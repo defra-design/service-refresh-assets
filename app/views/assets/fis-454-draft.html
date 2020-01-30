@@ -1,0 +1,138 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  FIS-454-(draft)
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <table class="govuk-table">
+      <caption class="govuk-table__caption">Scenarios</caption>
+      <thead class="govuk-table__head govuk-visually-hidden">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Scenario</th>
+          <th scope="col" class="govuk-table__header">Description</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">A</th>
+          <td class="govuk-table__cell">Lorem ipsum</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">B</th>
+          <td class="govuk-table__cell">Lorem ipsum</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">C</th>
+          <td class="govuk-table__cell">Lorem ipsum</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <p>(A)<p>
+    <div class="defra-flood-status govuk-!-margin-bottom-1">
+      <div class="defra-flood-status-item">
+        <div class="defra-flood-status-item__text">
+          No flood warnings or alerts currently in place in this area. 
+        </div>
+      </div>
+    </div>
+    <p>The flood warning for <a href="">River Coln at Fairford</a> has been removed.</p>
+    <p>(B)<p>
+    <div class="defra-flood-status govuk-!-margin-bottom-1">
+      <div class="defra-flood-status-item">
+        <div class="defra-flood-status-item__text">
+          No flood warnings or alerts currently in place in this area but some <a href="">river and sea levels</a> are high. 
+        </div>
+      </div>
+    </div>
+    <p>(D)<p>
+    <div class="defra-flood-status govuk-!-margin-bottom-1">
+      <div class="defra-flood-status-item defra-flood-status-item--alert">
+        <span class="defra-flood-status-item__icon">
+          <span class="govuk-visually-hidden">Flood alert</span>
+        </span>
+        <div class="defra-flood-status-item__text">
+          <strong>
+            <a href="">Flood alert for The River Gipping, from downstream of Needham Market, to upstream of London Road Bridge, Ipswich</a>
+          </strong>
+          <span>Some flooding is possible</span>
+        </div>
+      </div>
+    </div>
+    <div class="defra-flood-status govuk-!-margin-bottom-1">
+      <div class="defra-flood-status-item">
+        <div class="defra-flood-status-item__text">
+          <strong>
+            <a href="">Flood alert for The River Gipping, from downstream of Needham Market, to upstream of London Road Bridge, Ipswich</a>
+          </strong>
+          <span>Some flooding is possible</span>
+        </div>
+      </div>
+    </div>
+    <p>(F)<p>
+    <div class="defra-flood-status govuk-!-margin-bottom-1">
+      <div class="defra-flood-status-item defra-flood-status-item--warning">
+        <span class="defra-flood-status-item__icon">
+          <span class="govuk-visually-hidden">Flood warning</span>
+        </span>
+        <div class="defra-flood-status-item__text">
+          <strong>
+            <a href="">3 Flood warnings in place nearby</a>
+          </strong>
+          <span>Flooding is expected</span>
+        </div>
+      </div>
+    </div>
+    <p><a href="">A flood alert</a> is in place in the wider area where some flooding is possible.</p>
+    <p><a href="">2 flood warnings have been removed</a>.</p>
+    <p>(E)<p>
+    <div class="defra-flood-status govuk-!-margin-bottom-1">
+      <div class="defra-flood-status-item defra-flood-status-item--warning">
+        <span class="defra-flood-status-item__icon">
+          <span class="govuk-visually-hidden">Flood warning</span>
+        </span>
+        <div class="defra-flood-status-item__text">
+          <strong>
+            <a href="">Flood warning for Isolated properties and villages near the River Witham and River Brant from Claypole to Lincoln</a>
+          </strong>
+          <span>Flooding is expected</span>
+        </div>
+      </div>
+    </div>
+    <p>(G)<p>
+    <div class="defra-flood-status govuk-!-margin-bottom-1">
+      <div class="defra-flood-status-item defra-flood-status-item--severe">
+        <span class="defra-flood-status-item__icon">
+          <span class="govuk-visually-hidden">Severe flood warning</span>
+        </span>
+        <div class="defra-flood-status-item__text">
+          <strong>
+            <a href="">Severe flood warning for Barwick Stream at Stoford</a>
+          </strong>
+          <span>There is a danger to life</span>
+        </div>
+      </div>
+      <div class="defra-flood-status-item defra-flood-status-item--warning">
+        <span class="defra-flood-status-item__icon">
+          <span class="govuk-visually-hidden">Flood warning</span>
+        </span>
+        <div class="defra-flood-status-item__text">
+          <strong>
+            <a href="">2 Flood warnings in place nearby</a>
+          </strong>
+          <span>Flooding is expected</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

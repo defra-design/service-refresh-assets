@@ -18,18 +18,18 @@
         display: table-cell;
         vertical-align: middle;
         width:100%;
-        padding:15px 0px;
+        padding:15px 15px 15px 0px;
         @include govuk-font($size: 19);
         strong {
             @include govuk-font($size: 19, $weight: bold);
             display: block;
         }
         @include mq ($from: tablet) {
-            padding:20px 0px;
+            padding:20px 20px 20px 0px;
         }
     }
     .defra-flood-status-item__text:first-child {
-        padding:15px;
+        padding:15px 20px 15px 20px;
     }
     .defra-flood-status-item__icon {
         display: table-cell;
