@@ -2,6 +2,5 @@
 .vscode
 node_modules
 public
-lib
 npm-debug.log
 logs
