@@ -1,7 +1,7 @@
 .DS_Store
 .vscode
 node_modules
-public/*
-lib/*
+public
+lib
 npm-debug.log
 logs
