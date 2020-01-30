@@ -1,6 +1,9 @@
 const express = require('express')
 const router = express.Router()
 
-// Add your routes here - above the module.exports line
+// Add your assets here
+router.get('/FIS-XXX-v1', function (req, res) {
+  res.render('assets/FIS-XXX-v1')
+})
 
 module.exports = router

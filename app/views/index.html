@@ -10,34 +10,64 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <h1 class="govuk-heading-xl">
-        The GOV.UK Prototype Kit
-        <span class="govuk-caption-xl">{{releaseVersion}}</span>
-      </h1>{{releaseVersion | log }}
+        Service refresh assets
+      </h1>
       <p>
-        This kit lets you rapidly create HTML prototypes of GOV.UK services.
+        This resource is for developing and sharing content and front end assets for the service refresh project.
       </p>
-
-      <p>
-        It contains all you need to prototype anything from simple static pages to complex, data-driven transactions.
-      </p>
-
-      <h2 class="govuk-heading-m">About this page</h2>
-
-      <p>We recommend you add links to your prototype to this page, rather than delete it.
-        You'll find this page in the kit at '/app/views/index.html'.</p>
-
-      <p>You can change the service name by editing the file '/app/config.js'.</p>
-
-      <h2 class="govuk-heading-m">Examples and documentation</h2>
-
-      <ul class="govuk-list govuk-list--bullet">
-        <li><a href="/docs/tutorials-and-examples">Example pages and documentation</a></li>
-        <li>
-          <a href="https://design-system.service.gov.uk">
-            GOV.UK Design System
-          </a>
-        </li>
-      </ul>
+      <div class="govuk-inset-text">
+        It is not a protoype for testing with users.
+      </div>
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            How to use this resource
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <p class="govuk-body"><strong>Product, BA and Research</strong></p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>Browse assets by JIRA ticket > Version</li>
+          </ul>
+          <p class="govuk-body"><strong>Development</strong></p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>Only assets with a version number are ready for development</li>
+            <li>Where new or modified CSS is required details will be stated</li>
+          </ul>
+          <p class="govuk-body"><strong>Content and Design</strong></p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>Create an entry in the contents table, linking to a corresponding page</li>
+            <li>Add a hyperlink to this page in the corresposnding JIRA ticket</li>
+            <li>While in draft ensure the link and page tile include (draft)</li>
+            <li>Develop content or front end assets within the corresponding page</li>
+            <li>When ready for dev replace (draft) with a version number eg. (v1)</li>
+            <li>Once an asset has a version number do <strong>no more work</strong> on this version</li>
+          </ul>
+        </div>
+      </details>     
+      <table class="govuk-table">
+        <caption class="govuk-table__caption">Assets</caption>
+        <thead class="govuk-table__head govuk-visually-hidden">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">JIRA reference</th>
+            <th scope="col" class="govuk-table__header">Description</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">
+              <a href="/fis-xxx-v1">FIS-XXX-(v1)</a>
+            </th>
+            <td class="govuk-table__cell">
+              Content for lorem ipsum doler
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header"><a href="">FIS-XXX-(draft)</a></th>
+            <td class="govuk-table__cell">Icons for lorem ipsum doler</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
 </div>
 
