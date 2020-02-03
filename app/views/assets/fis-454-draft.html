@@ -9,31 +9,45 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <table class="govuk-table">
-      <caption class="govuk-table__caption">Scenarios</caption>
-      <thead class="govuk-table__head govuk-visually-hidden">
-        <tr class="govuk-table__row">
-          <th scope="col" class="govuk-table__header">Scenario</th>
-          <th scope="col" class="govuk-table__header">Description</th>
-        </tr>
-      </thead>
-      <tbody class="govuk-table__body">
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">a</th>
-          <td class="govuk-table__cell">Lorem ipsum</td>
-        </tr>
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">b</th>
-          <td class="govuk-table__cell">Lorem ipsum</td>
-        </tr>
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">c</th>
-          <td class="govuk-table__cell">Lorem ipsum</td>
-        </tr>
-      </tbody>
-    </table>
+    <h2 class="govuk-heading-m">Requires</h2>
+    <ul class="govuk-list">
+      <li>sass/components/_flood-status.scss</li>
+    </ul>
+    <h2 class="govuk-heading-m govuk-!-margin-bottom-2">Scenarios</h2>
+    {{ govukTable({
+      caption: "",
+      firstCellIsHeader: false,
+      head: [
+        {
+          classes: "govuk-!-width-one-quarter",
+          text: ""
+        },
+        {
+          text: ""
+        }
+      ],
+      rows: [
+        [
+          {
+            text: "(a)"
+          },
+          {
+            text: "Lorem ipsum"
+          }
+        ],
+        [
+          {
+            text: "(b)"
+          },
+          {
+            text: "Lorem ipsum"
+          }
+        ]
+      ]
+    }) }}
   </div>
 </div>
+
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <p class="govuk-!-padding-top-4">(a)<p>
