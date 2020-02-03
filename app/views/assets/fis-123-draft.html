@@ -9,7 +9,43 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <p>Stuff.</p>
+    <h2 class="govuk-heading-m">Requires</h2>
+    <ul class="govuk-list">
+      <li>List any sass, png's, svgs etc that the cpomponent requires</li>
+    </ul>
+    <h2 class="govuk-heading-m govuk-!-margin-bottom-2">Scenarios</h2>
+    {{ govukTable({
+      caption: "",
+      firstCellIsHeader: false,
+      head: [
+        {
+          classes: "govuk-!-width-one-quarter",
+          text: ""
+        },
+        {
+          text: ""
+        }
+      ],
+      rows: [
+        [
+          {
+            text: "(a)"
+          },
+          {
+            text: "Description of scenario"
+          }
+        ]
+      ]
+    }) }}
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <p class="govuk-!-padding-top-4">(a)</p>
+    <!-- Start -->
+    <p>This is the component</p>
+    <!-- End -->
   </div>
 </div>
 
