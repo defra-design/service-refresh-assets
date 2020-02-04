@@ -55,30 +55,30 @@
     <!-- Start -->
     <h2 class="govuk-heading-m">Outlook for the wider region</h2>
     {% set dayOne %}
-    <h3 class="govuk-heading-s govuk-!-margin-bottom-0">Sunday</h3>
-    <p>Meta</p>
+    <h3 class="govuk-heading-s govuk-!-margin-bottom-0">Saturday</h3>
+    <p>River risk: High likelihood of significant impacts</p>
     {% endset -%}
     {% set dayTwo%}
     <h3 class="govuk-heading-s govuk-!-margin-bottom-0">Today</h3>
-    <p>Meta</p>
+    <p>River risk: High likelihood of significant impacts</p>
     {% endset -%}
     {% set dayThree %}
     <h3 class="govuk-heading-s govuk-!-margin-bottom-0">Tomorrow</h3>
-    <p>Meta</p>
+    <p>River risk: High likelihood of significant impacts</p>
     {% endset -%}
     {% set dayFour %}
-    <h3 class="govuk-heading-s govuk-!-margin-bottom-0">Wednesday</h3>
-    <p>Meta</p>
+    <h3 class="govuk-heading-s govuk-!-margin-bottom-0">Tuesday</h3>
+    <p>River risk: High likelihood of minor impacts</p>
     {% endset -%}
     {% set dayFive %}
-    <h3 class="govuk-heading-s govuk-!-margin-bottom-0">Thursday</h3>
-    <p>Meta</p>
+    <h3 class="govuk-heading-s govuk-!-margin-bottom-0">Wednesday</h3>
+    <p>River risk: High likelihood of minor impacts</p>
     {% endset -%}
     {{ govukTabs({
       classes: 'defra-flood-tabs govuk-!-padding-top-2',
       items: [
         {
-          label: "Sun",
+          label: "Sat",
           id: "day-one",
           panel: {
             html: dayOne
@@ -99,14 +99,14 @@
           }
         },
         {
-          label: "Wed",
+          label: "Tue",
           id: "day-four",
           panel: {
             html: dayFour
           }
         },
         {
-          label: "Thu",
+          label: "Wed",
           id: "day-five",
           panel: {
             html: dayFive
@@ -115,7 +115,7 @@
       ]
     }) }}
     <p class="defra-updated govuk-!-margin-bottom-4">
-      <time datetime="">Updated at 2/2/20 10:30am</time>. Produced by the Met Office and Environment Agency
+      <time datetime="">Updated at 9/11/19 15:30am</time>. Produced by the Met Office and Environment Agency
     </p>
     <!-- End -->
   </div>
