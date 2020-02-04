@@ -5,6 +5,9 @@ const router = express.Router()
 router.get('/fis-123-draft', function (req, res) {
   res.render('assets/fis-123-draft')
 })
+router.get('/fis-155-draft', function (req, res) {
+  res.render('assets/fis-155-draft')
+})
 router.get('/fis-256-draft', function (req, res) {
   res.render('assets/fis-256-draft')
 })
