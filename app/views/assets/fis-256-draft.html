@@ -2,15 +2,37 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  FIS-123-(draft)
+  FIS-256-(draft)
 {% endblock %}
 
 {% block content %}
 
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    <p>Stuff.</p>
-  </div>
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <p><a href="#">Search a different location</a> | <a href="#">See the national flood risk</a></p>
+      </div>
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">Flood risk in Faketown</h1>
+        <p class="govuk-body">This is a paragraph inside a two-thirds wide column</p>
+      </div>
+      <div class="govuk-grid-column-one-third">
+        <h2 class="govuk-heading-m">Related content</h2>
+        <p class="govuk-body">This is a paragraph inside a one-third wide column</p>
+      </div>
+      <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-heading-m">Other ways to check your flood risk</h2>
+        <p><a href="https://www.gov.uk/sign-up-for-flood-warnings">Sign up to get flood warnings by phone, text or email</a> if you live near a river or the sea.</p>
+        <p>You can also call Floodline for advice about flooding from rivers, the sea, and groundwater.</p>
+        <p>Telephone: 0345 988 1188<br>
+          Textphone: 0345 602 6340<br>
+          Open 24 hours a day, 7 days a week.<br>
+          <a href="https://gov.uk/call-charges">Find out more about call charges</a>.</p>
+        <p><a href="https://www.gov.uk/find-local-council">Contact your local council</a> if there's flooding in your area, but you're not sure what the source is.</p>
+      </div>
+    </div>
+  </main>
 </div>
 
 {% endblock %}
