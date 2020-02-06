@@ -8,33 +8,76 @@
 
 {% block content %}
 
-<div class="govuk-width-container">
-  <main class="govuk-main-wrapper">
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds">
-        <p><a href="#">Search a different location</a> | <a href="#">See the national flood risk</a></p>
-      </div>
-      <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-xl">Flood risk in Faketown</h1>
-        <p class="govuk-body">This is a paragraph inside a two-thirds wide column</p>
-      </div>
-      <div class="govuk-grid-column-one-third">
-        <h2 class="govuk-heading-m">Related content</h2>
-        <p class="govuk-body">This is a paragraph inside a one-third wide column</p>
-      </div>
-      <div class="govuk-grid-column-two-thirds">
-        <h2 class="govuk-heading-m">Other ways to check your flood risk</h2>
-        <p><a href="https://www.gov.uk/sign-up-for-flood-warnings">Sign up to get flood warnings by phone, text or email</a> if you live near a river or the sea.</p>
-        <p>You can also call Floodline for advice about flooding from rivers, the sea, and groundwater.</p>
-        <p>Telephone: 0345 988 1188<br>
-          Textphone: 0345 602 6340<br>
-          Open 24 hours a day, 7 days a week.<br>
-          <a href="https://gov.uk/call-charges">Find out more about call charges</a>.</p>
-        <p><a href="https://www.gov.uk/find-local-council">Contact your local council</a> if there's flooding in your area, but you're not sure what the source is.</p>
-      </div>
-    </div>
-  </main>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h2 class="govuk-heading-m">Requires</h2>
+    <ul class="govuk-list">
+      <li>sass/components/_related-items.scss</li>
+      <li>sass/components/_updated.scss</li>
+    </ul>
+    <h2 class="govuk-heading-m">All scenarios</h2>
+  </div>
 </div>
+
+<!-- Start -->
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <nav class="govuk-!-margin-bottom-7">
+      <p>
+        <a href="">Search a different location</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="">See the national flood risk</a>
+      </p>
+    </nav>
+    <h1 class="govuk-heading-xl govuk-!-margin-bottom-2">
+      Flood risk in Location
+    </h1>
+    <p class="defra-updated govuk-!-margin-bottom-7">
+      Updated <time datetime="">6 November 2020 8:34am</time>
+    </p>
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <p style="color:#626a6e">[Headline flood status component]</p>
+    <p style="color:#626a6e">[Alerts and warnings component]</p>
+    <h2 class="govuk-heading-m">Other ways to check your flood risk</h2>
+    <p><a href="https://www.gov.uk/sign-up-for-flood-warnings">Sign up to get flood warnings by phone, text or email</a> if you live near a river or the sea.</p>
+    <p>You can also call Floodline for advice about flooding from rivers, the sea, and groundwater.</p>
+    <p>Telephone: 0345 988 1188<br>Textphone: 0345 602 6340<br>Open 24 hours a day, 7 days a week.<br><a href="https://gov.uk/call-charges">Find out more about call charges</a>.</p>
+    <p><a href="https://www.gov.uk/find-local-council">Contact your local council</a> if there's flooding in your area, but you're not sure what the source is.</p>
+  </div>
+  <div class="govuk-grid-column-one-third">
+    <aside class="defra-related-items" role="complementary">
+      <h2 class="govuk-heading-s" id="subsection-title">
+        Related content
+      </h2>
+      <nav role="navigation" aria-labelledby="subsection-title">
+        <ul class="govuk-list govuk-!-font-size-16">
+          <li>
+            <a class="govuk-link" href="/plan-ahead-for-flooding">
+              How to plan ahead for flooding
+            </a>
+          </li>
+          <li>
+            <a class="govuk-link" href="/what-to-do-in-a-flood">
+              What to do in a flood
+            </a>
+          </li>
+          <li>
+            <a class="govuk-link" href="/recovering-after-a-flood">
+              How to recover after a flood
+            </a>
+          </li>
+          <li>
+            <a class="govuk-link" href="https://flood-test.aws.defra.cloud/long-term-flood-risk">
+              View long term flood risk information
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+  </div>
+</div>
+<!-- End -->
 
 {% endblock %}
 
