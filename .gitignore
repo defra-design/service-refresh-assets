@@ -4,4 +4,4 @@ node_modules
 public
 npm-debug.log
 logs
-lib/extensions/_extensions.scss
+/lib/extensions/_extensions.scss
