@@ -55,58 +55,58 @@
     <!-- Start -->
     <h2 class="govuk-heading-m">Outlook for the wider region</h2>
     {% set dayOne %}
-    <h3 class="govuk-heading-s govuk-!-margin-bottom-0">Saturday</h3>
-    <p>Medium risk from river flooding with a high likelihood of significant impacts.</p>
-    {% endset -%}
-    {% set dayTwo%}
     <h3 class="govuk-heading-s govuk-!-margin-bottom-0">Today</h3>
     <p>Medium risk from river flooding with a high likelihood of significant impacts.</p>
     {% endset -%}
-    {% set dayThree %}
+    {% set dayTwo%}
     <h3 class="govuk-heading-s govuk-!-margin-bottom-0">Tomorrow</h3>
     <p>Medium risk from river flooding with a high likelihood of significant impacts.</p>
     {% endset -%}
+    {% set dayThree %}
+    <h3 class="govuk-heading-s govuk-!-margin-bottom-0">Thursday</h3>
+    <p>Medium risk from river flooding with a high likelihood of significant impacts.</p>
+    {% endset -%}
     {% set dayFour %}
-    <h3 class="govuk-heading-s govuk-!-margin-bottom-0">Tuesday</h3>
+    <h3 class="govuk-heading-s govuk-!-margin-bottom-0">Friday</h3>
     <p>Low risk from river flooding with a high likelihood of minor impacts</p>
     {% endset -%}
     {% set dayFive %}
-    <h3 class="govuk-heading-s govuk-!-margin-bottom-0">Wednesday</h3>
+    <h3 class="govuk-heading-s govuk-!-margin-bottom-0">Saturday</h3>
     <p>Low risk from river flooding with a high likelihood of minor impacts</p>
     {% endset -%}
     {{ govukTabs({
       classes: 'defra-flood-tabs govuk-!-padding-top-2',
       items: [
         {
-          label: "Sat",
+          label: "Today",
           id: "day-one",
           panel: {
             html: dayOne
           }
         },
         {
-          label: "Today",
+          label: "Tomorrow",
           id: "day-two",
           panel: {
             html: dayTwo
           }
         },
         {
-          label: "Tomorrow",
+          label: "Thursday",
           id: "day-three",
           panel: {
             html: dayThree
           }
         },
         {
-          label: "Tue",
+          label: "Friday",
           id: "day-four",
           panel: {
             html: dayFour
           }
         },
         {
-          label: "Wed",
+          label: "Saturday",
           id: "day-five",
           panel: {
             html: dayFive
