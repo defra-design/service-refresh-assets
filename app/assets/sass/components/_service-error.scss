@@ -4,4 +4,7 @@
     &__title {
         @extend .govuk-error-summary__title;
     }
+    p:last-child {
+        margin-bottom:5px;
+    }
 }
