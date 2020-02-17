@@ -37,7 +37,7 @@
       <form method="post" autocomplete="off">
         <div class="govuk-form-group">
           <label class="govuk-label" for="location">
-            Search for a location
+            Search a location
           </label>
           <div class="defra-search">
             <input class="defra-search__input" id="location" name="location" type="search" spellcheck="false" value="{% if model.placeName %}{{ model.placeName }}{% else %}{{ model.q }}{% endif %}">
