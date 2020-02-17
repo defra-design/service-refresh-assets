@@ -23,8 +23,8 @@ router.get('/fis-410-draft', function (req, res) {
 router.get('/fis-454-draft', function (req, res) {
   res.render('assets/fis-454-draft')
 })
-router.get('/fis-459-draft', function (req, res) {
-  res.render('assets/fis-459-draft')
+router.get('/fis-459-v1', function (req, res) {
+  res.render('assets/fis-459-v1')
 })
 
 module.exports = router

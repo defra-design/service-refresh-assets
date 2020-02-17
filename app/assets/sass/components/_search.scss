@@ -6,6 +6,7 @@
         display: table-cell;
         position: relative;
         z-index: 1;
+        white-space: nowrap;
     }
     &__input::-webkit-search-decoration {
         -webkit-appearance: none;
@@ -17,6 +18,8 @@
         display: table-cell;
         vertical-align: top;
         position: relative;
+        white-space: nowrap;
+        width:40px;
     }
     &__button {
         display: block;
