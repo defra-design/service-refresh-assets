@@ -1,0 +1,96 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  FIS-387-(draft)
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h2 class="govuk-heading-m">Requires</h2>
+    <ul class="govuk-list">
+      <li>sass/components/_search.scss</li>
+      <li>sass/components/_service-error.scss</li>
+      <li>sass/objects/_lists.scss</li>
+      <li>images/icon-search.svg</li>
+    </ul>
+    <p><a href="https://github.com/danleech-defra/service-refresh-assets/tree/master/app/assets">See assets on Github</a></p>
+    <h2 class="govuk-heading-m">All scenarios</h2>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <div class="govuk-!-padding-top-6 govuk-!-padding-bottom-6">
+      <p>&lt;title&gt;<!-- Start -->Sorry, there is currently a problem searching a location - Flood alerts and warnings - GOV.UK<!-- End -->&lt;/title&gt;</p>
+    </div>
+  </div>
+</div>
+
+<!-- Start -->
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <div class="defra-service-error">
+      <h2 class="defra-service-error__title" id="error-summary-title">
+        Sorry, there is currently a problem searching a location
+      </h2>
+      <p>Try again later, or use the list to find a warning or alert.</p>
+    </div>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third">
+    <div class="govuk-form-group">
+      <form method="post" autocomplete="off">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="location">
+            Search a location
+          </label>
+          <div class="defra-search">
+            <input class="defra-search__input" id="location" name="location" type="search" spellcheck="false" value="{% if model.placeName %}{{ model.placeName }}{% else %}{{ model.q }}{% endif %}">
+            <div class="defra-search__submit-container">
+                <button class="defra-search__button">Search</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="govuk-grid-column-two-thirds">
+    <div class="defra-search-summary" id="searchSummary">
+      <h2 class="defra-search-summary__count">2520 levels</h2>
+      <button id="map-btn" class="defra-search-summary__button-map">View on map</button>
+    </div>
+    <ul class="defra-flood-list">
+      <li class="defra-flood-list__group">
+        <span class="defra-flood-list__group-title">
+          Addlestone Bourne <span class="govuk-visually-hidden">at:</span>
+        </span>
+        <dl class="defra-flood-list__items defra-flood-list__items--levels defra-flood-list__items--has-relation"><!-- Optional modifier 'defra-flood-list__items--has-relation' -->
+          <div class="defra-flood-list__item defra-flood-list__item--high">
+            <dt class="defra-flood-list__item-title">
+              <a href="">Addlestone</a>
+            </dt>
+            <dd class="defra-flood-list__item-desc">
+              <strong>High</strong> (1.08m <time datetime="2020-02-18T11:15:00.000Z">at 11:15am</time>)
+            </dd>
+          </div>
+          <div class="defra-flood-list__item defra-flood-list__item--normal">
+            <dt class="defra-flood-list__item-title">
+              <a href="">Grants Bridge</a>
+            </dt>
+            <dd class="defra-flood-list__item-desc">
+              Normal (0.44m <time datetime="2020-02-18T04:15:00.000Z">at 4:15am</time>)
+            </dd>
+          </div>
+        </dl>
+      </li>
+    </ul>
+  </div>
+</div>
+<!-- End -->
+
+{% endblock %}
