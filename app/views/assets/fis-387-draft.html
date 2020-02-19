@@ -36,7 +36,7 @@
       <h2 class="defra-service-error__title" id="error-summary-title">
         Sorry, there is currently a problem searching a location
       </h2>
-      <p>Try again later, or use the list to find a warning or alert.</p>
+      <p>Try again later, or use the list to find a river, sea or groundwater level.</p>
     </div>
   </div>
 </div>
@@ -62,28 +62,99 @@
   <div class="govuk-grid-column-two-thirds">
     <div class="defra-search-summary" id="searchSummary">
       <h2 class="defra-search-summary__count">2520 levels</h2>
+      <!-- Added with javascript -->
       <button id="map-btn" class="defra-search-summary__button-map">View on map</button>
+      <!-- Added with javascript -->
     </div>
     <ul class="defra-flood-list">
       <li class="defra-flood-list__group">
         <span class="defra-flood-list__group-title">
-          Addlestone Bourne <span class="govuk-visually-hidden">at:</span>
+          Sea levels <span class="govuk-visually-hidden">at:</span>
         </span>
-        <dl class="defra-flood-list__items defra-flood-list__items--levels defra-flood-list__items--has-relation"><!-- Optional modifier 'defra-flood-list__items--has-relation' -->
-          <div class="defra-flood-list__item defra-flood-list__item--high">
+        <dl class="defra-flood-list__items defra-flood-list__items--levels">
+          <div class="defra-flood-list__item">
             <dt class="defra-flood-list__item-title">
-              <a href="">Addlestone</a>
+              <a href="">Silloth Docks</a>
             </dt>
             <dd class="defra-flood-list__item-desc">
-              <strong>High</strong> (1.08m <time datetime="2020-02-18T11:15:00.000Z">at 11:15am</time>)
+              1.00m <time datetime="2020-01-01T00:00:00.000Z">at 00:00am</time>
+            </dd>
+          </div>
+        </dl>
+      </li>
+      <li class="defra-flood-list__group">
+        <span class="defra-flood-list__group-title">
+          Groundwater levels <span class="govuk-visually-hidden">at:</span>
+        </span>
+        <dl class="defra-flood-list__items defra-flood-list__items--levels">
+          <div class="defra-flood-list__item">
+            <dt class="defra-flood-list__item-title">
+              <a href="">Botcherby Bridge, Carlisle</a>
+            </dt>
+            <dd class="defra-flood-list__item-desc">
+              1.00m <time datetime="2020-01-01T00:00:00.000Z">at 00:00am</time>
+            </dd>
+          </div>
+        </dl>
+      </li>
+      <li class="defra-flood-list__group">
+        <span class="defra-flood-list__group-title">
+          River Eden <span class="govuk-visually-hidden">at:</span>
+        </span>
+        <dl class="defra-flood-list__items defra-flood-list__items--levels defra-flood-list__items--has-relation"><!-- Optional modifier 'defra-flood-list__items--has-relation' -->
+          <div class="defra-flood-list__item">
+            <dt class="defra-flood-list__item-title">
+              <a href="">Appleby</a>
+            </dt>
+            <dd class="defra-flood-list__item-desc">
+              Data not available
+            </dd>
+          </div>
+          <div class="defra-flood-list__item">
+            <dt class="defra-flood-list__item-title">
+              <a href="">Great Corby</a>
+            </dt>
+            <dd class="defra-flood-list__item-desc">
+              1.00m <time datetime="2020-01-01T00:00:00.000Z">at 00:00am</time>
+            </dd>
+          </div>
+          <div class="defra-flood-list__item defra-flood-list__item--low">
+            <dt class="defra-flood-list__item-title">
+              <a href="">Great Musgrave Bridge</a>
+            </dt>
+            <dd class="defra-flood-list__item-desc">
+              Low (1.00m <time datetime="2020-01-01T00:00:00.000Z">at 00:00am</time>)
             </dd>
           </div>
           <div class="defra-flood-list__item defra-flood-list__item--normal">
             <dt class="defra-flood-list__item-title">
-              <a href="">Grants Bridge</a>
+              <a href="">Kirkby Stephen</a>
             </dt>
             <dd class="defra-flood-list__item-desc">
-              Normal (0.44m <time datetime="2020-02-18T04:15:00.000Z">at 4:15am</time>)
+              Normal (1.00m <time datetime="2020-01-01T00:00:00.000Z">at 00:00am</time>)
+            </dd>
+          </div>
+          <div class="defra-flood-list__item defra-flood-list__item--high">
+            <dt class="defra-flood-list__item-title">
+              <a href="">Temple Sowerby</a>
+            </dt>
+            <dd class="defra-flood-list__item-desc">
+              <strong>High</strong> (1.00m <time datetime="2020-01-01T00:00:00.000Z">at 00:00am</time>)
+            </dd>
+          </div>
+        </dl>
+      </li>
+      <li class="defra-flood-list__group">
+        <span class="defra-flood-list__group-title">
+          Ceiriog <span class="govuk-visually-hidden">at:</span>
+        </span>
+        <dl class="defra-flood-list__items defra-flood-list__items--levels defra-flood-list__items--has-relation"><!-- Optional modifier 'defra-flood-list__items--has-relation' -->
+          <div class="defra-flood-list__item defra-flood-list__item--normal">
+            <dt class="defra-flood-list__item-title">
+              <a href="" rel="external">Brynkinalt (Natural Resources Wales)</a>
+            </dt>
+            <dd class="defra-flood-list__item-desc">
+              Normal (1.00m <time datetime="2020-01-01T00:00:00.000Z">at 00:00am</time>)
             </dd>
           </div>
         </dl>
@@ -92,5 +163,19 @@
   </div>
 </div>
 <!-- End -->
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h2 class="govuk-heading-m govuk-!-padding-top-8">Not in England error</h2>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <div class="govuk-!-padding-top-6 govuk-!-padding-bottom-6">
+      <p>&lt;title&gt;<!-- Start -->This service provides flood warning information for England only - River and sea levels - GOV.UK<!-- End -->&lt;/title&gt;</p>
+    </div>
+  </div>
+</div>
 
 {% endblock %}
