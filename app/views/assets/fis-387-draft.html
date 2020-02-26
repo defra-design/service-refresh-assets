@@ -17,18 +17,35 @@
       <li>images/icon-search.svg</li>
     </ul>
     <p><a href="https://github.com/danleech-defra/service-refresh-assets/tree/master/app/assets">See assets on Github</a></p>
-    <h2 class="govuk-heading-m">All scenarios</h2>
   </div>
 </div>
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
-    <div class="govuk-!-padding-top-6 govuk-!-padding-bottom-6">
-      <p>&lt;title&gt;<!-- Start -->Sorry, there is currently a problem searching a location - Flood alerts and warnings - GOV.UK<!-- End -->&lt;/title&gt;</p>
-    </div>
+    <h2 class="govuk-heading-m govuk-!-padding-top-6 govuk-!-padding-bottom-6">Page meta titles</h2>
+    <p>&lt;title&gt;<!-- Start -->River and sea levels in England - GOV.UK<!-- End -->&lt;/title&gt;</p>
+    <p>&lt;title&gt;<!-- Start -->This service provides flood risk information for England only - River and sea levels in England - GOV.UK<!-- End -->&lt;/title&gt;</p>
+    <p>&lt;title&gt;<!-- Start -->Sorry, there is currently a problem searching a location - River and sea levels in England - GOV.UK<!-- End -->&lt;/title&gt;</p>
   </div>
 </div>
 
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h2 class="govuk-heading-m govuk-!-padding-top-6 govuk-!-padding-bottom-6">Page content with results</h2>
+  </div>
+</div>
+
+<!-- Start -->
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-xl">
+      River and sea levels
+    </h1>
+  </div>
+</div>
+<!-- End -->
+
+<!-- Bing 500 error -->
 <!-- Start -->
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
@@ -40,7 +57,9 @@
     </div>
   </div>
 </div>
+<!-- End -->
 
+<!-- Start -->
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-one-third">
     <div class="govuk-form-group">
@@ -61,7 +80,7 @@
   </div>
   <div class="govuk-grid-column-two-thirds">
     <div class="defra-search-summary" id="searchSummary">
-      <h2 class="defra-search-summary__count">2520 levels</h2>
+      <h2 class="defra-search-summary__count">2316 levels</h2>
       <!-- Added with javascript -->
       <button id="map-btn" class="defra-search-summary__button-map">View on map</button>
       <!-- Added with javascript -->
@@ -69,7 +88,7 @@
     <ul class="defra-flood-list">
       <li class="defra-flood-list__group">
         <span class="defra-flood-list__group-title">
-          Sea levels <span class="govuk-visually-hidden">at:</span>
+          <a href="">Sea levels <span class="govuk-visually-hidden">at:</span></a>
         </span>
         <dl class="defra-flood-list__items defra-flood-list__items--levels">
           <div class="defra-flood-list__item">
@@ -84,7 +103,7 @@
       </li>
       <li class="defra-flood-list__group">
         <span class="defra-flood-list__group-title">
-          Groundwater levels <span class="govuk-visually-hidden">at:</span>
+          <a href="">Groundwater levels <span class="govuk-visually-hidden">at:</span></a>
         </span>
         <dl class="defra-flood-list__items defra-flood-list__items--levels">
           <div class="defra-flood-list__item">
@@ -99,7 +118,7 @@
       </li>
       <li class="defra-flood-list__group">
         <span class="defra-flood-list__group-title">
-          River Eden <span class="govuk-visually-hidden">at:</span>
+          <a href="">River Eden <span class="govuk-visually-hidden">at:</span></a>
         </span>
         <dl class="defra-flood-list__items defra-flood-list__items--levels defra-flood-list__items--has-relation"><!-- Optional modifier 'defra-flood-list__items--has-relation' -->
           <div class="defra-flood-list__item">
@@ -154,9 +173,9 @@
       </li>
       <li class="defra-flood-list__group">
         <span class="defra-flood-list__group-title">
-          Ceiriog <span class="govuk-visually-hidden">at:</span>
+          <a href="">Ceiriog <span class="govuk-visually-hidden">at:</span></a>
         </span>
-        <dl class="defra-flood-list__items defra-flood-list__items--levels defra-flood-list__items--has-relation"><!-- Optional modifier 'defra-flood-list__items--has-relation' -->
+        <dl class="defra-flood-list__items defra-flood-list__items--levels"><!-- Optional modifier 'defra-flood-list__items--has-relation' -->
           <div class="defra-flood-list__item defra-flood-list__item--normal">
             <dt class="defra-flood-list__item-title">
               <a href="" rel="external">Brynkinalt (Natural Resources Wales)</a>
@@ -173,17 +192,48 @@
 <!-- End -->
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    <h2 class="govuk-heading-m govuk-!-padding-top-8">Not in England error</h2>
+  <div class="govuk-grid-column-full">
+    <h2 class="govuk-heading-m govuk-!-padding-top-6 govuk-!-padding-bottom-6">Page content no results</h2>
   </div>
 </div>
 
+<!-- Start -->
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-full">
-    <div class="govuk-!-padding-top-6 govuk-!-padding-bottom-6">
-      <p>&lt;title&gt;<!-- Start -->This service provides flood warning information for England only - River and sea levels - GOV.UK<!-- End -->&lt;/title&gt;</p>
+  <div class="govuk-grid-column-one-third">
+    <div class="govuk-form-group">
+      <form method="post" autocomplete="off">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="location">
+            Search a location
+          </label>
+          <div class="defra-search">
+            <input class="defra-search__input" id="location" name="location" type="search" spellcheck="false" value="sftgshdgfter">
+            <div class="defra-search__submit-container">
+                <button class="defra-search__button">Search</button>
+            </div>
+          </div>
+        </div>
+      </form>
     </div>
   </div>
+  <div class="govuk-grid-column-two-thirds">
+    <div class="defra-search-summary" id="searchSummary">
+      <h2 class="defra-search-summary__count">0 levels</h2>
+      <!-- Added with javascript -->
+      <button id="map-btn" class="defra-search-summary__button-map">View on map</button>
+      <!-- Added with javascript -->
+    </div>
+    <p class="govuk-body govuk-!-margin-top-4">
+      <strong>No river, sea or groundwater levels found.</strong>    
+    </p>
+    <p class="govuk-body">There are approximatley 2300 water level measuring stations in England. These are located mostly along main rivers and the coast.</p>
+    <p class="govuk-body">Improve your search results by:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>searching a broader location</li>
+      <li>double-checking your spelling</li>
+    </ul>
+  </div>
 </div>
+<!-- End -->
 
 {% endblock %}
