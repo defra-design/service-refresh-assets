@@ -20,9 +20,7 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
     <h2 class="govuk-heading-m govuk-!-padding-top-6 govuk-!-padding-bottom-6">Page meta titles</h2>
-    <p>&lt;title&gt;<!-- Start -->River and sea levels in England - GOV.UK<!-- End -->&lt;/title&gt;</p>
-    <p>&lt;title&gt;<!-- Start -->This service provides flood risk information for England only - River and sea levels in England - GOV.UK<!-- End -->&lt;/title&gt;</p>
-    <p>&lt;title&gt;<!-- Start -->Sorry, there is currently a problem searching a location - River and sea levels in England - GOV.UK<!-- End -->&lt;/title&gt;</p>
+    <p>&lt;title&gt;<!-- Start -->River level at Gargrave (River Aire) - GOV.UK<!-- End -->&lt;/title&gt;</p>
   </div>
 </div>
 
@@ -34,20 +32,128 @@
 
 <!-- Start -->
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-full">
+  <div class="govuk-grid-column-two-thirds">
     <h1 class="govuk-heading-xl">
-      River and sea levels
+      River level at Gargrave (River Aire)
     </h1>
   </div>
 </div>
-<!-- End -->
-
-<!-- Start -->
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third"> 
+    <p role="text" class="govuk-!-margin-bottom-6">
+      <span class="govuk-caption-m">Latest</span>
+      <strong class="defra-flood-heading-l govuk-!-margin-bottom-1">
+        0.48m
+      </strong>
+      <span class="govuk-body">
+        at <time datetime="">11:00am</time> today
+      </span>
+    </p>
+  </div>
+  <div class="govuk-grid-column-one-third"> 
+    <p role="text" class="govuk-!-margin-bottom-6">
+      <span class="govuk-caption-m">State</span>
+      <strong class="defra-flood-heading-l defra-flood-heading-l--normal govuk-!-margin-bottom-1">
+        Normal
+      </strong>
+      <span class="govuk-body">
+        0.13m–0.60m typical <span class="govuk-visually-hidden">level here</span>
+      </span>
+    </p>
+  </div>
+  <!--
+    <div class="station-data__item">
+      <span class="station-data__icon"></span>
+      <div class="station-data__copy">
+        <span class="station-data__item-name">Trend</span>
+        <strong class="station-data__item-value">Stable</strong>
+        <span class="station-data__item-secondary">Forecast within typical range</span>
+      </div>
+    </div>
+  -->
+</div>
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
-    <p>Stuff</p>
+    <figure class="defra-line-chart" aria-hidden="true" hidden>
+      <figcaption class="defra-line-chart__caption">Water level measured over the last 5 days</figcaption>
+      <div id="line-chart" class="defra-line-chart__container" role="presentation"></div>
+    </figure>
+  </div>
+</div>
+<hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-6">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h2 class="govuk-heading-m">What effect could the level here have on nearby areas?</h2>
+    <table class="govuk-table defra-table-impact govuk-!-margin-bottom-6 govuk-!-font-size-16">
+      <caption class="govuk-table__caption govuk-visually-hidden">Months and rates</caption>
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="col">Level</th>
+          <th class="govuk-table__header" scope="col">Description</th>
+          <th class="govuk-table__header" scope="col"></th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row" data-id="highest" data-level="1.35" data-name="Highest level on record">
+          <th class="govuk-table__header defra-table-impact__cell--numeric" scope="row">1.35m</th>
+          <td class="govuk-table__cell">Highest level on record</td>
+          <td class="govuk-table__cell"></td>
+        </tr>   
+        <tr class="govuk-table__row" data-id="alert" data-level="0.60" data-name="Top of typical range">
+          <th class="govuk-table__header defra-table-impact__cell--numeric" scope="row">0.60m</th>
+          <td class="govuk-table__cell">Top of typical range. Above this flooding to low-laying land is possible</td>
+          <td class="govuk-table__cell"></td>
+        </tr>     
+      </tbody>
+    </table>
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">   
+    <h2 class="govuk-heading-m">Technical details about this gauging station</h2>
+    <dl class="govuk-summary-list govuk-summary-list--no-border govuk-!-font-size-16">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Location
+        </dt>
+        <dd class="govuk-summary-list__value" id="location"><button class="defra-button-map defra-button-map--small" title="View map">Grid ref NY 12345 12345</button></dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Site datum
+        </dt>
+        <dd class="govuk-summary-list__value">
+          104.82<a href="" class="defra-link-meta" title="What this means">mAOD</a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Station name
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Gargrave
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Station ID
+        </dt>
+        <dd class="govuk-summary-list__value">
+          8083
+        </dd>
+      </div>
+    </dl>
+    <p class="govuk-text govuk-!-margin-bottom-6">
+      <a href="/how-river-sea-groundwater-levels-are-measured">Find out how river, sea and groundwater levels are measured</a>.    
+    </p>  
   </div>
 </div>
 <!-- End -->
 
+{% endblock %}
+
+{% block pageScripts %}
+<script src="/public/javascripts/station/core.js"></script>
+<script src="/public/javascripts/station/model.js"></script>
+<script src="/public/javascripts/station/station.js"></script>
 {% endblock %}
