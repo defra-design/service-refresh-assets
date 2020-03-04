@@ -5062,8 +5062,8 @@ window.flood.model = {
         {
           "id": "alert",
           "value": "2.80",
-          "description": "Top of typical range. Above this flooding to low-laying land is possible",
-          "shortname": "Top of typical range"
+          "description": "Top of normal range. Above this flooding to low-laying land is possible",
+          "shortname": "Top of normal range"
         }
       ]
     }
