@@ -94,7 +94,7 @@
 .defra-table-impact__button {
     @extend .defra-button-text-s;
     span {
-        @include mq ($until: tablet) {
+        @include mq ($until: desktop) {
             @include defra-visually-hidden;
         }
     }
