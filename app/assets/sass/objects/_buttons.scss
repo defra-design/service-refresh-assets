@@ -91,7 +91,7 @@
 .defra-button-map:focus:before {
     background-position: 100% 0%;
 }
-.defra-table-impact__button {
+.defra-button-impact-chart {
     @extend .defra-button-text-s;
     span {
         @include mq ($until: desktop) {
