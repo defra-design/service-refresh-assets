@@ -1,0 +1,26 @@
+.defra-flood-statistics {
+    margin:0;
+    &__row {
+        border-top: 1px solid $govuk-border-colour;
+        @include govuk-responsive-padding(4, 'top');
+        @include govuk-responsive-padding(5, 'bottom');
+    }
+    &__key {
+        @include govuk-font($size: 19);
+    }
+    &__value {
+        @include govuk-font($size: 16);
+        margin:0;
+    }
+    &__impact {
+        @include govuk-font($size: 36, $weight: bold);
+        @include govuk-responsive-margin(1, 'bottom');
+        display: block;
+    }
+    &__impact--normal {
+        color: govuk-colour('green');
+    }
+    &__impact--high {
+        color: govuk-colour('red');
+    }
+}

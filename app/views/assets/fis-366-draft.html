@@ -12,7 +12,7 @@
     <h2 class="govuk-heading-m">Requires</h2>
     <ul class="govuk-list">
       <li>sass/components/_line-chart.scss</li>
-      <li>sass/objects/_typography.scss</li>
+      <li>sass/components/_flood-statistics.scss</li>
       <li>sass/utilities/_tables.scss</li>
       <li>sass/utilities/_summary-list.scss</li>
     </ul>
@@ -56,6 +56,7 @@
   <div class="govuk-grid-column-full">
     <nav id="browserBackContainer">
       <a href="/river-and-sea-levels?river-id=river-exe" class="defra-river-nav-link">River Exe</a>
+      <button class="defra-button-map defra-button-map--small"><span>View map</span></button>
       <!--
       <a href="" class="defra-river-nav-link">
         <svg role="presentation" focusable="false" class="defra-river-nav__icon" xmlns="http://www.w3.org/2000/svg" width="13" height="15" viewBox="0 0 13 15">
@@ -78,39 +79,46 @@
     <h1 class="govuk-heading-xl">
       River Aire level at Gargrave
     </h1>
+    <h2 class="govuk-visually-hidden">Station summary</h2>
   </div>
 </div>
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-one-third"> 
-    <p role="text" class="govuk-!-margin-bottom-5 govuk-!-padding-top-4" style="border-top:1px solid #ccc;">
-      <span class="govuk-body govuk-!-margin-bottom-0">Status</span>
-      <strong class="defra-flood-heading-l defra-flood-heading-l--normal">
-        Normal
-      </strong>
-      <span class="govuk-body-s">
-        0.43m to 2.80m <span class="govuk-visually-hidden">level here</span>
-      </span>
-    </p>
-  </div>
-  <div class="govuk-grid-column-one-third"> 
-    <p role="text" class="govuk-!-margin-bottom-5 govuk-!-padding-top-4" style="border-top:1px solid #ccc">
-      <span class="govuk-body govuk-!-margin-bottom-0">Trend</span>
-      <strong class="defra-flood-heading-l">
-        Falling
-      </strong>
-      <span class="govuk-body-s">36 hour forecast is stable</span>
-    </p>
-  </div>
-  <div class="govuk-grid-column-one-third"> 
-    <p role="text" class="govuk-!-margin-bottom-5 govuk-!-padding-top-4" style="border-top:1px solid #ccc">
-      <span class="govuk-body govuk-!-margin-bottom-0">Height</span>
-      <strong class="defra-flood-heading-l">
-        1.17m
-      </strong>
-      <span class="govuk-body-s">
-        at <time datetime="">5:30am</time> today
-      </span>
-    </p>
+  <div class="govuk-grid-column-full govuk-!-padding-0">
+    <dl class="defra-flood-statistics">
+      <div class="govuk-grid-column-one-third">
+        <div class="defra-flood-statistics__row">
+          <dt class="defra-flood-statistics__key">Status</dt>
+          <dd class="defra-flood-statistics__value">
+            <strong class="defra-flood-statistics__impact defra-flood-statistics__impact--normal">
+              Normal
+            </strong>
+            0.43m to 2.80m
+          </dd>
+        </div>
+      </div>
+      <div class="govuk-grid-column-one-third">
+        <div class="defra-flood-statistics__row">
+          <dt class="defra-flood-statistics__key">Trend</dt>
+          <dd class="defra-flood-statistics__value">
+            <strong class="defra-flood-statistics__impact">
+              Falling
+            </strong>
+            36 hour forecast is stable
+          </dd>
+        </div>
+      </div>
+      <div class="govuk-grid-column-one-third">
+        <div class="defra-flood-statistics__row">
+          <dt class="defra-flood-statistics__key">Height</dt>
+          <dd class="defra-flood-statistics__value">
+            <strong class="defra-flood-statistics__impact">
+              1.17m
+            </strong>
+            at <time datetime="">5:30am</time> today
+          </dd>
+        </div>
+      </div>   
+    </dl>
   </div>
 </div>
 <div class="govuk-grid-row">
@@ -157,9 +165,9 @@
     <dl class="govuk-summary-list govuk-summary-list--defra-flood-station govuk-!-font-size-16">
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          Location
+          Grid reference
         </dt>
-        <dd class="govuk-summary-list__value">Grid ref NY 12345 12345</dd>
+        <dd class="govuk-summary-list__value">NY 12345 12345</dd>
       </div>
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
