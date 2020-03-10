@@ -76,6 +76,9 @@
     &:focus span {
         border:0px;
     }
+    &:hover span {
+        border-color:$govuk-link-hover-colour;
+    }
 }
 .defra-button-map:before {
     content: "";
