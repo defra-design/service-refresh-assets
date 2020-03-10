@@ -83,16 +83,6 @@
   </div>
 </div>
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-full">
-    <!-- Audit 2.7 -->
-    <div class="defra-flood-status-item govuk-!-margin-bottom-8">
-      <div class="defra-flood-status-item__text">
-        <p class="govuk-body-s govuk-!-margin-bottom-0">The latest measurement is unreliable. Reasons for this include very low river levels or a technical fault with the measuring equipment.</p>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="govuk-grid-row">
   <div class="govuk-grid-column-full-width">
     <h2 class="govuk-visually-hidden">Station summary</h2>
     <dl class="defra-flood-statistics">
@@ -136,32 +126,27 @@
 </div>
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
-    <figure class="defra-line-chart" aria-hidden="true" hidden>
-      <figcaption class="govuk-heading-m govuk-!-margin-bottom-7">Height over the last 5 days and 36 hour forecast</figcaption>
-      <!-- Render with Javascript -->
-      <!-- Audit 2.9 -->
-      <div class="defra-flood-status-item govuk-!-margin-bottom-8">
-        <div class="defra-flood-status-item__text">
-          <p class="govuk-body-s govuk-!-margin-bottom-0">This station’s data feed was recently interrupted. Normal service resumed at 10:30am on Monday 1 January 2020</p>
-        </div>
-      </div>
-      <!-- Audit 2.11 -->
-      <div class="defra-flood-status-item govuk-!-margin-bottom-8">
-        <div class="defra-flood-status-item__text">
-          <p class="govuk-body-s govuk-!-margin-bottom-0">The chart will be visible once the next batch of telemetry data has been imported.</p>
-        </div>
-      </div>
-      <!-- Audit 2.12 -->
-      <div class="defra-flood-status-item govuk-!-margin-bottom-8">
-        <div class="defra-flood-status-item__text">
-          <p class="govuk-body-s govuk-!-margin-bottom-0">Sorry no data found</p>
-        </div>
-      </div>
-      <!-- End -->
-      <div id="line-chart" class="defra-line-chart__container" role="presentation"></div>
-      <p class="govuk-body-s govuk-!-margin-top-2 govuk-!-margin-bottom-0">This forecast is from a computer model. It contains uncertainty and might change.</p>
-    </figure>
-    <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-6">
+    <!-- Render with Javascript -->
+    <!-- Audit 2.9 -->
+    <div class="defra-service-error govuk-!-margin-top-7 govuk-!-margin-bottom-7">
+      <h2 class="defra-service-error__title" id="error-summary-title">
+        Data error
+      </h2>
+      <p class="govuk-body govuk-!-margin-bottom-0">
+        This station’s data feed was recently interrupted. Normal service resumed at 10:30am on Monday 1 January 2020
+      </p>
+    </div>
+    <!-- Audit 2.11
+    <div class="defra-service-error govuk-!-margin-top-7 govuk-!-margin-bottom-7">
+      <p class="govuk-body govuk-!-margin-bottom-0">The chart will be visible once the next batch of telemetry data has been imported.</p>
+    </div>
+    -->
+    <!-- Audit 2.12
+    <div class="defra-service-error govuk-!-margin-top-7 govuk-!-margin-bottom-7">
+      <p class="govuk-body govuk-!-margin-bottom-0">Sorry no data found</p>
+    </div>
+    -->
+    <!-- End Javascript render -->
     <h2 class="govuk-heading-m">How levels here could affect nearby areas</h2>
     <table class="govuk-table govuk-table--defra-flood-impact govuk-!-margin-bottom-6">
       <thead class="govuk-table__head">
