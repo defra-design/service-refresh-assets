@@ -6,8 +6,6 @@
 }
 .defra-line-chart {
     position:relative;
-    border-top:1px solid $govuk-border-colour;
-    padding-top:20px;
     @include mq ($from: tablet) {
         padding-top:30px;
         padding-bottom:15px;
