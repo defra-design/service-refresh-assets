@@ -1,0 +1,160 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  FIS-366-Errors-(draft)
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h2 class="govuk-heading-m">Requires</h2>
+    <ul class="govuk-list">
+      <li>sass/components/_line-chart.scss</li>
+      <li>sass/components/_flood-statistics.scss</li>
+      <li>sass/utilities/_tables.scss</li>
+      <li>sass/utilities/_summary-list.scss</li>
+    </ul>
+    <p><a href="https://github.com/danleech-defra/service-refresh-assets/tree/master/app/assets">See assets on Github</a></p>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h2 class="govuk-heading-m govuk-!-padding-top-6 govuk-!-padding-bottom-6">Page meta titles</h2>
+    <p>&lt;title&gt;<!-- Start -->River Aire level at Gargrave - GOV.UK<!-- End -->&lt;/title&gt;</p>
+    <p>&lt;title&gt;<!-- Start -->Sea level at Silloth - GOV.UK<!-- End -->&lt;/title&gt;</p>
+    <p>&lt;title&gt;<!-- Start -->Groundwater level at Tilshead borehole - GOV.UK<!-- End -->&lt;/title&gt;</p>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h2 class="govuk-heading-m govuk-!-padding-top-6 govuk-!-padding-bottom-6">Page content</h2>
+  </div>
+</div>
+
+<!-- Start -->
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <div class="defra-flood-status govuk-!-margin-bottom-0">
+      <div class="defra-flood-status-item defra-flood-status-item--severe">
+        <span class="defra-flood-status-item__icon">
+          <span class="govuk-visually-hidden">Severe flood warning</span>
+        </span>
+        <div class="defra-flood-status-item__text">
+          <strong>
+            <a href="">There is one severe flood warning, 4 warnings and one alert in place nearby</a>
+          </strong>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <nav id="browserBackContainer">
+      <a href="/river-and-sea-levels?river-id=river-exe" class="defra-river-nav-link">River Aire</a>
+      <button class="defra-button-map defra-button-map--small"><span>View map</span></button>
+      <!--
+      <a href="" class="defra-river-nav-link">
+        <svg role="presentation" focusable="false" class="defra-river-nav__icon" xmlns="http://www.w3.org/2000/svg" width="13" height="15" viewBox="0 0 13 15">
+          <path fill="currentColor" d="m6.5,0l-6.5,6.5l1.4,1.5l4,-4l0,10.7l2,0l0,-10.7l4.3,4l1.3,-1.6l-6.5,-6.4z"></path>
+        </svg>
+        <span>Upstream</span>
+      </a>
+      <a href="" class="defra-river-nav-link">
+          <svg role="presentation" focusable="false" class="defra-river-nav__icon" xmlns="http://www.w3.org/2000/svg" width="13" height="15" viewBox="0 0 13 15">
+            <path fill="currentColor" d="m6.5,0l-6.5,6.5l1.4,1.5l4,-4l0,10.7l2,0l0,-10.7l4.3,4l1.3,-1.6l-6.5,-6.4z" transform="rotate(180,6.5,7.5)"></path>
+          </svg>
+          <span>Downstream</span>
+      </a>
+      -->
+    </nav>
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      River Aire level at Gargrave
+    </h1>
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-inset-text govuk-!-margin-top-0">
+      This station is closed and no data is available.
+    </div>
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-inset-text govuk-!-margin-top-0">
+      This station is temporarily closed and we are working to get the station back online.
+    </div>
+  </div>
+</div>
+<p><a href="">You can check another river or sea level</a></p> 
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          View technical details about this measuring station
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <dl class="govuk-summary-list govuk-summary-list--no-border govuk-summary-list--defra-flood-station govuk-!-font-size-16">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Grid reference
+            </dt>
+            <dd class="govuk-summary-list__value">NY 12345 12345</dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Site datum
+            </dt>
+            <dd class="govuk-summary-list__value">
+              104.82<abbr title="metres above ordnance datum">mAOD</abbr>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Station name
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Gargrave
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Normal range
+            </dt>
+            <dd class="govuk-summary-list__value">
+              0.43m to 2.80m
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Station ID
+            </dt>
+            <dd class="govuk-summary-list__value">
+              8083
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </details>
+  </div>
+</div>
+<!-- End -->
+
+{% endblock %}
+
+{% block pageScripts %}
+<script src="/public/javascripts/station/core.js"></script>
+<script src="/public/javascripts/station/model.js"></script>
+<script src="/public/javascripts/station/station.js"></script>
+{% endblock %}

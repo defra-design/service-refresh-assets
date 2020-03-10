@@ -14,8 +14,11 @@ router.get('/fis-256-draft', function (req, res) {
 router.get('/fis-260-draft', function (req, res) {
   res.render('assets/fis-260-draft')
 })
-router.get('/fis-366-draft', function (req, res) {
-  res.render('assets/fis-366-draft')
+router.get('/fis-366-page-draft', function (req, res) {
+  res.render('assets/fis-366-page-draft')
+})
+router.get('/fis-366-errors-draft', function (req, res) {
+  res.render('assets/fis-366-errors-draft')
 })
 router.get('/fis-375-draft', function (req, res) {
   res.render('assets/fis-375-draft')
