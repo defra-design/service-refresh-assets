@@ -55,7 +55,7 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
     <nav id="browserBackContainer">
-      <a href="/river-and-sea-levels?river-id=river-exe" class="defra-river-nav-link">River Exe</a>
+      <a href="/river-and-sea-levels?river-id=river-exe" class="defra-river-nav-link">River Aire</a>
       <button class="defra-button-map defra-button-map--small"><span>View map</span></button>
       <!--
       <a href="" class="defra-river-nav-link">
@@ -79,6 +79,7 @@
     <h1 class="govuk-heading-xl">
       River Aire level at Gargrave
     </h1>
+    <p class="govuk-!-margin-bottom-8">This station has two measurements. View <a href="">t'other one</a></p>
     <h2 class="govuk-visually-hidden">Station summary</h2>
   </div>
 </div>
@@ -131,7 +132,6 @@
     <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-6">
     <h2 class="govuk-heading-m">How levels here could affect nearby areas</h2>
     <table class="govuk-table govuk-table--defra-flood-impact govuk-!-margin-bottom-6">
-      <caption class="govuk-table__caption govuk-visually-hidden">Months and rates</caption>
       <thead class="govuk-table__head">
         <tr class="govuk-table__row">
           <th class="govuk-table__header" scope="col">Level</th>
@@ -161,50 +161,61 @@
         </tr>     
       </tbody>
     </table>  
-    <h2 class="govuk-heading-m">Technical details about this measuring station</h2>
-    <dl class="govuk-summary-list govuk-summary-list--defra-flood-station govuk-!-font-size-16">
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Grid reference
-        </dt>
-        <dd class="govuk-summary-list__value">NY 12345 12345</dd>
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          View technical details about this measuring station
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <dl class="govuk-summary-list govuk-summary-list--defra-flood-station govuk-!-font-size-16">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Grid reference
+            </dt>
+            <dd class="govuk-summary-list__value">NY 12345 12345</dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Site datum
+            </dt>
+            <dd class="govuk-summary-list__value">
+              104.82<abbr title="metres above ordnance datum">mAOD</abbr>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Station name
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Gargrave
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Normal range
+            </dt>
+            <dd class="govuk-summary-list__value">
+              0.43m to 2.80m
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Station ID
+            </dt>
+            <dd class="govuk-summary-list__value">
+              8083
+            </dd>
+          </div>
+        </dl>
       </div>
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Site datum
-        </dt>
-        <dd class="govuk-summary-list__value">
-          104.82<a href="" class="defra-link-meta" title="What this means">mAOD</a>
-        </dd>
-      </div>
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Station name
-        </dt>
-        <dd class="govuk-summary-list__value">
-          Gargrave
-        </dd>
-      </div>
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Normal range
-        </dt>
-        <dd class="govuk-summary-list__value">
-          0.43m to 2.80m
-        </dd>
-      </div>
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Station ID
-        </dt>
-        <dd class="govuk-summary-list__value">
-          8083
-        </dd>
-      </div>
-    </dl>
+    </details>
+
+    <!--
     <p class="govuk-text govuk-!-margin-bottom-6">
       <a href="/how-river-sea-groundwater-levels-are-measured">Find out how river, sea and groundwater levels are measured</a>.    
     </p>
+    -->
   </div>
 </div>
 <!-- End -->
