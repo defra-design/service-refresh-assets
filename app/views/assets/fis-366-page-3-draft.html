@@ -1,0 +1,261 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  FIS-366-Page-(draft)
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h2 class="govuk-heading-m">Requires</h2>
+    <ul class="govuk-list">
+      <li>sass/components/_line-chart.scss</li>
+      <li>sass/components/_flood-statistics.scss</li>
+      <li>sass/utilities/_tables.scss</li>
+      <li>sass/utilities/_summary-list.scss</li>
+    </ul>
+    <p><a href="https://github.com/danleech-defra/service-refresh-assets/tree/master/app/assets">See assets on Github</a></p>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h2 class="govuk-heading-m govuk-!-padding-top-6 govuk-!-padding-bottom-6">Page meta titles</h2>
+    <p>&lt;title&gt;<!-- Start -->River Aire level at Gargrave - GOV.UK<!-- End -->&lt;/title&gt;</p>
+    <p>&lt;title&gt;<!-- Start -->Sea level at Silloth - GOV.UK<!-- End -->&lt;/title&gt;</p>
+    <p>&lt;title&gt;<!-- Start -->Groundwater level at Tilshead borehole - GOV.UK<!-- End -->&lt;/title&gt;</p>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h2 class="govuk-heading-m govuk-!-padding-top-6 govuk-!-padding-bottom-6">Page content</h2>
+  </div>
+</div>
+
+<!-- Start -->
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <nav id="browserBackContainer">
+      <a href="/river-and-sea-levels?river-id=river-exe" class="defra-river-nav-link">River Aire</a>
+      <button class="defra-button-map defra-button-map--small"><span>View map</span></button>
+      <!--
+      <a href="" class="defra-river-nav-link">
+        <svg role="presentation" focusable="false" class="defra-river-nav__icon" xmlns="http://www.w3.org/2000/svg" width="13" height="15" viewBox="0 0 13 15">
+          <path fill="currentColor" d="m6.5,0l-6.5,6.5l1.4,1.5l4,-4l0,10.7l2,0l0,-10.7l4.3,4l1.3,-1.6l-6.5,-6.4z"></path>
+        </svg>
+        <span>Upstream</span>
+      </a>
+      <a href="" class="defra-river-nav-link">
+          <svg role="presentation" focusable="false" class="defra-river-nav__icon" xmlns="http://www.w3.org/2000/svg" width="13" height="15" viewBox="0 0 13 15">
+            <path fill="currentColor" d="m6.5,0l-6.5,6.5l1.4,1.5l4,-4l0,10.7l2,0l0,-10.7l4.3,4l1.3,-1.6l-6.5,-6.4z" transform="rotate(180,6.5,7.5)"></path>
+          </svg>
+          <span>Downstream</span>
+      </a>
+      -->
+    </nav>
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <div class="defra-flood-status govuk-!-margin-bottom-4">
+      <div class="defra-flood-status-item defra-flood-status-item--severe">
+        <span class="defra-flood-status-item__icon">
+          <span class="govuk-visually-hidden">Severe flood warning</span>
+        </span>
+        <div class="defra-flood-status-item__text">
+          <strong>
+            <a href="">There is one severe flood warning, 4 warnings and one alert in place nearby</a>
+          </strong>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      River Aire level at Gargrave
+    </h1>
+    <p class="govuk-!-margin-bottom-8">This station has two measurements. View <a href="">t'other one</a></p>  
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <!-- Audit 2.7 -->
+    <div class="defra-flood-status-item govuk-!-margin-bottom-8">
+      <div class="defra-flood-status-item__text">
+        <p class="govuk-body-s govuk-!-margin-bottom-0">The latest measurement is unreliable. Reasons for this include very low river levels or a technical fault with the measuring equipment.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full-width">
+    <h2 class="govuk-visually-hidden">Station summary</h2>
+    <dl class="defra-flood-statistics">
+      <div class="govuk-grid-column-one-third">
+        <div class="defra-flood-statistics__row">
+          <dt class="defra-flood-statistics__key">Status</dt>
+          <dd class="defra-flood-statistics__value">
+            <strong class="defra-flood-statistics__impact defra-flood-statistics__impact--normal"> <!-- defra-flood-statistics__impact--high -->
+              Normal <!-- {Low/High} -->
+            </strong>
+            0.43m to 2.80m <!-- below {pc95}m / above {pc5 or ResFAL}m -->
+          </dd>
+        </div>
+      </div>
+      <!--
+      <div class="govuk-grid-column-one-third">
+        <div class="defra-flood-statistics__row">
+          <dt class="defra-flood-statistics__key">Trend</dt>
+          <dd class="defra-flood-statistics__value">
+            <strong class="defra-flood-statistics__impact">
+              Falling
+            </strong>
+            36 hour forecast is stable
+          </dd>
+        </div>
+      </div>
+      -->
+      <div class="govuk-grid-column-one-third">
+        <div class="defra-flood-statistics__row">
+          <dt class="defra-flood-statistics__key">Height</dt>
+          <dd class="defra-flood-statistics__value">
+            <strong class="defra-flood-statistics__impact">
+              1.17m
+            </strong>
+            at <time datetime="">5:30am</time> today
+          </dd>
+        </div>
+      </div>   
+    </dl>
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <figure class="defra-line-chart" aria-hidden="true" hidden>
+      <figcaption class="govuk-heading-m govuk-!-margin-bottom-7">Height over the last 5 days and 36 hour forecast</figcaption>
+      <!-- Render with Javascript -->
+      <!-- Audit 2.9 -->
+      <div class="defra-flood-status-item govuk-!-margin-bottom-8">
+        <div class="defra-flood-status-item__text">
+          <p class="govuk-body-s govuk-!-margin-bottom-0">This station’s data feed was recently interrupted. Normal service resumed at 10:30am on Monday 1 January 2020</p>
+        </div>
+      </div>
+      <!-- Audit 2.11 -->
+      <div class="defra-flood-status-item govuk-!-margin-bottom-8">
+        <div class="defra-flood-status-item__text">
+          <p class="govuk-body-s govuk-!-margin-bottom-0">The chart will be visible once the next batch of telemetry data has been imported.</p>
+        </div>
+      </div>
+      <!-- Audit 2.12 -->
+      <div class="defra-flood-status-item govuk-!-margin-bottom-8">
+        <div class="defra-flood-status-item__text">
+          <p class="govuk-body-s govuk-!-margin-bottom-0">Sorry no data found</p>
+        </div>
+      </div>
+      <!-- End -->
+      <div id="line-chart" class="defra-line-chart__container" role="presentation"></div>
+      <p class="govuk-body-s govuk-!-margin-top-2 govuk-!-margin-bottom-0">This forecast is from a computer model. It contains uncertainty and might change.</p>
+    </figure>
+    <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-6">
+    <h2 class="govuk-heading-m">How levels here could affect nearby areas</h2>
+    <table class="govuk-table govuk-table--defra-flood-impact govuk-!-margin-bottom-6">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th class="govuk-table__header" scope="col">Level</th>
+          <th class="govuk-table__header" scope="col">Description</th>
+          <th class="govuk-table__header" scope="col"></th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row" data-id="highest" data-level="5.03" data-name="Highest level on record">
+          <th class="govuk-table__header defra-table-impact__cell--numeric" scope="row">5.03m</th>
+          <td class="govuk-table__cell">Highest level on record</td>
+          <td class="govuk-table__cell"></td>
+        </tr>   
+        <tr class="govuk-table__row" data-id="1234" data-level="4.00" data-name="Flooding on River View">
+          <th class="govuk-table__header defra-table-impact__cell--numeric" scope="row" rowspan="2">4.00m</th>
+          <td class="govuk-table__cell">Flooding to properties on River View</td>
+          <td class="govuk-table__cell"></td>
+        </tr> 
+        <tr class="govuk-table__row" data-id="1235" data-level="4.00" data-name="Flooding on Water Street">
+          <td class="govuk-table__cell">Flooding to properties on Water Street</td>
+          <td class="govuk-table__cell"></td>
+        </tr> 
+        <tr class="govuk-table__row" data-id="alert" data-level="2.80" data-name="Top of normal range">
+          <th class="govuk-table__header defra-table-impact__cell--numeric" scope="row">2.80m</th>
+          <td class="govuk-table__cell">Top of normal range. Above this flooding to low-laying land is possible</td>
+          <td class="govuk-table__cell"></td>
+        </tr>     
+      </tbody>
+    </table>  
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          View technical details about this measuring station
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <dl class="govuk-summary-list govuk-summary-list--no-border govuk-summary-list--defra-flood-station govuk-!-font-size-16">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Grid reference
+            </dt>
+            <dd class="govuk-summary-list__value">NY 12345 12345</dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Site datum
+            </dt>
+            <dd class="govuk-summary-list__value">
+              104.82<abbr title="metres above ordnance datum">mAOD</abbr>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Station name
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Gargrave
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Normal range
+            </dt>
+            <dd class="govuk-summary-list__value">
+              0.43m to 2.80m
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Station ID
+            </dt>
+            <dd class="govuk-summary-list__value">
+              8083
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </details>
+
+    <!--
+    <p class="govuk-text govuk-!-margin-bottom-6">
+      <a href="/how-river-sea-groundwater-levels-are-measured">Find out how river, sea and groundwater levels are measured</a>.    
+    </p>
+    -->
+  </div>
+</div>
+<!-- End -->
+
+{% endblock %}
+
+{% block pageScripts %}
+<script src="/public/javascripts/station/core.js"></script>
+<script src="/public/javascripts/station/model.js"></script>
+<script src="/public/javascripts/station/station.js"></script>
+{% endblock %}
