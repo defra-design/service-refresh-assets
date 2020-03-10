@@ -57,15 +57,24 @@
     display:inline-block;
     padding-left:20px;
     &--small {
+        float:right;
+        margin-top:15px;
         padding-left:18px;
         @include govuk-font($size: 16);
         @include mq ($from: tablet) {
             padding-left:20px;
         }
     }
+    &--small:focus {
+        outline: 3px solid transparent;
+        box-shadow: 0 -2px #ffdd00, 0 4px #0b0c0c;
+    }
     span {
         display: inline-block;
         border-bottom:1px solid $govuk-text-colour;
+    }
+    &:focus span {
+        border:0px;
     }
 }
 .defra-button-map:before {

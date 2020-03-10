@@ -2,7 +2,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  FIS-366-Page-(draft)
+  FIS-366-Page-2-(draft)
 {% endblock %}
 
 {% block content %}
@@ -70,6 +70,30 @@
         </div>
       </div>
     </div>
+    <div class="defra-flood-status govuk-!-margin-bottom-4">
+      <div class="defra-flood-status-item defra-flood-status-item--warning">
+        <span class="defra-flood-status-item__icon">
+          <span class="govuk-visually-hidden">Flood warning</span>
+        </span>
+        <div class="defra-flood-status-item__text">
+          <strong>
+            <a href="">There is a flood warning in place nearby</a>
+          </strong>
+        </div>
+      </div>
+    </div>
+    <div class="defra-flood-status govuk-!-margin-bottom-4">
+      <div class="defra-flood-status-item defra-flood-status-item--alert">
+        <span class="defra-flood-status-item__icon">
+          <span class="govuk-visually-hidden">Flood alert</span>
+        </span>
+        <div class="defra-flood-status-item__text">
+          <strong>
+            <a href="">There are 2 flood alerts in place nearby</a>
+          </strong>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 <div class="govuk-grid-row">
@@ -99,8 +123,7 @@
       <div id="line-chart" class="defra-line-chart__container" role="presentation"></div>
       <p class="govuk-body-s govuk-!-margin-top-2 govuk-!-margin-bottom-0">This forecast is from a computer model. It contains uncertainty and might change.</p>
     </figure>
-    <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-bottom-6">
-    <h2 class="govuk-heading-m">How levels here could affect nearby areas</h2>
+    <h2 class="govuk-heading-m govuk-!-margin-top-6">How levels here could affect nearby areas</h2>
     <table class="govuk-table govuk-table--defra-flood-impact govuk-!-margin-bottom-6">
       <thead class="govuk-table__head">
         <tr class="govuk-table__row">
@@ -131,7 +154,7 @@
         </tr>     
       </tbody>
     </table>  
-    <details class="govuk-details govuk-!-font-size-16" data-module="govuk-details">
+    <details class="govuk-details" data-module="govuk-details">
       <summary class="govuk-details__summary">
         <span class="govuk-details__summary-text">
           View technical details about this measuring station
