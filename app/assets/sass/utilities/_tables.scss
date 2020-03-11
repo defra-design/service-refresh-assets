@@ -1,9 +1,0 @@
-.govuk-table--defra-flood-impact {
-    @include govuk-font($size: 16);
-    thead tr th:first-child {
-        width:20%;
-    }
-    &__cell--numeric {
-        @include govuk-font($size: false, $tabular: true, $weight: bold);
-    }
-}

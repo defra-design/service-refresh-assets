@@ -42,7 +42,7 @@
     <nav class="defra-flood-nav" id="browserBackContainer">
       <a href="/river-and-sea-levels?river-id=river-exe" class="defra-flood-nav__link">River Aire</a>
       <!-- Outout with Javascript -->
-      <button class="defra-button-map defra-button-map--small"><span>View on map</span></button>
+      <button class="defra-button-map-s"><span>View on map</span></button>
       <!-- Javascript end -->
       <!--
       <a href="" class="defra-river-nav-link">
@@ -112,7 +112,7 @@
       <p class="govuk-body-s govuk-!-margin-top-2 govuk-!-margin-bottom-0">This forecast is from a computer model. It contains uncertainty and might change.</p>
     </figure>
     <h2 class="govuk-heading-m govuk-!-margin-top-6">How levels here could affect nearby areas</h2>
-    <table class="govuk-table govuk-table--defra-flood-impact govuk-!-margin-bottom-6">
+    <table class="defra-table-flood-impact govuk-!-margin-bottom-6">
       <thead class="govuk-table__head">
         <tr class="govuk-table__row">
           <th class="govuk-table__header" scope="col">Level</th>
@@ -128,13 +128,18 @@
         </tr>   
         <tr class="govuk-table__row" data-id="1234" data-level="4.00" data-name="Flooding on River View">
           <th class="govuk-table__header defra-table-impact__cell--numeric" scope="row" rowspan="2">4.00m</th>
-          <td class="govuk-table__cell">Flooding to properties on River View</td>
+          <td class="govuk-table__cell">Historic impact: Flooding to properties on River View</td>
           <td class="govuk-table__cell"></td>
         </tr> 
         <tr class="govuk-table__row" data-id="1235" data-level="4.00" data-name="Flooding on Water Street">
-          <td class="govuk-table__cell">Flooding to properties on Water Street</td>
+          <td class="govuk-table__cell">Historic impact: Flooding to properties on Water Street</td>
           <td class="govuk-table__cell"></td>
         </tr> 
+        <tr class="govuk-table__row" data-id="1235" data-level="4.00" data-name="Flooding on Water Street">
+          <th class="govuk-table__header defra-table-impact__cell--numeric" scope="row">3.80m</th>
+          <td class="govuk-table__cell">Operational: Flood warning may be issued for Severn Estuary from Sharpness to Oldbury-on-Severn, Shepperdine and Oldbury Power Station areas</td>
+          <td class="govuk-table__cell"></td>
+        </tr>
         <tr class="govuk-table__row" data-id="alert" data-level="2.80" data-name="Top of normal range">
           <th class="govuk-table__header defra-table-impact__cell--numeric" scope="row">2.80m</th>
           <td class="govuk-table__cell">Top of normal range. Above this flooding to low-laying land is possible</td>
