@@ -70,7 +70,7 @@
     margin-bottom:10px;
     &__count {
         @extend .govuk-body;
-        @include govuk-responsive-margin(2, 'bottom');
+        @include govuk-responsive-margin(1, 'bottom');
     }
     .defra-button-map-s {
         position:absolute;

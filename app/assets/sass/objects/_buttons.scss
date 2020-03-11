@@ -65,11 +65,8 @@
         @extend .defra-button-map;
         text-decoration: none;
         color: $govuk-text-colour;
-        padding-left:18px;
+        padding-left:20px;
         @include govuk-font($size: 16);
-        @include mq ($from: tablet) {
-            padding-left:20px;
-        }
     }
     &-s:before {
         top:-1px;
