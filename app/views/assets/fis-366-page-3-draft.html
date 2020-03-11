@@ -112,6 +112,19 @@
       <p class="govuk-body govuk-!-margin-bottom-0">There is no data.</p>
     </div>
     <!-- End Javascript render -->
+    <!-- Audit 2.14 Render in Markup if none of the above are true -->
+    <!--<noscript>-->
+      <div class="defra-service-error govuk-!-margin-top-6">
+        <p class="govuk-body govuk-!-margin-bottom-0">A chart is a availble with Javascript enabled.</p>
+      </div>
+    <!--</noscript>-->
+    <!-- End markup render -->
+    <!-- Audit 2.13 Render with Javascript if none of above are true and old browser detected -->
+    <div class="defra-service-error govuk-!-margin-top-6" aria-hidden="true">
+      <p class="govuk-body">You should <a href="https://www.gov.uk/help/browsers">upgrade your web browser</a> (the software you use to access the internet) as it's out of date.</p>
+      <p>A chart is a vailable with an uptodate browser.</p>
+    </div>
+    <!-- End Javascript render -->
     <h2 class="govuk-heading-m govuk-!-margin-top-6">How levels here could affect nearby areas</h2>
     <table class="govuk-table govuk-table--defra-flood-impact govuk-!-margin-bottom-6">
       <thead class="govuk-table__head">
