@@ -42,5 +42,8 @@ $govuk-images-path: '/public/images/';
 @import "components/updated";
 @import "components/service-error";
 
+// Tools
+@import "utilities/summary-list";
+
 // Utilities
 @import "utilities/summary-list";
