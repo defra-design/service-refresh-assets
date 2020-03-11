@@ -13,6 +13,7 @@
     <ul class="govuk-list">
       <li>sass/components/_line-chart.scss</li>
       <li>sass/components/_flood-statistics.scss</li>
+      <li>sass/components/_flood-nav.scss</li>
       <li>sass/utilities/_tables.scss</li>
       <li>sass/utilities/_summary-list.scss</li>
     </ul>
@@ -38,24 +39,14 @@
 <!-- Start -->
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
-    <nav id="browserBackContainer">
-      <a href="/river-and-sea-levels?river-id=river-exe" class="defra-river-nav-link">River Aire</a>
-      <button class="defra-button-map defra-button-map--small"><span>View map</span></button>
-      <!--
-      <a href="" class="defra-river-nav-link">
-        <svg role="presentation" focusable="false" class="defra-river-nav__icon" xmlns="http://www.w3.org/2000/svg" width="13" height="15" viewBox="0 0 13 15">
-          <path fill="currentColor" d="m6.5,0l-6.5,6.5l1.4,1.5l4,-4l0,10.7l2,0l0,-10.7l4.3,4l1.3,-1.6l-6.5,-6.4z"></path>
-        </svg>
-        <span>Upstream</span>
-      </a>
-      <a href="" class="defra-river-nav-link">
-          <svg role="presentation" focusable="false" class="defra-river-nav__icon" xmlns="http://www.w3.org/2000/svg" width="13" height="15" viewBox="0 0 13 15">
-            <path fill="currentColor" d="m6.5,0l-6.5,6.5l1.4,1.5l4,-4l0,10.7l2,0l0,-10.7l4.3,4l1.3,-1.6l-6.5,-6.4z" transform="rotate(180,6.5,7.5)"></path>
-          </svg>
-          <span>Downstream</span>
-      </a>
-      -->
-    </nav>
+    <div class="govuk-grid-column-full">
+      <nav class="defra-flood-nav" id="browserBackContainer">
+        <a href="/river-and-sea-levels?river-id=river-exe" class="defra-flood-nav__link">River Aire</a>
+        <!-- Outout with Javascript -->
+        <button class="defra-button-map defra-button-map--small"><span>View on map</span></button>
+        <!-- Javascript end -->
+      </nav>
+    </div>
   </div>
 </div>
 <div class="govuk-grid-row">
