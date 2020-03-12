@@ -1,0 +1,37 @@
+.defra-flood-impact-list {
+    @include govuk-font($size: 19);
+    &__row {
+        position:relative;
+        border-bottom:1px solid $govuk-border-colour;
+    }
+    &__key {
+        position:absolute;
+        left:0px;
+        top:0px;
+        margin-top:10px;
+        @include govuk-font($size: false, $tabular: true, $weight: bold);
+        width:20%;
+    }
+    &__value {
+        position:relative;
+        margin:0px;
+        padding: 10px 20% 10px 0;
+        margin-left: 20%;
+        border-bottom:1px solid $govuk-border-colour;
+    }
+    &__value:last-child {
+        border-bottom:0px;
+    }
+    &__action {
+        position:absolute;
+        right:0px;
+        top:1px;
+        margin-top:10px;
+    }
+    &__historic {
+        color: $govuk-secondary-text-colour;
+    }
+    .defra-button-text-s {
+        display:block;
+    }
+}
