@@ -43,4 +43,26 @@
     .defra-button-text-s {
         display:block;
     }
+    &__row--current {
+        border-bottom:3px solid $govuk-border-colour;
+        padding-top:10px;
+        margin-bottom:5px;
+        top:-2px;
+        background-color:white;
+    }
+    &__row--current .defra-flood-impact-list__key {
+        display:none;
+    }
+    &__row--current .defra-flood-impact-list__value {
+        position: absolute;
+        top:-9px;
+        padding-right:0.5em;
+        background-color:white;
+        width:auto;
+        @include govuk-font($size: 16);
+        margin-left:0;
+    }
+    &__row--current .defra-flood-impact-list__value:before {
+        content:'2.85m';
+    }
 }
