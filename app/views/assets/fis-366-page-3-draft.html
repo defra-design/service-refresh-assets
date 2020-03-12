@@ -125,38 +125,27 @@
       <p>A chart is a vailable with an uptodate browser.</p>
     </div>
     <!-- End Javascript render -->
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
     <h2 class="govuk-heading-m govuk-!-margin-top-6">How levels here could affect nearby areas</h2>
-    <table class="defra-table-flood-impact govuk-!-margin-bottom-6">
-      <thead class="govuk-table__head">
-        <tr class="govuk-table__row">
-          <th class="govuk-table__header" scope="col">Level</th>
-          <th class="govuk-table__header" scope="col">Description</th>
-          <th class="govuk-table__header" scope="col"></th>
-        </tr>
-      </thead>
-      <tbody class="govuk-table__body">
-        <tr class="govuk-table__row" data-id="highest" data-level="5.03" data-name="Highest level on record">
-          <th class="govuk-table__header defra-table-impact__cell--numeric" scope="row">5.03m</th>
-          <td class="govuk-table__cell">Highest level on record</td>
-          <td class="govuk-table__cell"></td>
-        </tr>   
-        <tr class="govuk-table__row" data-id="1234" data-level="4.00" data-name="Flooding on River View">
-          <th class="govuk-table__header defra-table-impact__cell--numeric" scope="row" rowspan="2">4.00m</th>
-          <td class="govuk-table__cell">Flooding to properties on River View</td>
-          <td class="govuk-table__cell"></td>
-        </tr> 
-        <tr class="govuk-table__row" data-id="1235" data-level="4.00" data-name="Flooding on Water Street">
-          <td class="govuk-table__cell">Flooding to properties on Water Street</td>
-          <td class="govuk-table__cell"></td>
-        </tr> 
-        <tr class="govuk-table__row" data-id="alert" data-level="2.80" data-name="Top of normal range">
-          <th class="govuk-table__header defra-table-impact__cell--numeric" scope="row">2.80m</th>
-          <td class="govuk-table__cell">Top of normal range. Above this flooding to low-laying land is possible</td>
-          <td class="govuk-table__cell"></td>
-        </tr>     
-      </tbody>
-    </table>  
-    <details class="govuk-details" data-module="govuk-details">
+    <dl class="defra-flood-impact-list govuk-!-margin-bottom-0">
+      <div class="defra-flood-impact-list__row">
+        <dt class="defra-flood-impact-list__key">
+          5.03m
+        </dt>
+        <dd class="defra-flood-impact-list__value" data-id="highest" data-level="5.03" data-name="Highest level on record">
+          Water reaches the highest level recorded at this measuring station
+          <span class="defra-flood-impact-list__action"></span>
+        </dd>
+      </div>
+    </dl> 
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <details class="govuk-details govuk-!-margin-top-6" data-module="govuk-details">
       <summary class="govuk-details__summary">
         <span class="govuk-details__summary-text">
           View technical details about this measuring station
@@ -205,7 +194,6 @@
         </dl>
       </div>
     </details>
-
     <!--
     <p class="govuk-text govuk-!-margin-bottom-6">
       <a href="/how-river-sea-groundwater-levels-are-measured">Find out how river, sea and groundwater levels are measured</a>.    
