@@ -16,11 +16,11 @@
     }
     &__value {
         position:relative;
-        margin:0 0 0 30px;
-        padding: 10px 0 10px 0;
+        margin:0;
+        padding: 10px 30px 10px 0;
         @include mq ($from: tablet) {
-            margin-left: 20%;
-            padding-right: 20%;
+            margin-left: 13%;
+            padding-right: 28%;
         }
         border-bottom:1px solid $govuk-border-colour;
     }
@@ -66,7 +66,7 @@
         background-color:white;
         @include mq ($from: tablet) {
             top:11px;
-            left:20%;
+            left:13%;
             width:auto;
             margin-left:-0.5em;
             padding-left:0.5em;
@@ -84,7 +84,7 @@
         position:absolute;
         width:20px;
         height:20px;
-        left:-30px;
+        right:0;
         top:10px;
         background-image: svg-url('<svg width="24" height="24" viewBox="0 0 24 24"><path d="M1.5,24c-0.828,0 -1.5,-0.672 -1.5,-1.5c0,-0.241 0.057,-0.469 0.158,-0.671l10.5,-21c0.247,-0.491 0.755,-0.829 1.342,-0.829c0.587,0 1.095,0.338 1.342,0.829l10.5,21c0.101,0.202 0.158,0.43 0.158,0.671c0,0.828 -0.672,1.5 -1.5,1.5l-21,0" style="fill:#f18700;"/><path d="M2.309,22l19.382,0l-9.691,-19.382l-9.691,19.382Z" style="fill:#fff;"/><path d="M15.376,14.996l1.045,0l-4.433,-5.069l-1.708,1.964l0,-0.794l-1.015,0l0,1.96l-1.686,1.939l1.026,0l0,3.504l6.771,0l0,-3.504Z" style="fill:#181c1b;"/><path d="M19.323,19.5l-14.646,0l-0.75,1.5l16.146,0l-0.75,-1.5Z" style="fill:#00a4cd;"/></svg>');
         background-size: 20px 20px;
@@ -94,7 +94,7 @@
             width:24px;
             height:24px;
             background-size: 24px 24px;
-            left:-35px;
+            right:20%;
         }
     }
     &__warning {
