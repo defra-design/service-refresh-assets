@@ -44,27 +44,13 @@
       <!-- Outout with Javascript -->
       <button class="defra-button-map-s"><span>View map</span></button>
       <!-- Javascript end -->
-      <!--
-      <a href="" class="defra-river-nav-link">
-        <svg role="presentation" focusable="false" class="defra-river-nav__icon" xmlns="http://www.w3.org/2000/svg" width="13" height="15" viewBox="0 0 13 15">
-          <path fill="currentColor" d="m6.5,0l-6.5,6.5l1.4,1.5l4,-4l0,10.7l2,0l0,-10.7l4.3,4l1.3,-1.6l-6.5,-6.4z"></path>
-        </svg>
-        <span>Upstream</span>
-      </a>
-      <a href="" class="defra-river-nav-link">
-          <svg role="presentation" focusable="false" class="defra-river-nav__icon" xmlns="http://www.w3.org/2000/svg" width="13" height="15" viewBox="0 0 13 15">
-            <path fill="currentColor" d="m6.5,0l-6.5,6.5l1.4,1.5l4,-4l0,10.7l2,0l0,-10.7l4.3,4l1.3,-1.6l-6.5,-6.4z" transform="rotate(180,6.5,7.5)"></path>
-          </svg>
-          <span>Downstream</span>
-      </a>
-      -->
     </nav>
   </div>
 </div>
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <h1 class="govuk-heading-xl">
-      River Aire level at Gargrave
+      River Aire level <!-- upstream/downstream --> at Gargrave
     </h1>
   </div>
 </div>
@@ -73,15 +59,18 @@
     <h2 class="govuk-visually-hidden">Station summary</h2>
     <div class="defra-flood-statistics">
       <dl class="defra-flood-statistics__list">
-        <div class="defra-flood-statistics__row">
+        <!-- If station has latest level and pc5 and pc95 -->
+        <div class="defra-flood-statistics__row"> 
           <dt class="defra-flood-statistics__key">Status</dt>
           <dd class="defra-flood-statistics__value">
             <strong class="defra-flood-statistics__impact defra-flood-statistics__impact--normal"> <!-- defra-flood-statistics__impact--high -->
-              Normal <!-- {Low/High} -->
+              Normal <!-- {Low / High} -->
             </strong>
-            0.43m to 2.80m <!-- below {pc95}m / above {pc5 or ResFAL}m -->
+            0.43m to 2.80m <!-- if low then 'below {pc95}m', if high then 'above {pc5}m' -->
           </dd>
         </div>
+        <!-- end station has pc5 and pc95 -->
+        <!-- Exclude from MVP
         <div class="defra-flood-statistics__row">
           <dt class="defra-flood-statistics__key">Trend</dt>
           <dd class="defra-flood-statistics__value">
@@ -91,13 +80,14 @@
             36 hour forecast: stable
           </dd>
         </div>
+        end exclude -->
         <div class="defra-flood-statistics__row">
           <dt class="defra-flood-statistics__key">Height</dt>
           <dd class="defra-flood-statistics__value">
             <strong class="defra-flood-statistics__impact">
               1.17m
             </strong>
-            at <time datetime="">5:30am</time> today
+            at <time datetime="">5:30am</time> today <!-- yesterday / on 1 Jan 1970 -->
           </dd>
         </div>
       </dl>
@@ -107,11 +97,12 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
     <figure class="defra-line-chart" aria-hidden="true" hidden>
-      <figcaption class="govuk-heading-m govuk-!-margin-bottom-7">Height over the last 5 days and 36 hour forecast</figcaption>
+      <figcaption class="govuk-heading-m govuk-!-margin-bottom-7">Height over the last 5 days <!-- if ffoi add 'and 36 hour forecast' --></figcaption>
       <div id="line-chart" class="defra-line-chart__container" role="presentation"></div>
     </figure>
   </div>
 </div>
+<!-- If station has at least one threshold or impact -->
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
     <h2 class="govuk-heading-m govuk-!-margin-top-6">How levels here could affect nearby areas</h2>
@@ -120,8 +111,9 @@
         <dt class="defra-flood-impact-list__key">
           5.03m
         </dt>
-        <dd class="defra-flood-impact-list__value" data-id="highest" data-level="5.03" data-name="Highest level on record">
-          Water reaches the highest recorded level at this measuring station
+        <dd class="defra-flood-impact-list__value" data-id="highest" data-level="5.03" data-name="Highest level on record"> <!-- unique id and short name -->
+          Water reaches the highest recorded level at this measuring station <!-- impact, threshold or target area name -->
+          <!-- placeholder for chart button, rendered with javascript -->
           <span class="defra-flood-impact-list__action"></span>
         </dd>
       </div>
@@ -130,10 +122,10 @@
           4.00m
         </dt>
         <dd class="defra-flood-impact-list__value" data-id="1234" data-level="4.00" data-name="Flooding on River View">
-          <span class="">Past impact: flooding to properties on River View</span>
+          <span class="">Past impact: flooding to properties on River View</span> <!-- impacts are prefixed with 'Past impact: ' first letter lowercase if poss :-) -->
           <span class="defra-flood-impact-list__action"></span>
         </dd>
-        <dd class="defra-flood-impact-list__value" data-id="1235" data-level="4.00" data-name="Flooding on Water Street">
+        <dd class="defra-flood-impact-list__value" data-id="1235" data-level="4.00" data-name="Flooding on Water Street"><!-- Items grouped by level use dd element -->
           <span class="">Past impact: flooding to properties on Water Street</span>
           <span class="defra-flood-impact-list__action"></span>
         </dd>
@@ -144,22 +136,26 @@
         </dt>
         <dd class="defra-flood-impact-list__value" data-id="1236" data-level="3.80" data-name="Possible flood warning">
           A flood warning may be issued for <a href="">Severn Estuary from Sharpness to Oldbury-on-Severn, Shepperdine and Oldbury Power Station areas</a>
-          <span class="defra-flood-impact-list__warning" title="Flood warning has been issued">!</span>
+          <!-- If this target area has a severe, warning or alert in place add element with appropriate class and title attributes -->
+          <span class="defra-flood-impact-list__severe" title="Severe flood warning has been issued">!</span> <!-- defra-flood-impact-list__alert or defra-flood-impact-list__warning -->
+          <!-- end severe, warning or alert in place -->
           <span class="defra-flood-impact-list__action"></span>
         </dd>
       </div>
-      <div class="defra-flood-impact-list__row defra-flood-impact-list__row--current">
+      <!-- If station has a latest value insert this row in level order -->
+      <div class="defra-flood-impact-list__row defra-flood-impact-list__row--current" aria-hidden="true">
         <dt class="defra-flood-impact-list__key">
           2.85m
         </dt>
-        <dd class="defra-flood-impact-list__value" data-level="2.85">
+        <dd class="defra-flood-impact-list__value" data-level="2.85"> <!-- data-level uses latest value -->
           Latest level
           <span class="defra-flood-impact-list__action"></span>
         </dd>
       </div>
+      <!-- end station has a latest value -->
       <div class="defra-flood-impact-list__row">
         <dt class="defra-flood-impact-list__key">
-          2.80m
+          2.80m <span class="govuk-visually-hidden">(Level exceeded)</span> <!-- Add span to all levels that have been exceed by latest value -->
         </dt>
         <dd class="defra-flood-impact-list__value" data-id="alert" data-level="2.80" data-name="Possible flood alert">
           A flood alert may be issued for <a href="">Coast from Fleetwood to Blackpool</a>
@@ -169,7 +165,7 @@
       </div>
       <div class="defra-flood-impact-list__row">
         <dt class="defra-flood-impact-list__key">
-          2.80m
+          2.80m <span class="govuk-visually-hidden">(Level exceeded)</span>
         </dt>
         <dd class="defra-flood-impact-list__value" data-id="pc95" data-level="2.80" data-name="Top of typical range">
           This is the top of the normal range. Flooding to low lying land is possible above this level.
@@ -180,6 +176,7 @@
     <p class="govuk-body-s govuk-!-margin-top-3 govuk-!-margin-bottom-0">Past impacts might not happen at the same level if flood defences have been put in place since then.</p>
   </div>
 </div>
+<!-- end station has at least one threshold or impact -->
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
     <details class="govuk-details govuk-!-margin-top-6" data-module="govuk-details">
