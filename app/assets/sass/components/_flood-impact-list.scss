@@ -60,12 +60,12 @@
         text-align:center;
         top:2px;
         left:50%;
-        margin-left:-5.5em;
-        width:11em;
+        margin-left:-5em;
+        width:10em;
         padding:0;
         background-color:white;
         @include mq ($from: tablet) {
-            top:6px;
+            top:11px;
             left:20%;
             width:auto;
             margin-left:-0.5em;
