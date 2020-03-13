@@ -2,7 +2,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  FIS-366-Page-2-(draft)
+  FIS-366-Page-3-(v1)
 {% endblock %}
 
 {% block content %}
@@ -23,6 +23,13 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
+    <h2 class="govuk-heading-m govuk-!-padding-top-6 govuk-!-padding-bottom-6">Page meta titles</h2>
+    <p>&lt;title&gt;<!-- Start -->River Aire level upstream at Gargrave - GOV.UK<!-- End -->&lt;/title&gt;</p>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
     <h2 class="govuk-heading-m govuk-!-padding-top-6 govuk-!-padding-bottom-6">Page content</h2>
   </div>
 </div>
@@ -34,88 +41,94 @@
       <a href="/river-and-sea-levels?river-id=river-exe" class="defra-flood-nav__link">River Aire</a>
       <!-- Outout with Javascript -->
       <button class="defra-button-map-s"><span>View map</span></button>
-      <!-- Javascript end -->    
+      <!-- Javascript end -->
     </nav>
   </div>
 </div>
-<!-- Common component for later sprint
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-full">
-    <div class="defra-flood-status govuk-!-margin-bottom-4">
-      <div class="defra-flood-status-item defra-flood-status-item--severe">
-        <span class="defra-flood-status-item__icon">
-          <span class="govuk-visually-hidden">Severe flood warning</span>
-        </span>
-        <div class="defra-flood-status-item__text">
-          <strong>
-            <a href="">There is 1 severe flood warning, 4 warnings and 1 alert in place nearby</a>
-          </strong>
-        </div>
-      </div>
-    </div>
-    <div class="defra-flood-status govuk-!-margin-bottom-4">
-      <div class="defra-flood-status-item defra-flood-status-item--warning">
-        <span class="defra-flood-status-item__icon">
-          <span class="govuk-visually-hidden">Flood warning</span>
-        </span>
-        <div class="defra-flood-status-item__text">
-          <strong>
-            <a href="">There is a flood warning in place nearby</a>
-          </strong>
-        </div>
-      </div>
-    </div>
-    <div class="defra-flood-status govuk-!-margin-bottom-4">
-      <div class="defra-flood-status-item defra-flood-status-item--alert">
-        <span class="defra-flood-status-item__icon">
-          <span class="govuk-visually-hidden">Flood alert</span>
-        </span>
-        <div class="defra-flood-status-item__text">
-          <strong>
-            <a href="">There are 2 flood alerts in place nearby</a>
-          </strong>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-end common component for later sprint -->
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <h1 class="govuk-heading-xl">
-      River Aire level at Gargrave
+      River Aire level upstream at Gargrave <!-- if station is multi insert upstream or downstream bewteen level and at -->
     </h1>
   </div>
 </div>
-<!-- (Audit 2.7) If latest measurement is 'unreliable' show instead of station statistics -->
+<!-- If station is multi -->
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
-    <div class="defra-service-error govuk-!-margin-bottom-4">
-      <h2 class="defra-service-error__title" id="error-summary-title">
-        Sorry, there's a problem with the latest measurement
-      </h2>
-      <p class="govuk-body govuk-!-margin-bottom-0">
-        The latest measurement is unreliable. This could be due to something like very low river levels, or a fault with the measuring equipment.
-      </p>
+    <p class="govuk-!-margin-bottom-8">There are 2 different levels here. You are viewing the upstream level. <a href="">View the downstream level.</a></p> <!-- use upstream or downstream accordingley -->
+  </div>
+</div>
+<!-- end station is multi -->
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h2 class="govuk-visually-hidden">Station summary</h2>
+    <div class="defra-flood-statistics">
+      <dl class="defra-flood-statistics__list">
+        <div class="defra-flood-statistics__row">
+          <dt class="defra-flood-statistics__key">Status</dt>
+          <dd class="defra-flood-statistics__value">
+            <strong class="defra-flood-statistics__impact defra-flood-statistics__impact--high"> <!-- defra-flood-statistics__impact--high -->
+              High <!-- {Low/High} -->
+            </strong>
+            Above 2.80m <!-- below {pc95}m / above {pc5 or ResFAL}m -->
+          </dd>
+        </div>
+        <!--
+        <div class="defra-flood-statistics__row">
+          <dt class="defra-flood-statistics__key">Trend</dt>
+          <dd class="defra-flood-statistics__value">
+            <strong class="defra-flood-statistics__impact">
+              Falling
+            </strong>
+            36 hour forecast: stable
+          </dd>
+        </div>
+        -->
+        <div class="defra-flood-statistics__row">
+          <dt class="defra-flood-statistics__key">Height</dt>
+          <dd class="defra-flood-statistics__value">
+            <strong class="defra-flood-statistics__impact">
+              2.95m
+            </strong>
+            at <time datetime="">5:30am</time> today
+          </dd>
+        </div>
+      </dl>
     </div>
   </div>
 </div>
-<!-- end latest measurement is unreliable -->
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
-    <figure class="defra-line-chart" aria-hidden="true" hidden>
-      <figcaption class="govuk-heading-m govuk-!-margin-bottom-7">Height over the last 5 days and 36 hour forecast</figcaption>
-      <div id="line-chart" class="defra-line-chart__container" role="presentation"></div>
-      <!-- Show if latest level is more than 1 hour old -->
-      <p class="govuk-body-s govuk-!-margin-top-2 govuk-!-margin-bottom-0">We take measurements more often when the risk of flooding is high.</p>
-      <!-- end latest level is more than 1 hour old-->
-      <!-- Show if river level and station has one or more negative values -->
-      <p class="govuk-body-s govuk-!-margin-top-2 govuk-!-margin-bottom-0">Levels that are very low or below 0 meters are normal for some stations.</p>
-      <!-- end river level and has negative values -->
-      <!-- Show if ffoi sation -->
-      <p class="govuk-body-s govuk-!-margin-top-2 govuk-!-margin-bottom-0">This forecast is from a computer model. It has some uncertainty and might change.</p>
-      <!-- end ffoi station -->
-    </figure>
+    <!-- Render with Javascript -->
+    <!-- (Audit 2.9) show if feed was interputed-->
+    <div class="defra-service-error govuk-!-margin-top-6">
+      <h2 class="defra-service-error__title" id="error-summary-title">Sorry, this data feed was interrupted</h2>
+      <p class="govuk-body govuk-!-margin-bottom-0">
+        Normal service resumed at 10:30am on Monday 1 January 2020. <!-- Time and date feed was resumed -->
+      </p>
+    </div>
+    <!-- (Audit 2.11) show if data out of date -->
+    <div class="defra-service-error govuk-!-margin-top-6">
+      <h2 class="defra-service-error__title" id="error-summary-title">Sorry, there is currently a problem displaying a chart</h2>
+      <p class="govuk-body govuk-!-margin-bottom-0">There is no recent data.</p>
+    </div>
+    <!-- (Audit 2.12) show if no data feed -->
+    <div class="defra-service-error govuk-!-margin-top-6">
+      <h2 class="defra-service-error__title" id="error-summary-title">Sorry, there is currently a problem displaying a chart</h2>
+      <p class="govuk-body govuk-!-margin-bottom-0">There is no data.</p>
+    </div>
+    <!-- end render with Javascript -->
+    <!-- Removed from requirements
+    <noscript>
+      <div class="defra-service-error govuk-!-margin-top-6">
+        <p class="govuk-body govuk-!-margin-bottom-0">A chart will show here if Javascript is available.</p>
+      </div>
+    </noscript>
+    <div class="defra-service-error govuk-!-margin-top-6" aria-hidden="true">
+      <p class="govuk-body">You should <a href="https://www.gov.uk/help/browsers">upgrade your web browser</a> (the software you use to access the internet) as it's out of date.</p>
+      <p>A chart will display here if you update your browser.</p>
+    </div>
+    end removed from requirtements -->
   </div>
 </div>
 <div class="govuk-grid-row">
@@ -128,6 +141,15 @@ end common component for later sprint -->
         </dt>
         <dd class="defra-flood-impact-list__value" data-id="highest" data-level="5.03" data-name="Highest level on record">
           Water reaches the highest level recorded at this measuring station
+          <span class="defra-flood-impact-list__action"></span>
+        </dd>
+      </div>
+      <div class="defra-flood-impact-list__row defra-flood-impact-list__row--current">
+        <dt class="defra-flood-impact-list__key">
+          2.95m
+        </dt>
+        <dd class="defra-flood-impact-list__value" data-level="2.95">
+          Current level
           <span class="defra-flood-impact-list__action"></span>
         </dd>
       </div>
@@ -185,11 +207,6 @@ end common component for later sprint -->
         </dl>
       </div>
     </details>
-    <!--
-    <p class="govuk-text govuk-!-margin-bottom-6">
-      <a href="/how-river-sea-groundwater-levels-are-measured">Find out how river, sea and groundwater levels are measured</a>.    
-    </p>
-    -->
   </div>
 </div>
 <!-- End -->
