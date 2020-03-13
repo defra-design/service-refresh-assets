@@ -11,9 +11,9 @@
   <div class="govuk-grid-column-two-thirds">
     <h2 class="govuk-heading-m">Requires</h2>
     <ul class="govuk-list">
-      <li>sass/components/_line-chart.scss</li>
-      <li>sass/components/_flood-statistics.scss</li>
       <li>sass/components/_flood-nav.scss</li>
+      <li>sass/components/_flood-statistics.scss</li>
+      <li>sass/components/_line-chart.scss</li>
       <li>sass/utilities/_flood-impact-list.scss</li>
       <li>sass/utilities/_summary-list.scss</li>
     </ul>
@@ -197,7 +197,9 @@ end common component for later sprint -->
 {% endblock %}
 
 {% block pageScripts %}
+<!-- Only used for visualising the chart in the assets resource  -->
 <script src="/public/javascripts/station/core.js"></script>
 <script src="/public/javascripts/station/model.js"></script>
 <script src="/public/javascripts/station/station.js"></script>
+<!-- end assets resource only -->
 {% endblock %}

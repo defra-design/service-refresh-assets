@@ -47,8 +47,8 @@
         top:-2px;
         background-color:white;
         @include mq ($from: tablet) {
-            padding-top:15px;
-            margin-bottom:10px;
+            padding-top:20px;
+            margin-bottom:15px;
         }
     }
     &__row--current .defra-flood-impact-list__key {
