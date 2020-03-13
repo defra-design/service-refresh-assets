@@ -38,6 +38,7 @@
     </nav>
   </div>
 </div>
+<!-- Common component for later sprint
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
     <div class="defra-flood-status govuk-!-margin-bottom-4">
@@ -78,6 +79,7 @@
     </div>
   </div>
 </div>
+end common component for later sprint -->
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <h1 class="govuk-heading-xl">
@@ -85,9 +87,9 @@
     </h1>
   </div>
 </div>
+<!-- (Audit 2.7) If latest measurement is 'unreliable' show instead of station statistics -->
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
-    <!-- Audit 2.7 -->
     <div class="defra-service-error govuk-!-margin-bottom-4">
       <h2 class="defra-service-error__title" id="error-summary-title">
         Sorry, there's a problem with the latest measurement
@@ -98,14 +100,21 @@
     </div>
   </div>
 </div>
+<!-- end latest measurement is unreliable -->
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
     <figure class="defra-line-chart" aria-hidden="true" hidden>
       <figcaption class="govuk-heading-m govuk-!-margin-bottom-7">Height over the last 5 days and 36 hour forecast</figcaption>
       <div id="line-chart" class="defra-line-chart__container" role="presentation"></div>
+      <!-- Show if latest level is more than 1 hour old -->
       <p class="govuk-body-s govuk-!-margin-top-2 govuk-!-margin-bottom-0">We take measurements more often when the risk of flooding is high.</p>
+      <!-- end latest level is more than 1 hour old-->
+      <!-- Show if river level and station has one or more negative values -->
       <p class="govuk-body-s govuk-!-margin-top-2 govuk-!-margin-bottom-0">Levels that are very low or below 0 meters are normal for some stations.</p>
+      <!-- end river level and has negative values -->
+      <!-- Show if ffoi sation -->
       <p class="govuk-body-s govuk-!-margin-top-2 govuk-!-margin-bottom-0">This forecast is from a computer model. It has some uncertainty and might change.</p>
+      <!-- end ffoi station -->
     </figure>
   </div>
 </div>

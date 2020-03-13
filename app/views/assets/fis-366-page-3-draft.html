@@ -48,15 +48,17 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <h1 class="govuk-heading-xl">
-      River Aire level upstream at Gargrave
+      River Aire level upstream at Gargrave <!-- if station is multi insert upstream or downstream bewteen level and at -->
     </h1>
   </div>
 </div>
+<!-- If station is multi -->
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
-    <p class="govuk-!-margin-bottom-8">There are 2 different levels here. You are viewing the upstream level. <a href="">View the downstream level.</a></p>  
+    <p class="govuk-!-margin-bottom-8">There are 2 different levels here. You are viewing the upstream level. <a href="">View the downstream level.</a></p> <!-- use upstream or downstream accordingley -->
   </div>
 </div>
+<!-- end station is multi -->
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
     <h2 class="govuk-visually-hidden">Station summary</h2>
@@ -98,37 +100,35 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
     <!-- Render with Javascript -->
-    <!-- Audit 2.9 -->
+    <!-- (Audit 2.9) show if feed was interputed-->
     <div class="defra-service-error govuk-!-margin-top-6">
       <h2 class="defra-service-error__title" id="error-summary-title">Sorry, this data feed was interrupted</h2>
       <p class="govuk-body govuk-!-margin-bottom-0">
-        Normal service resumed at 10:30am on Monday 1 January 2020.
+        Normal service resumed at 10:30am on Monday 1 January 2020. <!-- Time and date feed was resumed -->
       </p>
     </div>
-    <!-- Audit 2.11 -->
+    <!-- (Audit 2.11) show if data out of date -->
     <div class="defra-service-error govuk-!-margin-top-6">
       <h2 class="defra-service-error__title" id="error-summary-title">Sorry, there is currently a problem displaying a chart</h2>
       <p class="govuk-body govuk-!-margin-bottom-0">There is no recent data.</p>
     </div>
-    <!-- Audit 2.12 -->
+    <!-- (Audit 2.12) show if no data feed -->
     <div class="defra-service-error govuk-!-margin-top-6">
       <h2 class="defra-service-error__title" id="error-summary-title">Sorry, there is currently a problem displaying a chart</h2>
       <p class="govuk-body govuk-!-margin-bottom-0">There is no data.</p>
     </div>
-    <!-- End Javascript render -->
-    <!-- Audit 2.14 Render in Markup if none of the above are true -->
-    <!--<noscript>-->
+    <!-- end render with Javascript -->
+    <!-- Removed from requirements
+    <noscript>
       <div class="defra-service-error govuk-!-margin-top-6">
         <p class="govuk-body govuk-!-margin-bottom-0">A chart will show here if Javascript is available.</p>
       </div>
-    <!--</noscript>-->
-    <!-- End markup render -->
-    <!-- Audit 2.13 Render with Javascript if none of above are true and old browser detected -->
+    </noscript>
     <div class="defra-service-error govuk-!-margin-top-6" aria-hidden="true">
       <p class="govuk-body">You should <a href="https://www.gov.uk/help/browsers">upgrade your web browser</a> (the software you use to access the internet) as it's out of date.</p>
       <p>A chart will display here if you update your browser.</p>
     </div>
-    <!-- End Javascript render -->
+    end removed from requirtements -->
   </div>
 </div>
 <div class="govuk-grid-row">
@@ -207,11 +207,6 @@
         </dl>
       </div>
     </details>
-    <!--
-    <p class="govuk-text govuk-!-margin-bottom-6">
-      <a href="/how-river-sea-groundwater-levels-are-measured">Find out how river, sea and groundwater levels are measured</a>.    
-    </p>
-    -->
   </div>
 </div>
 <!-- End -->
