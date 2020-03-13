@@ -16,7 +16,7 @@
     }
     &__value {
         position:relative;
-        margin:0;
+        margin:0 0 0 30px;
         padding: 10px 0 10px 0;
         @include mq ($from: tablet) {
             margin-left: 20%;
@@ -36,9 +36,6 @@
             top:1px;
             margin-top:10px;
         }
-    }
-    &__historic {
-        color: $govuk-secondary-text-colour;
     }
     .defra-button-text-s {
         display:block;
@@ -81,5 +78,33 @@
     }
     &__row--current .defra-flood-impact-list__action {
         display: none;
+    }
+    &__alert {
+        text-indent: -5000px;
+        position:absolute;
+        width:20px;
+        height:20px;
+        left:-30px;
+        top:10px;
+        background-image: svg-url('<svg width="20" height="20" viewBox="0 0 20 20"><path d="M8.691,0.809c0.248,-0.495 0.755,-0.809 1.309,-0.809c0.554,0 1.061,0.314 1.309,0.809c2.185,4.369 6.531,13.061 8.537,17.073c0.226,0.453 0.202,0.992 -0.065,1.424c-0.267,0.431 -0.737,0.694 -1.245,0.694l-17.072,0c-0.508,0 -0.978,-0.263 -1.245,-0.694c-0.267,-0.432 -0.291,-0.971 -0.065,-1.424c2.006,-4.012 6.352,-12.704 8.537,-17.073Z" fill="#6f777b"/><circle cx="10" cy="15.55" r="1.5" fill="#ffffff"/><path d="M11.2,5.944l-2.4,0l0.3,7.05l1.8,0l0.3,-7.05Z" fill="#ffffff"/></svg>');
+        background-size: 20px 20px;
+        background-repeat: no-repeat;
+        background-position: top left;
+        @include mq ($from: tablet) {
+            width:24px;
+            height:24px;
+            background-size: 24px 24px;
+            left:-35px;
+        }
+    }
+    &__warning {
+        @extend .defra-flood-impact-list__alert;
+        background-image: svg-url('<svg width="20" height="20" viewBox="0 0 20 20"><path d="M8.691,0.809c0.248,-0.495 0.755,-0.809 1.309,-0.809c0.554,0 1.061,0.314 1.309,0.809c2.185,4.369 6.531,13.061 8.537,17.073c0.226,0.453 0.202,0.992 -0.065,1.424c-0.267,0.431 -0.737,0.694 -1.245,0.694l-17.072,0c-0.508,0 -0.978,-0.263 -1.245,-0.694c-0.267,-0.432 -0.291,-0.971 -0.065,-1.424c2.006,-4.012 6.352,-12.704 8.537,-17.073Z" fill="#6f777b"/><circle cx="10" cy="15.55" r="1.5" fill="#ffffff"/><path d="M11.2,5.944l-2.4,0l0.3,7.05l1.8,0l0.3,-7.05Z" fill="#ffffff"/></svg>');
+
+    }
+    &__severe {
+        @extend .defra-flood-impact-list__alert;
+        background-image: svg-url('<svg width="20" height="20" viewBox="0 0 20 20"><path d="M8.691,0.809c0.248,-0.495 0.755,-0.809 1.309,-0.809c0.554,0 1.061,0.314 1.309,0.809c2.185,4.369 6.531,13.061 8.537,17.073c0.226,0.453 0.202,0.992 -0.065,1.424c-0.267,0.431 -0.737,0.694 -1.245,0.694l-17.072,0c-0.508,0 -0.978,-0.263 -1.245,-0.694c-0.267,-0.432 -0.291,-0.971 -0.065,-1.424c2.006,-4.012 6.352,-12.704 8.537,-17.073Z" fill="#6f777b"/><circle cx="10" cy="15.55" r="1.5" fill="#ffffff"/><path d="M11.2,5.944l-2.4,0l0.3,7.05l1.8,0l0.3,-7.05Z" fill="#ffffff"/></svg>');
+
     }
 }
