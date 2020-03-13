@@ -44,25 +44,42 @@
         display:block;
     }
     &__row--current {
-        border-bottom:3px solid $govuk-border-colour;
+        border-bottom:3px solid govuk-colour("blue");
         padding-top:10px;
         margin-bottom:5px;
         top:-2px;
         background-color:white;
+        @include mq ($from: tablet) {
+            padding-top:15px;
+            margin-bottom:10px;
+        }
     }
     &__row--current .defra-flood-impact-list__key {
         display:none;
     }
     &__row--current .defra-flood-impact-list__value {
+        @include govuk-font($size: 16, $weight: bold);
         position: absolute;
-        top:-9px;
-        padding-right:0.5em;
+        text-align:center;
+        top:2px;
+        left:50%;
+        margin-left:-5.5em;
+        width:11em;
+        padding:0;
         background-color:white;
-        width:auto;
-        @include govuk-font($size: 16);
-        margin-left:0;
+        @include mq ($from: tablet) {
+            top:6px;
+            left:20%;
+            width:auto;
+            margin-left:-0.5em;
+            padding-left:0.5em;
+            padding-right:0.5em;
+        }
     }
-    &__row--current .defra-flood-impact-list__value:before {
-        content:'2.85m';
+    &__row--current .defra-flood-impact-list__value:after {
+        content: "("attr(data-level)"m)";
+    }
+    &__row--current .defra-flood-impact-list__action {
+        display: none;
     }
 }
