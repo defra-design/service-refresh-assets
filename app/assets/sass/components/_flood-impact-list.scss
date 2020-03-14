@@ -2,99 +2,162 @@
     @include govuk-font($size: 19);
     &__row {
         position:relative;
-        border-bottom:1px solid $govuk-border-colour;
+        margin-left:3em;
+        @include mq ($from: tablet) {
+            margin-left:3.6em;
+        }
+        overflow:visible;
+    }
+    &__row:before {
+        position:absolute;
+        content:'';
+        width:3px;
+        top:10px;
+        bottom:-20px;
+        background-color: govuk-colour('mid-grey');
+        margin-left:-1.5px;
+        left:8%;
+        @include mq ($from: tablet) {
+            left:4%;
+        }
+    }
+    &__row:last-child:before {
+        bottom:14px;
     }
     &__key {
         @include govuk-font($size: false, $tabular: true, $weight: bold);
-        margin-top:10px;
+        position:absolute;
+        left:-3em;
+        width:3em;
+        top:0px;
+        text-align:right;
         @include mq ($from: tablet) {
-            position:absolute;
-            left:0px;
-            top:0px;
-            width:20%;
+            left:-3.6em;
+            width:3.6em;
         }
     }
     &__value {
         position:relative;
         margin:0;
-        padding: 10px 30px 10px 0;
+        padding-left: 16%;
+        padding-bottom:10px;
         @include mq ($from: tablet) {
-            margin-left: 13%;
-            padding-right: 28%;
+            padding-left:8%;
+            padding-bottom:15px;
         }
-        border-bottom:1px solid $govuk-border-colour;
     }
-    &__value:last-child {
-        border-bottom:0px;
+    &__value:nth-child(2):before {
+        position: absolute;
+        content:'';
+        width:7px;
+        height:7px;
+        border:3px solid white;
+        border-radius: 100%;
+        background-color:white;
+        margin-left:-6.5px;
+        top:4px;
+        left:8%;
+        @include mq ($from: tablet) {
+            top:7px;
+            left:4%;
+        }
+    }
+    &__value:nth-child(2):after {
+        position: absolute;
+        content:'';
+        margin-left:-5.5px;
+        width:7px;
+        height:7px;
+        border:2px solid govuk-colour('mid-grey');
+        border-radius: 100%;
+        background-color: white;
+        top:5px;
+        left:8%;
+        @include mq ($from: tablet) {
+            top:8px;
+            left:4%;
+        }
+    }
+    &__container {
+        padding-bottom:10px;
+        border-bottom:1px solid $govuk-border-colour;
+        @include mq ($from: tablet) {
+            padding-right:28%;
+            padding-bottom:15px;
+        }
     }
     &__action {
         display:block;
         margin-top:5px;
         @include mq ($from: tablet) {
             position:absolute;
-            right:0px;
-            top:1px;
-            margin-top:10px;
+            right:0;
+            top:0px;
+            margin-top:0px;
         }
     }
     .defra-button-text-s {
         display:block;
     }
-    &__row--current {
-        border-bottom:3px solid govuk-colour("blue");
-        padding-top:10px;
-        margin-bottom:5px;
-        top:-2px;
-        background-color:white;
-        @include mq ($from: tablet) {
-            padding-top:20px;
-            margin-bottom:15px;
-        }
-    }
-    &__row--current .defra-flood-impact-list__key {
-        display:none;
-    }
-    &__row--current .defra-flood-impact-list__value {
-        @include govuk-font($size: 16, $weight: bold);
-        position: absolute;
-        text-align:center;
-        top:2px;
-        left:50%;
-        margin-left:-5em;
-        width:10em;
-        padding:0;
-        background-color:white;
-        @include mq ($from: tablet) {
-            top:11px;
-            left:13%;
-            width:auto;
-            margin-left:-0.5em;
-            padding-left:0.5em;
-            padding-right:0.5em;
-        }
-    }
-    &__row--current .defra-flood-impact-list__value:after {
-        content: "("attr(data-level)"m)";
-    }
     &__row--current .defra-flood-impact-list__action {
         display: none;
     }
+    &__row--exceded {
+        &:before {
+            background-color: govuk-colour('blue');
+        }
+        .defra-flood-impact-list__value:nth-child(2):after {
+            border-color: govuk-colour('blue');
+            background-color: govuk-colour('blue');
+        }
+    }
+    &__row--current {
+        &:before {
+            background-color: govuk-colour('blue');
+        }
+        .defra-flood-impact-list__value {
+            font-weight:bold;
+        }
+        .defra-flood-impact-list__value:before {
+            border-width:4px;
+            margin-left:-7.5px;
+            top:3px;
+            @include mq ($from: tablet) {
+                top:6px;
+            }
+        }
+        .defra-flood-impact-list__value:after {
+            border-color: govuk-colour('blue');
+            border-width:3px;
+            margin-left:-6.5px;
+            top:4px;
+            @include mq ($from: tablet) {
+                top:7px;
+            }
+        }
+    }
     &__alert {
+        z-index:1;
         text-indent: -5000px;
         position:absolute;
-        width:20px;
-        height:20px;
-        right:0;
-        top:10px;
         background-image: svg-url('<svg width="24" height="24" viewBox="0 0 24 24"><path d="M1.5,24c-0.828,0 -1.5,-0.672 -1.5,-1.5c0,-0.241 0.057,-0.469 0.158,-0.671l10.5,-21c0.247,-0.491 0.755,-0.829 1.342,-0.829c0.587,0 1.095,0.338 1.342,0.829l10.5,21c0.101,0.202 0.158,0.43 0.158,0.671c0,0.828 -0.672,1.5 -1.5,1.5l-21,0" style="fill:#f18700;"/><path d="M2.309,22l19.382,0l-9.691,-19.382l-9.691,19.382Z" style="fill:#fff;"/><path d="M15.376,14.996l1.045,0l-4.433,-5.069l-1.708,1.964l0,-0.794l-1.015,0l0,1.96l-1.686,1.939l1.026,0l0,3.504l6.771,0l0,-3.504Z" style="fill:#181c1b;"/><path d="M19.323,19.5l-14.646,0l-0.75,1.5l16.146,0l-0.75,-1.5Z" style="fill:#00a4cd;"/></svg>');
-        background-size: 20px 20px;
         background-repeat: no-repeat;
         background-position: top left;
+        border-top:1px solid white;
+        border-bottom:1px solid white;
+        background-color:white;
+        top:-1px;
+        width:20px;
+        height:20px;
+        background-size: 20px 20px;
+        margin-left:-10px;
+        left:8%;
         @include mq ($from: tablet) {
             width:24px;
             height:24px;
             background-size: 24px 24px;
-            right:20%;
+            margin-left:-12px;
+            left:4%;
         }
     }
     &__warning {
