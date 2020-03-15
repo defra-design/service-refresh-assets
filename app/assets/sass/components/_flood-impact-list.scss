@@ -104,6 +104,7 @@
         }
         .defra-flood-impact-list__value:nth-child(2):before {
             background-color: govuk-colour('blue');
+            border:0px;
         }
     }
     &__row--current {
@@ -115,6 +116,7 @@
         }
         .defra-flood-impact-list__value:before {
             background-color: govuk-colour('blue');
+            border:0px;
         }
     }
     &__alert {
