@@ -3,17 +3,14 @@
     border-bottom:1px solid $govuk-border-colour;
     &__row {
         position:relative;
-        margin-left:3em;
-        @include mq ($from: tablet) {
-            margin-left:3.6em;
-        }
+        margin-left:3.65em;
         overflow:visible;
     }
     &__row:before {
         position:absolute;
         content:'';
         width:3px;
-        top:10px;
+        top:11px;
         bottom:-20px;
         background-color: govuk-colour('mid-grey');
         margin-left:-1.5px;
@@ -25,14 +22,10 @@
     &__key {
         @include govuk-font($size: false, $tabular: true, $weight: bold);
         position:absolute;
-        left:-3em;
-        width:3em;
+        left:-3.65em;
+        width:3.65em;
         top:0px;
         text-align:right;
-        @include mq ($from: tablet) {
-            left:-3.6em;
-            width:3.6em;
-        }
     }
     &__value {
         position:relative;
