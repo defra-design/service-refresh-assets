@@ -53,10 +53,10 @@
         border-bottom:1px solid white;
         background-color:govuk-colour('mid-grey');
         margin-left:-6.5px;
-        top:7px;
+        top:8px;
         left:8%;
         @include mq ($from: tablet) {
-            top:10px;
+            top:11px;
             left:4%;
         }
     }
