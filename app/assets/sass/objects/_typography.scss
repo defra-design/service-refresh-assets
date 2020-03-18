@@ -3,3 +3,11 @@
     vertical-align: middle;
     margin-right:2px;
 }
+
+// Abbr consistent behavior
+abbr {
+    text-decoration:none;
+}
+abbr:hover {
+    cursor: help;
+}
