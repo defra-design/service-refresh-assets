@@ -102,28 +102,10 @@
 </div>
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
-    <!-- Render with Javascript -->
-    <div class="defra-service-error govuk-!-margin-top-6">
-      <h2 class="defra-service-error__title" id="error-summary-title">Sorry, there is currently a problem displaying a chart</h2>
-      <p class="govuk-body govuk-!-margin-bottom-0">There is no recent data.</p>
-    </div>
-    <!-- (Audit 2.12) show if no data feed -->
-    <div class="defra-service-error govuk-!-margin-top-6">
-      <h2 class="defra-service-error__title" id="error-summary-title">Sorry, there is currently a problem displaying a chart</h2>
-      <p class="govuk-body govuk-!-margin-bottom-0">There is no data.</p>
-    </div>
-    <!-- end render with Javascript -->
-    <!-- Removed from requirements
-    <noscript>
-      <div class="defra-service-error govuk-!-margin-top-6">
-        <p class="govuk-body govuk-!-margin-bottom-0">A chart will show here if Javascript is available.</p>
-      </div>
-    </noscript>
-    <div class="defra-service-error govuk-!-margin-top-6" aria-hidden="true">
-      <p class="govuk-body">You should <a href="https://www.gov.uk/help/browsers">upgrade your web browser</a> (the software you use to access the internet) as it's out of date.</p>
-      <p>A chart will display here if you update your browser.</p>
-    </div>
-    end removed from requirtements -->
+    <figure class="defra-line-chart" aria-hidden="true" hidden>
+      <figcaption class="govuk-heading-m govuk-!-margin-bottom-7">Height over the last 5 days and 36 hour forecast</figcaption>
+      <div id="line-chart" class="defra-line-chart__container" role="presentation"></div>
+    </figure>
   </div>
 </div>
 <div class="govuk-grid-row">
