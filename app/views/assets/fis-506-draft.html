@@ -1,0 +1,54 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  FIS-506-(draft)
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h2 class="govuk-heading-m">Requires</h2>
+    <ul class="govuk-list">
+      <li>sass/components/_flood-status.scss</li>
+      <li>sass/objects/_buttons.scss</li>
+    </ul>
+    <p><a href="https://github.com/danleech-defra/service-refresh-assets/tree/master/app/assets">See assets on Github</a></p>
+    <h2 class="govuk-heading-m govuk-!-margin-bottom-2">Scenarios</h2>
+    {{ govukTable({
+      caption: "",
+      firstCellIsHeader: false,
+      head: [
+        {
+          classes: "govuk-!-width-one-quarter",
+          text: ""
+        },
+        {
+          text: ""
+        }
+      ],
+      rows: [
+        [
+          {
+            text: "(a)"
+          },
+          {
+            text: "Description of scenario"
+          }
+        ]
+      ]
+    }) }}
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <p class="govuk-!-padding-top-4">(a)</p>
+    <!-- Start -->
+    <p>This is the component</p>
+    <!-- End -->
+  </div>
+</div>
+
+{% endblock %}
