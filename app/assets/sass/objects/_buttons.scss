@@ -10,13 +10,15 @@
     padding:0;
     border-radius: 0;
     cursor:pointer;
-    &:focus,
-    &:active {
+    &:focus {
         outline:3px solid transparent;
         background-color: $govuk-focus-colour;
         color: $govuk-text-colour !important;
         box-shadow: 0 -2px #ffdd00, 0 4px #0b0c0c;
         text-decoration: none;
+    }
+    &:active {
+        color: $govuk-text-colour !important;
     }
     &:hover {
         color:$govuk-link-hover-colour;
@@ -83,10 +85,10 @@
     &:focus span {
         border:0px;
     }
-    &:active span {
-        border:0px;
-    }
     &:hover span {
         border-color:$govuk-link-hover-colour;
+    }
+    &:active span {
+        border-color: $govuk-text-colour;
     }
 }
