@@ -1,5 +1,6 @@
 
 {% extends "layout.html" %}
+{% from "govuk/components/tabs/macro.njk" import govukTabs %}
 
 {% block pageTitle %}
   FIS-506-inactive-(draft)
@@ -64,6 +65,70 @@
     <h2 class="govuk-heading-m">Latest river and sea levels in this area</h2>
     <p class="govuk-body">
       <a href="/river-and-sea-levels">View the latest river and sea levels in this area</a>.
+    </p>
+    <h2 class="govuk-heading-m govuk-!-margin-top-2">Outlook for the wider region</h2>
+    {% set dayOne %}
+    <h3 class="govuk-heading-s govuk-!-margin-bottom-0">Today</h3>
+    <p>Medium risk from river flooding with a high likelihood of significant impacts.</p>
+    {% endset -%}
+    {% set dayTwo%}
+    <h3 class="govuk-heading-s govuk-!-margin-bottom-0">Tomorrow</h3>
+    <p>Medium risk from river flooding with a high likelihood of significant impacts.</p>
+    {% endset -%}
+    {% set dayThree %}
+    <h3 class="govuk-heading-s govuk-!-margin-bottom-0">Thursday</h3>
+    <p>Medium risk from river flooding with a high likelihood of significant impacts.</p>
+    {% endset -%}
+    {% set dayFour %}
+    <h3 class="govuk-heading-s govuk-!-margin-bottom-0">Friday</h3>
+    <p>Low risk from river flooding with a high likelihood of minor impacts</p>
+    {% endset -%}
+    {% set dayFive %}
+    <h3 class="govuk-heading-s govuk-!-margin-bottom-0">Saturday</h3>
+    <p>Low risk from river flooding with a high likelihood of minor impacts</p>
+    {% endset -%}
+    {{ govukTabs({
+      classes: 'defra-flood-tabs govuk-!-padding-top-2',
+      items: [
+        {
+          label: "Today",
+          id: "day-one",
+          panel: {
+            html: dayOne
+          }
+        },
+        {
+          label: "Tomorrow",
+          id: "day-two",
+          panel: {
+            html: dayTwo
+          }
+        },
+        {
+          label: "Thursday",
+          id: "day-three",
+          panel: {
+            html: dayThree
+          }
+        },
+        {
+          label: "Friday",
+          id: "day-four",
+          panel: {
+            html: dayFour
+          }
+        },
+        {
+          label: "Saturday",
+          id: "day-five",
+          panel: {
+            html: dayFive
+          }
+        }
+      ]
+    }) }}
+    <p class="defra-updated govuk-!-margin-bottom-4">
+      <time datetime="">Updated yesterday at 3:30pm</time>. Produced by the Met Office and Environment Agency
     </p>
     <h2 class="govuk-heading-m">Other ways to check your current flood risk</h2>
     <p>If you live near a river or the coast you may be able to <a href="https://www.gov.uk/sign-up-for-flood-warnings">get flood warnings by phone, text or email</a>. This service is free.</p>
