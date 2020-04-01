@@ -2,7 +2,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  FIS-506-warning-(draft)
+  FIS-506-alert-(draft)
 {% endblock %}
 
 {% block content %}
@@ -42,15 +42,15 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <div class="defra-flood-status govuk-!-margin-bottom-3">
-      <div class="defra-flood-status-item defra-flood-status-item--alert">
+      <div class="defra-flood-status-item defra-flood-status-item--warning">
         <span class="defra-flood-status-item__icon"></span>
         <div class="defra-flood-status-item__text">
-          <strong>Flooding is possible - be prepared</strong>
+          <strong>Flooding is expected - take action</strong>
         </div>
       </div>
     </div>
     <h1 class="govuk-heading-xl govuk-!-margin-bottom-2">
-      Flood alert for Ginge Brook
+      Flood warning for Ginge Brook
     </h1>
     <p class="defra-updated govuk-!-margin-bottom-7">
       Updated <time datetime="2020-03-30T08:55:00.000Z">30 March 2020 at 9:55am</time>
@@ -60,11 +60,12 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor inci ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    <p>Area affected: Ginge Brook, for the Steventon area down to and including Sutton Courtenay</p>
-    <button id="map-btn" class="defra-button-map govuk-!-margin-bottom-4">View map of the area affected</button><div class="defra-map" id="map-live"></div>
+    <p>Area at risk: Ginge Brook, for the Steventon area down to and including Sutton Courtenay</p>
+    <button id="map-btn" class="defra-button-map govuk-!-margin-bottom-4">View map of the area at risk</button><div class="defra-map" id="map-live"></div>
     <div class="govuk-inset-text govuk-!-margin-top-2">
-      A flood alert means flooding is possible and you need to be prepared. <a href="/what-to-do-in-a-flood#what-to-do-if-you-get-a-flood-alert">Find out what to do in you get a flood alert</a>.
+      A flood warning means flooding is expected and you need to take action. <a href="/what-to-do-in-a-flood#what-to-do-if-you-get-a-flood-warning">Find out what to do in you get a flood warning</a>.
     </div>
+    <h2 class="govuk-heading-m">Latest river and sea levels in this area</h2>
     <p class="govuk-body">
       <a href="/river-and-sea-levels">View the latest river and sea levels in this area</a>.
     </p>
