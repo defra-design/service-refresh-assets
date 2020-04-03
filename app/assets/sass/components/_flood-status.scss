@@ -52,12 +52,8 @@
             height: 50px;
         }
     }
-    &--hover {
-        // opacity:0.85;
-        cursor: pointer;
-        a {
-            @extend a:hover;
-        }
+    a {
+        color: $govuk-text-colour;
     }
 }
 .defra-flood-status-item--severe {
