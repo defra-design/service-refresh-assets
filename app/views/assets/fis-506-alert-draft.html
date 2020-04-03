@@ -45,7 +45,7 @@
       <div class="defra-flood-status-item defra-flood-status-item--alert">
         <span class="defra-flood-status-item__icon"></span>
         <div class="defra-flood-status-item__text">
-          <strong>Flooding is possible - be prepared</strong>
+          <strong>Flooding is possible - <a href="/what-to-do-in-a-flood#what-to-do-if-you-get-a-flood-alert">be prepared</a></strong>
         </div>
       </div>
     </div>
@@ -62,22 +62,79 @@
     </p>
     <p>Flood risk area: Ginge Brook, for the Steventon area down to and including Sutton Courtenay</p>
     <button id="map-btn" class="defra-button-map govuk-!-margin-bottom-6">View map of the flood risk area</button><div class="defra-map" id="map-live"></div>
-    <div class="govuk-inset-text govuk-!-margin-top-0">
-      A flood alert means flooding is possible and you need to be prepared. <a href="/what-to-do-in-a-flood#what-to-do-if-you-get-a-flood-alert">Find out what to do in you get a flood alert</a>.
-    </div>
-    <h2 class="govuk-heading-m">Latest river and sea levels in this area</h2>
-    <p class="govuk-body">
-      <a href="/river-and-sea-levels">View the latest river and sea levels in this area</a>.
+    <h2 class="govuk-heading-m">What you need to do</h2>
+    <p class="govuk-body">A flood alert means you need to prepare for possible flooding.</p>
+    <p class="govuk-body"><a href="/what-to-do-in-a-flood#what-to-do-if-you-get-a-flood-alert">Check what you need to do</a></p>
+    <h2 class="govuk-heading-m">Check river levels</h2>
+    <p class="govuk-body">River levels can help you understand your flood risk now and over the next few days.</p>
+    <p class="govuk-body"><a href="/river-and-sea-levels">Check river levels in the area</a></p>
+    <h2 class="govuk-heading-m govuk-!-margin-top-2">Flood forecast for the region</h2>
+    {% set dayOne %}
+    <h3 class="govuk-heading-s govuk-!-margin-bottom-0">Today</h3>
+    <p>Medium risk from river flooding with a high likelihood of significant impacts.</p>
+    {% endset -%}
+    {% set dayTwo%}
+    <h3 class="govuk-heading-s govuk-!-margin-bottom-0">Tomorrow</h3>
+    <p>Medium risk from river flooding with a high likelihood of significant impacts.</p>
+    {% endset -%}
+    {% set dayThree %}
+    <h3 class="govuk-heading-s govuk-!-margin-bottom-0">Thursday</h3>
+    <p>Medium risk from river flooding with a high likelihood of significant impacts.</p>
+    {% endset -%}
+    {% set dayFour %}
+    <h3 class="govuk-heading-s govuk-!-margin-bottom-0">Friday</h3>
+    <p>Low risk from river flooding with a high likelihood of minor impacts</p>
+    {% endset -%}
+    {% set dayFive %}
+    <h3 class="govuk-heading-s govuk-!-margin-bottom-0">Saturday</h3>
+    <p>Low risk from river flooding with a high likelihood of minor impacts</p>
+    {% endset -%}
+    {{ govukTabs({
+      classes: 'defra-flood-tabs govuk-!-padding-top-2',
+      items: [
+        {
+          label: "Today",
+          id: "day-one",
+          panel: {
+            html: dayOne
+          }
+        },
+        {
+          label: "Tomorrow",
+          id: "day-two",
+          panel: {
+            html: dayTwo
+          }
+        },
+        {
+          label: "Thursday",
+          id: "day-three",
+          panel: {
+            html: dayThree
+          }
+        },
+        {
+          label: "Friday",
+          id: "day-four",
+          panel: {
+            html: dayFour
+          }
+        },
+        {
+          label: "Saturday",
+          id: "day-five",
+          panel: {
+            html: dayFive
+          }
+        }
+      ]
+    }) }}
+    <p class="defra-updated govuk-!-margin-bottom-4">
+      <time datetime="">Updated yesterday at 3:30pm</time>. Produced by the Met Office and Environment Agency.
     </p>
-    <h2 class="govuk-heading-m">Other ways to check your current flood risk</h2>
-    <p>If you live near a river or the coast you may be able to <a href="https://www.gov.uk/sign-up-for-flood-warnings">get flood warnings by phone, text or email</a>. This service is free.</p>
-    <p>For river and sea flooding, call the 24-hour Floodline service.</p>
-    <p>
-      Telephone: 0345 988 1188<br>
-      Type talk: 0345 602 6340 (for the hard of hearing)<br>
-      <a href="https://gov.uk/call-charges">Find out more about call charges</a>.
-    </p>  
-    <p><a href="https://www.gov.uk/find-local-council">Contact your local council</a> if you are not sure of the source of flooding.</p>
+    <h2 class="govuk-heading-m">Get advice</h2>
+    <p>Call Floodline for advice about flooding from rivers, the sea and groundwater.</p>
+    <p>Telephone: 0345 988 1188<br>Textphone: 0345 602 6340<br>Open 24 hours a day, 7 days a week.<br><a href="https://gov.uk/call-charges">Find out more about call charges</a>.</p>
   </div>
   <div class="govuk-grid-column-one-third">
     <!-- The Related items component is not part of GOV.UK Frontend but will be styled if used in the Prototype Kit -->
