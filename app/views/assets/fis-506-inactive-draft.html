@@ -45,28 +45,26 @@
     <div class="defra-flood-status govuk-!-margin-bottom-3">
       <div class="defra-flood-status-item defra-flood-status-item">
         <div class="defra-flood-status-item__text">
-          <strong>No flooding expected
-          </strong>
+          <strong>No flood alert or warning</strong>
         </div>
       </div>
     </div>
-    <h1 class="govuk-heading-xl govuk-!-margin-bottom-2">
+    <h1 class="govuk-heading-xl">
       Ginge Brook flood risk area
     </h1>
-    <p class="defra-flood-meta govuk-!-margin-bottom-7">
-      Updated <time datetime="2020-03-30T08:55:00.000Z">at 9:55am on 30 March 2020</time>
-    </p>
   </div>
 </div>
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <p>This is an area at risk of flooding. When a flood alert is in place, we'll update this page with information about it.
-    <p>You can <a href="https://www.gov.uk/sign-up-for-flood-warnings">get flood warnings by phone, text or email</a> for this area.</p>
+    <p>This is an area at risk of flooding. When a flood alert is in place, we'll update this page with information about it.</p>
+        <p class="defra-flood-meta defra-flood-meta--border govuk-!-margin-top-6 govuk-!-margin-bottom-6">
+      Updated <time datetime="2020-03-30T08:55:00.000Z">9:55am on 30 March 2020</time>
+    </p>
     <p>Flood risk area: Ginge Brook, for the Steventon area down to and including Sutton Courtenay</p>
     <button id="map-btn" class="defra-button-map govuk-!-margin-bottom-6">View map of the flood risk area</button><div class="defra-map" id="map-live"></div>
+    <p>You can <a href="https://www.gov.uk/sign-up-for-flood-warnings">get flood warnings by phone, text or email</a> for this area.</p>
     <h2 class="govuk-heading-m">Check river levels</h2>
-    <p>River levels can help you understand your flood risk now and over the next few days.</p>
-    <p><a href="/river-and-sea-levels">Check river levels in the area</a></p>
+    <p class="govuk-body">River levels can help you understand your flood risk now and over the next few days. <a href="/river-and-sea-levels">Check river levels in the area</a>.</p>
     <!--
     <h2 class="govuk-heading-m">Check sea levels</h2>
     <p>Sea levels can help you understand your flood risk now and over the next few days.</p>
@@ -137,11 +135,14 @@
       ]
     }) }}
     <p class="defra-flood-meta govuk-!-margin-bottom-4">
-      <time datetime="">Updated yesterday at 3:30pm</time>. Produced by the Met Office and Environment Agency.
+      Produced by the Met Office and Environment Agency<br/>
+      <time datetime="">Updated 3:30pm on 29 March 2020</time>
     </p>
-    <h2 class="govuk-heading-m">Get advice</h2>
-    <p>Call Floodline for advice about flooding from rivers, the sea and groundwater.</p>
-    <p>Telephone: 0345 988 1188<br>Textphone: 0345 602 6340<br>Open 24 hours a day, 7 days a week.<br><a href="https://gov.uk/call-charges">Find out more about call charges</a>.</p>
+    <div class="defra-context-footer">
+      <h2 class="govuk-visually-hidden">Speak to someone</h2>
+      <p>Call Floodline for advice about flooding from rivers, the sea and groundwater.</p>
+      <p>Telephone: 0345 988 1188<br>Textphone: 0345 602 6340<br>Open 24 hours a day, 7 days a week.<br><a href="https://gov.uk/call-charges">Find out more about call charges</a>.</p>
+    </div>
   </div>
   <div class="govuk-grid-column-one-third">
     <!-- The Related items component is not part of GOV.UK Frontend but will be styled if used in the Prototype Kit -->
