@@ -62,6 +62,9 @@ router.get('/fis-506-alert-draft', function (req, res) {
 router.get('/fis-506-warning-draft', function (req, res) {
   res.render('assets/fis-506-warning-draft')
 })
+router.get('/fis-506-warning-2-draft', function (req, res) {
+  res.render('assets/fis-506-warning-2-draft')
+})
 router.get('/fis-506-severe-draft', function (req, res) {
   res.render('assets/fis-506-severe-draft')
 })
