@@ -50,20 +50,20 @@ router.get('/fis-454-draft', function (req, res) {
 router.get('/fis-459-v1', function (req, res) {
   res.render('assets/fis-459-v1')
 })
-router.get('/fis-506-inactive-draft', function (req, res) {
-  res.render('assets/fis-506-inactive-draft')
+router.get('/fis-506-alert-inactive-draft', function (req, res) {
+  res.render('assets/fis-506-alert-inactive-draft')
 })
 router.get('/fis-506-removed-draft', function (req, res) {
   res.render('assets/fis-506-removed-draft')
 })
-router.get('/fis-506-alert-draft', function (req, res) {
-  res.render('assets/fis-506-alert-draft')
+router.get('/fis-506-alert-active-draft', function (req, res) {
+  res.render('assets/fis-506-alert-active-draft')
 })
-router.get('/fis-506-warning-draft', function (req, res) {
+router.get('/fis-506-warning-active-draft', function (req, res) {
   res.render('assets/fis-506-warning-draft')
 })
-router.get('/fis-506-warning-2-draft', function (req, res) {
-  res.render('assets/fis-506-warning-2-draft')
+router.get('/fis-506-warning-inactive-draft', function (req, res) {
+  res.render('assets/fis-506-warning-inactive-draft')
 })
 router.get('/fis-506-severe-draft', function (req, res) {
   res.render('assets/fis-506-severe-draft')
