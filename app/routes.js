@@ -53,20 +53,20 @@ router.get('/fis-459-v1', function (req, res) {
 router.get('/fis-506-alert-inactive-draft', function (req, res) {
   res.render('assets/fis-506-alert-inactive-draft')
 })
-router.get('/fis-506-removed-draft', function (req, res) {
-  res.render('assets/fis-506-removed-draft')
-})
 router.get('/fis-506-alert-active-draft', function (req, res) {
   res.render('assets/fis-506-alert-active-draft')
-})
-router.get('/fis-506-warning-active-draft', function (req, res) {
-  res.render('assets/fis-506-warning-draft')
 })
 router.get('/fis-506-warning-inactive-draft', function (req, res) {
   res.render('assets/fis-506-warning-inactive-draft')
 })
+router.get('/fis-506-warning-active-draft', function (req, res) {
+  res.render('assets/fis-506-warning-active-draft')
+})
 router.get('/fis-506-severe-draft', function (req, res) {
   res.render('assets/fis-506-severe-draft')
+})
+router.get('/fis-506-removed-draft', function (req, res) {
+  res.render('assets/fis-506-removed-draft')
 })
 
 module.exports = router
