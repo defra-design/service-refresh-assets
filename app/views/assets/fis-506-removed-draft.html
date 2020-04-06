@@ -22,7 +22,7 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
     <h2 class="govuk-heading-m govuk-!-padding-top-6 govuk-!-padding-bottom-6">Page meta titles</h2>
-    <p>&lt;title&gt;<!-- Start -->Ginge Brook flood warning area - GOV.UK<!-- End -->&lt;/title&gt;</p>
+    <p>&lt;title&gt;<!-- Start -->Ginge Brook flood alert [warning] area - GOV.UK<!-- End -->&lt;/title&gt;</p>
   </div>
 </div>
 
@@ -44,26 +44,41 @@
     <div class="defra-flood-status govuk-!-margin-bottom-3">
       <div class="defra-flood-status-item defra-flood-status-item">
         <div class="defra-flood-status-item__text">
-          <strong>The flood alert [warning] has been removed</strong>
+          The flood alert [warning] is no longer in place
         </div>
       </div>
     </div>
+    <!-- if flood warning type -->
+    <div class="defra-flood-status govuk-!-margin-bottom-3">
+      <div class="defra-flood-status-item defra-flood-status-item--alert">
+        <span class="defra-flood-status-item__icon"></span>
+        <div class="defra-flood-status-item__text">
+          The flood warning is no longer in place, but <a href="">a flood alert is in place</a> in the wider area
+        </div>
+      </div>
+    </div>
+    <!-- end flood warning type -->
     <h1 class="govuk-heading-xl">
-      Ginge Brook flood warning area
+      Ginge Brook flood alert [warning] area
     </h1>
   </div>
 </div>
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
+    <!-- If removed message -->
     <p>Lorem ipsum dolor sit amet...</p>
+    <!-- end removed message -->
+    <!-- default inactive content -->
+    <p>[See inactive alert or inactive warning]</p>
+    <!-- end default inactive content -->
     <p class="defra-flood-meta defra-flood-meta--border govuk-!-margin-top-6 govuk-!-margin-bottom-6">
       Updated <time datetime="2020-03-30T08:55:00.000Z">9:55am on 30 March 2020</time>
     </p>
-    <p>Flood risk area: Ginge Brook, for the Steventon area down to and including Sutton Courtenay</p>
-    <button id="map-btn" class="defra-button-map govuk-!-margin-bottom-4">View map of the flood risk area</button><div class="defra-map" id="map-live"></div>
+    <p>Flood alert [warning] area: Ginge Brook, for the Steventon area down to and including Sutton Courtenay</p>
+    <button id="map-btn" class="defra-button-map govuk-!-margin-bottom-4">View map of the flood alert [warning] area</button><div class="defra-map" id="map-live"></div>
     <p><a href="https://www.gov.uk/sign-up-for-flood-warnings">Get flood warnings by phone, text or email</a>.</p>
     <h2 class="govuk-heading-m">Check river levels</h2>
-    <p class="govuk-body"><a href="/river-and-sea-levels">Check the river level near you</a>.  You can also check levels up and down the river, to help you understand your flood risk now and over the next few days.</p>
+    <p class="govuk-body"><a href="/river-and-sea-levels">Check river [sea/groundwater] levels in this area</a>.  River [Sea/Groundwater] levels can to help you understand your flood risk now and over the next few days.</p>
     <!--
     <h2 class="govuk-heading-m">Check sea levels</h2>
     <p>Sea levels can help you understand your flood risk now and over the next few days.</p>
