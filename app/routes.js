@@ -14,6 +14,24 @@ router.get('/fis-256-draft', function (req, res) {
 router.get('/fis-260-draft', function (req, res) {
   res.render('assets/fis-260-draft')
 })
+router.get('/fis-279-alert-inactive-draft', function (req, res) {
+  res.render('assets/fis-279-alert-inactive-draft')
+})
+router.get('/fis-279-alert-active-draft', function (req, res) {
+  res.render('assets/fis-279-alert-active-draft')
+})
+router.get('/fis-279-warning-inactive-draft', function (req, res) {
+  res.render('assets/fis-279-warning-inactive-draft')
+})
+router.get('/fis-279-warning-active-draft', function (req, res) {
+  res.render('assets/fis-279-warning-active-draft')
+})
+router.get('/fis-279-severe-draft', function (req, res) {
+  res.render('assets/fis-279-severe-draft')
+})
+router.get('/fis-279-removed-draft', function (req, res) {
+  res.render('assets/fis-279-removed-draft')
+})
 router.get('/fis-366-page-1-v1', function (req, res) {
   res.render('assets/fis-366-page-1-v1')
 })
@@ -49,24 +67,6 @@ router.get('/fis-454-draft', function (req, res) {
 })
 router.get('/fis-459-v1', function (req, res) {
   res.render('assets/fis-459-v1')
-})
-router.get('/fis-506-alert-inactive-draft', function (req, res) {
-  res.render('assets/fis-506-alert-inactive-draft')
-})
-router.get('/fis-506-alert-active-draft', function (req, res) {
-  res.render('assets/fis-506-alert-active-draft')
-})
-router.get('/fis-506-warning-inactive-draft', function (req, res) {
-  res.render('assets/fis-506-warning-inactive-draft')
-})
-router.get('/fis-506-warning-active-draft', function (req, res) {
-  res.render('assets/fis-506-warning-active-draft')
-})
-router.get('/fis-506-severe-draft', function (req, res) {
-  res.render('assets/fis-506-severe-draft')
-})
-router.get('/fis-506-removed-draft', function (req, res) {
-  res.render('assets/fis-506-removed-draft')
 })
 
 module.exports = router
