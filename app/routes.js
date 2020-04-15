@@ -8,6 +8,9 @@ router.get('/fis-123-draft', function (req, res) {
 router.get('/fis-155-v1', function (req, res) {
   res.render('assets/fis-155-v1')
 })
+router.get('/fis-208-draft', function (req, res) {
+  res.render('assets/fis-208-draft')
+})
 router.get('/fis-256-draft', function (req, res) {
   res.render('assets/fis-256-draft')
 })
