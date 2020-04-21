@@ -56,12 +56,74 @@
     <p>Not what you expected? This service tells you your risk of flooding from rivers, the sea and groundwater. If there's surface water flooding (also called flash flooding) in your area, <a href="#">contact your local council</a>.</p>
     <h2 class="govuk-heading-m">Check river and sea levels</h2>
     <p class="govuk-body"><a href="/river-and-sea-levels">Check river and sea levels in this area</a>.  These can help you understand your flood risk now and over the next few days.</p>
+    <!-- Start -->
     <h2 class="govuk-heading-m">Flood forecast for the region</h2>
-    <p>The flood risk for the next 5 days is very low.</p>
-    <p class="defra-flood-meta defra-flood-meta--border govuk-!-margin-top-6 govuk-!-margin-bottom-4">
-      <time datetime="">Updated 3:30pm on 29 March 2020</time><br/>
-      Produced by the Met Office and Environment Agency
+    {% set dayOne %}
+    <h3 class="govuk-heading-s govuk-!-margin-bottom-0">Today</h3>
+    <p>Medium risk from river flooding with a high likelihood of significant impacts.</p>
+    {% endset -%}
+    {% set dayTwo%}
+    <h3 class="govuk-heading-s govuk-!-margin-bottom-0">Tomorrow</h3>
+    <p>Medium risk from river flooding with a high likelihood of significant impacts.</p>
+    {% endset -%}
+    {% set dayThree %}
+    <h3 class="govuk-heading-s govuk-!-margin-bottom-0">Thursday</h3>
+    <p>Medium risk from river flooding with a high likelihood of significant impacts.</p>
+    {% endset -%}
+    {% set dayFour %}
+    <h3 class="govuk-heading-s govuk-!-margin-bottom-0">Friday</h3>
+    <p>Low risk from river flooding with a high likelihood of minor impacts</p>
+    {% endset -%}
+    {% set dayFive %}
+    <h3 class="govuk-heading-s govuk-!-margin-bottom-0">Saturday</h3>
+    <p>Low risk from river flooding with a high likelihood of minor impacts</p>
+    {% endset -%}
+    {{ govukTabs({
+      classes: 'defra-flood-tabs govuk-!-padding-top-2',
+      items: [
+        {
+          label: "Today",
+          id: "day-one",
+          panel: {
+            html: dayOne
+          }
+        },
+        {
+          label: "Tomorrow",
+          id: "day-two",
+          panel: {
+            html: dayTwo
+          }
+        },
+        {
+          label: "Thursday",
+          id: "day-three",
+          panel: {
+            html: dayThree
+          }
+        },
+        {
+          label: "Friday",
+          id: "day-four",
+          panel: {
+            html: dayFour
+          }
+        },
+        {
+          label: "Saturday",
+          id: "day-five",
+          panel: {
+            html: dayFive
+          }
+        }
+      ]
+    }) }}
+    <p class="defra-flood-meta govuk-!-margin-bottom-4">
+      <time datetime="">Updated yesterday at 3:30pm</time>. Produced by the Met Office and Environment Agency.
     </p>
+    <!-- End -->
+  </div>
+</div>
     <div class="defra-context-footer">
       <h2 class="govuk-visually-hidden">Speak to someone</h2>
       <p>Call Floodline for advice about flooding from rivers, the sea and groundwater.</p>
