@@ -54,10 +54,14 @@
     </p>
     <p><a href="https://www.gov.uk/sign-up-for-flood-warnings">Get flood warnings by phone, text or email</a>.</p>
     <p>Not what you expected? This service tells you your risk of flooding from rivers, the sea and groundwater. If there's surface water flooding (also called flash flooding) in your area, <a href="#">contact your local council</a>.</p>
+    <!-- River and sea levels -->
     <h2 class="govuk-heading-m">Check river and sea levels</h2>
-    <p class="govuk-body"><a href="/river-and-sea-levels">Check river and sea levels in this area</a>.  These can help you understand your flood risk now and over the next few days.</p>
-    <!-- Start -->
-    <h2 class="govuk-heading-m">Flood forecast for the region</h2>
+    <p class="govuk-body">
+      <a href="/river-and-sea-levels">Check river and sea levels in this area</a>.  These can help you understand your flood risk now and over the next few days.
+    </p>
+    <!-- end river and sea levels -->
+    <!-- Regional forecast -->
+    <h2 class="govuk-heading-m govuk-!-margin-top-2">Flood forecast for the region</h2>
     {% set dayOne %}
     <h3 class="govuk-heading-s govuk-!-margin-bottom-0">Today</h3>
     <p>Medium risk from river flooding with a high likelihood of significant impacts.</p>
@@ -119,11 +123,10 @@
       ]
     }) }}
     <p class="defra-flood-meta govuk-!-margin-bottom-4">
-      <time datetime="">Updated yesterday at 3:30pm</time>. Produced by the Met Office and Environment Agency.
+      <time datetime="">Updated 3:30pm on 29 March 2020</time><br/>
+      Produced by the Met Office and Environment Agency
     </p>
-    <!-- End -->
-  </div>
-</div>
+    <!-- end regional forecast -->
     <div class="defra-context-footer">
       <h2 class="govuk-visually-hidden">Speak to someone</h2>
       <p>Call Floodline for advice about flooding from rivers, the sea and groundwater.</p>
