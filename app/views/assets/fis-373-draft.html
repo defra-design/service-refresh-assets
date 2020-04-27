@@ -1,0 +1,105 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  FIS-373-(draft)
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h2 class="govuk-heading-m">Requires</h2>
+    <ul class="govuk-list">
+      <li>sass/components/_flood-status.scss</li>
+    </ul>
+    <h2 class="govuk-heading-m govuk-!-margin-bottom-2">Scenarios (exclusive)</h2>
+    {{ govukTable({
+      caption: "",
+      firstCellIsHeader: false,
+      head: [
+        {
+          text: ""
+        },
+        {
+          text: ""
+        }
+      ],
+      rows: [
+        [
+          {
+            text: "(a)"
+          },
+          {
+            html: "One alert or warning nearby. Use highest state banner"
+          }
+        ],
+        [
+          {
+            text: "(b)"
+          },
+          {
+            html: "More than one of the same type. Use highest state banner"
+          }
+        ],
+        [
+          {
+            text: "(c)"
+          },
+          {
+            html: "More than one of different types. Use highest state banner"
+          }
+        ]
+      ]
+    }) }}
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <p class="govuk-!-padding-top-4">(a)</p>
+    <!-- start -->
+    <div class="defra-flood-status govuk-!-margin-bottom-1">
+      <div class="defra-flood-status-item defra-flood-status-item--alert">
+        <span class="defra-flood-status-item__icon">
+          <span class="govuk-visually-hidden">Flood alert</span>
+        </span>
+        <div class="defra-flood-status-item__text">
+          <strong>
+            <a href="">Flood alert for The River Gipping, from downstream of Needham Market, to upstream of London Road Bridge, Ipswich</a>
+          </strong>
+        </div>
+      </div>
+    </div>
+    <p class="govuk-!-padding-top-4">(b)</p>
+    <!-- start -->
+    <div class="defra-flood-status govuk-!-margin-bottom-1">
+      <div class="defra-flood-status-item defra-flood-status-item--warning">
+        <span class="defra-flood-status-item__icon">
+          <span class="govuk-visually-hidden">Flood warning</span>
+        </span>
+        <div class="defra-flood-status-item__text">
+          <strong>
+            <a href="">3 flood warnings are in place nearby</a>
+          </strong>
+        </div>
+      </div>
+    </div>
+    <!-- end -->
+    <p class="govuk-!-padding-top-4">(c)</p>
+    <!-- start -->
+    <div class="defra-flood-status govuk-!-margin-bottom-1">
+      <div class="defra-flood-status-item defra-flood-status-item--severe">
+        <span class="defra-flood-status-item__icon">
+          <span class="govuk-visually-hidden">Severe flood warning</span>
+        </span>
+        <div class="defra-flood-status-item__text">
+          <strong><a href="">1 severe flood warning</a></strong>, <strong><a href="">3 flood warnings</a></strong> and <strong><a href="">7 flood alerts</a></strong> are in place nearby.
+        </div>
+      </div>
+    </div>
+    <!-- end -->
+  </div>
+</div>
+
+{% endblock %}
