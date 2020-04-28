@@ -31,7 +31,7 @@
             text: "(a)"
           },
           {
-            html: "One alert or warning nearby. Use highest state banner"
+            html: "One alert or warning or severe nearby."
           }
         ],
         [
@@ -39,7 +39,7 @@
             text: "(b)"
           },
           {
-            html: "More than one of the same type. Use highest state banner"
+            html: "More than one of the same type."
           }
         ],
         [
@@ -59,29 +59,67 @@
   <div class="govuk-grid-column-full">
     <p class="govuk-!-padding-top-4">(a)</p>
     <!-- start -->
+    <!-- Singular flood alert doesnt display the name-->
     <div class="defra-flood-status govuk-!-margin-bottom-1">
       <div class="defra-flood-status-item defra-flood-status-item--alert">
         <span class="defra-flood-status-item__icon">
           <span class="govuk-visually-hidden">Flood alert</span>
         </span>
         <div class="defra-flood-status-item__text">
-          <strong>
-            <a href="">Flood alert for The River Gipping, from downstream of Needham Market, to upstream of London Road Bridge, Ipswich</a>
-          </strong>
+          <strong><a href="">There is a flood alert in this area</a></strong>
         </div>
       </div>
     </div>
-    <p class="govuk-!-padding-top-4">(b)</p>
-    <!-- start -->
+    <!-- Singular flood warning and severe does display the name -->
     <div class="defra-flood-status govuk-!-margin-bottom-1">
       <div class="defra-flood-status-item defra-flood-status-item--warning">
         <span class="defra-flood-status-item__icon">
           <span class="govuk-visually-hidden">Flood warning</span>
         </span>
         <div class="defra-flood-status-item__text">
-          <strong>
-            <a href="">3 flood warnings nearby</a>
-          </strong>
+          <strong><a href="">Flood warning for Keswick campsite</a></strong>
+        </div>
+      </div>
+    </div>
+    <div class="defra-flood-status govuk-!-margin-bottom-1">
+      <div class="defra-flood-status-item defra-flood-status-item--severe">
+        <span class="defra-flood-status-item__icon">
+          <span class="govuk-visually-hidden">Severe flood warning</span>
+        </span>
+        <div class="defra-flood-status-item__text">
+          <strong><a href="">Severe flood warning for Keswick campsite</a></strong>
+        </div>
+      </div>
+    </div>
+    <p class="govuk-!-padding-top-4">(b)</p>
+    <!-- start -->
+    <div class="defra-flood-status govuk-!-margin-bottom-1">
+      <div class="defra-flood-status-item defra-flood-status-item--alert">
+        <span class="defra-flood-status-item__icon">
+          <span class="govuk-visually-hidden">Flood alert</span>
+        </span>
+        <div class="defra-flood-status-item__text">
+          <strong><a href="">2 flood alerts in this area</a></strong>
+        </div>
+      </div>
+    </div>
+    <div class="defra-flood-status govuk-!-margin-bottom-1">
+      <div class="defra-flood-status-item defra-flood-status-item--warning">
+        <span class="defra-flood-status-item__icon">
+          <span class="govuk-visually-hidden">Flood warning</span>
+        </span>
+        <div class="defra-flood-status-item__text">
+          <strong><a href="">3 flood warnings in this area</a></strong>
+        </div>
+      </div>
+    </div>
+    <div class="defra-flood-status govuk-!-margin-bottom-1">
+      <div class="defra-flood-status-item defra-flood-status-item--severe">
+        <span class="defra-flood-status-item__icon">
+          <span class="govuk-visually-hidden">Severe flood warning</span>
+        </span>
+        <div class="defra-flood-status-item__text">
+          <strong><a href="">3 severe flood warnings in this area</a></strong>
         </div>
       </div>
     </div>
@@ -94,7 +132,37 @@
           <span class="govuk-visually-hidden">Severe flood warning</span>
         </span>
         <div class="defra-flood-status-item__text">
-          <strong><a href="">1 severe flood warning</a>, <a href="">3 flood warnings</a> and <a href="">7 flood alerts</a> nearby
+          <strong><a href="">1 severe flood warning</a></strong>, <strong><a href="">3 flood warnings</a></strong> and <strong><a href="">1 flood alert</a></strong> in this area
+        </div>
+      </div>
+    </div>
+    <div class="defra-flood-status govuk-!-margin-bottom-1">
+      <div class="defra-flood-status-item defra-flood-status-item--severe">
+        <span class="defra-flood-status-item__icon">
+          <span class="govuk-visually-hidden">Severe flood warning</span>
+        </span>
+        <div class="defra-flood-status-item__text">
+          <strong><a href="">2 severe flood warnings</a></strong> and <strong><a href="">3 flood warnings</a></strong> in this area
+        </div>
+      </div>
+    </div>
+    <div class="defra-flood-status govuk-!-margin-bottom-1">
+      <div class="defra-flood-status-item defra-flood-status-item--severe">
+        <span class="defra-flood-status-item__icon">
+          <span class="govuk-visually-hidden">Severe flood warning</span>
+        </span>
+        <div class="defra-flood-status-item__text">
+          <strong><a href="">1 severe flood warning</a></strong> and <strong><a href="">7 flood alerts</a></strong> in this area
+        </div>
+      </div>
+    </div>
+    <div class="defra-flood-status govuk-!-margin-bottom-1">
+      <div class="defra-flood-status-item defra-flood-status-item--warning">
+        <span class="defra-flood-status-item__icon">
+          <span class="govuk-visually-hidden">Flood warning</span>
+        </span>
+        <div class="defra-flood-status-item__text">
+          <strong><a href="">2 flood warnings</a></strong> and <strong><a href="">7 flood alerts</a></strong> in this area
         </div>
       </div>
     </div>
