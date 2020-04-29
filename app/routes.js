@@ -2,8 +2,8 @@ const express = require('express')
 const router = express.Router()
 
 // Add your assets here
-router.get('/fis-123-draft', function (req, res) {
-  res.render('assets/fis-123-draft')
+router.get('/fis-start-page-ideas', function (req, res) {
+  res.render('assets/fis-start-page-ideas')
 })
 router.get('/fis-152-draft', function (req, res) {
   res.render('assets/fis-152-draft')
