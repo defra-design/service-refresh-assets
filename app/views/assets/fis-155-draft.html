@@ -33,7 +33,7 @@
             text: "(a)"
           },
           {
-            html: "Scenario details."
+            html: "1 or more flood alerts or warnings."
           }
         ],
         [
@@ -41,7 +41,7 @@
             text: "(b)"
           },
           {
-            html: "Scenario details."
+            html: "1 or more flood warnings removed."
           }
         ],
         [
@@ -49,7 +49,15 @@
             text: "(c)"
           },
           {
-            html: "Scenario details."
+            html: "No flood alerts or warnings but 1 or more flood alerts or warnings removed."
+          }
+        ],
+        [
+          {
+            text: "(d)"
+          },
+          {
+            html: "No flood alerts or warnings."
           }
         ]
       ]
@@ -101,9 +109,6 @@
           <span class="defra-flood-status-item__text-secondary">Flooding is possible</span>
         </div>
       </div>
-      <p class="defra-flood-status__text">
-        <a href="">12 flood warnings were removed</a> in the last 24 hours
-      </p>
     </div>
     <!-- end flood status -->
     <!-- Map component -->
@@ -122,23 +127,12 @@
     <p class="govuk-!-margin-top-8">(b)</p>
     <!-- Flood status component -->
     <div class="defra-flood-status">
-      <div class="defra-flood-status-item defra-flood-status-item--severe">
-        <span class="defra-flood-status-item__icon"></span>
-        <div class="defra-flood-status-item__text">
-          <strong>
-            <a href="">
-              14 severe flood warnings
-            </a>
-          </strong>
-          <span class="defra-flood-status-item__text-secondary">There is a danger to life</span>
-        </div>
-      </div>
       <div class="defra-flood-status-item defra-flood-status-item--warning">
         <span class="defra-flood-status-item__icon"></span>
         <div class="defra-flood-status-item__text">
           <strong>
             <a href="">
-              16 flood warnings
+              6 flood warnings
             </a>
           </strong>
           <span class="defra-flood-status-item__text-secondary">Flooding is expected</span>
@@ -149,7 +143,7 @@
         <div class="defra-flood-status-item__text">
           <strong>
             <a href="">
-              16 flood alerts
+              14 flood alerts
             </a>
           </strong>
           <span class="defra-flood-status-item__text-secondary">Flooding is possible</span>
@@ -176,37 +170,11 @@
     <p class="govuk-!-margin-top-8">(c)</p>
     <!-- Flood status component -->
     <div class="defra-flood-status">
-      <div class="defra-flood-status-item defra-flood-status-item--severe">
-        <span class="defra-flood-status-item__icon"></span>
+      <div class="defra-flood-status-item defra-flood-status-item">
         <div class="defra-flood-status-item__text">
           <strong>
-            <a href="">
-              14 severe flood warnings
-            </a>
+            No flood alerts or warnings
           </strong>
-          <span class="defra-flood-status-item__text-secondary">There is a danger to life</span>
-        </div>
-      </div>
-      <div class="defra-flood-status-item defra-flood-status-item--warning">
-        <span class="defra-flood-status-item__icon"></span>
-        <div class="defra-flood-status-item__text">
-          <strong>
-            <a href="">
-              16 flood warnings
-            </a>
-          </strong>
-          <span class="defra-flood-status-item__text-secondary">Flooding is expected</span>
-        </div>
-      </div>
-      <div class="defra-flood-status-item defra-flood-status-item--alert">
-        <span class="defra-flood-status-item__icon"></span>
-        <div class="defra-flood-status-item__text">
-          <strong>
-            <a href="">
-              16 flood alerts
-            </a>
-          </strong>
-          <span class="defra-flood-status-item__text-secondary">Flooding is possible</span>
         </div>
       </div>
       <p class="defra-flood-status__text">
@@ -218,7 +186,29 @@
     <button id="map-btn" class="defra-button-map">View map of flood warning and alerts</button>
     <!-- end map -->
     <!-- Meta data component -->
-    <p class="defra-flood-meta defra-flood-meta--border govuk-!-margin-top-6 govuk-!-margin-bottom-6">
+    <p class="defra-flood-meta defra-flood-meta--border govuk-!-margin-top-6 govuk-!-margin-bottom-6"> <!-- Different class and margin if no map button -->
+      Updated <time datetime="2020-03-30T08:55:00.000Z">9:55am on 30 March 2020</time>
+    </p>
+    <!-- end meta data -->
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <p class="govuk-!-margin-top-8">(d)</p>
+    <!-- Flood status component -->
+    <div class="defra-flood-status">
+      <div class="defra-flood-status-item defra-flood-status-item">
+        <div class="defra-flood-status-item__text">
+          <strong>
+            No flood alerts or warnings
+          </strong>
+        </div>
+      </div>
+    </div>
+    <!-- end flood status -->
+    <!-- Meta data component -->
+    <p class="defra-flood-meta govuk-!-margin-bottom-6"> <!-- Different class and margin if no map button -->
       Updated <time datetime="2020-03-30T08:55:00.000Z">9:55am on 30 March 2020</time>
     </p>
     <!-- end meta data -->
