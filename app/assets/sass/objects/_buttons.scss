@@ -2,14 +2,11 @@
 .defra-button-start {
     @extend .govuk-button;
     @extend .govuk-button--secondary;
-    padding-right:30px;
     &:after {
         content: '';
-        display: block;
-        position: absolute;
-        top:50%;
-        margin-top:-6px;
-        right:10px;
+        display: inline-block;
+        position:relative;
+        top:2px;
         width:13px;
         height:15px;
         background: transparent;
