@@ -22,16 +22,14 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
-    <h2 class="govuk-heading-m govuk-!-padding-top-6 govuk-!-padding-bottom-6">Page meta titles</h2>
-    <p>&lt;title&gt;<!-- Start -->River and sea levels in England - GOV.UK<!-- End -->&lt;/title&gt;</p>
-    <p>&lt;title&gt;<!-- Start -->This service provides flood risk information for England only - River and sea levels in England - GOV.UK<!-- End -->&lt;/title&gt;</p>
-    <p>&lt;title&gt;<!-- Start -->Sorry, there is currently a problem searching a location - River and sea levels in England - GOV.UK<!-- End -->&lt;/title&gt;</p>
+    <h2 class="govuk-heading-m govuk-!-padding-top-6 govuk-!-padding-bottom-6">Unfiltered and service error</h2>
   </div>
 </div>
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-full">
-    <h2 class="govuk-heading-m govuk-!-padding-top-6 govuk-!-padding-bottom-6">Page content with results</h2>
+  <div class="govuk-grid-column-full govuk-!-padding-bottom-6">
+    <p>&lt;title&gt;<!-- Start -->River and sea levels in England - GOV.UK<!-- End -->&lt;/title&gt;</p>
+    <p>&lt;title&gt;<!-- Start -->Sorry, there is currently a problem searching a location - River and sea levels in England - GOV.UK<!-- End -->&lt;/title&gt;</p>
   </div>
 </div>
 
@@ -43,10 +41,8 @@
     </h1>
   </div>
 </div>
-<!-- End -->
 
 <!-- Bing 500 error -->
-<!-- Start -->
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
     <div class="defra-service-error govuk-!-margin-bottom-7">
@@ -57,9 +53,8 @@
     </div>
   </div>
 </div>
-<!-- End -->
+<!-- End Bing 500 error -->
 
-<!-- Start -->
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-one-third">
     <div class="govuk-form-group">
@@ -193,11 +188,191 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
-    <h2 class="govuk-heading-m govuk-!-padding-top-6 govuk-!-padding-bottom-6">Page content no results</h2>
+    <h2 class="govuk-heading-m govuk-!-padding-top-6 govuk-!-padding-bottom-6">River or group filter</h2>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full govuk-!-padding-bottom-6">
+    <p>&lt;title&gt;<!-- Start -->River Eden - River and sea levels in England - GOV.UK<!-- End -->&lt;/title&gt;</p>
   </div>
 </div>
 
 <!-- Start -->
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-xl">
+      River and sea levels
+    </h1>
+    <p class="govuk-visually-hidden">Showing River Eden [sea|groundwater] levels</p>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third">
+    <div class="govuk-form-group">
+      <form method="post" autocomplete="off">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="location">
+            Search a location
+          </label>
+          <div class="defra-search">
+            <input class="defra-search__input" id="location" name="location" type="search" spellcheck="false" value="">
+            <div class="defra-search__submit-container">
+                <button class="defra-search__button">Search</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="govuk-grid-column-two-thirds">
+    <div class="defra-search-summary" id="searchSummary">
+      <h2 class="defra-search-summary__count">1 level</h2>
+      <!-- Added with javascript -->
+      <button id="map-btn" class="defra-button-map-s">View map</button>
+      <!-- Added with javascript -->
+    </div>
+    <ul class="defra-flood-list">
+      <li class="defra-flood-list__group">
+        <span class="defra-flood-list__group-title">
+          <a href="">River Eden <span class="govuk-visually-hidden">at:</span></a>
+        </span>
+        <dl class="defra-flood-list__items defra-flood-list__items--levels defra-flood-list__items--has-relation"><!-- Optional modifier 'defra-flood-list__items--has-relation' -->
+          <div class="defra-flood-list__item">
+            <dt class="defra-flood-list__item-title">
+              <a href="">Appleby</a>
+            </dt>
+            <dd class="defra-flood-list__item-desc">
+              Data not available
+            </dd>
+          </div>
+        </dl>
+      </li>
+    </ul>
+  </div>
+</div>
+<!-- End -->
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h2 class="govuk-heading-m govuk-!-padding-top-6 govuk-!-padding-bottom-6">Target area filter</h2>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full govuk-!-padding-bottom-6">
+    <p>&lt;title&gt;<!-- Start -->The River Gipping, from downstream of Needham Market, to upstream of London Road Bridge, Ipswich - River and sea levels in England - GOV.UK<!-- End -->&lt;/title&gt;</p>
+  </div>
+</div>
+
+<!-- Start -->
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-xl">
+      River and sea levels
+    </h1>
+    <p class="govuk-!-margin-bottom-8">Showing levels near the alert [warning] area: The River Gipping, from downstream of Needham Market, to upstream of London Road Bridge, Ipswich. <a href="">Show all levels</a></p>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third">
+    <div class="govuk-form-group">
+      <form method="post" autocomplete="off">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="location">
+            Search a location
+          </label>
+          <div class="defra-search">
+            <input class="defra-search__input" id="location" name="location" type="search" spellcheck="false" value="{% if model.placeName %}{{ model.placeName }}{% else %}{{ model.q }}{% endif %}">
+            <div class="defra-search__submit-container">
+                <button class="defra-search__button">Search</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="govuk-grid-column-two-thirds">
+    <div class="defra-search-summary" id="searchSummary">
+      <h2 class="defra-search-summary__count">9 levels</h2>
+      <!-- Added with javascript -->
+      <button id="map-btn" class="defra-button-map-s">View map</button>
+      <!-- Added with javascript -->
+    </div>
+    <ul class="defra-flood-list">
+      <li class="defra-flood-list__group">
+        <span class="defra-flood-list__group-title">
+          <a href="">Sea levels <span class="govuk-visually-hidden">at:</span></a>
+        </span>
+        <dl class="defra-flood-list__items defra-flood-list__items--levels">
+          <div class="defra-flood-list__item">
+            <dt class="defra-flood-list__item-title">
+              <a href="">Silloth Docks</a>
+            </dt>
+            <dd class="defra-flood-list__item-desc">
+              1.00m <time datetime="2020-01-01T00:00:00.000Z">at 12:00am</time>
+            </dd>
+          </div>
+        </dl>
+      </li>
+      <li class="defra-flood-list__group">
+        <span class="defra-flood-list__group-title">
+          <a href="">Groundwater levels <span class="govuk-visually-hidden">at:</span></a>
+        </span>
+        <dl class="defra-flood-list__items defra-flood-list__items--levels">
+          <div class="defra-flood-list__item">
+            <dt class="defra-flood-list__item-title">
+              <a href="">Ashton Farm</a>
+            </dt>
+            <dd class="defra-flood-list__item-desc">
+              1.00m <time datetime="2020-01-01T00:00:00.000Z">at 12:05am</time>
+            </dd>
+          </div>
+        </dl>
+      </li>
+      <li class="defra-flood-list__group">
+        <span class="defra-flood-list__group-title">
+          <a href="">River Eden <span class="govuk-visually-hidden">at:</span></a>
+        </span>
+        <dl class="defra-flood-list__items defra-flood-list__items--levels defra-flood-list__items--has-relation"><!-- Optional modifier 'defra-flood-list__items--has-relation' -->
+          <div class="defra-flood-list__item">
+            <dt class="defra-flood-list__item-title">
+              <a href="">Appleby</a>
+            </dt>
+            <dd class="defra-flood-list__item-desc">
+              Data not available
+            </dd>
+          </div>
+        </dl>
+      </li>
+    </ul>
+  </div>
+</div>
+<!-- End -->
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h2 class="govuk-heading-m govuk-!-padding-top-6 govuk-!-padding-bottom-6">No results</h2>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full govuk-!-padding-bottom-6">
+    <p>&lt;title&gt;<!-- Start -->sftgshdgfter - River and sea levels in England - GOV.UK<!-- End -->&lt;/title&gt;</p>
+  </div>
+</div>
+
+<!-- Start -->
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-xl">
+      River and sea levels
+    </h1>
+  </div>
+</div>
+
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-one-third">
     <div class="govuk-form-group">
@@ -238,11 +413,25 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
-    <h2 class="govuk-heading-m govuk-!-padding-top-6 govuk-!-padding-bottom-6">Page content not in England</h2>
+    <h2 class="govuk-heading-m govuk-!-padding-top-6 govuk-!-padding-bottom-6">Not in England</h2>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full govuk-!-padding-bottom-6">
+    <p>&lt;title&gt;<!-- Start -->Aberdeen - River and sea levels in England - GOV.UK<!-- End -->&lt;/title&gt;</p>
   </div>
 </div>
 
 <!-- Start -->
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-xl">
+      River and sea levels
+    </h1>
+  </div>
+</div>
+
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-one-third">
     <div class="govuk-form-group">
