@@ -59,6 +59,9 @@ router.get('/fis-366-page-6-v1', function (req, res) {
 router.get('/fis-366-page-7-v1', function (req, res) {
   res.render('assets/fis-366-page-7-v1')
 })
+router.get('/fis-366-page-8-draft', function (req, res) {
+  res.render('assets/fis-366-page-8-draft')
+})
 router.get('/fis-373-draft', function (req, res) {
   res.render('assets/fis-373-draft')
 })
