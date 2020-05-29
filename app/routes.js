@@ -17,14 +17,14 @@ router.get('/fis-208-draft', function (req, res) {
 router.get('/fis-256-draft', function (req, res) {
   res.render('assets/fis-256-draft')
 })
-router.get('/fis-256-active-draft', function (req, res) {
-  res.render('assets/fis-256-active-draft')
+router.get('/fis-260-a-draft', function (req, res) {
+  res.render('assets/fis-260-a-draft')
 })
-router.get('/fis-256-inactive-draft', function (req, res) {
-  res.render('assets/fis-256-inactive-draft')
+router.get('/fis-260-b-draft', function (req, res) {
+  res.render('assets/fis-260-b-draft')
 })
-router.get('/fis-260-draft', function (req, res) {
-  res.render('assets/fis-260-draft')
+router.get('/fis-260-c-draft', function (req, res) {
+  res.render('assets/fis-260-c-draft')
 })
 router.get('/fis-279-alert-inactive-draft', function (req, res) {
   res.render('assets/fis-279-alert-inactive-draft')
@@ -79,9 +79,6 @@ router.get('/fis-387-draft', function (req, res) {
 })
 router.get('/fis-410-draft', function (req, res) {
   res.render('assets/fis-410-draft')
-})
-router.get('/fis-454-draft', function (req, res) {
-  res.render('assets/fis-454-draft')
 })
 router.get('/fis-459-v1', function (req, res) {
   res.render('assets/fis-459-v1')
