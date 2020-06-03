@@ -79,9 +79,9 @@
             left:-32px;
             width:7px;
             height:7px;
-            border:2px solid govuk-colour('mid-grey');
+            border:2px solid govuk-colour('light-blue');
             border-radius: 100%;
-            background-color: white;
+            background-color: govuk-colour('light-blue');
             @include mq ($from: tablet) {
                 top:8px;
             }
@@ -235,20 +235,20 @@
         }
         // River level symbols
         &--normal dt:after {
-            border-color: govuk-colour('green');
-            background-color: govuk-colour('green');
+            border-color: govuk-colour('light-blue');
+            background-color: govuk-colour('light-blue');
         }
-        &--forecast-high dt:after {
-            border-color: govuk-colour('orange');
-            background-color: govuk-colour('orange');
+        &--error dt:after {
+            border-color: govuk-colour('mid-grey');
+            background-color: white;
         }
         &--high dt:after {
-            border-color: govuk-colour('red');
-            background-color: govuk-colour('red');
+            border-color: govuk-colour('dark-blue');
+            background-color: govuk-colour('dark-blue');
         }
         &--low dt:after {
-            border-color: govuk-colour('mid-grey');
-            background-color: govuk-colour('mid-grey');
+            border-color: govuk-colour('light-blue');
+            background-color: govuk-colour('light-blue');
         }
     }
 }
