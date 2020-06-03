@@ -6,6 +6,9 @@
 {% endblock %}
 
 {% block beforeContent %}
+<span class="govuk-error-message">
+    <span class="govuk-visually-hidden">Error:</span> Enter a real town, city or postcode
+  </span>
 <div class="govuk-phase-banner">
   <p class="govuk-phase-banner__content">
     <strong class="govuk-tag govuk-phase-banner__content__tag">
@@ -15,9 +18,6 @@
       This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
     </span>
     </p>
-    <span class="govuk-error-message">
-        <span class="govuk-visually-hidden">Error:</span> Enter a real town, city or postcode
-      </span>
 </div>
 <a href="#" class="govuk-back-link">Back</a>
 {% endblock %}
@@ -33,7 +33,7 @@
         <span id="address-postcode-error" class="govuk-error-message">
           <span class="govuk-visually-hidden">Error:</span> Enter a real town, city or post
         </span>
-        <input class="govuk-input govuk-input--width-10 govuk-input--error" id="address-postcode" name="address-postcode" type="text" value="Not a postcode" aria-describedby="address-postcode-error" autocomplete="postal-code">
+        <input class="govuk-input govuk-input--width-10 govuk-input--error" id="address-postcode" name="address-postcode" type="text" value="fhdiwncbd" aria-describedby="address-postcode-error" autocomplete="postal-code">
       </div>
     <button class="govuk-button" data-module="govuk-button">
     Continue
