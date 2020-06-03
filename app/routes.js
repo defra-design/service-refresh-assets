@@ -29,6 +29,9 @@ router.get('/fis-5d', function (req, res) {
 router.get('/fis-5e', function (req, res) {
   res.render('assets/fis-5e')
 })
+router.get('/fis-5f', function (req, res) {
+  res.render('assets/fis-5f')
+})
 router.get('/fis-279-alert-inactive-draft', function (req, res) {
   res.render('assets/fis-279-alert-inactive-draft')
 })

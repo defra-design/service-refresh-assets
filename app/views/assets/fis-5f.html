@@ -1,0 +1,47 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  FIS 5e
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h2 class="govuk-heading-m govuk-!-margin-bottom-2">Condition</h2>
+    {{ govukTable({
+      caption: "",
+      firstCellIsHeader: false,
+      head: [
+        {
+          text: ""
+        },
+        {
+          text: ""
+        }
+      ],
+      rows: [
+        [
+          {
+            text: "(1)"
+          },
+          {
+            html: "Show only if no flood alerts, warnings or severe warnings are in place and there are no flood warnings removed"
+          }
+        ]
+      ]
+    }) }}
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <p class="govuk-!-padding-top-4">(1)<p>
+    <!-- start -->
+    <p>Not what you expected? This service tells you your risk of flooding from rivers, the sea and groundwater. If there's surface water flooding (also known as flash flooding) in your area, <a href="https://www.gov.uk/find-local-council">contact your local council</a>.</p>
+    <!-- -->
+  </div>
+</div>
+
+{% endblock %}
