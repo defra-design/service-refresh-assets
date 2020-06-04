@@ -20,23 +20,23 @@ router.get('/fis-554-draft', function (req, res) {
 router.get('/fis-554-2-draft', function (req, res) {
   res.render('assets/fis-554-2-draft')
 })
-router.get('/fis-5', function (req, res) {
-  res.render('assets/fis-5')
+router.get('/asset-5', function (req, res) {
+  res.render('assets/asset-5')
 })
-router.get('/fis-5b', function (req, res) {
-  res.render('assets/fis-5b')
+router.get('/asset-5b', function (req, res) {
+  res.render('assets/asset-5b')
 })
-router.get('/fis-5c', function (req, res) {
-  res.render('assets/fis-5c')
+router.get('/asset-5c', function (req, res) {
+  res.render('assets/asset-5c')
 })
-router.get('/fis-5d', function (req, res) {
-  res.render('assets/fis-5d')
+router.get('/asset-5d', function (req, res) {
+  res.render('assets/asset-5d')
 })
-router.get('/fis-5e', function (req, res) {
-  res.render('assets/fis-5e')
+router.get('/asset-5e', function (req, res) {
+  res.render('assets/asset-5e')
 })
-router.get('/fis-5f', function (req, res) {
-  res.render('assets/fis-5f')
+router.get('/asset-5f', function (req, res) {
+  res.render('assets/asset-5f')
 })
 router.get('/fis-279-alert-inactive-draft', function (req, res) {
   res.render('assets/fis-279-alert-inactive-draft')
