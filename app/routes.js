@@ -14,12 +14,6 @@ router.get('/fis-155-draft', function (req, res) {
 router.get('/fis-208-draft', function (req, res) {
   res.render('assets/fis-208-draft')
 })
-router.get('/fis-554-draft', function (req, res) {
-  res.render('assets/fis-554-draft')
-})
-router.get('/fis-554-2-draft', function (req, res) {
-  res.render('assets/fis-554-2-draft')
-})
 router.get('/asset-5', function (req, res) {
   res.render('assets/asset-5')
 })
@@ -37,6 +31,12 @@ router.get('/asset-5e', function (req, res) {
 })
 router.get('/asset-5f', function (req, res) {
   res.render('assets/asset-5f')
+})
+router.get('/asset-6', function (req, res) {
+  res.render('assets/asset-6')
+})
+router.get('/asset-6b', function (req, res) {
+  res.render('assets/asset-6b')
 })
 router.get('/fis-279-alert-inactive-draft', function (req, res) {
   res.render('assets/fis-279-alert-inactive-draft')

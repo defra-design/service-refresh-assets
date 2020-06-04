@@ -2,13 +2,10 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  FIS-554-draft
+  Asset 6
 {% endblock %}
 
 {% block beforeContent %}
-<span class="govuk-error-message">
-    <span class="govuk-visually-hidden">Error:</span> Enter a real town, city or postcode
-  </span>
 <div class="govuk-phase-banner">
   <p class="govuk-phase-banner__content">
     <strong class="govuk-tag govuk-phase-banner__content__tag">
@@ -25,15 +22,12 @@
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <h1 class="govuk-heading-l">Where do you want to check?</h1>
-    <div class="govuk-form-group govuk-form-group--error">
-        <label class="govuk-label" for="address-postcode">
-          Town, city or postcode
-        </label>
-        <span id="address-postcode-error" class="govuk-error-message">
-          <span class="govuk-visually-hidden">Error:</span> Enter a real town, city or postcode
-        </span>
-        <input class="govuk-input govuk-input--width-10 govuk-input--error" id="address-postcode" name="address-postcode" type="text" value="fhdiwncbd" aria-describedby="address-postcode-error" autocomplete="postal-code">
-      </div>
+   <div class="govuk-form-group">
+    <label class="govuk-label" for="address-town">
+      Town, city or postcode
+    </label>
+    <input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="address-town" type="text" autocomplete="address-level2">
+    </div>
     <button class="govuk-button" data-module="govuk-button">
     Continue
     </button>
