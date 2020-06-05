@@ -3,7 +3,7 @@ const router = express.Router()
 
 // Add your assets here
 router.get('/asset-1', function (req, res) {
-  res.render('assets/fis-1')
+  res.render('assets/asset-1')
 })
 router.get('/fis-152-draft', function (req, res) {
   res.render('assets/fis-152-draft')
