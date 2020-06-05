@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router()
 
 // Add your assets here
-router.get('/fis-1', function (req, res) {
+router.get('/asset-1', function (req, res) {
   res.render('assets/fis-1')
 })
 router.get('/fis-152-draft', function (req, res) {
