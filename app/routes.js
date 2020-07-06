@@ -95,5 +95,8 @@ router.get('/fis-410-draft', function (req, res) {
 router.get('/fis-459-v1', function (req, res) {
   res.render('assets/fis-459-v1')
 })
+router.get('/asset-14', function (req, res) {
+  res.render('assets/asset-14')
+})
 
 module.exports = router
