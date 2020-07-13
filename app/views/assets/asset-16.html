@@ -4,19 +4,30 @@
   Asset 16
 {% endblock %}
 
-{% block Content %}
-<div class="govuk-width-container">
-    <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-two-thirds">
-          <h1 class="govuk-heading-l">Sorry, there is a problem with the service</h1>
-          <p class="govuk-body">Try again later.</p>
-          <p class="govuk-body">We saved your answers. They will be available for 30 days.</p>
-          <p class="govuk-body">
-            <a class="govuk-link" href="#">Contact the Tax Credits Helpline</a> if you need to make changes to your claim or speak to someone about your tax credits.
-          </p>
-        </div>
-      </div>
-    </main>
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h2 class="govuk-heading-m">Requires</h2>
+    <ul class="govuk-list">
+      <li>sass/components/_related-items.scss</li>
+      <li>sass/components/_updated.scss</li>
+    </ul>
+    <h2 class="govuk-heading-m">All scenarios</h2>
   </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full" id="browserBackContainer">
+    <nav><a href="" class="govuk-back-link govuk-!-margin-bottom-7 govuk-!-margin-right-2">Back</a></nav>
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      Sorry, there is a problem with the service
+    </h1>
+    <p class="govuk-body"><p>Try again later or <a href="https://flood-warning-information.service.gov.uk/warnings">use the old flood information service</a>.</p>
+  </div>
+</div>
+
 {% endblock %}
