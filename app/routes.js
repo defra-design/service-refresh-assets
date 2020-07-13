@@ -101,5 +101,8 @@ router.get('/asset-14', function (req, res) {
 router.get('/asset-15', function (req, res) {
   res.render('assets/asset-15')
 })
+router.get('/asset-16', function (req, res) {
+  res.render('assets/asset-16')
+})
 
 module.exports = router
