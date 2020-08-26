@@ -72,11 +72,7 @@ Asset 5b
     </p>
     <p><a href="https://www.gov.uk/sign-up-for-flood-warnings">Get flood warnings by phone, text or email</a></p>
     <p>Not what you expected? This service tells you your risk of flooding from rivers, the sea and groundwater. If there's surface water flooding (also known as flash flooding) in your area, <a href="https://www.gov.uk/find-local-council">contact your local council</a>.</p>
-    <!-- River and sea levels -->
-    <h2 class="govuk-heading-m">Latest river, sea and groundwater levels</h2>
-    <p>Most measuring stations are along main rivers and the coast. These levels can help you understand your flood risk now and over the next few days.</p>
-    <p><a href="/river-and-sea-levels">Find a river, sea or groundwater level in this area</a></p> 
-    <!-- end river and sea levels -->
+    {% include "partials/levels.html" %}
     <!-- Regional forecast -->
     <h2 class="govuk-heading-m govuk-!-margin-top-2">Flood forecast for the region</h2>
     {% set dayOne %}

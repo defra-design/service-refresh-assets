@@ -77,11 +77,7 @@
     <p>Flood warning area: Keswick Campsite flooding from the lake.</p>
     <button id="map-btn" class="defra-button-map govuk-!-margin-bottom-4">View map of the flood warning area</button><div class="defra-map" id="map-live"></div>
     <p><a href="https://www.gov.uk/sign-up-for-flood-warnings">Get flood warnings by phone, text or email</a>.</p>
-    <!-- River and sea levels -->
-    <h2 class="govuk-heading-m">Check river, sea or groundwater levels</h2>
-    <p>They can give you a better understanding of your flood risk.</p>
-    <p><a href="/river-and-sea-levels">Find a river, sea or groundwater level in this area</a>.</p> 
-    <!-- end river and sea levels -->
+    {% include "partials/levels.html" %}
     <h2 class="govuk-heading-m govuk-!-margin-top-2">Flood forecast for the region</h2>
     {% set dayOne %}
     <h3 class="govuk-heading-s govuk-!-margin-bottom-0">Today</h3>
