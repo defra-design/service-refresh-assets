@@ -110,6 +110,9 @@ router.get('/asset-16b', function (req, res) {
 router.get('/asset-17', function (req, res) {
   res.render('assets/asset-17')
 })
+router.get('/asset-18', function (req, res) {
+  res.render('assets/asset-18')
+})
 router.get('/icons', function (req, res) {
   res.render('assets/icons')
 })
