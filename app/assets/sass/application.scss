@@ -26,6 +26,7 @@ $govuk-images-path: '/public/images/';
 
 // Components
 @import "components/cookie-banner";
+@import "components/cookie-confirmation";
 @import "components/flood-status";
 @import "components/flood-nav";
 @import "components/flood-statistics";

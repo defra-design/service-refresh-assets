@@ -7,10 +7,53 @@
 {% block content %}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
+    <div class="defra-cookie-confirmation" id="cookie-save-confirmation" data-module="initial-focus" role="alert" tabindex="-1">
+      <h2 class="govuk-heading-m">Your cookie settings were saved</h2>
+      <p>Government services may set additional cookies and, if so, will have their own cookie policy and banner.</p>
+      <p><a href="#" id="cookies-save">Go back to the page you were looking at</a></p>
+    </div>
     <h1 class="govuk-heading-xl">
       Cookie preferences
     </h1>
-    <p class="govuk-body">Content</p>
+    <p class="govuk-body">Some text</p>
+    <h2 class="govuk-heading-m">Some sub title</h2>
+    <p class="govuk-body">Some text</p>
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" aria-describedby="hint-1">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+          <h2 class="govuk-heading-m">
+            Cookies that measure website use
+          </h2>
+        </legend>
+        <div id="hint-1">
+          <p>We use Google Analytics to measure how you use the website so we can improve it based on user needs. We do not allow Google to use or share the data about how you use this site.</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>how you got to the site</li>
+            <li>the pages you visit on GOV.UK and government digital services, and how long you spend on each page</li>
+            <li>what you click on while you're visiting the site</li>
+          </ul>
+        </div>
+        <div class="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="sign-in" name="sign-in" type="radio" value="government-gateway" aria-describedby="sign-in-item-hint">
+            <label class="govuk-label govuk-radios__label" for="sign-in">
+              Cookies that measure website use
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="sign-in-2" name="sign-in" type="radio" value="govuk-verify" aria-describedby="sign-in-2-item-hint" checked>
+            <label class="govuk-label govuk-radios__label" for="sign-in-2">
+              Do not use cookies that measure my website use
+            </label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+    <h2 class="govuk-heading-m">Strictly necessary cookies</h2>
+    <p>These essential cookies do things like remember your progress through a form (for example a licence application)</p>
+    <p>They always need to be on.</p>
+    <p><a href="">Find out more about cookies on GOV.UK</a></p>
+    <button class="govuk-button govuk-!-margin-left-0" data-module="govuk-button">Save changes</button>
   </div>
 </div>
 {% endblock %}

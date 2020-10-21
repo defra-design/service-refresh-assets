@@ -19,3 +19,14 @@ if (container) {
     document.getElementById('cookie-banner').style.display = 'none'
   })
 }
+
+const save = document.getElementById('cookies-save')
+
+if (save) {
+  save.addEventListener('click', (e) => {
+    e.preventDefault()
+    const alert = document.getElementById('cookie-save-confirmation')
+    console.log(alert)
+    alert.focus()
+  })
+}
