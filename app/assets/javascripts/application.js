@@ -10,11 +10,11 @@ $(document).ready(function () {
 })
 
 // JS/Non-JS content - Perhaps we need a helper for this
-const nonJsElements = document.getElementsByClassName('defra-no-js')
+var nonJsElements = document.getElementsByClassName('defra-no-js')
 Array.prototype.forEach.call(nonJsElements, function (element) {
   element.style.display = 'none'
 })
-const jsElements = document.getElementsByClassName('defra-js')
+var jsElements = document.getElementsByClassName('defra-js')
 Array.prototype.forEach.call(jsElements, function (element) {
   element.removeAttribute('style')
 })
