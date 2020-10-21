@@ -26,6 +26,7 @@ if (save) {
   save.addEventListener('click', (e) => {
     e.preventDefault()
     const alert = document.getElementById('cookie-save-confirmation')
+    alert.removeAttribute('style')
     alert.focus()
   })
 }
