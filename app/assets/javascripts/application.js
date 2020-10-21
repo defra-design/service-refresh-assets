@@ -8,3 +8,13 @@ if (window.console && window.console.info) {
 $(document).ready(function () {
   window.GOVUKFrontend.initAll()
 })
+
+// JS/Non-JS content - Perhaps we need a helper for this
+const nonJsElements = document.getElementsByClassName('defra-no-js')
+Array.prototype.forEach.call(nonJsElements, function (element) {
+  element.style.display = 'none'
+})
+const jsElements = document.getElementsByClassName('defra-js')
+Array.prototype.forEach.call(jsElements, function (element) {
+  element.removeAttribute('style')
+})
