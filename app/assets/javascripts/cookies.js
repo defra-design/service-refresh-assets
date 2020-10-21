@@ -1,7 +1,7 @@
-const container = document.getElementById('cookie-accept')
+var container = document.getElementById('cookie-accept')
 
 if (container) {
-  const accept = document.createElement('button')
+  var accept = document.createElement('button')
   accept.className = 'defra-cookie-banner__button-accept'
   accept.innerText = 'Accept all cookies'
   container.parentNode.replaceChild(accept, container)
@@ -12,7 +12,7 @@ if (container) {
     document.getElementById('cookie-confirmation').removeAttribute('style')
   })
 
-  const hide = document.getElementById('cookie-hide')
+  var hide = document.getElementById('cookie-hide')
 
   hide.addEventListener('click', (e) => {
     e.preventDefault()
@@ -20,12 +20,12 @@ if (container) {
   })
 }
 
-const save = document.getElementById('cookies-save')
+var save = document.getElementById('cookies-save')
 
 if (save) {
   save.addEventListener('click', (e) => {
     e.preventDefault()
-    const alert = document.getElementById('cookie-save-confirmation')
+    var alert = document.getElementById('cookie-save-confirmation')
     alert.removeAttribute('style')
     alert.focus()
   })
