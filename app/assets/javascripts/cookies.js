@@ -6,7 +6,7 @@ if (container) {
   acceptButton.innerText = 'Accept all cookies'
   container.parentNode.replaceChild(acceptButton, container)
 
-  acceptButton.addEventListener('click', (e) => {
+  acceptButton.addEventListener('click', function (e) {
     e.preventDefault()
     document.getElementById('cookie-message').style.display = 'none'
     document.getElementById('cookie-confirmation').removeAttribute('style')
@@ -14,7 +14,7 @@ if (container) {
 
   var hideButton = document.getElementById('cookie-hide')
 
-  hideButton.addEventListener('click', (e) => {
+  hideButton.addEventListener('click', function (e) {
     e.preventDefault()
     document.getElementById('cookie-banner').style.display = 'none'
   })
@@ -23,7 +23,7 @@ if (container) {
 var saveButton = document.getElementById('cookies-save')
 
 if (saveButton) {
-  saveButton.addEventListener('click', (e) => {
+  saveButton.addEventListener('click', function (e) {
     e.preventDefault()
     var alert = document.getElementById('cookie-save-confirmation')
     alert.removeAttribute('style')
