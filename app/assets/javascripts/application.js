@@ -9,7 +9,7 @@ $(document).ready(function () {
   window.GOVUKFrontend.initAll()
 })
 
-// JS/Non-JS content - Perhaps we need a helper for this
+// JS/Non-JS content - We may already havea helper on live for this
 var nonJsElements = document.getElementsByClassName('defra-no-js')
 Array.prototype.forEach.call(nonJsElements, function (element) {
   element.style.display = 'none'
