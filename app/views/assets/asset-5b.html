@@ -7,7 +7,6 @@ Asset 5b
 {% endblock %}
 
 {% block content %}
-
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <h2 class="govuk-heading-m">Requires</h2>
@@ -74,71 +73,7 @@ Asset 5b
     </p>
     {% include "partials/levels.html" %}
     <!-- Regional forecast -->
-    <h2 class="govuk-heading-m govuk-!-margin-top-2">Flood forecast for the region</h2>
-    {% set dayOne %}
-    <h3 class="govuk-heading-s govuk-!-margin-bottom-0">Today</h3>
-    <p>Medium risk from river flooding with a high likelihood of significant impacts.</p>
-    {% endset -%}
-    {% set dayTwo%}
-    <h3 class="govuk-heading-s govuk-!-margin-bottom-0">Tomorrow</h3>
-    <p>Medium risk from river flooding with a high likelihood of significant impacts.</p>
-    {% endset -%}
-    {% set dayThree %}
-    <h3 class="govuk-heading-s govuk-!-margin-bottom-0">Thursday</h3>
-    <p>Medium risk from river flooding with a high likelihood of significant impacts.</p>
-    {% endset -%}
-    {% set dayFour %}
-    <h3 class="govuk-heading-s govuk-!-margin-bottom-0">Friday</h3>
-    <p>Low risk from river flooding with a high likelihood of minor impacts</p>
-    {% endset -%}
-    {% set dayFive %}
-    <h3 class="govuk-heading-s govuk-!-margin-bottom-0">Saturday</h3>
-    <p>Low risk from river flooding with a high likelihood of minor impacts</p>
-    {% endset -%}
-    {{ govukTabs({
-      classes: 'defra-flood-tabs govuk-!-padding-top-2',
-      items: [
-        {
-          label: "Today",
-          id: "day-one",
-          panel: {
-            html: dayOne
-          }
-        },
-        {
-          label: "Tomorrow",
-          id: "day-two",
-          panel: {
-            html: dayTwo
-          }
-        },
-        {
-          label: "Thursday",
-          id: "day-three",
-          panel: {
-            html: dayThree
-          }
-        },
-        {
-          label: "Friday",
-          id: "day-four",
-          panel: {
-            html: dayFour
-          }
-        },
-        {
-          label: "Saturday",
-          id: "day-five",
-          panel: {
-            html: dayFive
-          }
-        }
-      ]
-    }) }}
-    <p class="defra-flood-meta govuk-!-margin-bottom-6">
-      <time datetime="">Updated 3:30pm on 29 March 2020</time><br/>
-      Produced by the Met Office and Environment Agency
-    </p>
+    {% include "partials/outlook.html" %}
     <!-- end regional forecast -->
     <p><a href="https://www.gov.uk/sign-up-for-flood-warnings">Get flood warnings by phone, text or email</a></p>
     {% include "partials/floodline.html" %}
@@ -180,6 +115,12 @@ Asset 5b
   </div>
 </div>
 <!-- End -->
-
 {% endblock %}
 
+{% block feedback %}
+<div class="defra-feedback">
+  <div class="defra-feedback__container">
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfo8KEuvRQf0TmxZ8XFhYM2em45JFcJEOCrkKT8BursofUEwg/viewform">Is there anything missing on this page?</a>
+  </div>
+</div>
+{% endblock %}
