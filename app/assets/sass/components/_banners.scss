@@ -69,3 +69,10 @@
         }
     }
 }
+.defra-banner-beta {
+    border: 5px solid$govuk-link-colour;
+    padding: 15px;
+    p:last-child {
+        margin-bottom:1px;
+    }
+}
