@@ -76,3 +76,18 @@
         margin-bottom:1px;
     }
 }
+.defra-banner-covid {
+    background-color: $govuk-link-colour;
+    border-top:1px solid white;
+    padding: 15px;
+    p {
+        color:white;
+        font-weight:bold;
+    }
+    p:last-child {
+        margin-bottom:1px;
+    }
+    a {
+        color:white;
+    }
+}
