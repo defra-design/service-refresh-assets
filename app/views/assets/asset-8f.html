@@ -2,7 +2,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  FIS-366-Page-5-(v1)
+  Asset 8f
 {% endblock %}
 
 {% block content %}
@@ -49,9 +49,27 @@
     </h1>
   </div>
 </div>
-<div class="defra-service-error govuk-!-margin-bottom-3">
-  <h2 class="defra-service-error__title" id="error-summary-title">Sorry, there is currently a problem with the data</h2>
-  <p class="govuk-body govuk-!-margin-bottom-0">There is no recent data.</p>
+<!-- (Audit 2.7) If latest measurement is 'unreliable' show instead of station statistics -->
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <div class="defra-service-error govuk-!-margin-bottom-3">
+      <h2 class="defra-service-error__title" id="error-summary-title">
+        Sorry, there is a problem with the latest measurement
+      </h2>
+      <p class="govuk-body govuk-!-margin-bottom-0">
+        The latest measurement is unreliable. This could be due to a fault with the measuring equipment.
+      </p>
+    </div>
+  </div>
+</div>
+<!-- end latest measurement is unreliable -->
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <figure class="defra-line-chart" aria-hidden="true" hidden>
+      <figcaption class="govuk-heading-m govuk-!-margin-bottom-7">Height over the last 5 days and 36 hour forecast</figcaption>
+      <div id="line-chart" class="defra-line-chart__container" role="presentation"></div>
+    </figure>
+  </div>
 </div>
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">

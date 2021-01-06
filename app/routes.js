@@ -5,14 +5,11 @@ const router = express.Router()
 router.get('/asset-1', function (req, res) {
   res.render('assets/asset-1')
 })
-router.get('/fis-152-draft', function (req, res) {
-  res.render('assets/fis-152-draft')
+router.get('/asset-2', function (req, res) {
+  res.render('assets/asset-2')
 })
-router.get('/fis-155-draft', function (req, res) {
-  res.render('assets/fis-155-draft')
-})
-router.get('/fis-208-draft', function (req, res) {
-  res.render('assets/fis-208-draft')
+router.get('/asset-3', function (req, res) {
+  res.render('assets/asset-3')
 })
 router.get('/asset-5', function (req, res) {
   res.render('assets/asset-5')
@@ -38,62 +35,62 @@ router.get('/asset-6', function (req, res) {
 router.get('/asset-6b', function (req, res) {
   res.render('assets/asset-6b')
 })
-router.get('/fis-279-alert-inactive-draft', function (req, res) {
-  res.render('assets/fis-279-alert-inactive-draft')
+router.get('/asset-7', function (req, res) {
+  res.render('assets/asset-7')
 })
-router.get('/fis-279-alert-active-draft', function (req, res) {
-  res.render('assets/fis-279-alert-active-draft')
+router.get('/asset-7b', function (req, res) {
+  res.render('assets/asset-7b')
 })
-router.get('/fis-279-warning-inactive-draft', function (req, res) {
-  res.render('assets/fis-279-warning-inactive-draft')
+router.get('/asset-7c', function (req, res) {
+  res.render('assets/asset-7c')
 })
-router.get('/fis-279-warning-active-draft', function (req, res) {
-  res.render('assets/fis-279-warning-active-draft')
+router.get('/asset-7d', function (req, res) {
+  res.render('assets/asset-7d')
 })
-router.get('/fis-279-severe-draft', function (req, res) {
-  res.render('assets/fis-279-severe-draft')
+router.get('/asset-7e', function (req, res) {
+  res.render('assets/asset-7e')
 })
-router.get('/fis-279-removed-draft', function (req, res) {
-  res.render('assets/fis-279-removed-draft')
+router.get('/asset-7f', function (req, res) {
+  res.render('assets/asset-7f')
 })
-router.get('/fis-366-page-1-v1', function (req, res) {
-  res.render('assets/fis-366-page-1-v1')
+router.get('/asset-8', function (req, res) {
+  res.render('assets/asset-8')
 })
-router.get('/fis-366-page-2-v1', function (req, res) {
-  res.render('assets/fis-366-page-2-v1')
+router.get('/asset-8b', function (req, res) {
+  res.render('assets/asset-8b')
 })
-router.get('/fis-366-page-3-v1', function (req, res) {
-  res.render('assets/fis-366-page-3-v1')
+router.get('/asset-8c', function (req, res) {
+  res.render('assets/asset-8c')
 })
-router.get('/fis-366-page-4-v1', function (req, res) {
-  res.render('assets/fis-366-page-4-v1')
+router.get('/asset-8d', function (req, res) {
+  res.render('assets/asset-8d')
 })
-router.get('/fis-366-page-5-v1', function (req, res) {
-  res.render('assets/fis-366-page-5-v1')
+router.get('/asset-8e', function (req, res) {
+  res.render('assets/asset-8e')
 })
-router.get('/fis-366-page-6-v1', function (req, res) {
-  res.render('assets/fis-366-page-6-v1')
+router.get('/asset-8f', function (req, res) {
+  res.render('assets/asset-8f')
 })
-router.get('/fis-366-page-7-v1', function (req, res) {
-  res.render('assets/fis-366-page-7-v1')
+router.get('/asset-8g', function (req, res) {
+  res.render('assets/asset-8g')
 })
-router.get('/fis-366-page-8-draft', function (req, res) {
-  res.render('assets/fis-366-page-8-draft')
+router.get('/asset-8h', function (req, res) {
+  res.render('assets/asset-8h')
 })
-router.get('/fis-373-draft', function (req, res) {
-  res.render('assets/fis-373-draft')
+router.get('/asset-9', function (req, res) {
+  res.render('assets/asset-9')
 })
-router.get('/fis-375-draft', function (req, res) {
-  res.render('assets/fis-375-draft')
+router.get('/asset-10', function (req, res) {
+  res.render('assets/asset-10')
 })
 router.get('/fis-387-draft', function (req, res) {
   res.render('assets/fis-387-draft')
 })
-router.get('/fis-410-draft', function (req, res) {
-  res.render('assets/fis-410-draft')
+router.get('/asset-11', function (req, res) {
+  res.render('assets/asset-11')
 })
-router.get('/fis-459-v1', function (req, res) {
-  res.render('assets/fis-459-v1')
+router.get('/asset-12', function (req, res) {
+  res.render('assets/asset-12')
 })
 router.get('/asset-14', function (req, res) {
   res.render('assets/asset-14')

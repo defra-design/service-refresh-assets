@@ -2,7 +2,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  FIS-366-Page-8-(draft)
+  Asset 8e
 {% endblock %}
 
 {% block content %}
@@ -12,7 +12,6 @@
     <h2 class="govuk-heading-m">Requires</h2>
     <ul class="govuk-list">
       <li>sass/components/_flood-nav.scss</li>
-      <li>sass/components/_flood-status.scss</li>
       <li>sass/components/_service-error.scss</li>
       <li>sass/components/_flood-statistics.scss</li>
       <li>sass/components/_line-chart.scss</li>
@@ -44,76 +43,16 @@
 </div>
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-full">
-    <div class="defra-flood-status govuk-!-margin-bottom-5">
-      <div class="defra-flood-status-item defra-flood-status-item--alert">
-        <span class="defra-flood-status-item__icon">
-          <span class="govuk-visually-hidden">Flood alert</span>
-        </span>
-        <div class="defra-flood-status-item__text">
-          <strong><a href="">There is a flood alert in this area</a></strong>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <h1 class="govuk-heading-xl">
-      River Aire level <!-- upstream/downstream --> at Gargrave
+      River Aire level at Gargrave
     </h1>
   </div>
 </div>
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-full">
-    <h2 class="govuk-visually-hidden">Station summary</h2>
-    <div class="defra-flood-statistics">
-      <dl class="defra-flood-statistics__list">
-        <!-- If station has latest level and pc5 and pc95 -->
-        <div class="defra-flood-statistics__row"> 
-          <dt class="defra-flood-statistics__key">Status</dt>
-          <dd class="defra-flood-statistics__value">
-            <strong class="defra-flood-statistics__impact defra-flood-statistics__impact--normal"> <!-- defra-flood-statistics__impact--high -->
-              Normal <!-- {Low / High} -->
-            </strong>
-            0.43m to 2.80m <!-- if low then 'below {pc95}m', if high then 'above {pc5}m' -->
-          </dd>
-        </div>
-        <!-- end station has pc5 and pc95 -->
-        <!-- Exclude from MVP
-        <div class="defra-flood-statistics__row">
-          <dt class="defra-flood-statistics__key">Trend</dt>
-          <dd class="defra-flood-statistics__value">
-            <strong class="defra-flood-statistics__impact">
-              Falling
-            </strong>
-            36 hour forecast: stable
-          </dd>
-        </div>
-        end exclude -->
-        <div class="defra-flood-statistics__row">
-          <dt class="defra-flood-statistics__key">Height</dt>
-          <dd class="defra-flood-statistics__value">
-            <strong class="defra-flood-statistics__impact">
-              1.17m
-            </strong>
-            at <time datetime="">5:30am</time> today <!-- yesterday / on 1 Jan 1970 -->
-          </dd>
-        </div>
-      </dl>
-    </div>
-  </div>
+<div class="defra-service-error govuk-!-margin-bottom-3">
+  <h2 class="defra-service-error__title" id="error-summary-title">Sorry, there is currently a problem with the data</h2>
+  <p class="govuk-body govuk-!-margin-bottom-0">There is no recent data.</p>
 </div>
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-full">
-    <figure class="defra-line-chart" aria-hidden="true" hidden>
-      <figcaption class="govuk-heading-m govuk-!-margin-bottom-7">Height over the last 5 days <!-- if ffoi add 'and 36 hour forecast' --></figcaption>
-      <div id="line-chart" class="defra-line-chart__container" role="presentation"></div>
-    </figure>
-  </div>
-</div>
-<!-- If station has at least one threshold or impact -->
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
     <h2 class="govuk-heading-m govuk-!-margin-top-6">How levels here could affect nearby areas</h2>
@@ -122,10 +61,9 @@
         <dt class="defra-flood-impact-list__key">
           5.03m
         </dt>
-        <dd class="defra-flood-impact-list__value" data-id="highest" data-level="5.03" data-name="Highest level on record"> <!-- unique id and short name -->
+        <dd class="defra-flood-impact-list__value" data-id="highest" data-level="5.03" data-name="Highest level on record">
           <div class="defra-flood-impact-list__container">
-            Water reaches the highest recorded level at this measuring station <!-- impact, threshold or target area name -->
-            <!-- placeholder for chart button, rendered with javascript -->
+            Water reaches the highest recorded level at this measuring station
             <span class="defra-flood-impact-list__action"></span>
           </div>
         </dd>
@@ -133,7 +71,6 @@
     </dl> 
   </div>
 </div>
-<!-- end station has at least one threshold or impact -->
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
     <details class="govuk-details govuk-!-margin-top-6" data-module="govuk-details">

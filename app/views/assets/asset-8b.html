@@ -2,7 +2,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  FIS-366-Page-7-(v1)
+  Asset 8b
 {% endblock %}
 
 {% block content %}
@@ -42,6 +42,48 @@
   </div>
 </div>
 
+<!-- Common component for later sprint
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <div class="defra-flood-status govuk-!-margin-bottom-4">
+      <div class="defra-flood-status-item defra-flood-status-item--severe">
+        <span class="defra-flood-status-item__icon">
+          <span class="govuk-visually-hidden">Severe flood warning</span>
+        </span>
+        <div class="defra-flood-status-item__text">
+          <strong>
+            <a href="">There is 1 severe flood warning, 4 warnings and 1 alert in place nearby</a>
+          </strong>
+        </div>
+      </div>
+    </div>
+    <div class="defra-flood-status govuk-!-margin-bottom-4">
+      <div class="defra-flood-status-item defra-flood-status-item--warning">
+        <span class="defra-flood-status-item__icon">
+          <span class="govuk-visually-hidden">Flood warning</span>
+        </span>
+        <div class="defra-flood-status-item__text">
+          <strong>
+            <a href="">There is a flood warning in place nearby</a>
+          </strong>
+        </div>
+      </div>
+    </div>
+    <div class="defra-flood-status govuk-!-margin-bottom-4">
+      <div class="defra-flood-status-item defra-flood-status-item--alert">
+        <span class="defra-flood-status-item__icon">
+          <span class="govuk-visually-hidden">Flood alert</span>
+        </span>
+        <div class="defra-flood-status-item__text">
+          <strong>
+            <a href="">There are 2 flood alerts in place nearby</a>
+          </strong>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+end common component for later sprint -->
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <h1 class="govuk-heading-xl">
@@ -51,9 +93,9 @@
 </div>
 <!-- (Audit 2.9) show if feed was interputed-->
 <div class="defra-service-error govuk-!-margin-bottom-8">
-  <h2 class="defra-service-error__title" id="error-summary-title">Sorry, there is a problem with the forecast data</h2>
+  <h2 class="defra-service-error__title" id="error-summary-title">Sorry, this data feed was interrupted</h2>
   <p class="govuk-body govuk-!-margin-bottom-0">
-    The forecast data is missing or more than 24 hours old. <!-- Time and date feed was resumed -->
+    Normal service resumed at 10:30am on Monday 1 January 2020. <!-- Time and date feed was resumed -->
   </p>
 </div>
 <!-- -->
@@ -66,15 +108,14 @@
         <div class="defra-flood-statistics__row"> 
           <dt class="defra-flood-statistics__key">Status</dt>
           <dd class="defra-flood-statistics__value">
-            <strong class="defra-flood-statistics__impact defra-flood-statistics__impact--normal"> <!-- defra-flood-statistics__impact--high -->
-              Normal <!-- {Low / High} -->
+            <strong class="defra-flood-statistics__impact"> <!-- defra-flood-statistics__impact--high -->
+              Low <!-- {Low / High} -->
             </strong>
-            0.43m to 2.80m <!-- if low then 'below {pc95}m', if high then 'above {pc5}m' -->
+            below 0.43m <!-- if low then 'below {pc95}m', if high then 'above {pc5}m' -->
           </dd>
         </div>
         <!-- end station has pc5 and pc95 -->
-        <!-- If ffoi and has forecast telemetry that is with 24 hours old -->
-        <!-- Not for MVP
+        <!-- Exclude from MVP
         <div class="defra-flood-statistics__row">
           <dt class="defra-flood-statistics__key">Trend</dt>
           <dd class="defra-flood-statistics__value">
@@ -84,13 +125,12 @@
             36 hour forecast: stable
           </dd>
         </div>
-        -->
-        <!-- end ffoi -->
+        end exclude -->
         <div class="defra-flood-statistics__row">
           <dt class="defra-flood-statistics__key">Height</dt>
           <dd class="defra-flood-statistics__value">
             <strong class="defra-flood-statistics__impact">
-              1.17m
+              <abbr title="Less than or equal to">&le;</abbr> 0m
             </strong>
             at <time datetime="">5:30am</time> today <!-- yesterday / on 1 Jan 1970 -->
           </dd>
@@ -104,9 +144,15 @@
     <figure class="defra-line-chart" aria-hidden="true" hidden>
       <figcaption class="govuk-heading-m govuk-!-margin-bottom-7">Height over the last 5 days and 36 hour forecast</figcaption>
       <div id="line-chart" class="defra-line-chart__container" role="presentation"></div>
-      <!-- Show if ffoi sation, moved to new ticket -->
-      <p class="govuk-body-s govuk-!-margin-top-2 govuk-!-margin-bottom-0">The highest level in our forecast is 1.41m at 2:45am on 5 March. Forecasts come from a computer model and can change.</p>
-      <!-- end ffoi station -->
+      <!-- Show if latest level is more than 1 hour old -->
+      <p class="govuk-body-s govuk-!-margin-top-2 govuk-!-margin-bottom-0">We take measurements more often as the risk of flooding increases.</p>
+      <!-- end latest level is more than 1 hour old-->
+      <!-- Show if river level and station has one or more negative values -->
+      <p class="govuk-body-s govuk-!-margin-top-2 govuk-!-margin-bottom-0">Levels that are very low or below zero are normal for some stations.</p>
+      <!-- end river level and has negative values -->
+      <!-- Show if ffoi sation, moved to new ticket
+      <p class="govuk-body-s govuk-!-margin-top-2 govuk-!-margin-bottom-0">This forecast is from a computer model. It has some uncertainty and might change.</p>
+      end ffoi station -->
     </figure>
   </div>
 </div>
@@ -138,12 +184,6 @@
       </summary>
       <div class="govuk-details__text">
         <dl class="govuk-summary-list govuk-summary-list--no-border govuk-summary-list--defra-flood-station govuk-!-font-size-16">
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Grid reference
-            </dt>
-            <dd class="govuk-summary-list__value">NY 12345 12345</dd>
-          </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
               Site datum
@@ -179,11 +219,6 @@
         </dl>
       </div>
     </details>
-    <!--
-    <p class="govuk-text govuk-!-margin-bottom-6">
-      <a href="/how-river-sea-groundwater-levels-are-measured">Find out how river, sea and groundwater levels are measured</a>.    
-    </p>
-    -->
   </div>
 </div>
 <!-- End -->

@@ -2,7 +2,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  FIS-366-Page-4-(v1)
+  Asset 8c
 {% endblock %}
 
 {% block content %}
@@ -27,9 +27,7 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
     <h2 class="govuk-heading-m govuk-!-padding-top-6 govuk-!-padding-bottom-6">Page meta titles</h2>
-    <p>&lt;title&gt;<!-- Start -->River Aire level at Gargrave - GOV.UK<!-- End -->&lt;/title&gt;</p>
-    <p>&lt;title&gt;<!-- Start -->Sea level at Silloth - GOV.UK<!-- End -->&lt;/title&gt;</p>
-    <p>&lt;title&gt;<!-- Start -->Groundwater level at Tilshead borehole - GOV.UK<!-- End -->&lt;/title&gt;</p>
+    <p>&lt;title&gt;<!-- Start -->River Aire level upstream at Gargrave - GOV.UK<!-- End -->&lt;/title&gt;</p>
   </div>
 </div>
 
@@ -54,39 +52,75 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <h1 class="govuk-heading-xl">
-      River Aire level at Gargrave
+      River Aire level upstream at Gargrave <!-- if station is multi insert upstream or downstream bewteen level and at -->
     </h1>
   </div>
 </div>
-<!-- Closed -->
+<!-- If station is multi -->
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
-    <div class="defra-service-error govuk-!-margin-bottom-7">
-      <h2 class="defra-service-error__title" id="error-summary-title">
-        This measuring station is closed
-      </h2>
-      <p class="govuk-body govuk-!-margin-bottom-0">
-        No data is available. You can <a href="/river-and-sea-levels">check another river or sea level</a>.
-      </p>
+    <p class="govuk-!-margin-bottom-8">This measuring station takes 2 measurements. You're viewing the upstream level. <a href="">View the downstream level.</a></p> <!-- use upstream or downstream accordingley -->
+  </div>
+</div>
+<!-- end station is multi -->
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h2 class="govuk-visually-hidden">Station summary</h2>
+    <div class="defra-flood-statistics">
+      <dl class="defra-flood-statistics__list">
+        <div class="defra-flood-statistics__row">
+          <dt class="defra-flood-statistics__key">Height</dt>
+          <dd class="defra-flood-statistics__value">
+            <strong class="defra-flood-statistics__impact">
+              -0.95m
+            </strong>
+            at <time datetime="">5:30am</time> today
+          </dd>
+        </div>
+      </dl>
     </div>
   </div>
 </div>
-<!-- Suspended -->
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
-    <div class="defra-service-error govuk-!-margin-bottom-7">
-      <h2 class="defra-service-error__title" id="error-summary-title">
-        This measuring station is currently offline
-      </h2>
-      <p class="govuk-body govuk-!-margin-bottom-0">
-        We are working to get it back online. You can <a href="/river-and-sea-levels">check another river or sea level</a>.
-      </p>
-    </div>
+    <figure class="defra-line-chart" aria-hidden="true" hidden>
+      <figcaption class="govuk-heading-m govuk-!-margin-bottom-7">Height over the last 5 days and 36 hour forecast</figcaption>
+      <div id="line-chart" class="defra-line-chart__container" role="presentation"></div>
+    </figure>
   </div>
 </div>
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
-    <details class="govuk-details" data-module="govuk-details">
+    <h2 class="govuk-heading-m govuk-!-margin-top-6">How levels here could affect nearby areas</h2>
+    <dl class="defra-flood-impact-list govuk-!-margin-bottom-0">
+      <div class="defra-flood-impact-list__row">
+        <dt class="defra-flood-impact-list__key">
+          5.03m
+        </dt>
+        <dd class="defra-flood-impact-list__value" data-id="highest" data-level="5.03" data-name="Highest level on record">
+          <div class="defra-flood-impact-list__container">
+            Water reaches the highest level recorded at this measuring station
+            <span class="defra-flood-impact-list__action"></span>
+          </div>
+        </dd>
+      </div>
+      <div class="defra-flood-impact-list__row defra-flood-impact-list__row--current">
+        <dt class="defra-flood-impact-list__key">
+          2.95m
+        </dt>
+        <dd class="defra-flood-impact-list__value" data-level="2.95">
+          <div class="defra-flood-impact-list__container">
+            Latest level
+            <span class="defra-flood-impact-list__action"></span>
+          </div>
+        </dd>
+      </div>
+    </dl> 
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <details class="govuk-details govuk-!-margin-top-6" data-module="govuk-details">
       <summary class="govuk-details__summary">
         <span class="govuk-details__summary-text">
           View technical information for this measuring station

@@ -2,7 +2,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  FIS-279-Severe-(draft)
+  Asset 7c
 {% endblock %}
 
 {% block content %}
@@ -26,7 +26,7 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
     <h2 class="govuk-heading-m govuk-!-padding-top-6 govuk-!-padding-bottom-6">Page meta titles</h2>
-    <p>&lt;title&gt;<!-- Start -->Severe flood warning for Keswick campsite - GOV.UK<!-- End -->&lt;/title&gt;</p>
+    <p>&lt;title&gt;<!-- Start -->Keswick campsite flood warning area - GOV.UK<!-- End -->&lt;/title&gt;</p>
   </div>
 </div>
 
@@ -44,27 +44,35 @@
     </nav>
   </div>
 </div>
-  
+
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <div class="defra-flood-status govuk-!-margin-bottom-3">
-      <div class="defra-flood-status-item defra-flood-status-item--severe">
+      <div class="defra-flood-status-item">
+        <div class="defra-flood-status-item__text">
+          There are no flood warnings in this area
+        </div>
+      </div>
+    </div>
+    <div class="defra-flood-status govuk-!-margin-bottom-3">
+      <div class="defra-flood-status-item defra-flood-status-item--alert">
         <span class="defra-flood-status-item__icon"></span>
         <div class="defra-flood-status-item__text">
-          <strong>Severe flooding is expected - <a href="/what-to-do-in-a-flood#what-to-do-if-you-get-a-severe-flood-warning">act now</a></strong>
+          There are no flood warnings in this area, but there is <a href="">a flood alert in the wider area</a>
         </div>
       </div>
     </div>
     <h1 class="govuk-heading-xl">
-      Severe flood warning for Keswick campsite
+      Keswick campsite flood warning area
     </h1>
   </div>
 </div>
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <p>We'll update this page when there's a flood warning in the area.</p>
+    <p>A flood warning means flooding to some property is expected. A severe flood warning means there's a danger to life.</p>
     <p class="defra-flood-meta defra-flood-meta--border govuk-!-margin-top-6 govuk-!-margin-bottom-4">
-      Updated <time datetime="2020-03-30T08:55:00.000Z">9:55am on 30 March 2020</time>
+      Up to date as of <time datetime="2020-03-30T08:55:00.000Z">9:55am on 30 March 2020</time>
     </p>
     <p>Flood warning area: Keswick Campsite flooding from the lake.</p>
     <button id="map-btn" class="defra-button-map govuk-!-margin-bottom-6">View map of the flood warning area</button><div class="defra-map" id="map-live"></div>
