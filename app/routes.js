@@ -89,6 +89,9 @@ router.get('/fis-387-draft', function (req, res) {
 router.get('/asset-11', function (req, res) {
   res.render('assets/asset-11')
 })
+router.get('/asset-11b', function (req, res) {
+  res.render('assets/asset-11b')
+})
 router.get('/asset-12', function (req, res) {
   res.render('assets/asset-12')
 })

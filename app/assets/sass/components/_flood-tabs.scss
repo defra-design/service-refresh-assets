@@ -6,7 +6,7 @@
     .govuk-tabs__panel {
         margin-bottom:0px;
     }
-    > h3:first-child {
+    > h3 {
         display: none;
     }
     .govuk-tabs__title {
@@ -20,7 +20,7 @@
     }
 }
 .js-enabled .defra-flood-tabs {
-    > h3:first-child {
+    > h3 {
         @include mq ($from: tablet) {
             display: block;
         }
@@ -41,7 +41,7 @@
             @include govuk-responsive-margin(2, 'bottom')
         }
     }   
-    .govuk-tabs__panel *:first-child {
+    .govuk-tabs__panel h3 {
         @include mq ($from: tablet) {
             @include defra-visually-hidden();
         }
