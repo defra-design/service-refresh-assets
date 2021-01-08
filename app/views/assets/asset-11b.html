@@ -9,7 +9,6 @@
 
 {% block content %}
 
-
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <h2 class="govuk-heading-m">Flood forecast for the region</h2>
@@ -41,14 +40,8 @@
       </div>
       <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="tomorrow">
         <h3 class="govuk-heading-s">Tomorrow</h3>
-        <p>
-          <strong>Coastal flooding: Low risk</strong></br>
-          Impacts most likely around times of high water on Monday and Tuesday.
-        </p>
-        <p>
-          <strong>Surface water flooding: low risk</strong></br>
-          Isolated heavy showers. Urban areas and small catchments most at risk.
-        </p>
+        <p><strong>There is a low risk from surface water and coastal flooding</strong></p>
+        <p>This would probably lead to some localised flooding to land, roads and properties.</p>
       </div>
       <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="outlook">
         <h3 class="govuk-heading-s">Outlook</h3>
@@ -62,88 +55,9 @@
         </p>
       </div>
     </div>
-
-
-
-    <!-- Start -->
-    <h2 class="govuk-heading-m govuk-!-margin-top-7">Flood forecast for the region</h2>
-    {% set dayOne %}
-    <h3 class="govuk-heading-s govuk-!-margin-bottom-0">Today</h3>
-    <p>Medium risk from river flooding with a high likelihood of significant impacts.</p>
-    {% endset -%}
-    {% set dayTwo%}
-    <h3 class="govuk-heading-s govuk-!-margin-bottom-0">Tomorrow</h3>
-    <p>Medium risk from river flooding with a high likelihood of significant impacts.</p>
-    {% endset -%}
-    {% set dayThree %}
-    <h3 class="govuk-heading-s govuk-!-margin-bottom-0">Thursday</h3>
-    <p>Medium risk from river flooding with a high likelihood of significant impacts.</p>
-    {% endset -%}
-    {% set dayFour %}
-    <h3 class="govuk-heading-s govuk-!-margin-bottom-0">Friday</h3>
-    <p>Low risk from river flooding with a high likelihood of minor impacts</p>
-    {% endset -%}
-    {% set dayFive %}
-    <h3 class="govuk-heading-s govuk-!-margin-bottom-0">Saturday</h3>
-    <p>Low risk from river flooding with a high likelihood of minor impacts</p>
-    {% endset -%}
-    {{ govukTabs({
-      classes: 'defra-flood-tabs govuk-!-padding-top-2',
-      items: [
-        {
-          label: "Today",
-          id: "day-one",
-          panel: {
-            html: dayOne
-          }
-        },
-        {
-          label: "Tomorrow",
-          id: "day-two",
-          panel: {
-            html: dayTwo
-          }
-        },
-        {
-          label: "Thursday",
-          id: "day-three",
-          panel: {
-            html: dayThree
-          }
-        },
-        {
-          label: "Friday",
-          id: "day-four",
-          panel: {
-            html: dayFour
-          }
-        },
-        {
-          label: "Saturday",
-          id: "day-five",
-          panel: {
-            html: dayFive
-          }
-        }
-      ]
-    }) }}
-    <p class="defra-flood-meta govuk-!-margin-bottom-4">
-      <time datetime="">Updated yesterday at 3:30pm</time>. Produced by the Met Office and Environment Agency.
-    </p>
-    <!-- End -->
-  </div>
-</div>
-
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    <p class="govuk-!-padding-top-4">(b)</p>
-    <!-- Start -->
-    <h2 class="govuk-heading-m">Flood forecast for the region</h2>
-    <p>The flood risk for the next 5 days is very low.</p>
     <p class="defra-flood-meta govuk-!-margin-bottom-4">
       <time datetime="">Updated today at 10:30am</time>. Produced by the Met Office and Environment Agency
     </p>
-    <!-- End -->
   </div>
 </div>
 
