@@ -4,7 +4,7 @@
 {% from "govuk/components/table/macro.njk" import govukTable %}
 
 {% block pageTitle %}
-  Asset 11c
+  Asset 11b
 {% endblock %}
 
 {% block content %}
@@ -17,13 +17,54 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <!-- Start -->
     <h2 class="govuk-heading-m">Flood forecast for the region</h2>
-    <p>The flood risk for the next 5 days is very low.</p>
-    <p class="defra-flood-meta govuk-!-margin-bottom-4">
+    <div class="defra-flood-tabs govuk-!-padding-top-2" data-module="govuk-tabs">
+      <h2 class="govuk-tabs__title">
+        Contents
+      </h2>
+      <ul class="govuk-tabs__list">
+        <li class="govuk-tabs__list-item">
+          <a class="govuk-tabs__tab" href="#today">
+            Today
+          </a>
+        </li>
+        <li class="govuk-tabs__list-item">
+          <a class="govuk-tabs__tab" href="#tomorrow">
+            Tomorrow
+          </a>
+        </li>
+        <li class="govuk-tabs__list-item">
+          <a class="govuk-tabs__tab" href="#outlook">
+            Outlook
+          </a>
+        </li>
+      </ul>
+      <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="today">
+        <h3 class="govuk-heading-s">Today</h3>
+        <p><strong>There is a low risk from coastal flooding and a very low risk from river and surface water flooding</strong></p>
+        <p>High tides or storm surges would probably lead to some localised flooding to land, roads and properties. High or overflowing rivers and runoff from rainfall or blocked drains would possibly lead to land, roads and individual properties flooding however this is not expected.</p>
+      </div>
+      <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="tomorrow">
+        <h3 class="govuk-heading-s">Tomorrow</h3>
+        <p><strong>There is a low risk from surface water and coastal flooding and a very low risk from river flooding</strong></p>
+        <p>High tides or storm surges, runoff from rainfall or blocked drains would probably lead to some localised flooding to land, roads and properties. High or overflowing rivers would possibly lead to land, roads and individual properties flooding however this is not expected.</p>
+      </div>
+      <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="outlook">
+        <h3 class="govuk-heading-s">Outlook</h3>
+        <p>
+          <strong>Thursday</strong></br>
+          There is a low risk from coastal flooding
+        </p>
+        <p>
+          <strong>Friday and Saturday</strong></br>
+          The flood risk is very low
+        </p>
+      </div>
+    </div>
+    <button id="map-live-btn" class="defra-button-map govuk-!-margin-bottom-4">View map of flood risk areas<span class="govuk-visually-hidden">(Visual only)</span></button>
+    <p class="defra-flood-meta">
       <time datetime="">Updated today at 10:30am</time>. Produced by the Met Office and Environment Agency
     </p>
-    <!-- End -->
   </div>
 </div>
 

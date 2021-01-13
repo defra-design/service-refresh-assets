@@ -1,0 +1,31 @@
+
+{% extends "layout.html" %}
+{% from "govuk/components/tabs/macro.njk" import govukTabs %}
+{% from "govuk/components/table/macro.njk" import govukTable %}
+
+{% block pageTitle %}
+  Asset 11d
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <p class="govuk-body-s govuk-!-margin-bottom-8">Data: Monday 30 Septemeber 2019<br/>Location: Felixstowe</p>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <!-- Start -->
+    <h2 class="govuk-heading-m">Flood forecast for England</h2>
+    <p>Coastal/tidal flooding is probable for many parts of the English and Welsh coastline today (Monday) and Tuesday, continuing for the east coast of England on Wednesday. This is due to high tides and strong winds at times. River and surface water flooding is expected this afternoon and tonight for mainly central parts of England and also Wales, due to further heavy rain. On Tuesday, local flooding from surface water and small rivers is also possible, mainly for the southern half of England and Wales due to heavy showers. On Friday, for the south-west of England and Wales, coastal, river and surface water flooding are currently possible but not expected. Land, roads and some properties could flood and there will likely be travel disruption in places.</p>
+    <button id="map-live-btn" class="defra-button-map govuk-!-margin-bottom-4">View map of flood risk areas<span class="govuk-visually-hidden">(Visual only)</span></button>
+    <p class="defra-flood-meta govuk-!-margin-bottom-4">
+      <time datetime="">Updated today at 10:30am</time>. Produced by the Met Office and Environment Agency
+    </p>
+    <!-- End -->
+  </div>
+</div>
+
+{% endblock %}
