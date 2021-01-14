@@ -101,6 +101,9 @@ router.get('/asset-11d', function (req, res) {
 router.get('/asset-11e', function (req, res) {
   res.render('assets/asset-11e')
 })
+router.get('/asset-11f', function (req, res) {
+  res.render('assets/asset-11f')
+})
 router.get('/asset-12', function (req, res) {
   res.render('assets/asset-12')
 })
