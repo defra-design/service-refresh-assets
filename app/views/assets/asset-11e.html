@@ -4,20 +4,67 @@
 {% from "govuk/components/table/macro.njk" import govukTable %}
 
 {% block pageTitle %}
-  Asset 11c
+  Asset 11e
 {% endblock %}
 
 {% block content %}
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <!-- Start -->
+    <p class="govuk-body-s govuk-!-margin-bottom-8">Data: Monday 30 Septemeber 2019<br/>Location: Felixstowe</p>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">Felixstowe</h1>
     <h2 class="govuk-heading-m">Flood forecast for the region</h2>
-    <p>The flood risk for the next 5 days is very low.</p>
-    <p class="defra-flood-meta govuk-!-margin-bottom-4">
+    <div class="defra-flood-tabs govuk-!-padding-top-2" data-module="govuk-tabs">
+      <h2 class="govuk-tabs__title">
+        Contents
+      </h2>
+      <ul class="govuk-tabs__list">
+        <li class="govuk-tabs__list-item">
+          <a class="govuk-tabs__tab" href="#today">
+          <span class="defra-flood-tabs__label">Today</span>
+          </a>
+        </li>
+        <li class="govuk-tabs__list-item">
+          <a class="govuk-tabs__tab" href="#tomorrow">
+          <span class="defra-flood-tabs__label">Tomorrow</span>
+          </a>
+        </li>
+        <li class="govuk-tabs__list-item">
+          <a class="govuk-tabs__tab" href="#outlook">
+          <span class="defra-flood-tabs__label">Outlook</span>
+          </a>
+        </li>
+      </ul>
+      <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="today">
+        <h3 class="govuk-heading-s">Today</h3>
+        <p>High tides or large waves would probably lead to some localised flooding and minor travel disruption today.</p>
+      </div>
+      <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="tomorrow">
+        <h3 class="govuk-heading-s">Tomorrow</h3>
+        <p>High tides and large waves would probably lead to some localised flooding and minor travel disruption.</p>
+        <p>Runoff from rainfall or blocked drains would possibly lead to significant or widespread flooding and travel disruption, but this is very unlikely. If this happens, your life might be in danger.</p>
+      </div>
+      <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="outlook">
+        <h3 class="govuk-heading-s">Outlook</h3>
+        <p>
+          <strong>Wednesday</strong></br>
+          High tides or large waves would possibly lead to some localised flooding and minor travel disruption. 
+        </p>
+        <p>
+          <strong>Thursday and Friday</strong></br>
+          There is a very low risk of flooding.
+        </p>
+      </div>
+    </div>
+    <button id="map-live-btn" class="defra-button-map govuk-!-margin-bottom-4">View a map of flood risk areas<span class="govuk-visually-hidden">(Visual only)</span></button>
+    <p class="defra-flood-meta">
       <time datetime="">Updated today at 10:30am</time>. Produced by the Met Office and Environment Agency
     </p>
-    <!-- End -->
   </div>
 </div>
 
