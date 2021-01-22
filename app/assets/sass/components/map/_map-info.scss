@@ -5,15 +5,26 @@
     &__content dd {
       margin: 0px;
     }
+    &__name {
+      display: block;
+      @extend .govuk-body;
+      margin-bottom: 0px;
+    }
     &__type {
       display: block;
       @extend .govuk-body-s;
       margin-bottom: 0px;
     }
-    &__location {
+    &__description {
+      @extend .govuk-body-s;
+      margin-bottom: 0px;
+      margin-top:10px;
+    }
+    &__meta {
       display: block;
-      @include govuk-font($size: 19, $weight: bold);
-      margin-bottom: 10px;
+      @include govuk-font($size: 14);
+      margin-top: 10px;
+      margin-bottom: 0px;
     }
     &__buttons {
       margin-top: 10px;
@@ -81,13 +92,19 @@
       }
     }
     &__data {
-      display:table;
+      display: flex;
       width:100%;
       border-top:1px solid $govuk-border-colour;
-      padding-top:10px;
+      margin-top: 10px;
+      margin-bottom: 0px;
     }
     &__data-column {
-      display:table-cell;
+      flex: auto 1 1;
+      margin:0px;
+      padding-top:10px;
+      dd {
+        margin: 0px;
+      }
     }
     &__data-type {
       display: block;
