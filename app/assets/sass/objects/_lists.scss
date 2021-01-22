@@ -46,7 +46,7 @@
             }
         }
     }
-    &__items--levels {
+    &__items--measurements {
         padding-left:40px;
         dt {
             @include mq ($from: tablet) {
