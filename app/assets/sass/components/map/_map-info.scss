@@ -114,8 +114,9 @@
       display: block;
       @include govuk-font($size: 24, $weight: bold);
     }
-    &__data-value--warning {
-      color: govuk-colour('red');
+    &__data-secondary {
+      display: block;
+      @include govuk-font($size: 14);
     }
     &__data-description {
       display: block;
