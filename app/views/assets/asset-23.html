@@ -83,115 +83,193 @@
     <ul class="defra-flood-list">
       <li class="defra-flood-list__group">
         <span class="defra-flood-list__group-title">
-          <a href="">Sea levels <span class="govuk-visually-hidden">at:</span></a>
+          2 flood warnings
+          <span>Flooding is expected</span>
         </span>
-        <dl class="defra-flood-list__items defra-flood-list__items--measurements">
-          <div class="defra-flood-list__item">
-            <dt class="defra-flood-list__item-title">
-              <a href="">Silloth Docks</a>
-            </dt>
-            <dd class="defra-flood-list__item-desc">
-              1.00m <time datetime="2020-01-01T00:00:00.000Z">at 12:00am</time>
+        <ul>
+          <li class="defra-flood-list-item defra-flood-list-item--warning">
+            <span class="defra-flood-list-item__title">
+              <a href="">Mill Beck at Welham Road, Norton</a>
+            </span>
+            <span class="defra-flood-list-item__meta">
+              Updated <time datetime="2021-01-25T07:32:00.000Z">7:32am on 25 January 2021</time>
+            </span>
+          </li>
+          <li class="defra-flood-list-item defra-flood-list-item--warning">
+            <span class="defra-flood-list-item__title">
+              <a href="">River Ouse at York - St George's Field and Queen's Staith</a>
+            </span>
+            <span class="defra-flood-list-item__meta">
+              Updated <time datetime="2021-01-25T08:11:00.000Z">8:11am on 25 January 2021</time>
+            </span>
+          </li>
+        </ul>
+      </li>
+      <li class="defra-flood-list-item defra-flood-list-item--sea">
+        <span class="defra-flood-list-item__title">
+          <a href="">Sea level at Silloth Docks</a>
+        </span>
+        <dl class="defra-flood-list-data">
+          <div class="defra-flood-list-data__column">
+            <dt class="govuk-visually-hidden">Height</dt>
+            <dd>
+              <span class="defra-flood-list-data__value">-0.45m</span>
+              <span class="defra-flood-list-data__description"><time datetime="2020-01-01T00:00:00.000Z">4:00pm today</time></span>
             </dd>
           </div>
         </dl>
       </li>
-      <li class="defra-flood-list__group">
-        <span class="defra-flood-list__group-title">
-          <a href="">Groundwater levels <span class="govuk-visually-hidden">at:</span></a>
-        </span>
-        <dl class="defra-flood-list__items defra-flood-list__items--measurements">
-          <div class="defra-flood-list__item">
-            <dt class="defra-flood-list__item-title">
-              <a href="">Ashton Farm</a>
-            </dt>
-            <dd class="defra-flood-list__item-desc">
-              1.00m <time datetime="2020-01-01T00:00:00.000Z">at 12:05am</time>
-            </dd>
-          </div>
-        </dl>
-      </li>
-      <li class="defra-flood-list__group">
-        <span class="defra-flood-list__group-title">
+      <li class="defra-flood-list-river defra-flood-list-river--order">
+        <span class="defra-flood-list-river__name">
           <a href="">River Eden <span class="govuk-visually-hidden">at:</span></a>
         </span>
-        <dl class="defra-flood-list__items defra-flood-list__items--measurements defra-flood-list__items--has-relation"><!-- Optional modifier 'defra-flood-list__items--has-relation' -->
-          <div class="defra-flood-list__item defra-flood-list__item--error">
-            <dt class="defra-flood-list__item-title">
+        <ul>
+          <li class="defra-flood-list-item defra-flood-list-item--error">
+            <span class="defra-flood-list-item__title">
               <a href="">Appleby</a>
-            </dt>
-            <dd class="defra-flood-list__item-desc">
+            </span>
+            <span class="defra-flood-list-item__meta">
               Data not available
-            </dd>
-          </div>
-          <div class="defra-flood-list__item defra-flood-list__item--error">
-            <dt class="defra-flood-list__item-title">
+            </span>
+          </li>
+          <li class="defra-flood-list-item defra-flood-list-item--river-normal">
+            <span class="defra-flood-list-item__title">
               <a href="">Temple Sowerby</a>
-            </dt>
-            <dd class="defra-flood-list__item-desc">
-              Data error
-            </dd>
-          </div>
-          <div class="defra-flood-list__item">
-            <dt class="defra-flood-list__item-title">
+            </span>
+            <dl class="defra-flood-list-data">
+              <div class="defra-flood-list-data__column">
+                <dt class="govuk-visually-hidden">State</dt>
+                <dd>
+                  <span class="defra-flood-list-data__value">Normal</span>
+                  <span class="defra-flood-list-data__description">0.20m - 3.00m</span>
+                </dd>
+              </div>
+              <div class="defra-flood-list-data__column">
+                <dt class="govuk-visually-hidden">Height</dt>
+                <dd>
+                  <span class="defra-flood-list-data__value">0.66m</span>
+                  <span class="govuk-visually-hidden">at</span>
+                  <span class="defra-flood-list-data__description"><time datetime="2020-01-01T00:00:00.000Z">4:00pm today</time></span>
+                </dd>
+              </div>
+              <div class="defra-flood-list-data__column">
+                <dt class="govuk-visually-hidden">Trend</dt>
+                <dd>
+                  <span class="defra-flood-list-data__value defra-flood-list-data__value--emphasis">Rising</span>
+                </dd>
+              </div>
+            </dl>
+          </li>
+          <li class="defra-flood-list-item defra-flood-list-item--river-high">
+            <span class="defra-flood-list-item__title">
               <a href="">Great Corby</a>
-            </dt>
-            <dd class="defra-flood-list__item-desc">
-              1.00m <time datetime="2020-01-01T00:00:00.000Z">at 11:59pm</time>
-            </dd>
-          </div>
-          <div class="defra-flood-list__item defra-flood-list__item--low">
-            <dt class="defra-flood-list__item-title">
+            </span>
+            <dl class="defra-flood-list-data">
+              <div class="defra-flood-list-data__column">
+                <dt class="govuk-visually-hidden">State</dt>
+                <dd>
+                  <span class="defra-flood-list-data__value defra-flood-list-data__value--emphasis">High</span>
+                  <span class="defra-flood-list-data__description">above 2.00m</span>
+                </dd>
+              </div>
+              <div class="defra-flood-list-data__column">
+                <dt class="govuk-visually-hidden">Height</dt>
+                <dd>
+                  <span class="defra-flood-list-data__value defra-flood-list-data__value--emphasis">2.44m</span>
+                  <span class="govuk-visually-hidden">at</span>
+                  <span class="defra-flood-list-data__description"><time datetime="2020-01-01T00:00:00.000Z">4:00pm today</time></span>
+                </dd>
+              </div>
+              <div class="defra-flood-list-data__column">
+                <dt class="govuk-visually-hidden">Trend</dt>
+                <dd>
+                  <span class="defra-flood-list-data__value defra-flood-list-data__value--emphasis">Rising</span>
+                </dd>
+              </div>
+            </dl>
+          </li>
+          <li class="defra-flood-list-item defra-flood-list-item--river-low">
+            <span class="defra-flood-list-item__title">
               <a href="">Linstock</a>
-            </dt>
-            <dd class="defra-flood-list__item-desc">
-              <span class="defra-numeric">1.00m <time datetime="2020-01-01T00:00:00.000Z">at 1:00am</time></span> (low)
+            </span>
+            <dl class="defra-flood-list-data">
+              <div class="defra-flood-list-data__column">
+                <dt class="govuk-visually-hidden">State</dt>
+                <dd>
+                  <span class="defra-flood-list-data__value">Low</span>
+                  <span class="defra-flood-list-data__description">below 0.11m</span>
+                </dd>
+              </div>
+              <div class="defra-flood-list-data__column">
+                <dt class="govuk-visually-hidden">Height</dt>
+                <dd>
+                  <span class="defra-flood-list-data__value">2.44m</span>
+                  <span class="govuk-visually-hidden">at</span>
+                  <span class="defra-flood-list-data__description"><time datetime="2020-01-01T00:00:00.000Z">4:00pm today</time></span>
+                </dd>
+              </div>
+              <div class="defra-flood-list-data__column">
+                <dt class="govuk-visually-hidden">Trend</dt>
+                <dd>
+                  <span class="defra-flood-list-data__value">Stable</span>
+                </dd>
+              </div>
+            </dl>
+          </li>
+        </ul>
+      </li>
+      <li class="defra-flood-list-item defra-flood-list-item--river-normal">
+        <span class="defra-flood-list-item__title">
+          <a href="">Trout Beck level at Warwick Bridge</a>
+        </span>
+        <dl class="defra-flood-list-data">
+          <div class="defra-flood-list-data__column">
+            <dt class="govuk-visually-hidden">State</dt>
+            <dd>
+              <span class="defra-flood-list-data__value">Normal</span>
+              <span class="defra-flood-list-data__description">0.10m - 0.50m</span>
             </dd>
           </div>
-          <div class="defra-flood-list__item defra-flood-list__item--normal">
-            <dt class="defra-flood-list__item-title">
-              <a href="">Sands Centre, Carlisle</a>
-            </dt>
-            <dd class="defra-flood-list__item-desc">
-              <span class="tabular">2.00m</span> <time datetime="2020-01-01T00:00:00.000Z">at 10:00am</time> (normal)
+          <div class="defra-flood-list-data__column">
+            <dt class="govuk-visually-hidden">Height</dt>
+            <dd>
+              <span class="defra-flood-list-data__value">0.13m</span>
+              <span class="govuk-visually-hidden">at</span>
+              <span class="defra-flood-list-data__description"><time datetime="2020-01-01T00:00:00.000Z">4:00pm today</time></span>
             </dd>
           </div>
-          <div class="defra-flood-list__item defra-flood-list__item--high">
-            <dt class="defra-flood-list__item-title">
-              <a href="">Sheepmount</a>
-            </dt>
-            <dd class="defra-flood-list__item-desc">
-              <span class="tabular">1.00m</span> <time datetime="2020-01-01T00:00:00.000Z">at 4:00pm</time> (<strong>high</strong>)
+          <div class="defra-flood-list-data__column">
+            <dt class="govuk-visually-hidden">Trend</dt>
+            <dd>
+              <span class="defra-flood-list-data__value">Falling</span>
             </dd>
           </div>
         </dl>
       </li>
-      <li class="defra-flood-list__group">
-        <span class="defra-flood-list__group-title">
-          <a href="">Ceiriog <span class="govuk-visually-hidden">at:</span></a>
+      <li class="defra-flood-list-item defra-flood-list-item--groundwater-high">
+        <span class="defra-flood-list-item__title">
+          <a href="">Groundwater level at Aldershot borehole</a>
         </span>
-        <dl class="defra-flood-list__items defra-flood-list__items--measurements"><!-- Optional modifier 'defra-flood-list__items--has-relation' -->
-          <div class="defra-flood-list__item defra-flood-list__item--normal">
-            <dt class="defra-flood-list__item-title">
-              <a href="" rel="external">Brynkinalt (Natural Resources Wales)</a>
-            </dt>
-            <dd class="defra-flood-list__item-desc">
-              1.00m <time datetime="2020-01-01T00:00:00.000Z">at 0:00am</time> (normal)
+        <dl class="defra-flood-list-data">
+          <div class="defra-flood-list-data__column">
+            <dt class="govuk-visually-hidden">State</dt>
+            <dd>
+              <span class="defra-flood-list-data__value defra-flood-list-data__value--emphasis">High</span>
+              <span class="defra-flood-list-data__description">above 58.52m</span>
             </dd>
           </div>
-        </dl>
-      </li>
-      <li class="defra-flood-list__group">
-        <span class="defra-flood-list__group-title">
-          <a href="">Rainfall <span class="govuk-visually-hidden">at:</span></a>
-        </span>
-        <dl class="defra-flood-list__items defra-flood-list__items--measurements">
-          <div class="defra-flood-list__item defra-flood-list__item--heavy">
-            <dt class="defra-flood-list__item-title">
-              Bassingbourn raingauge
-            </dt>
-            <dd class="defra-flood-list__item-desc">
-              Moderate (3.2mm/hr)
+          <div class="defra-flood-list-data__column">
+            <dt class="govuk-visually-hidden">Height</dt>
+            <dd>
+              <span class="defra-flood-list-data__value">67.83m</span>
+              <span class="govuk-visually-hidden">at</span>
+              <span class="defra-flood-list-data__description"><time datetime="2020-01-01T00:00:00.000Z">4:00pm today</time></span>
+            </dd>
+          </div>
+          <div class="defra-flood-list-data__column">
+            <dt class="govuk-visually-hidden">Trend</dt>
+            <dd>
+              <span class="defra-flood-list-data__value">Stable</span>
             </dd>
           </div>
         </dl>
@@ -250,7 +328,7 @@
     </div>
     <ul class="defra-flood-list">
       <li class="defra-flood-list__group">
-        <span class="defra-flood-list__group-title">
+        <span class="defra-flood-list__group-name">
           <a href="">River Eden <span class="govuk-visually-hidden">at:</span></a>
         </span>
         <dl class="defra-flood-list__items defra-flood-list__items--measurements defra-flood-list__items--has-relation"><!-- Optional modifier 'defra-flood-list__items--has-relation' -->
@@ -318,7 +396,7 @@
     </div>
     <ul class="defra-flood-list">
       <li class="defra-flood-list__group">
-        <span class="defra-flood-list__group-title">
+        <span class="defra-flood-list__group-name">
           <a href="">Sea levels <span class="govuk-visually-hidden">at:</span></a>
         </span>
         <dl class="defra-flood-list__items defra-flood-list__items--measurements">
@@ -333,7 +411,7 @@
         </dl>
       </li>
       <li class="defra-flood-list__group">
-        <span class="defra-flood-list__group-title">
+        <span class="defra-flood-list__group-name">
           <a href="">Groundwater levels <span class="govuk-visually-hidden">at:</span></a>
         </span>
         <dl class="defra-flood-list__items defra-flood-list__items--measurements">
@@ -348,7 +426,7 @@
         </dl>
       </li>
       <li class="defra-flood-list__group">
-        <span class="defra-flood-list__group-title">
+        <span class="defra-flood-list__group-name">
           <a href="">River Eden <span class="govuk-visually-hidden">at:</span></a>
         </span>
         <dl class="defra-flood-list__items defra-flood-list__items--measurements defra-flood-list__items--has-relation"><!-- Optional modifier 'defra-flood-list__items--has-relation' -->

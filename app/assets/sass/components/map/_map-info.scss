@@ -105,7 +105,10 @@
     }
     &__data-value {
       display: block;
-      @include govuk-font($size: 24, $weight: bold);
+      @include govuk-font($size: 24);
+    }
+    &__data-value--emphasis {
+      font-weight: bold;
     }
     &__data-value--de-emphasis {
       font-weight: normal;
