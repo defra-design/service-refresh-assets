@@ -7,18 +7,11 @@
     }
     &__name {
       display: block;
-      @extend .govuk-body;
-      margin-bottom: 0px;
-    }
-    &__type {
-      display: block;
       @extend .govuk-body-s;
       margin-bottom: 0px;
     }
-    &__description {
-      @extend .govuk-body-s;
-      margin-bottom: 0px;
-      margin-top:10px;
+    &__name--emphasis {
+      font-weight: bold;
     }
     &__meta {
       display: block;
@@ -113,6 +106,9 @@
     &__data-value {
       display: block;
       @include govuk-font($size: 24, $weight: bold);
+    }
+    &__data-value--de-emphasis {
+      font-weight: normal;
     }
     &__data-secondary {
       display: block;

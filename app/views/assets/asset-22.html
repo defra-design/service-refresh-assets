@@ -63,9 +63,7 @@
           <!-- Start -->
           <div id="infoDescription">
             <h2 class="defra-map-info__name">
-              <span class="defra-map-info__type">Rainfall measurement</span>
-              <span class="govuk-visually-hidden">at</span>
-              Bassingbourn raingauge
+              Rainfall at Bassingbourn raingauge
             </h2>
             <dl class="defra-map-info__data">
               <div class="defra-map-info__data-column">
@@ -76,20 +74,19 @@
                 </dd>
               </div>
               <div class="defra-map-info__data-column">
-                <dt class="govuk-visually-hidden">Latest measurement</dt>
+                <dt class="govuk-visually-hidden">Hourly measurment</dt>
                 <dd>
-                  <span class="defra-map-info__data-value">1.7mm</span>
-                  <span class="defra-map-info__data-description">in 15mins</span>
+                  <span class="defra-map-info__data-value">3.7mm</span>
+                  <span class="govuk-visually-hidden">in the</span>
+                  <span class="defra-map-info__data-description">latest 1hr</span>
                 </dd>
               </div>
               <div class="defra-map-info__data-column">
-                <dt class="govuk-visually-hidden">Hourly measurement</dt>
+                <dt class="govuk-visually-hidden">Daily measurment</dt>
                 <dd>
-                  <span class="defra-map-info__data-secondary">3.2mm/hr</span>
-                </dd>
-                <dt class="govuk-visually-hidden">Daily measurmeent</dt>
-                <dd>
-                  <span class="defra-map-info__data-secondary">435mm/24hrs</span>
+                  <span class="defra-map-info__data-value">8.2mm</span>
+                  <span class="govuk-visually-hidden">in the</span>
+                  <span class="defra-map-info__data-description">latest 24hrs</span>
                 </dd>
               </div>
             </dl>
@@ -104,7 +101,7 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <p>(b) - River, sea or groundwater level</p>
+    <p>(b) - River or groundwater level</p>
   </div>
 </div>
 
@@ -117,9 +114,7 @@
           <!-- Start -->
           <div id="infoDescription">
             <h2 class="defra-map-info__name">
-              <span class="defra-map-info__type">River level measurement</span>
-              <span class="govuk-visually-hidden">at</span>
-              <a href="">Newport Pagnell, River Great Ouse</a>
+              <a href="">River Great Ouse level at Newport Pagnell</a>
             </h2>
             <dl class="defra-map-info__data">
               <div class="defra-map-info__data-column">
@@ -163,7 +158,7 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <p>(c) - Alert or wanrning</p>
+    <p>(c) - Sea level</p>
   </div>
 </div>
 
@@ -175,8 +170,51 @@
         <div class="defra-map-info__container">
           <!-- Start -->
           <div id="infoDescription">
-            <h2 class="defra-map-info__type"><strong>Flood warning</strong></h2>
-            <p class="defra-map-info__name"><a href="">River Foss at Layerthorpe to Foss Islands Road, Stonebow and Piccadilly</a></p>
+            <h2 class="defra-map-info__name">
+              <a href="">Sea level at Silloth Docks</a>
+            </h2>
+            <dl class="defra-map-info__data">
+              <div class="defra-map-info__data-column">
+                <dt class="govuk-visually-hidden">Height</dt>
+                <dd>
+                  <span class="defra-map-info__data-value">-0.44m</span>
+                  <span class="govuk-visually-hidden">at</span>
+                  <span class="defra-map-info__data-description">4:00pm today</span>
+                </dd>
+              </div>
+              <div class="defra-map-info__data-column">
+                <dt class="govuk-visually-hidden">Trend</dt>
+                <dd>
+                  <span class="defra-map-info__data-value">4.25m <span class="defra-map-info__data-value--de-emphasis">in</span> 3h 24m</span>
+                  <span class="defra-map-info__data-description">next high tide</span>
+                </dd>
+              </div>
+            </dl>
+          </div>
+          <!-- End -->
+        </div>
+        <button class="defra-map-info__close">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <p>(d) - Alert or wanrning</p>
+  </div>
+</div>
+
+<div class="govuk-grid-row govuk-grid-row--defra-prototype">
+  <div class="govuk-grid-column-full govuk-grid-column-full--overide">
+    <div class="defra-prototype-box govuk-!-margin-bottom-4">
+      <div class="defra-map-info">
+        <h2 id="infoLabel" class="govuk-visually-hidden">Selected feature information</h2>
+        <div class="defra-map-info__container">
+          <!-- Start -->
+          <div id="infoDescription">
+            <h2 class="defra-map-info__name defra-map-info__name--emphasis">Flood warning</h2>
+            <p class="govuk-body govuk-!-margin-bottom-1"><a href="">River Foss at Layerthorpe to Foss Islands Road, Stonebow and Piccadilly</a></p>
             <p class="defra-map-info__meta">Updated 5:04am on 22 January 2021</p>
           </div>
           <!-- End -->
@@ -189,7 +227,7 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <p>(d) - Outlook area of concern</p>
+    <p>(e) - Outlook area of concern</p>
   </div>
 </div>
 
@@ -201,8 +239,8 @@
         <div class="defra-map-info__container">
           <!-- Start -->
           <div id="infoDescription">
-            <h2 class="defra-map-info__name">Medium risk from river flooding</h2>
-            <p class="defra-map-info__description">High or overflowing rivers would possibly lead to severe or widespread flooding. If this happens, your life might be in danger and you should be prepared to evacuate. It could also cause severe travel disruption.</p>
+            <h2 class="defra-map-info__name defra-map-info__name--emphasis">Medium risk from river flooding</h2>
+            <p class="govuk-body-s govuk-!-margin-top-1 govuk-!-margin-bottom-0">High or overflowing rivers would possibly lead to severe or widespread flooding. If this happens, your life might be in danger and you should be prepared to evacuate. It could also cause severe travel disruption.</p>
           </div>
           <!-- End -->
         </div>
