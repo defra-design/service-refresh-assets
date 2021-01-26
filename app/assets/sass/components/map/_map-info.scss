@@ -13,6 +13,13 @@
     &__name--emphasis {
       font-weight: bold;
     }
+    &__description {
+      @extend .govuk-body;
+      margin-bottom: 0px;
+      margin-top: 10px;
+      border-top:1px solid $govuk-border-colour;
+      padding-top: 10px;
+    }
     &__meta {
       display: block;
       @include govuk-font($size: 14);
@@ -106,12 +113,6 @@
     &__data-value {
       display: block;
       @include govuk-font($size: 24);
-    }
-    &__data-value--emphasis {
-      font-weight: bold;
-    }
-    &__data-value--de-emphasis {
-      font-weight: normal;
     }
     &__data-secondary {
       display: block;
