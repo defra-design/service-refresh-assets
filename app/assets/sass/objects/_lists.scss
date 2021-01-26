@@ -13,6 +13,7 @@
     }
     &__group-title {
         display: block;
+        margin-top: 20px;
         margin-bottom: 5px;
         @include govuk-font($size: 24, $weight: bold);
         span {
@@ -141,7 +142,7 @@
     }
     &__name {
         display: block;
-        @include govuk-font($size: 19);
+        @include govuk-font($size: 16);
         a {
             color: $govuk-text-colour;
         }

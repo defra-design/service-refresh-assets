@@ -65,7 +65,6 @@
 .defra-search-summary {
     position:relative;
     border-bottom:1px solid govuk-colour('black');
-    margin-bottom:10px;
     &__count {
         @extend .govuk-body;
         @include govuk-responsive-margin(1, 'bottom');
