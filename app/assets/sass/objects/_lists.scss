@@ -159,8 +159,15 @@
     max-width: 500px;
     @include govuk-font($size: 16);
     &__column {
-        // flex: 1 1 1;
         flex-basis:33.33%;
+        margin:0px;
+        padding-top:5px;
+        dd {
+            margin: 0px;
+        }
+    }
+    &__column-two-thirds {
+        flex-basis:66.66%;
         margin:0px;
         padding-top:5px;
         dd {
