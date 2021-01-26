@@ -81,7 +81,7 @@
 .defra-facet-tags {
     @include govuk-font($size: 16, $weight: bold);
     padding-top:10px;
-    padding-bottom:10px;
+    border-bottom:1px solid $govuk-input-border-colour;
 }
 .defra-facet-tag {
     @include govuk-font($size: 16);
