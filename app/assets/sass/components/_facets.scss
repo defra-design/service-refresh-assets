@@ -15,8 +15,8 @@
         float:left;
         margin:0px 2.5px 5px;
         padding:10px 10px 10px 30px;
-        border: 2px solid govuk-colour('black');
         background-color: white;
+        border: 2px solid govuk-colour('black');
         cursor: pointer;
     }
     &__facet:active {
@@ -35,7 +35,10 @@
         left: 10px;
         width: 9px;
         height: 3.5px;
-        margin-top:-5px;
+        margin-top:-4px;
+        @include mq ($from: tablet) {
+            margin-top:-5px;
+        }
         border-left: 3px solid govuk-colour('black');
         border-bottom: 3px solid govuk-colour('black');
     }
