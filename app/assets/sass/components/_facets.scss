@@ -1,0 +1,58 @@
+.defra-flood-facets {
+    padding-top:15px;
+    padding-bottom:10px;
+    border-bottom:1px solid $govuk-input-border-colour;
+    &__inner {
+        margin-left:-2.5px;
+        margin-right:-2.5px;
+    }
+    &__facet {
+        border: 0px;
+        position: relative;
+        @include govuk-font($size: 16);
+        color: $govuk-text-colour;
+        outline: 0px;
+        float:left;
+        margin:0px 2.5px 5px;
+        padding:10px 10px 10px 30px;
+        border: 2px solid govuk-colour('black');
+        background-color: white;
+        cursor: pointer;
+    }
+    &__facet:active {
+        color: $govuk-text-colour;
+    }
+    &__facet[aria-pressed='true'] {
+        background-color: govuk-colour('light-grey');
+    }
+    &__facet[aria-pressed='true']:after {
+        content: "";
+        position: absolute;
+        -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        top:50%;
+        left: 10px;
+        width: 9px;
+        height: 3.5px;
+        margin-top:-5px;
+        border-left: 3px solid govuk-colour('black');
+        border-bottom: 3px solid govuk-colour('black');
+    }
+    &__facet[aria-pressed='false']:after {
+        content: "";
+        position: absolute;
+        top:50%;
+        left: 12px;
+        width: 6px;
+        height: 6px;
+        margin-top:-3px;
+        border-radius: 100%;
+        background-color: govuk-colour('black');
+    }
+    &:after {
+        display:block;
+        clear:both;
+        content: '';
+    }
+}
