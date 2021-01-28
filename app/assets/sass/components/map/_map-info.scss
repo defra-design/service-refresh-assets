@@ -92,31 +92,45 @@
       }
     }
     &__data {
-      display: flex;
+      position: relative;
       width:100%;
       border-top:1px solid $govuk-border-colour;
       margin-top: 10px;
       margin-bottom: 0px;
     }
-    &__data-column {
-      flex: auto 1 1;
+    &__data-primary {
+      width: 100%;
       margin:0px;
       padding-top:10px;
       dd {
         margin: 0px;
       }
     }
-    &__data-type {
+    &__data-trend {
+      position: absolute;
       display: block;
-      @include govuk-font($size: 16);
+      width: 18px;
+      height: 18px;
+      text-indent: -5000px;
+      background-size: 18px;
+      top: 11px;
+      @include mq ($from: tablet) {
+          top:13px;
+      }
+      right: 0px;
+    }
+    &__data-trend--rising {
+      background-image: svg-url('<svg width="18" height="18" viewBox="0 0 18 18"><path d="M13.95,2.636L1.929,14.657L3.343,16.071L15.364,4.05L13.95,2.636Z" style="fill:#505a5f;"/><path d="M15,11L15,3L7,3" style="fill:none;stroke:#505a5f;stroke-width:2px;"/></svg>');
+    }
+    &__data-trend--stable {
+        background-image: svg-url('<svg width="18" height="18"><rect x="1" y="8" width="15" height="2" style="fill:#505a5f;"/><path d="M10.343,3.343L16,9L10.343,14.657" style="fill:none;stroke:#505a5f;stroke-width:2px;"/></svg>');
+    }
+    &__data-trend--falling {
+        background-image: svg-url('<svg width="18" height="18"><path d="M13.95,15.364L1.929,3.343L3.343,1.929L15.364,13.95L13.95,15.364Z" style="fill:#505a5f;"/><path d="M15,7L15,15L7,15" style="fill:none;stroke:#505a5f;stroke-width:2px;"/></svg>');
     }
     &__data-value {
       display: block;
-      @include govuk-font($size: 24);
-    }
-    &__data-secondary {
-      display: block;
-      @include govuk-font($size: 14);
+      @include govuk-font($size: 19);
     }
     &__data-description {
       display: block;
