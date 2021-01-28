@@ -33,6 +33,39 @@
         background-size: 100%;
         margin-top:-3px;
     }
+    .govuk-tabs__tab {
+        margin-bottom: 6px;
+    }
+}
+.defra-flood-tabs-risk {
+    display: block;
+    position: absolute;
+    text-indent: -5000px;
+    height:8px;
+    bottom: -2px;
+    left: -2px;
+    right: -2px;
+    border: 1px solid white;
+    span {
+        float:left;
+        width:25%;
+        height: 100%;
+        text-indent: -5000px;
+        background-color: govuk-colour('light-grey');
+        border: 1px solid white;
+        box-sizing: border-box;
+    }
+    &--very-low span:nth-child(1) {
+        background-color: govuk-colour('light-green');
+    }
+    &--low span:nth-child(1), &--low span:nth-child(2) {
+        background-color: govuk-colour('yellow');
+    }
+}
+.defra-flood-tabs .govuk-tabs__list-item--selected {
+    .defra-flood-tabs-risk {
+        display: none;
+    }
 }
 .js-enabled {
     .defra-flood-tabs .govuk-tabs__tab:active .defra-flood-tabs__label,
