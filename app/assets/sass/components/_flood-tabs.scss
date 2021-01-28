@@ -33,6 +33,29 @@
         background-size: 100%;
         margin-top:-3px;
     }
+    &__trend {
+        display: inline-block;
+        vertical-align: middle;
+        width:24px;
+        height:24px;
+        background-image: svg-url('<svg width="24" height="24" viewBox="0 0 24 24"><path d="M16,17.976L22,12.058L16,6.024" style="fill:none;stroke:#0b0c0c;stroke-width:2px;"/><path d="M27.75,12.034L15.003,-0.713L2.275,12.015L15.023,24.762L27.75,12.034Z" style="fill:none"/><path d="M1,13L1,11L7,11L10,8L13.015,11.015L13.025,11L21,11L21,13L12.172,13L10,10.828L7.828,13L1,13Z" style="fill:#0b0c0c;"/></svg>');
+        background-size: 100%;
+        margin-top: 0px;
+        margin-left: 4px;
+        text-indent: -5000px;
+    }
+    &__trend--rising {
+        background-image: svg-url('<svg width="24" height="24" viewBox="0 0 24 24"><path d="M12.85,9.736L20.586,2L22,3.414L12.85,12.564L10.35,10.064L2.2,18.2L0.8,16.8L10.35,7.236L12.85,9.736Z" style="fill:#0b0c0c;fill-rule:nonzero;"/><path d="M14,2L22,2L22,10" style="fill:none;fill-rule:nonzero;stroke:#0b0c0c;stroke-width:2px;"/></svg>');
+        @include mq ($from: tablet) {
+            margin-top: 3px;
+        }
+    }
+    &__trend--falling {
+        background-image: svg-url('<svg width="24" height="24" viewBox="0 0 24 24"><path d="M12.85,14.264L20.586,22L22,20.586L12.85,11.436L10.35,13.936L2.2,5.8L0.8,7.2L10.35,16.764L12.85,14.264Z" style="fill:#0b0c0c;"/><path d="M14,22L22,22L22,14" style="fill:none;stroke:#0b0c0c;stroke-width:2px;"/></svg>');
+        @include mq ($from: tablet) {
+            margin-top: -6px;
+        }
+    }
     .govuk-tabs__tab {
         margin-bottom: 6px;
     }
