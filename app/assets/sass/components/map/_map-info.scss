@@ -115,7 +115,7 @@
       background-size: 18px;
       top: 11px;
       @include mq ($from: tablet) {
-          top:13px;
+          top:17px;
       }
       right: 0px;
     }
@@ -130,7 +130,7 @@
     }
     &__data-value {
       display: block;
-      @include govuk-font($size: 19);
+      @include govuk-font($size: 24);
     }
     &__data-description {
       display: block;
