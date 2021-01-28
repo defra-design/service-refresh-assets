@@ -6,35 +6,71 @@
   <ul class="govuk-tabs__list">
     <li class="govuk-tabs__list-item">
       <a class="govuk-tabs__tab" href="#today">
-      <span class="defra-flood-tabs__label">Today</span>
-      <span class="defra-flood-tabs__icon"></span>
+        <span class="defra-flood-tabs__label">Today</span>
+        <span class="defra-flood-tabs-risk defra-flood-tabs-risk--very-low">
+          Overall risk is very low
+          <span>very low</span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
       </a>
     </li>
     <li class="govuk-tabs__list-item">
       <a class="govuk-tabs__tab" href="#tomorrow">
-      <span class="defra-flood-tabs__label">Tomorrow</span>
-      <span class="defra-flood-tabs__icon"></span>
+        <span class="defra-flood-tabs__label">Tomorrow</span>
+        <span class="defra-flood-tabs__trend defra-flood-tabs__trend--rising">Rising</span>
+        <span class="defra-flood-tabs-risk defra-flood-tabs-risk--low">
+          Overall risk is low
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
       </a>
     </li>
     <li class="govuk-tabs__list-item">
       <a class="govuk-tabs__tab" href="#outlook">
-      <span class="defra-flood-tabs__label">Outlook</span>
-      <span class="defra-flood-tabs__icon"></span>
+        <span class="defra-flood-tabs__label">Outlook</span>
+        <span class="defra-flood-tabs__trend defra-flood-tabs__trend--stable">Stable</span>
+        <span class="defra-flood-tabs-risk defra-flood-tabs-risk--low">
+          Overall risk is low
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
       </a>
     </li>
   </ul>
   <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="today">
     <h3 class="govuk-heading-s">Today</h3>
-    <p>Today high or overflowing rivers will likely lead to significant or widespread flooding and travel disruption. If this happens, your life might be in danger.</p>
+    <div class="defra-flood-risk-bar defra-flood-risk-bar--very-low govuk-!-margin-bottom-4">
+      <span>Very low</span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <p>Today high tides or large waves will likely lead to some localised flooding and minor travel disruption.</p>
   </div>
   <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="tomorrow">
     <h3 class="govuk-heading-s">Tomorrow</h3>
-    <p>Tomorrow high or overflowing rivers will likely lead to significant or widespread flooding and travel disruption. If this happens, your life might be in danger.</p>
+    <div class="defra-flood-risk-bar defra-flood-risk-bar--low govuk-!-margin-bottom-4">
+      <span>Low</span>
+      <span></span>
+      <span></span>
+    </div>
+    <p>On Tuesday the flood risk increases. High tides or large waves will likely lead to some localised flooding and minor travel disruption. Runoff from rainfall or blocked drains will possibly lead to significant or widespread flooding and travel disruption, but this is very unlikely.</p>
   </div>
   <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="outlook">
     <h3 class="govuk-heading-s">Outlook</h3>
-    <p>On Monday high or overflowing rivers will likely lead to significant or widespread flooding and travel disruption. If this happens, your life might be in danger.</p>
-    <p>On Tuesday and Wednesday high or overflowing rivers are expected to lead to some localised flooding and minor travel disruption.</p>
+    <div class="defra-flood-risk-bar defra-flood-risk-bar--low govuk-!-margin-bottom-4">
+      <span>Low</span>
+      <span></span>
+      <span></span>
+    </div>
+    <p>On Wednesday the flood risk is lower. High tides or large waves will possibly lead to some localised flooding and minor travel disruption.</p>
+    <p>On Thursday and Friday there is a very low risk of flooding.</p>
   </div>
 </div>
 <button id="map-live-btn" class="defra-button-map govuk-!-margin-bottom-4">View map of flood risk areas<span class="govuk-visually-hidden">(Visual only)</span></button>

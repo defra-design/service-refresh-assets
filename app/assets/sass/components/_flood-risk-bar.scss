@@ -1,0 +1,28 @@
+.defra-flood-risk-bar {
+    display: flex;
+    width: 300px;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding-top: 6px;
+    span {
+        flex: 1;
+        height: 15px;
+        background-color: govuk-colour('light-grey');
+        border: 1px solid white;
+        @include govuk-font($size: 14, $weight: bold, $line-height: 25px);
+        text-align: center;
+    }
+    &--very-low span:nth-child(1) {
+        margin-top:-6px;
+        height: 25px;
+        border: 2px solid govuk-colour('black');
+        background-color: govuk-colour('light-green');
+    }
+    &--low span:nth-child(1) {
+        flex: 2;
+        margin-top:-6px;
+        height: 25px;
+        border: 2px solid govuk-colour('black');
+        background-color: govuk-colour('yellow');
+    }
+}
