@@ -62,6 +62,12 @@
     .govuk-tabs__tab {
         margin-bottom: 7px;
     }
+    button {
+        display: none;
+        @include mq ($from: tablet) {
+            display: block;
+        }    
+    }
 }
 .defra-flood-tabs-risk {
     display: block;
