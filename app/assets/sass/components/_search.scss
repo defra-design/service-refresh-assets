@@ -66,8 +66,9 @@
     position:relative;
     border-bottom:1px solid govuk-colour('black');
     &__count {
-        @extend .govuk-body;
-        @include govuk-responsive-margin(1, 'bottom');
+        @include govuk-font($size: 19, $weight: bold);
+        margin-top: 0px;
+        margin-bottom: 10px;
     }
     .defra-button-map-s {
         position:absolute;

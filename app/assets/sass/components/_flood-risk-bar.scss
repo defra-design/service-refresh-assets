@@ -14,10 +14,9 @@
     }
     &__level--selected {
         font-weight: bold;
-        line-height: 28px;
+        line-height: 30px;
         margin-top:-3px;
-        height: 28px;
-        border: 2px solid govuk-colour('black');
+        height: 30px;
     }
     &--very-low span:nth-child(1) {
         background-color: govuk-colour('light-green');
