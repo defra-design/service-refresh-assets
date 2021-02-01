@@ -18,11 +18,8 @@ $govuk-images-path: '/public/images/';
 // Elements
 
 // Objects
-@import "objects/lists";
 @import "objects/typography";
 @import "objects/buttons";
-@import "objects/inputs";
-@import "objects/links";
 
 // Components
 @import "components/cookie-banner";
@@ -36,11 +33,11 @@ $govuk-images-path: '/public/images/';
 @import "components/bar-chart";
 @import "components/line-chart";
 @import "components/banners";
+@import "components/flood-list";
 @import "components/flood-details";
 @import "components/flood-tabs";
 @import "components/flood-risk-bar";
 @import "components/search";
-@import "components/facets";
 @import "components/flood-meta";
 @import "components/service-error";
 @import "components/context-footer";

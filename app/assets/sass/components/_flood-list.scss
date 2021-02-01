@@ -195,7 +195,6 @@
         height: 18px;
         text-indent: -5000px;
         background-size: 100%;
-        // background-image: svg-url('<svg width="24" height="24" viewBox="0 0 24 24"><path d="M16,17.976L22,12.058L16,6.024" style="fill:none;fill-rule:nonzero;stroke:#0b0c0c;stroke-width:2px;"/><path d="M1,12.012L8,12.012L9.982,10L12,12.012L21,12.012" style="fill:none;stroke:#0b0c0c;stroke-width:2px;stroke-linejoin:round;stroke-miterlimit:1.5;"/></svg>');
         background-image: svg-url('<svg width="18" height="18"><path d="M10,14.976L16,9.058L10,3.024" style="fill:none;fill-rule:nonzero;stroke:#0b0c0c;stroke-width:2px;"/><path d="M0,9.012L5,9.012L6.982,7L9,9.012L15,9.012" style="fill:none;stroke:#0b0c0c;stroke-width:2px;stroke-linejoin:round;stroke-miterlimit:1.5;"/></svg>');
         top: 16px;
         @include mq ($from: tablet) {
@@ -208,7 +207,6 @@
         @include mq ($from: tablet) {
             top:20px;
         }
-        // background-image: svg-url('<svg width="24" height="24" viewBox="0 0 24 24"><path d="M14,2L22,2L22,10" style="fill:none;fill-rule:nonzero;stroke:#0b0c0c;stroke-width:2px;"/><path d="M21.3,2.724C15.655,8.751 8.956,13.781 1.5,17.517" style="fill:none;stroke:#0b0c0c;stroke-width:2px;stroke-linejoin:round;stroke-miterlimit:1.5;"/></svg>');
         background-image: svg-url('<svg width="18" height="18"><path d="M8,2L16,2L16,10" style="fill:none;fill-rule:nonzero;stroke:#0b0c0c;stroke-width:2px;"/><path d="M15.795,2C11.963,6.622 6.849,10.143 1,12.015" style="fill:none;stroke:#0b0c0c;stroke-width:2px;stroke-linejoin:round;stroke-miterlimit:1.5;"/></svg>');
     }
     &__trend--falling {
@@ -216,7 +214,6 @@
         @include mq ($from: tablet) {
             top:17px;
         }
-        // background-image: svg-url('<svg width="24" height="24" viewBox="0 0 24 24"><path d="M14,22L22,22L22,14" style="fill:none;fill-rule:nonzero;stroke:#0b0c0c;stroke-width:2px;"/><path d="M21.3,21.276C15.655,15.249 8.956,10.219 1.5,6.483" style="fill:none;stroke:#0b0c0c;stroke-width:2px;stroke-linejoin:round;stroke-miterlimit:1.5;"/></svg>');
         background-image: svg-url('<svg width="18" height="18"><path d="M8,16L16,16L16,8" style="fill:none;fill-rule:nonzero;stroke:#0b0c0c;stroke-width:2px;"/><path d="M15.795,16C11.963,11.378 6.849,7.857 1,5.985" style="fill:none;stroke:#0b0c0c;stroke-width:2px;stroke-linejoin:round;stroke-miterlimit:1.5;"/></svg>');
     }
     &__value {
