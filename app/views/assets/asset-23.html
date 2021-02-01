@@ -13,7 +13,7 @@
     <ul class="govuk-list">
       <li>sass/components/_search.scss</li>
       <li>sass/components/_service-error.scss</li>
-      <li>sass/objects/_lists.scss</li>
+      <li>sass/components/_flood-list.scss</li>
       <li>images/icon-search.svg</li>
     </ul>
     <p><a href="https://github.com/danleech-defra/service-refresh-assets/tree/master/app/assets">See assets on Github</a></p>
@@ -71,6 +71,34 @@
           </div>
         </div>
       </form>
+    </div>
+    <div class="defra-facets" role="search" aria-label="Search filters">
+      <div class="defra-facets__container" aria-modal="true" tabindex="0">
+        <div class="defra-facets__inner">
+          <div class="defra-facets__header">
+            <h2>Filter</h2>
+            <button class="defra-facets__close-modal">Return to results</button>
+          </div>
+          <details class="defra-facets-details" data-module="govuk-details">
+            <summary class="defra-facets-details__summary">
+              <span class="defra-facets-details__summary-text">River name</span>
+              <span class="defra-facets-details__select-counter">1 selected</span>
+            </summary>
+            <div class="defra-facets-details__text">
+              <p>List</p>
+            </div>
+          </details>
+          <details class="defra-facets-details" data-module="govuk-details">
+            <summary class="defra-facets-details__summary">
+              <span class="defra-facets-details__summary-text">Type</span>
+            </summary>
+            <div class="defra-facets-details__text">
+              <p>List</p>
+            </div>
+          </details>
+          <button class="defra-facets__clear-filters">Clear all filters</button>
+        </div>
+      </div>
     </div>
   </div>
   <div class="govuk-grid-column-two-thirds">

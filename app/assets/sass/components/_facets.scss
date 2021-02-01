@@ -1,0 +1,87 @@
+.defra-facets {
+    &__clear-filters {
+        display: none;
+    }
+    &__close-modal {
+        display: none;
+    }
+}
+.js-enabled .defra-facets {
+    &__header {
+        display: none;
+    }
+    &__clear-filters {
+        display: none;
+    } 
+    &__container[aria-modal="true"] {
+        position: fixed;
+        z-index: 1000;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-y: auto;
+        background: #fff;
+        .defra-facets__header {
+            display: block;
+        }
+        .defra-facets__clear-filters {
+            display: block;
+        }
+    }
+}
+.defra-facets-details {
+    @extend .govuk-details;
+    padding-left:8px;
+    padding-right:8px;
+    border-bottom: 1px solid $govuk-border-colour;
+    margin-bottom: 20px;
+    &__summary {
+        @extend .govuk-details__summary;
+        position: relative;
+        display: block;
+        padding-left: 35px;
+        margin-bottom:20px;
+    }    
+    &__summary:before {
+        top: 3px;
+        width:22px !important;
+        height:14px !important;
+        background-image: svg-url('<svg width="22" height="14" viewBox="0 0 22 14"><path d="M2,2L11,11L20,2" style="fill:none;stroke:#0b0c0c;stroke-width:2.5px;"/></svg>');
+        background-size: 100%;
+        margin: 0px !important;
+        clip-path: none !important;
+        border: 0px !important;
+        @include mq ($from: tablet) {
+            top: 5px;
+        }
+    }
+    &__summary-text {
+        @extend .govuk-details__summary-text;
+        text-decoration: none;
+    }
+    &__summary:hover &__summary-text {
+        text-decoration: underline;
+    }
+    &__select-counter {
+        display: block;
+        @include govuk-font($size: 14);
+        color: $govuk-text-colour;
+    }
+    &[open] &__summary:before {
+        background-image: svg-url('<svg width="22" height="14" viewBox="0 0 22 14"><path d="M2,12L11,3L20,12" style="fill:none;stroke:#000;stroke-width:2.5px;"/></svg>');
+    }
+    &__summary:focus {
+        outline: 0px;
+        box-shadow: none;
+        background-color: transparent;
+    }
+    &__summary:focus &__summary-text {
+        @extend .govuk-link:focus;
+        text-decoration: none;
+    }
+}
