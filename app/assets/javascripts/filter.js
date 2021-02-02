@@ -8,8 +8,8 @@ window.flood.Filter = (id) => {
   const mobileMediaQuery = window.matchMedia('(max-width: 640px)')
   const mobileListener = (mobileMediaQuery) => {
     const isMobile = mobileMediaQuery.matches
-    facetsContainer.setAttribute('aria-modal', isMobile)
-    facetsContainer.setAttribute('tabindex', isMobile ? 0 : -1)
+    isMobile ? facetsContainer.setAttribute('aria-modal', 'true') : facetsContainer.removeAttribute('aria-modal')
+    isMobile ? facetsContainer.setAttribute('tabindex', 0) : facetsContainer.removeAttribute('tabindex')
     console.log('isMobile: ' + isMobile)
   }
   mobileMediaQuery.addListener(mobileListener)
