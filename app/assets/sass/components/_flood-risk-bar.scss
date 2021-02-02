@@ -1,6 +1,6 @@
 .defra-flood-risk-bar {
     padding-top: 6px;
-    &__level {
+    span {
         display: inline-block;
         text-indent: -5000px;
         position:relative;
@@ -12,11 +12,6 @@
         // padding:3px 8px;
         color: govuk-shade(govuk-colour('dark-grey',), 30);
         background: govuk-tint(govuk-colour('dark-grey',), 90);
-    }
-    &--very-low &__level:nth-child(1),
-    &--low &__level:nth-child(2),
-    &--medium &__level:nth-child(3),
-    &--high &__level:nth-child(4) {
         font-weight: bold;
         line-height: 23px;
         margin-top:-2px;
@@ -24,26 +19,20 @@
         width: 23px;
         border: 2px solid white;
     }
-    &--very-low &__level:nth-child(1) {
-        // color: govuk-shade(govuk-colour('green'), 20);
-        // background: govuk-tint(govuk-colour('green'), 80);
-        background-color:govuk-colour('green');
-        border-color: govuk-shade(govuk-colour('green'), 65);
+    &--very-low span:nth-child(1) {
+        background-color: govuk-tint(govuk-colour('green'), 80);
+        border-color: govuk-colour('green');
     }
-    &--low &__level:nth-child(2) {
-        // color: govuk-shade(govuk-colour('yellow'), 65);
-        // background: govuk-tint(govuk-colour('yellow'), 75);
-        background-color:govuk-colour('yellow');
-        border-color: govuk-shade(govuk-colour('yellow'), 65);
+    &--low span:nth-child(2) {
+        background: govuk-tint(govuk-colour('yellow'), 75);
+        border-color:govuk-colour('yellow');
     }
-    &--medium &__level:nth-child(3) {
-        color: govuk-shade(govuk-colour('orange'), 55);
-        background: govuk-tint(govuk-colour('orange'), 70);
-        // border-color: govuk-shade(govuk-colour('orange'), 55);
+    &--medium span:nth-child(3) {
+        background-color: govuk-tint(govuk-colour('orange'), 70);
+        border-color:govuk-colour('orange');
     }
-    &--high &__level:nth-child(4) {
-        color: govuk-shade(govuk-colour('red'), 55);
-        background: govuk-tint(govuk-colour('red'), 70);
-        // border-color: govuk-shade(govuk-colour('red'), 55);
+    &--high span:nth-child(4) {
+        background-color: govuk-tint(govuk-colour('red'), 70);
+        border-color:govuk-colour('red');
     }
 }
