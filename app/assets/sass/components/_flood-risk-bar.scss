@@ -18,22 +18,23 @@
     &--medium &__level:nth-child(3),
     &--high &__level:nth-child(4) {
         font-weight: bold;
-        line-height: 25px;
+        line-height: 23px;
         margin-top:-2px;
-        height: 26px;
-        width: 25px;
-        // border: 2px solid white;
+        height: 23px;
+        width: 23px;
+        border: 2px solid white;
     }
     &--very-low &__level:nth-child(1) {
-        color: govuk-shade(govuk-colour('green'), 20);
-        background: govuk-tint(govuk-colour('green'), 80);
-        // border-color: govuk-shade(govuk-colour('green'), 20);
+        // color: govuk-shade(govuk-colour('green'), 20);
+        // background: govuk-tint(govuk-colour('green'), 80);
+        background-color:govuk-colour('green');
+        border-color: govuk-shade(govuk-colour('green'), 65);
     }
     &--low &__level:nth-child(2) {
-        color: govuk-shade(govuk-colour('yellow'), 65);
-        background: govuk-tint(govuk-colour('yellow'), 75);
-        background-color: #FFBF47;
-        // border-color: govuk-shade(govuk-colour('yellow'), 65);
+        // color: govuk-shade(govuk-colour('yellow'), 65);
+        // background: govuk-tint(govuk-colour('yellow'), 75);
+        background-color:govuk-colour('yellow');
+        border-color: govuk-shade(govuk-colour('yellow'), 65);
     }
     &--medium &__level:nth-child(3) {
         color: govuk-shade(govuk-colour('orange'), 55);
