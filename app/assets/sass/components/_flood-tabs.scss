@@ -16,11 +16,6 @@
         text-decoration: none;
         text-align: left;
     }
-    .govuk-tabs__tab:focus:not(:focus-visible) {
-        background-color: transparent;
-        box-shadow: none;
-        outline: none;
-    }
     > h3 {
         display: none;
     }
