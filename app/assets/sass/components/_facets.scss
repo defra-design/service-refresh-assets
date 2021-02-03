@@ -5,15 +5,29 @@
     &__close-modal {
         display: none;
     }
+    &__show-filters {
+        @extend .defra-button-text;
+        font-weight: bold;
+        text-decoration: none;
+        margin-bottom: 15px;
+        @include mq ($from: tablet) {
+            display: none;
+        }
+    }
 }
 .js-enabled .defra-facets {
-    &__header {
+    &__header,
+    &__clear-filters,
+    &__container[aria-modal="true"] {
         display: none;
     }
-    &__clear-filters {
-        display: none;
-    } 
-    &__container[aria-modal="true"] {
+    &__filter-results {
+        @include mq ($from: tablet) {
+            display: none;
+        }
+    }
+    &__container[aria-modal="true"][open] {
+        display: block;
         position: fixed;
         z-index: 1000;
         top: 0;
