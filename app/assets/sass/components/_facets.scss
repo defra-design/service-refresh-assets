@@ -1,10 +1,4 @@
 .defra-facets {
-    &__clear-filters {
-        display: none;
-    }
-    &__close-modal {
-        display: none;
-    }
     &__show-filters {
         @extend .defra-button-text;
         font-weight: bold;
@@ -18,6 +12,7 @@
 .js-enabled .defra-facets {
     &__header,
     &__clear-filters,
+    &__close-filters,
     &__container[aria-modal="true"] {
         display: none;
     }
@@ -26,7 +21,7 @@
             display: none;
         }
     }
-    &__container[aria-modal="true"][open] {
+    &__container[aria-modal="true"][open="true"] {
         display: block;
         position: fixed;
         z-index: 1000;
@@ -40,10 +35,9 @@
         padding: 0;
         overflow-y: auto;
         background: #fff;
-        .defra-facets__header {
-            display: block;
-        }
-        .defra-facets__clear-filters {
+        .defra-facets__header,
+        .defra-facets__clear-filters,
+        .defra-facets__close-filters {
             display: block;
         }
     }
