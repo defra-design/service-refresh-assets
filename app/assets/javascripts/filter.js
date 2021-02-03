@@ -4,6 +4,7 @@ window.flood = {}
 window.flood.Filter = (id) => {
   const facetsContainer = document.getElementById(id).firstElementChild
   console.log(facetsContainer)
+
   // Mobile behavior
   const mobileMediaQuery = window.matchMedia('(max-width: 640px)')
   const mobileListener = (mobileMediaQuery) => {
