@@ -57,8 +57,8 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-one-third">
-    <div class="govuk-form-group">
-      <form method="post" autocomplete="off">
+    <form method="post" autocomplete="off">
+      <div class="govuk-form-group">
         <div class="govuk-form-group">
           <label class="govuk-label govuk-!-margin-bottom-2" for="location">
             Search a location
@@ -70,37 +70,37 @@
             </div>
           </div>
         </div>
-      </form>
-    </div>
-    <div id="filter" class="defra-facets" role="search" aria-label="Search filters">
-      <div class="defra-facets__container">
-        <div class="defra-facets__inner">
-          <div class="defra-facets__header">
-            <h2>Filter</h2>
-          </div>
-          <details class="defra-facets-details" data-module="govuk-details">
-            <summary class="defra-facets-details__summary">
-              <span class="defra-facets-details__summary-text">River name</span>
-              <span class="defra-facets-details__select-counter">1 selected</span>
-            </summary>
-            <div class="defra-facets-details__text">
-              <p>List</p>
-            </div>
-          </details>
-          <details class="defra-facets-details" data-module="govuk-details">
-            <summary class="defra-facets-details__summary">
-              <span class="defra-facets-details__summary-text">Type</span>
-            </summary>
-            <div class="defra-facets-details__text">
-              <p>List</p>
-            </div>
-          </details>
-        </div>
-        <button class="govuk-button defra-facets__filter-results" data-module="govuk-button">
-          Filter results
-        </button>
       </div>
-    </div>
+      <div id="filter" class="defra-facets" role="search" aria-label="Search filters">
+        <div class="defra-facets__container">
+          <div class="defra-facets__inner">
+            <div class="defra-facets__header">
+              <h2>Filter</h2>
+            </div>
+            <details class="defra-facets-details" data-module="govuk-details">
+              <summary class="defra-facets-details__summary">
+                <span class="defra-facets-details__summary-text">River name</span>
+                <span class="defra-facets-details__select-counter">1 selected</span>
+              </summary>
+              <div class="defra-facets-details__text">
+                <p>List</p>
+              </div>
+            </details>
+            <details class="defra-facets-details" data-module="govuk-details">
+              <summary class="defra-facets-details__summary">
+                <span class="defra-facets-details__summary-text">Type</span>
+              </summary>
+              <div class="defra-facets-details__text">
+                <p>List</p>
+              </div>
+            </details>
+          </div>
+          <button class="govuk-button defra-facets__filter-results" type="submit" data-module="govuk-button">
+            Filter results
+          </button>
+        </div>
+      </div>
+    </form>
   </div>
   <div class="govuk-grid-column-two-thirds">
     <div class="defra-search-summary" id="searchSummary">

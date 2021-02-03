@@ -38,17 +38,20 @@ window.flood.Filter = (id) => {
   mobileListener(mobileMediaQuery)
 
   // Show filters (mobile only)
-  showFilters.addEventListener('click', () => {
+  showFilters.addEventListener('click', (e) => {
+    e.preventDefault()
     container.setAttribute('open', true)
   })
 
   // Close filters (mobile only)
-  closeFilters.addEventListener('click', () => {
+  closeFilters.addEventListener('click', (e) => {
+    e.preventDefault()
     container.setAttribute('open', false)
   })
 
   // Filter results (asynchronous)
-  filterResults.addEventListener('click', () => {
+  filterResults.addEventListener('click', (e) => {
+    e.preventDefault()
     container.setAttribute('open', false)
   })
 }
