@@ -2,6 +2,8 @@ window.flood = {}
 
 // Filter list
 window.flood.Filter = (id) => {
+  const state = { isModalOpen: false }
+
   const container = document.getElementById(id).querySelector('.defra-facets__container')
   const inner = container.querySelector('.defra-facets__inner')
   const showFilters = document.createElement('button')
@@ -22,6 +24,23 @@ window.flood.Filter = (id) => {
   container.appendChild(showFilters)
   container.parentNode.insertBefore(showFilters, container.parentNode.firstChild)
 
+  const openModal = () => {
+    container.setAttribute('aria-modal', 'true')
+    document.body.style.top = `-${window.scrollY}px`
+    document.body.classList.add('defra-facets-body')
+    state.isModalOpen = true
+    // bodyScrollLock.disableBodyScroll(container)
+  }
+
+  const closeModal = () => {
+    container.removeAttribute('aria-modal')
+    document.body.classList.remove('defra-facets-body')
+    window.scrollTo(0, parseInt(document.body.style.top || '0') * -1)
+    document.body.style.top = ''
+    state.isModalOpen = false
+    // bodyScrollLock.clearAllBodyScrollLocks()
+  }
+
   //
   // Events
   //
@@ -30,9 +49,7 @@ window.flood.Filter = (id) => {
   const mobileMediaQuery = window.matchMedia('(max-width: 640px)')
   const mobileListener = (mobileMediaQuery) => {
     const isMobile = mobileMediaQuery.matches
-    isMobile ? container.setAttribute('aria-modal', 'true') : container.removeAttribute('aria-modal')
-    isMobile ? container.setAttribute('tabindex', 0) : container.removeAttribute('tabindex')
-    console.log('isMobile: ' + isMobile)
+    if (!isMobile && state.isModalOpen) { closeModal() }
   }
   mobileMediaQuery.addListener(mobileListener)
   mobileListener(mobileMediaQuery)
@@ -40,19 +57,19 @@ window.flood.Filter = (id) => {
   // Show filters (mobile only)
   showFilters.addEventListener('click', (e) => {
     e.preventDefault()
-    container.setAttribute('open', true)
+    openModal()
   })
 
   // Close filters (mobile only)
   closeFilters.addEventListener('click', (e) => {
     e.preventDefault()
-    container.setAttribute('open', false)
+    closeModal()
   })
 
   // Filter results (asynchronous)
   filterResults.addEventListener('click', (e) => {
     e.preventDefault()
-    container.setAttribute('open', false)
+    closeModal()
   })
 }
 

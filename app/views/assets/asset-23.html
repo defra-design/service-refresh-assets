@@ -644,3 +644,13 @@
 <!-- End -->
 
 {% endblock %}
+
+{% block bodyEnd %}
+  {% block scripts %}
+    {% include "includes/scripts.html" %}
+    <script src="/public/javascripts/bodyScrollLock.js"></script>
+    <script src="/public/javascripts/filter.js"></script>
+    {% block pageScripts %}{% endblock %}
+  {% endblock %}
+  <!-- GOV.UK Prototype Kit {{releaseVersion}} -->
+{% endblock %}

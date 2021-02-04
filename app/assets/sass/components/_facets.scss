@@ -1,3 +1,11 @@
+.defra-facets-body {
+    position: fixed;
+    overflow: hidden;
+    top:0px;
+    right:0px;
+    bottom:0px;
+    left:0px;
+}
 .defra-facets {
     &__show-filters {
         @extend .defra-button-text;
@@ -13,27 +21,25 @@
     &__header,
     &__clear-filters,
     &__close-filters,
-    &__container[aria-modal="true"] {
-        display: none;
-    }
     &__filter-results {
         @include mq ($from: tablet) {
             display: none;
         }
     }
-    &__container[aria-modal="true"][open="true"] {
+    &__container {
+        display: none;
+        @include mq ($from: tablet) {
+            display: block;
+        }
+    }
+    &__container[aria-modal="true"] {
         display: block;
         position: fixed;
         z-index: 1000;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        margin: 0;
-        padding: 0;
-        overflow-y: auto;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
         background: #fff;
         .defra-facets__header,
         .defra-facets__clear-filters,
@@ -91,5 +97,9 @@
     &__summary:focus &__summary-text {
         @extend .govuk-link:focus;
         text-decoration: none;
+    }
+    &__text {
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
     }
 }
