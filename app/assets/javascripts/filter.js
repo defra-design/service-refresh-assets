@@ -1,8 +1,8 @@
-window.flood = {}
-
 // Filter list
 window.flood.Filter = (id) => {
-  const state = { isModalOpen: false }
+  const state = {
+    isModalOpen: false
+  }
 
   const container = document.getElementById(id).querySelector('.defra-facets__container')
   const inner = container.querySelector('.defra-facets__inner')
@@ -24,21 +24,58 @@ window.flood.Filter = (id) => {
   container.appendChild(showFilters)
   container.parentNode.insertBefore(showFilters, container.parentNode.firstChild)
 
+  // Recursively find siblings and parents and add or remove aria-hidden
+  // Could become a helper flood utility for working with modals
+  const toggleAriaHidden = (target, isHidden) => {
+    while (target.parentNode && target.parentNode.nodeType === 1) {
+      if (target.parentNode.nodeName !== 'HTML') {
+        let sibling = target.parentNode.firstElementChild
+        while (sibling && sibling.nodeType === 1) {
+          if (sibling !== target && sibling.tagName !== 'SCRIPT' && sibling.tagName !== 'STYLE') {
+            isHidden ? sibling.setAttribute('aria-hidden', true) : sibling.removeAttribute('aria-hidden')
+          }
+          sibling = sibling.nextElementSibling
+        }
+      }
+      target = target.parentNode
+    }
+  }
+
+  // Escape key behavior
+  const keyup = (e) => {
+    // Tabbing into web area
+    if (!container.contains(document.activeElement)) {
+      closeFilters.focus()
+    }
+    // Escape key behavior
+    if (e.key === 'Escape' || e.key === 'Esc') {
+      closeModal()
+    }
+  }
+
+  // Open as a modal on mobile devices only
   const openModal = () => {
     container.setAttribute('aria-modal', 'true')
+    container.setAttribute('role', 'dialog')
     document.body.style.top = `-${window.scrollY}px`
     document.body.classList.add('defra-facets-body')
     state.isModalOpen = true
-    // bodyScrollLock.disableBodyScroll(container)
+    toggleAriaHidden(container, true)
+    closeFilters.focus()
+    window.addEventListener('keyup', keyup)
   }
 
+  // Close modal on mobile devices only
   const closeModal = () => {
     container.removeAttribute('aria-modal')
+    container.removeAttribute('role')
     document.body.classList.remove('defra-facets-body')
     window.scrollTo(0, parseInt(document.body.style.top || '0') * -1)
     document.body.style.top = ''
     state.isModalOpen = false
-    // bodyScrollLock.clearAllBodyScrollLocks()
+    toggleAriaHidden(container, false)
+    showFilters.focus()
+    window.removeEventListener('keyup', keyup)
   }
 
   //
@@ -61,6 +98,11 @@ window.flood.Filter = (id) => {
   })
 
   // Close filters (mobile only)
+  clearFilters.addEventListener('click', (e) => {
+    e.preventDefault()
+  })
+
+  // Close filters (mobile only)
   closeFilters.addEventListener('click', (e) => {
     e.preventDefault()
     closeModal()
@@ -77,3 +119,7 @@ window.flood.Filter = (id) => {
 if (document.getElementById('filter')) {
   window.flood.Filter('filter')
 }
+
+window.addEventListener('keyup', () => {
+  console.log('Another keyup')
+})
