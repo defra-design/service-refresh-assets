@@ -189,8 +189,8 @@
         }
     }
     &__trend {
+        display: none;
         position: absolute;
-        display: block;
         width: 18px;
         height: 18px;
         text-indent: -5000px;

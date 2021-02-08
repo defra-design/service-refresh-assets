@@ -51,17 +51,15 @@
 .defra-facets-details {
     @extend .govuk-details;
     border-bottom: 1px solid $govuk-border-colour;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     &__summary {
         @extend .govuk-details__summary;
         position: relative;
         display: block;
-        padding-left: 48px;
-        padding-right: 13px;
-        margin-bottom: 20px;
+        padding: 10px 13px 13px 48px;
     }    
     &__summary:before {
-        top: 3px;
+        top: 13px;
         left: 13px;
         width:22px !important;
         height:14px !important;
@@ -71,7 +69,7 @@
         clip-path: none !important;
         border: 0px !important;
         @include mq ($from: tablet) {
-            top: 5px;
+            top: 15px;
         }
     }
     &__summary-text {
@@ -115,7 +113,8 @@
     }
 }
 .defra-facets-filter {
-    padding: 0px 13px 10px 13px;
+    padding: 3px 13px 10px 13px;
+    position: relative;
     &__input {
         @extend .govuk-input;
         padding-left: 33px;
