@@ -81,7 +81,39 @@
                 <span class="defra-facets-details__select-counter">1 selected</span>
               </summary>
               <div class="defra-facets-details__text">
-                <p>List</p>
+                <div class="defra-facets-filter">
+                  <label class="govuk-visually-hidden" for="filter-river-name">Filter river name</label>
+                  <input id="filter-river-name" class="defra-facets-filter__input"></input>
+                </div>
+                <fieldset class="govuk-fieldset">
+                  <legend class="govuk-visually-hidden">River name</legend>
+                  <ul class="govuk-checkboxes govuk-checkboxes--small">
+                    <li class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="river-caldew" aria-controls="" type="checkbox"></input>
+                      <label class="govuk-label govuk-checkboxes__label" for="river-caldew">River Caldew</label>
+                    </li>
+                    <li class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="river-eden" aria-controls="" type="checkbox"></input>
+                      <label class="govuk-label govuk-checkboxes__label" for="river-eden">River Eden</label>
+                    </li>
+                    <li class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="river-irthing" aria-controls="" type="checkbox"></input>
+                      <label class="govuk-label govuk-checkboxes__label" for="river-irthing">River Irthing</label>
+                    </li>
+                    <li class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="river-petteril" aria-controls="" type="checkbox"></input>
+                      <label class="govuk-label govuk-checkboxes__label" for="river-petteril">River Petteril</label>
+                    </li>
+                    <li class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="roe-beck" aria-controls="" type="checkbox"></input>
+                      <label class="govuk-label govuk-checkboxes__label" for="roe-beck">Roe Beck</label>
+                    </li>
+                    <li class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="trout-beck" aria-controls="" type="checkbox"></input>
+                      <label class="govuk-label govuk-checkboxes__label" for="trout-beck">Trout Beck</label>
+                    </li>
+                  </ul>
+                </fieldset>
               </div>
             </details>
             <details class="defra-facets-details" data-module="govuk-details">
@@ -89,7 +121,27 @@
                 <span class="defra-facets-details__summary-text">Type</span>
               </summary>
               <div class="defra-facets-details__text">
-                <p>List</p>
+                <fieldset class="govuk-fieldset">
+                  <legend class="govuk-visually-hidden">Type</legend>
+                  <ul class="govuk-checkboxes govuk-checkboxes--small">
+                    <li class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="river-measurement" aria-controls="" type="checkbox"></input>
+                      <label class="govuk-label govuk-checkboxes__label" for="river-measurement">River</label>
+                    </li>
+                    <li class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="sea-measurement" aria-controls="" type="checkbox"></input>
+                      <label class="govuk-label govuk-checkboxes__label" for="sea-measurement">Coastal</label>
+                    </li>
+                    <li class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="groundwater-measurement" aria-controls="" type="checkbox"></input>
+                      <label class="govuk-label govuk-checkboxes__label" for="groundwater-measurement">Groundwater</label>
+                    </li>
+                    <li class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="rainfall-measurement" aria-controls="" type="checkbox"></input>
+                      <label class="govuk-label govuk-checkboxes__label" for="rainfall-measurement">Rainfall</label>
+                    </li>
+                  </ul>
+                </fieldset>
               </div>
             </details>
           </div>
