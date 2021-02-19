@@ -71,10 +71,10 @@
       </div>
       <div id="filter" class="defra-facets" role="search" aria-label="Search filters">
         <div class="defra-facets__container">
+          <div class="defra-facets__header">
+            <h2>Filter</h2>
+          </div>
           <div class="defra-facets__inner">
-            <div class="defra-facets__header">
-              <h2>Filter</h2>
-            </div>
             <details class="defra-facets-details" data-module="govuk-details">
               <summary class="defra-facets-details__summary">
                 <span class="defra-facets-details__summary-text">River name</span>
@@ -144,10 +144,13 @@
                 </fieldset>
               </div>
             </details>
+            <div class="defra-facets__reset-container"></div>
           </div>
-          <button class="govuk-button defra-facets__filter-results" type="submit" data-module="govuk-button">
-            Filter results
-          </button>
+          <div class="defra-facets__footer">
+            <button class="govuk-button defra-facets__filter-results" type="submit" data-module="govuk-button">
+              Filter results
+            </button>
+          </div>
         </div>
       </div>
     </form>

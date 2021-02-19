@@ -5,7 +5,6 @@ window.flood.Filter = (id) => {
   }
 
   const container = document.getElementById(id).querySelector('.defra-facets__container')
-  const inner = container.querySelector('.defra-facets__inner')
   const showFilters = document.createElement('button')
   showFilters.className = 'defra-facets__show-filters'
   showFilters.innerHTML = 'Filters'
@@ -13,14 +12,15 @@ window.flood.Filter = (id) => {
   filtersCount.innerHTML = ' (1)'
   showFilters.appendChild(filtersCount)
   const closeFilters = document.createElement('button')
-  closeFilters.className = 'defra-facets__close-filters'
+  closeFilters.className = 'defra-facets__close'
   closeFilters.innerHTML = 'Return to results'
-  const clearFilters = document.createElement('button')
-  clearFilters.className = 'defra-facets__clear-filters'
-  clearFilters.innerHTML = 'Clear filters'
+  const resetContainer = document.getElementById(id).querySelector('.defra-facets__reset-container')
+  const resetFilters = document.createElement('button')
+  resetFilters.className = 'defra-facets__reset'
+  resetFilters.innerHTML = 'Clear filters'
+  resetContainer.appendChild(resetFilters)
   const filterResults = container.querySelector('.defra-facets__filter-results')
-  inner.insertBefore(closeFilters, inner.firstChild)
-  inner.appendChild(clearFilters)
+  container.insertBefore(closeFilters, container.firstChild)
   container.appendChild(showFilters)
   container.parentNode.insertBefore(showFilters, container.parentNode.firstChild)
 
@@ -41,15 +41,34 @@ window.flood.Filter = (id) => {
     }
   }
 
+  // Constrain focus to tab ring
+  const keydown = (e) => {
+    if (e.key !== 'Tab') { return }
+    if (e.shiftKey) {
+      if (document.activeElement === closeFilters) {
+        filterResults.focus()
+        e.preventDefault()
+      }
+    } else {
+      if (document.activeElement === filterResults) {
+        closeFilters.focus()
+        e.preventDefault()
+      }
+    }
+  }
+
   // Escape key behavior
   const keyup = (e) => {
-    // Tabbing into web area
-    if (!container.contains(document.activeElement)) {
-      closeFilters.focus()
-    }
-    // Escape key behavior
     if (e.key === 'Escape' || e.key === 'Esc') {
       closeModal()
+    }
+  }
+
+  // Tabbing into web area
+  const focus = (e) => {
+    if (!container.contains(document.activeElement)) {
+      console.log('Out of modal')
+      closeFilters.focus()
     }
   }
 
@@ -62,7 +81,9 @@ window.flood.Filter = (id) => {
     state.isModalOpen = true
     toggleAriaHidden(container, true)
     closeFilters.focus()
+    window.addEventListener('keydown', keydown)
     window.addEventListener('keyup', keyup)
+    window.addEventListener('focus', focus)
   }
 
   // Close modal on mobile devices only
@@ -75,7 +96,9 @@ window.flood.Filter = (id) => {
     state.isModalOpen = false
     toggleAriaHidden(container, false)
     showFilters.focus()
+    window.removeEventListener('keydown', keydown)
     window.removeEventListener('keyup', keyup)
+    window.removeEventListener('focus', focus)
   }
 
   //
@@ -98,7 +121,7 @@ window.flood.Filter = (id) => {
   })
 
   // Close filters (mobile only)
-  clearFilters.addEventListener('click', (e) => {
+  resetFilters.addEventListener('click', (e) => {
     e.preventDefault()
   })
 
@@ -119,7 +142,3 @@ window.flood.Filter = (id) => {
 if (document.getElementById('filter')) {
   window.flood.Filter('filter')
 }
-
-window.addEventListener('keyup', () => {
-  console.log('Another keyup')
-})

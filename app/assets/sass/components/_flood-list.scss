@@ -141,10 +141,10 @@
     &--order:before {
         position:absolute;
         content:'';
-        top:-5px;   
+        top:-9px;   
         bottom:18px; 
         @include mq ($from: tablet) {
-            top:-9px;
+            top:-11px;
             bottom:20px;
         }
         left:13px;
@@ -170,15 +170,18 @@
         display: block;
         padding-left: 40px;
         margin-top: 15px;
-        @include govuk-font($size: 16);
+        @include govuk-font($size: 19);
         &:before {
             position:absolute;
             content: '';
             width: 14px;
             height: 2px;
             background-color: govuk-colour('mid-grey');
-            top: 9px;
+            top: 10px;
             left: 7px;
+            @include mq ($from: tablet) {
+                top: 13px;
+            }
         }
     }
     .defra-flood-list-item {
