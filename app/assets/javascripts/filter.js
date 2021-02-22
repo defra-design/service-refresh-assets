@@ -11,16 +11,17 @@ window.flood.Filter = (id) => {
   const filtersCount = document.createElement('span')
   filtersCount.innerHTML = ' (1)'
   showFilters.appendChild(filtersCount)
+  const header = container.querySelector('.defra-facets__header')
   const closeFilters = document.createElement('button')
   closeFilters.className = 'defra-facets__close'
   closeFilters.innerHTML = 'Return to results'
+  header.appendChild(closeFilters)
   const resetContainer = document.getElementById(id).querySelector('.defra-facets__reset-container')
   const resetFilters = document.createElement('button')
   resetFilters.className = 'defra-facets__reset'
   resetFilters.innerHTML = 'Clear filters'
   resetContainer.appendChild(resetFilters)
   const filterResults = container.querySelector('.defra-facets__filter-results')
-  container.insertBefore(closeFilters, container.firstChild)
   container.appendChild(showFilters)
   container.parentNode.insertBefore(showFilters, container.parentNode.firstChild)
 
