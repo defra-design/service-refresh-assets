@@ -43,8 +43,11 @@
         position:relative;
         display: block;
         padding-left:0px;
-        margin-bottom: 10px;
+        margin-bottom: 5px;
         @include govuk-font($size: 19, $weight: bold);
+        @include mq ($from: tablet) {
+            margin-bottom: 10px;
+        }
     }
     &__title:after {
         position: absolute;
@@ -71,11 +74,31 @@
     &__detail-link {
         display: inline-block;
         margin-top: 10px;
-        @include govuk-font($size: 16);
+        padding-right: 3px;
+        @include govuk-font($size: 19);
+        &:after {
+            content: '';
+            position: relative;
+            display: inline-block;
+            height: 8px;
+            width: 8px;
+            border-style: solid;
+            border-width: 0 2px 2px 0;
+            margin-left: 3px;
+            color: govuk-colour('black');
+            background: transparent;
+            -webkit-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+            @include mq ($from: tablet) {
+                margin-left: 5px;
+                height: 10px;
+                width: 10px;
+            }
+        }
         @include mq ($from: tablet) {
             float:right;
-            width: 25%;
-            margin-top: 4px;
+            margin-top: 0px;
             text-align:right;
         }
     }
@@ -177,14 +200,18 @@
         &:before {
             position:absolute;
             content: '';
-            width: 14px;
-            height: 2px;
+            width: 8px;
+            height: 8px;
+            border-radius: 100%;
             background-color: govuk-colour('mid-grey');
-            top: 10px;
-            left: 7px;
+            top: 6px;
+            left: 10px;
             @include mq ($from: tablet) {
-                top: 13px;
+                top: 10px;
             }
+        }
+        a {
+            color: $govuk-link-colour !important;
         }
     }
     .defra-flood-list-item {
@@ -210,6 +237,7 @@
         float:left;
         width: 75%;
     }
+    /*
     &__trend {
         display: block;
         margin-left: 30%;
@@ -228,6 +256,7 @@
     }
     &__trend--falling {
     }
+    */
     &__value {
         display: block;
         @include govuk-font($size: 19);

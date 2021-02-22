@@ -83,7 +83,7 @@
     &-s {
         @extend .defra-button-map;
         text-decoration: none;
-        color: $govuk-text-colour;
+        color: $govuk-link-colour;
         @include mq ($until: tablet) {
             padding-left:17px;
         }

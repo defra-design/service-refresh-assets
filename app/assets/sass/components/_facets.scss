@@ -71,6 +71,31 @@
         @include mq ($from: tablet) {
             top: 15px;
         }
+        /*
+        content: '';
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        height: 8px;
+        width: 8px;
+        border-style: solid;
+        border-width: 0 2px 2px 0;
+        margin: 12px 0px 0px 15px;
+        border-color: govuk-colour('black') !important;
+        background: transparent;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+        -webkit-clip-path: none !important;
+        -moz-clip-path: none !important;
+        -ms-clip-path: none !important;
+        clip-path: none !important;
+        @include mq ($from: tablet) {
+            margin-left: 16px;
+            height: 10px;
+            width: 10px;
+        }
+        */
     }
     &__summary-text {
         @extend .govuk-details__summary-text;
@@ -86,6 +111,17 @@
     }
     &[open] &__summary:before {
         background-image: svg-url('<svg width="22" height="14" viewBox="0 0 22 14"><path d="M2,12L11,3L20,12" style="fill:none;stroke:#000;stroke-width:2.5px;"/></svg>');
+        /*
+        top: 6px;
+        border-width: 2px 0px 0px 2px;
+        height: 8px;
+        width: 8px;
+        @include mq ($from: tablet) {
+            top: 8px;
+            height: 10px;
+            width: 10px;
+        }
+        */
     }
     &__summary:focus {
         outline: 0px;
