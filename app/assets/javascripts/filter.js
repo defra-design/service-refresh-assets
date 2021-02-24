@@ -16,11 +16,12 @@ window.flood.Filter = (id) => {
   closeFilters.className = 'defra-facets__close'
   closeFilters.innerHTML = 'Return to results'
   header.appendChild(closeFilters)
-  const resetContainer = document.getElementById(id).querySelector('.defra-facets__reset-container')
+  header.classList.remove('govuk-visually-hidden')
+  const content = document.getElementById(id).querySelector('.defra-facets__content')
   const resetFilters = document.createElement('button')
   resetFilters.className = 'defra-facets__reset'
-  resetFilters.innerHTML = 'Clear filters'
-  resetContainer.appendChild(resetFilters)
+  resetFilters.innerHTML = 'Clear all filters'
+  content.appendChild(resetFilters)
   const filterResults = container.querySelector('.defra-facets__filter-results')
   container.appendChild(showFilters)
   container.parentNode.insertBefore(showFilters, container.parentNode.firstChild)
