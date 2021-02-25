@@ -242,7 +242,7 @@
         &--rising,
         &--stable,
         &--falling {
-            padding-left: 21px;
+            padding-left: 20px;
             @include mq ($from: tablet) {
                 padding-left: 23px;
             }
