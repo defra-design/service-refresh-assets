@@ -30,13 +30,13 @@
     position: relative;
     margin: 0;
     padding: 15px 0px 15px 40px;
-    border-bottom:1px solid $govuk-border-colour;
+    border-top:1px solid $govuk-border-colour;
     &:after {
         content: '';
         display: block;
         clear: both;
     }
-    &:last-child {
+    &:first-child {
         border: 0px;
     }
     &__title {
@@ -47,9 +47,6 @@
         @include govuk-font($size: 19, $weight: bold);
         @include mq ($from: tablet) {
             padding-right:40px;
-        }
-        a {
-            color: $govuk-link-colour;
         }
     }
     &__title:after {
@@ -126,7 +123,6 @@
     padding: 0px;
     margin: 0px;
     list-style: none;
-    border-bottom:1px solid $govuk-border-colour;
     &--order {
         position: relative;
     }
@@ -161,8 +157,9 @@
         position: relative;
         display: block;
         padding-left: 40px;
-        margin-top: 15px;
+        padding-top: 15px;
         @include govuk-font($size: 19);
+        border-top:1px solid $govuk-border-colour;
         &:before {
             position:absolute;
             content: '';
@@ -170,10 +167,10 @@
             height: 8px;
             border-radius: 100%;
             background-color: govuk-colour('mid-grey');
-            top: 6px;
+            top: 21px;
             left: 10px;
             @include mq ($from: tablet) {
-                top: 10px;
+                top: 25px;
             }
         }
         a {
@@ -195,12 +192,9 @@
 
 // Data items
 .defra-flood-list-data {
-    margin: 5px 0px 0px;
+    margin: 10px 0px 0px;
     @include govuk-font($size: 16);
     width: 100%;
-    @include mq ($from: tablet) {
-        margin-top: 10px;
-    }
     &__column {
         display: block;
         dd {
@@ -209,32 +203,6 @@
         float:left;
         width: 33.33%;
     }
-    /*
-    @include mq ($from: tablet) {
-        float:left;
-        width: 75%;
-    }
-    */
-    /*
-    &__trend {
-        display: block;
-        margin-left: 30%;
-        margin-top: 1px;
-        width: 18px;
-        height: 18px;
-        text-indent: -5000px;
-        background-size: 100%;
-        top: 0px;
-        @include mq ($from: tablet) {
-            margin-top: 4px;
-        }
-    }
-    &__trend--rising {
-        background-image: svg-url('<svg width="18" height="18" viewBox="0 0 18 18"><path d="M3.429,8L9,2.429L14.571,8" style="fill:none;fill-rule:nonzero;stroke:#0b0c0c;stroke-width:2px;"/><path d="M9,2.429L9,16" style="fill:none;stroke:#000;stroke-width:2px;stroke-linejoin:round;stroke-miterlimit:1.5;"/></svg>');
-    }
-    &__trend--falling {
-    }
-    */
     &__value {
         display: block;
         position: relative;
@@ -284,6 +252,6 @@
 }
 
 // Overides
-.defra-search-summary + .defra-flood-list-river:last-child {
-    border: 0px;
-} 
+.defra-search-summary + .defra-flood-list-river__name {
+    border-top: 0px;
+}

@@ -408,6 +408,19 @@
         </dl>
       </li>
     </ul>
+    <!-- Pagination -->
+    <nav class="defra-flood-list-pagination">
+      <a href="">Previous<span> page</span></a>
+      <ul>
+        <li><a href=""><span>Page </span>1</a></li>
+        <li><span>Page </span>2</li>
+        <li><a href=""><span>Page </span>3</a></li>
+        <li><a href=""><span>Page </span>4</a></li>
+        <li>...</li>
+      </ul>
+      <a href="">Next<span> page</span></a>
+    </nav>
+    <!-- End pagination -->
   </div>
 </div>
 <!-- End -->
@@ -448,18 +461,6 @@
         </div>
       </div>
     </form>
-    <!--
-    <details class="govuk-details" data-module="govuk-details">
-      <summary class="govuk-details__summary">
-        <span class="govuk-details__summary-text">
-          Search by river
-        </span>
-      </summary>
-      <div class="govuk-details__text">
-        River
-      </div>
-    </details>
-    -->
   </div>
   <div class="govuk-grid-column-two-thirds">
     <div class="defra-search-summary" id="searchSummary">
@@ -468,24 +469,22 @@
       <button id="map-btn" class="defra-button-map-s">View map</button>
       <!-- Added with javascript -->
     </div>
-    <ul class="defra-flood-list" aria-label="Levels the River Eden">
-      <li>
+
         <span class="defra-flood-list-river__name">
           River Eden
         </span>
         <ul class="defra-flood-list-river defra-flood-list-river--order" aria-label="Levels the River Eden">
           <li class="defra-flood-list-item defra-flood-list-item--river-error">
             <span class="defra-flood-list-item__title">
-              Appleby
+              <a href="">Appleby</a>
             </span>
             <span class="defra-flood-list-item__meta">
               Data not available
             </span>
-            
           </li>
           <li class="defra-flood-list-item defra-flood-list-item--river">
             <span class="defra-flood-list-item__title">
-              Temple Sowerby
+              <a href="">Temple Sowerby</a>
             </span>
             <dl class="defra-flood-list-data">
               <div class="defra-flood-list-data__column">
@@ -505,15 +504,14 @@
               <div class="defra-flood-list-data__column">
                 <dt class="govuk-visually-hidden">Trend</dt>
                 <dd>
-                  <span class="defra-flood-list-data__value">Rising</span>
+                  <span class="defra-flood-list-data__value defra-flood-list-data__value--stable">Stable</span>
                 </dd>
               </div>
             </dl>
-            
           </li>
           <li class="defra-flood-list-item defra-flood-list-item--river-high">
             <span class="defra-flood-list-item__title">
-              Great Corby
+              <a href="">Great Corby</a>
             </span>
             <dl class="defra-flood-list-data">
               <div class="defra-flood-list-data__column">
@@ -533,15 +531,14 @@
               <div class="defra-flood-list-data__column">
                 <dt class="govuk-visually-hidden">Trend</dt>
                 <dd>
-                  <span class="defra-flood-list-data__value">Rising</span>
+                  <span class="defra-flood-list-data__value defra-flood-list-data__value--stable">Stable</span>
                 </dd>
               </div>
             </dl>
-            
           </li>
           <li class="defra-flood-list-item defra-flood-list-item--river">
             <span class="defra-flood-list-item__title">
-              Linstock
+              <a href="">Linstock</a>
             </span>
             <dl class="defra-flood-list-data">
               <div class="defra-flood-list-data__column">
@@ -555,21 +552,19 @@
                 <dt class="govuk-visually-hidden">State</dt>
                 <dd>
                   <span class="defra-flood-list-data__value">Low</span>
-                  <span class="defra-flood-list-data__description">&lt; 0.11m</span>
+                  <span class="defra-flood-list-data__description">below 0.11m</span>
                 </dd>
               </div>
               <div class="defra-flood-list-data__column">
                 <dt class="govuk-visually-hidden">Trend</dt>
                 <dd>
-                  <span class="defra-flood-list-data__value">Stable</span>
+                  <span class="defra-flood-list-data__value defra-flood-list-data__value--falling">Falling</span>
                 </dd>
               </div>
             </dl>
-            
           </li>
         </ul>
-      </li>
-    </ul>
+
   </div>
 </div>
 <!-- End -->
@@ -622,7 +617,7 @@
     <ul class="defra-flood-list">
       <li class="defra-flood-list-item defra-flood-list-item--sea">
         <span class="defra-flood-list-item__title">
-          Tide at Silloth Docks
+          <a href="">Tide at Silloth Docks</a>
         </span>
         <dl class="defra-flood-list-data">
           <div class="defra-flood-list-data__column">
@@ -642,11 +637,10 @@
           <div class="defra-flood-list-data__column">
             <dt class="govuk-visually-hidden">Phase</dt>
             <dd>
-              <span class="defra-flood-list-data__value">Incoming</span>
+              <span class="defra-flood-list-data__value defra-flood-list-data__value--rising">Rising</span>
             </dd>
           </div>
         </dl>
-        
       </li>
     </ul>
   </div>
