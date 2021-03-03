@@ -1,6 +1,14 @@
 
 {% extends "layout.html" %}
 
+{% block head %}
+  <!--[if lte IE 8]><link href="/public/stylesheets/application-ie8.css" rel="stylesheet" type="text/css" /><![endif]-->
+  <!--[if gt IE 8]><!--><link href="/public/archive-02-03-21/stylesheets/application.css" media="all" rel="stylesheet" type="text/css" /><!--<![endif]-->
+  {% for stylesheetUrl in extensionConfig.stylesheets %}
+    <link href="{{ stylesheetUrl }}" rel="stylesheet" type="text/css" />
+  {% endfor %}
+{% endblock %}
+
 {% block pageTitle %}
   Asset 8f
 {% endblock %}
@@ -153,8 +161,8 @@
 
 {% block pageScripts %}
 <!-- Only used for visualising the chart in the assets resource  -->
-<script src="/public/javascripts/station/core.js"></script>
-<script src="/public/javascripts/station/model.js"></script>
-<script src="/public/javascripts/station/station.js"></script>
+<script src="/public/archive-02-03-21/javascripts/station/core.js"></script>
+<script src="/public/archive-02-03-21/javascripts/station/model.js"></script>
+<script src="/public/archive-02-03-21/javascripts/station/station.js"></script>
 <!-- end assets resource only -->
 {% endblock %}
