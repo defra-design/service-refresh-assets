@@ -1,0 +1,65 @@
+// Map information dialog
+.defra-map-info {
+  position:relative;
+  background-color:white;
+  @include mq ($from: tablet) {
+    width:auto;
+    max-width:378px;
+  }
+  /*
+  &:focus {
+    outline: none;
+  }
+  &:focus[keyboard-focus]:after {
+    position:absolute;
+    pointer-events: none;
+    content:'';
+    left:3px;
+    right:3px;
+    top:3px;
+    bottom:3px;
+    outline: 3px solid $govuk-focus-colour;
+    z-index: 99;
+  }
+  */
+  &__container {
+    margin-right:36px;
+  }
+}
+.defra-map-info__close {
+  position:absolute;
+  top:0px;
+  right:0px;
+  width:40px;
+  height:40px;
+  padding:0;
+  border:0;
+  cursor:pointer;
+  background-color: #ffffff;
+  background-image: svg-url('<svg width="14" height="14" viewBox="0 0 14 14"><path d="M7,5.6L12.6,0L14,1.4L8.4,7L14,12.6L12.6,14L7,8.4L1.4,14L0,12.6L5.6,7L0,1.4L1.4,0L7,5.6Z" style="fill:#0b0c0c;stroke:#0b0c0c;stroke-width:0.1px"/></svg>');
+  background-size: 14px;
+  background-position: 13px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  text-indent: -5000px;
+  /*
+  &:hover {
+    background-color: govuk-colour('mid-grey');
+  }
+  &:focus {
+    outline:none;
+  }
+  &:focus[keyboard-focus] {
+    background-color: $govuk-focus-colour;
+  }
+  &::-moz-focus-inner {
+    border: 0;
+  }
+  */
+}
+.defra-map--info-open .defra-map-controls__bottom {
+  visibility: hidden;
+  @include mq ($from: tablet) {
+    visibility: visible;
+  }
+}

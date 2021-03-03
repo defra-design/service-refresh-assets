@@ -1,17 +1,8 @@
 
 {% extends "layout.html" %}
 
-{% block head %}
-  <!--[if lte IE 8]><link href="/public/stylesheets/application-ie8.css" rel="stylesheet" type="text/css" /><![endif]-->
-  <!--[if gt IE 8]><!--><link href="/public/archive-02-03-21/stylesheets/application.css" media="all" rel="stylesheet" type="text/css" /><!--<![endif]-->
-
-  {% for stylesheetUrl in extensionConfig.stylesheets %}
-    <link href="{{ stylesheetUrl }}" rel="stylesheet" type="text/css" />
-  {% endfor %}
-{% endblock %}
-
 {% block pageTitle %}
-  Asset 8
+  Asset 24
 {% endblock %}
 
 {% block content %}
@@ -50,19 +41,8 @@
 
 <!-- Start -->
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-full">
-    <nav class="defra-flood-nav" id="browserBackContainer">
-      <a href="" class="defra-flood-nav__link">River Aire</a>
-      <!-- Outout with Javascript -->
-      <button class="defra-button-map-s"><span>View map</span></button>
-      <!-- Javascript end -->
-    </nav>
-  </div>
-</div>
-
-<div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-xl">
+    <h1 class="govuk-heading-xl govuk-!-margin-bottom-0">
       River Aire level <!-- upstream/downstream --> at Gargrave
     </h1>
   </div>
@@ -70,47 +50,65 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
     <h2 class="govuk-visually-hidden">Station summary</h2>
-    <div class="defra-flood-statistics">
+    <div class="defra-flood-statistics govuk-!-margin-top-6">
       <dl class="defra-flood-statistics__list">
         <!-- If station has latest level and pc5 and pc95 -->
-        <div class="defra-flood-statistics__row"> 
-          <dt class="defra-flood-statistics__key">Status</dt>
+        <div class="defra-flood-statistics__column"> 
+          <dt class="defra-flood-statistics__key">State</dt>
           <dd class="defra-flood-statistics__value">
-            <strong class="defra-flood-statistics__impact defra-flood-statistics__impact--normal"> <!-- defra-flood-statistics__impact--high -->
-              Normal <!-- {Low / High} -->
-            </strong>
-            0.43m to 2.80m <!-- if low then 'below {pc95}m', if high then 'above {pc5}m' -->
+            <span class="defra-toggletip">
+              <a href="" class="defra-toggletip__link" aria-label="How we define state"> <!-- defra-flood-statistics__impact--high -->
+                Normal <!-- {Low / High} -->
+              </a>
+              <span class="defra-toggletip__status" role="status"></span>
+            </span>
+            <span class="defra-flood-statistics__value-detail">0.05 to 1.90m</span><!-- if low then 'below {pc95}m', if high then 'above {pc5}m' -->
           </dd>
         </div>
-        <!-- end station has pc5 and pc95 -->
-        <!-- Exclude from MVP
-        <div class="defra-flood-statistics__row">
-          <dt class="defra-flood-statistics__key">Trend</dt>
-          <dd class="defra-flood-statistics__value">
-            <strong class="defra-flood-statistics__impact">
-              Falling
-            </strong>
-            36 hour forecast: stable
-          </dd>
-        </div>
-        end exclude -->
-        <div class="defra-flood-statistics__row">
+        <div class="defra-flood-statistics__column">
           <dt class="defra-flood-statistics__key">Height</dt>
           <dd class="defra-flood-statistics__value">
-            <strong class="defra-flood-statistics__impact">
-              1.17m
-            </strong>
-            at <time datetime="">5:30am</time> today <!-- yesterday / on 1 Jan 1970 -->
+            <span class="defra-toggletip">
+              <a href="" class="defra-toggletip__link" aria-label="How we measure height">
+                0.71m
+              </a>
+              <span class="defra-toggletip__status" role="status"></span>
+            </span>
+            <span class="defra-flood-statistics__value-detail">45 mins ago</span>
+          </dd>
+        </div>
+        <div class="defra-flood-statistics__column">
+          <dt class="defra-flood-statistics__key">Computer model</dt>
+          <dd class="defra-flood-statistics__value">
+            <span class="defra-toggletip">
+              <a href="" class="defra-toggletip__link" aria-label="About the model prediction">
+                0.70m
+              </a>
+              <span class="defra-toggletip__status" role="status"></span>
+            </span>
+            <span class="defra-flood-statistics__value-detail">at 10:30am today</span>
           </dd>
         </div>
       </dl>
     </div>
   </div>
 </div>
+
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
-    <figure class="defra-line-chart" aria-hidden="true" hidden>
-      <figcaption class="govuk-heading-m govuk-!-margin-bottom-7">Height over the last 5 days <!-- if ffoi add 'and 36 hour forecast' --></figcaption>
+    <nav class="defra-flood-nav">
+      <button class="defra-button-map-s">View map<span class="govuk-visually-hidden">(Visual only)</span></button>
+      <a href="/station/{{ model.station.riverNavigation.up }}" class="defra-flood-nav__link defra-flood-nav__link--upstream">Upstream</a>
+      <a href="/station/{{ model.station.riverNavigation.down }}" class="defra-flood-nav__link defra-flood-nav__link--downstream">Downstream</a>
+      <a href="" class="defra-flood-nav__link">Nearby measurments</a>
+    </nav>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <figure class="defra-line-chart govuk-!-margin-top-6" aria-hidden="true" hidden>
+      <figcaption class="govuk-heading-m govuk-!-margin-bottom-4">Height over the last 5 days <!-- if ffoi add 'and 36 hour forecast' --></figcaption>
       <div id="line-chart" class="defra-line-chart__container" role="presentation"></div>
     </figure>
   </div>
@@ -277,8 +275,8 @@
 
 {% block pageScripts %}
 <!-- Only used for visualising the chart in the assets resource  -->
-<script src="/public/archive-02-03-21/javascripts/station/core.js"></script>
-<script src="/public/archive-02-03-21/javascripts/station/model.js"></script>
-<script src="/public/archive-02-03-21/javascripts/station/station.js"></script>
+<script src="/public/javascripts/station/core.js"></script>
+<script src="/public/javascripts/station/model.js"></script>
+<script src="/public/javascripts/station/station.js"></script>
 <!-- end assets resource only -->
 {% endblock %}
