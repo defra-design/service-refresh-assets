@@ -25,9 +25,3 @@ gulp.task('copy-assets-v6', function () {
     config.paths.v6Assets + '/**'])
     .pipe(gulp.dest(config.paths.public + '/v6'))
 })
-
-gulp.task('copy-assets-body-scroll-lock', function () {
-  console.log(config.paths.nodeModules + 'body-scroll-lock/lib/bodyScrollLock.js')
-  return gulp.src(config.paths.nodeModules + 'body-scroll-lock/lib/bodyScrollLock.js')
-    .pipe(gulp.dest(config.paths.public + 'javascripts'))
-})
