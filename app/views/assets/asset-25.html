@@ -1,0 +1,75 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Asset 25
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">
+            About water measurements
+        </h1>
+    </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h2 class="govuk-heading-m" id="river-height">How river levels are measured</h2>
+    <div>
+        <p>Height is measured from a fixed point close to the river bed. Measurements are collected once or twice a day but more frequently when there's a greater risk of flooding.</p>
+    </div>
+    <h2 class="govuk-heading-m" id="range">Low, normal and high</h2>
+    <div>
+        <p>Typical range is calculated using historic measurements taken at each location. It uses the 5-95 percentiles. Low, normal or high are displayed when the latest level is below, within or above this range.</p>
+    </div>
+    <h2 class="govuk-heading-m" id="low-levels">Rivers levels that are low or below zero</h2>
+    <div>
+        <p>The measuring equipment is fixed but the river bed can change due to errosion or silt deposits. This means its normal for some stations to show measurements that are low or below zero. </p>
+    </div>
+    <h2 class="govuk-heading-m" id="computer-models">Computer models</h2>
+    <div>
+        <p>In most cases a computer model can provide an indication of future levels. However these models have limitations. Where there is significant change you should always refer to flood warnings.</p>
+    </div>
+    <h2 class="govuk-heading-m" id="tide">How tide levels are measured</h2>
+    <div>
+        <p>How tide levels are measured</p>
+    </div>
+    <h2 class="govuk-heading-m" id="groundwater">How groundwater levels are measured</h2>
+    <div>
+        <p>How groundwater levels are measured</p>
+    </div>
+    <h2 class="govuk-heading-m" id="impacts">Accuracy of historic flood impacts</h2>
+    <div>
+        <p>About historic flood impacts</p>
+    </div>
+  </div>
+  <div class="govuk-grid-column-one-third">
+      <aside class="defra-related-items" role="complementary">
+          <h2 class="govuk-heading-s" id="subsection-title">
+              Related content
+          </h2>
+          <nav role="navigation" aria-labelledby="subsection-title">
+              <ul class="govuk-list govuk-!-font-size-16">
+                  <li>
+                      <a class="govuk-link" href="/what-to-do-in-a-flood">
+                          What to do in a flood
+                      </a>
+                  </li>
+                  <li>
+                      <a class="govuk-link" href="/recovering-after-a-flood">
+                          How to recover after a flood
+                      </a>
+                  </li>
+                  <li>
+                      <a class="govuk-link" href="/what-happens-after-a-flood">
+                          What happens after a flood
+                      </a>
+                  </li>
+              </ul>
+          </nav>
+      </aside>
+  </div>
+</div>
+{% endblock %}
