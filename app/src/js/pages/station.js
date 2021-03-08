@@ -2,25 +2,25 @@
 import 'elm-pep'
 import '../components/charts'
 import '../components/toggletip'
-// import '../components/nunjucks'
-// import '../components/map/maps'
-// import '../components/map/styles'
-// import '../components/map/layers'
-// import '../components/map/container'
-// import '../components/map/live'
+import '../components/nunjucks'
+import '../components/map/maps'
+import '../components/map/styles'
+import '../components/map/layers'
+import '../components/map/container'
+import '../components/map/live'
 
 // Add browser back button
 window.flood.utils.addBrowserBackButton()
 
 // Create LiveMap
-// window.flood.maps.createLiveMap('map', {
-//   btnText: 'View map',
-//   btnClasses: 'defra-button-map-s',
-//   layers: 'mv,sh,st',
-//   centre: JSON.parse(window.flood.model.station.coordinates).coordinates,
-//   selectedId: 'stations.' + window.flood.model.station.id,
-//   zoom: 14
-// })
+window.flood.maps.createLiveMap('map', {
+  btnText: 'View map',
+  btnClasses: 'defra-button-map-s',
+  layers: 'mv,sh,st',
+  centre: JSON.parse(window.flood.model.station.coordinates).coordinates,
+  selectedId: 'stations.' + window.flood.model.station.id,
+  zoom: 14
+})
 
 const chart = document.querySelector('.defra-line-chart')
 if (chart) {

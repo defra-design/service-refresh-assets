@@ -27,7 +27,8 @@ gulp.task('generate-assets', gulp.series(
     'sass-v6',
     'copy-assets-v6'
   ),
-  'webpack'
+  'webpack',
+  'nunjucks'
 ))
 gulp.task('watch', gulp.parallel(
   'watch-sass',

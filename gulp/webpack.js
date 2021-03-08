@@ -12,8 +12,8 @@ const webpackConfig = require('../webpack.config.js')
 
 gulp.task('webpack', function (done) {
   gulp.src([
-    config.paths.webpackSrc + 'core.js',
-    config.paths.webpackSrc + 'pages/station.js'
+    config.paths.webpackSrc + 'js/core.js',
+    config.paths.webpackSrc + 'js/pages/station.js'
   ])
     .pipe(named())
     .pipe(webpack(webpackConfig))

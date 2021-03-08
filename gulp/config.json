@@ -5,7 +5,7 @@
     "docsAssets" : "docs/assets/",
     "v6Assets": "app/v6/assets/",
     "nodeModules": "node_modules/",
-    "webpackSrc": "app/src/js/",
+    "webpackSrc": "app/src/",
     "webpackDist": "public/javascripts/dist/",
     "lib": "lib/"
   }

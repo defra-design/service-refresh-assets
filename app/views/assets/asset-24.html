@@ -97,7 +97,8 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
     <nav class="defra-flood-nav">
-      <button class="defra-button-map-s">View map<span class="govuk-visually-hidden">(Visual only)</span></button>
+      <!--<button class="defra-button-map-s">View map<span class="govuk-visually-hidden">(Visual only)</span></button>-->
+      <span id="map"></span>
       <a href="/station/{{ model.station.riverNavigation.up }}" class="defra-flood-nav__link defra-flood-nav__link--upstream">Upstream</a>
       <a href="/station/{{ model.station.riverNavigation.down }}" class="defra-flood-nav__link defra-flood-nav__link--downstream">Downstream</a>
       <a href="" class="defra-flood-nav__link">Nearby measurments</a>
@@ -275,6 +276,7 @@
 <!-- Only used for visualising the chart in the assets resource  -->
 <script src="/public/javascripts/dist/core.js"></script>
 <script src="/public/javascripts/station-model.js"></script>
+<script src="/public/javascripts/dist/templates.js"></script>
 <script src="/public/javascripts/dist/station.js"></script>
 <!-- end assets resource only -->
 {% endblock %}
