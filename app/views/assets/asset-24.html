@@ -109,7 +109,7 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
     <figure class="defra-line-chart govuk-!-margin-top-6" aria-hidden="true" hidden>
-      <figcaption class="govuk-heading-m govuk-!-margin-bottom-4">Height over the last 5 days <!-- if ffoi add 'and 36 hour forecast' --></figcaption>
+      <figcaption class="govuk-heading-m govuk-!-margin-bottom-6">Height over the last 5 days <!-- if ffoi add 'and 36 hour forecast' --></figcaption>
       <div id="line-chart" class="defra-line-chart__container" role="presentation"></div>
     </figure>
   </div>
@@ -274,9 +274,9 @@
 
 {% block pageScripts %}
 <!-- Only used for visualising the chart in the assets resource  -->
-<script src="/public/javascripts/dist/core.js"></script>
-<script src="/public/javascripts/station-model.js"></script>
-<script src="/public/javascripts/dist/templates.js"></script>
-<script src="/public/javascripts/dist/station.js"></script>
+<script src="/assets/js/core.js"></script>
+<script src="/public/javascripts/models/station.js"></script>
+<script src="/assets/js/templates.js"></script>
+<script src="/assets/js/station.js"></script>
 <!-- end assets resource only -->
 {% endblock %}

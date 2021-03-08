@@ -25,7 +25,8 @@ gulp.task('generate-assets', gulp.series(
     'sass-documentation',
     'copy-assets-documentation',
     'sass-v6',
-    'copy-assets-v6'
+    'copy-assets-v6',
+    'copy-src-images'
   ),
   'webpack',
   'nunjucks'

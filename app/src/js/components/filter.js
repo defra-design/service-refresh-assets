@@ -139,8 +139,3 @@ window.flood.Filter = (id) => {
     closeModal()
   })
 }
-
-// Create filter
-if (document.getElementById('filter')) {
-  window.flood.Filter('filter')
-}

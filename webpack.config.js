@@ -6,7 +6,8 @@ module.exports = (env, argv) => ({
   devtool: !inDev ? 'none' : 'source-map',
   entry: {
     core: './app/src/js/core',
-    station: './app/src/js/pages/station'
+    station: './app/src/js/pages/station',
+    'river-and-sea-levels': './app/src/js/pages/river-and-sea-levels'
   },
   output: {
     path: path.resolve(__dirname, 'public/javascripts/dist')

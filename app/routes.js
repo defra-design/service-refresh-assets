@@ -156,4 +156,10 @@ router.get('/icons', function (req, res) {
   res.render('assets/icons')
 })
 
+// API routes
+router.get('/api/stations.geojson', (req, res) => {
+  const stations = require('./data/stations-geojson.js')
+  res.json(stations)
+})
+
 module.exports = router

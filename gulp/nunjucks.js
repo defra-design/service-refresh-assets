@@ -11,9 +11,9 @@ const config = require('./config.json')
 const path = require('path')
 
 gulp.task('nunjucks', function (done) {
-  gulp.src(path.join(config.paths.webpackSrc, 'templates/*.html'))
+  gulp.src(path.join(config.paths.src, 'templates/*.html'))
     .pipe(nunjucks.precompile())
     .pipe(concat('templates.js'))
-    .pipe(gulp.dest(config.paths.webpackDist))
+    .pipe(gulp.dest(config.paths.dist + 'js/'))
   done()
 })

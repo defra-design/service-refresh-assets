@@ -12,11 +12,12 @@ const webpackConfig = require('../webpack.config.js')
 
 gulp.task('webpack', function (done) {
   gulp.src([
-    config.paths.webpackSrc + 'js/core.js',
-    config.paths.webpackSrc + 'js/pages/station.js'
+    config.paths.src + 'js/core.js',
+    config.paths.src + 'js/pages/station.js',
+    config.paths.src + 'js/pages/river-and-sea-levels.js'
   ])
     .pipe(named())
     .pipe(webpack(webpackConfig))
-    .pipe(gulp.dest(config.paths.webpackDist))
+    .pipe(gulp.dest(config.paths.dist + 'js/'))
   done()
 })

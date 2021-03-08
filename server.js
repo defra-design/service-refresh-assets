@@ -108,6 +108,9 @@ app.set('view engine', 'html')
 // Middleware to serve static assets
 app.use('/public', express.static(path.join(__dirname, '/public')))
 
+// DL: Middleware to serve Webpack assets
+app.use('/assets', express.static(path.join(__dirname, '/dist')))
+
 // Serve govuk-frontend in from node_modules (so not to break pre-extenstions prototype kits)
 app.use('/node_modules/govuk-frontend', express.static(path.join(__dirname, '/node_modules/govuk-frontend')))
 

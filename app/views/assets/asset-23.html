@@ -158,7 +158,7 @@
     <div class="defra-search-summary" id="searchSummary">
       <h2 class="defra-search-summary__count">9 levels</h2>
       <!-- Added with javascript -->
-      <button id="map-btn" class="defra-button-map-s">View map</button>
+      <span id="map"></span>
       <!-- Added with javascript -->
     </div>
     <ul class="defra-flood-list">
@@ -773,12 +773,11 @@
 
 {% endblock %}
 
-{% block bodyEnd %}
-  {% block scripts %}
-    {% include "includes/scripts.html" %}
-    <script src="/public/javascripts/bodyScrollLock.js"></script>
-    <script src="/public/javascripts/filter.js"></script>
-    {% block pageScripts %}{% endblock %}
-  {% endblock %}
-  <!-- GOV.UK Prototype Kit {{releaseVersion}} -->
+{% block pageScripts %}
+<!-- Only used for visualising the chart in the assets resource  -->
+<script src="/assets/js/core.js"></script>
+<script src="/public/javascripts/models/river-and-sea-levels.js"></script>
+<script src="/assets/js/templates.js"></script>
+<script src="/assets/js/river-and-sea-levels.js"></script>
+<!-- end assets resource only -->
 {% endblock %}
