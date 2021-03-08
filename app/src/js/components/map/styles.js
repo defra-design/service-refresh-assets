@@ -90,11 +90,11 @@ window.flood.maps.styles = {
     const isBigSymbol = resolution <= window.flood.maps.liveMaxBigZoom
     switch (state) {
       case 'high':
-        return isSelected ? (isBigSymbol ? styleCache.levelHighBigSelected : styleCache.levelHighSelected) : (isBigSymbol ? styleCache.levelHighBig : styleCache.levelHigh)
+        return isSelected ? (isBigSymbol ? styleCache.levelHighBigSelected : styleCache.measurementAlertSelected) : (isBigSymbol ? styleCache.levelHighBig : styleCache.measurementAlert)
       case 'error':
-        return isSelected ? (isBigSymbol ? styleCache.levelErrorBigSelected : styleCache.levelErrorSelected) : (isBigSymbol ? styleCache.levelErrorBig : styleCache.levelError)
+        return isSelected ? (isBigSymbol ? styleCache.levelErrorBigSelected : styleCache.measurementErrorSelected) : (isBigSymbol ? styleCache.levelErrorBig : styleCache.measurementError)
       default:
-        return isSelected ? (isBigSymbol ? styleCache.levelBigSelected : styleCache.levelSelected) : (isBigSymbol ? styleCache.levelBig : styleCache.level)
+        return isSelected ? (isBigSymbol ? styleCache.levelBigSelected : styleCache.measurementSelected) : (isBigSymbol ? styleCache.levelBig : styleCache.measurement)
     }
   },
 
@@ -411,12 +411,12 @@ const styleCache = {
   levelBigSelected: createIconStyle({ offset: [100, 600], zIndex: 10 }),
   levelErrorBig: createIconStyle({ offset: [0, 700], zIndex: 1 }),
   levelErrorBigSelected: createIconStyle({ offset: [100, 700], zIndex: 10 }),
-  levelHigh: createIconStyle({ offset: [0, 900], zIndex: 3 }),
-  levelHighSelected: createIconStyle({ offset: [100, 900], zIndex: 10 }),
-  level: createIconStyle({ offset: [0, 1000], zIndex: 2 }),
-  levelSelected: createIconStyle({ offset: [100, 1000], zIndex: 10 }),
-  levelError: createIconStyle({ offset: [0, 1100], zIndex: 1 }),
-  levelErrorSelected: createIconStyle({ offset: [100, 1100], zIndex: 10 }),
+  measurementAlert: createIconStyle({ offset: [0, 1800], zIndex: 3 }),
+  measurementAlertSelected: createIconStyle({ offset: [100, 1800], zIndex: 10 }),
+  measurement: createIconStyle({ offset: [0, 1900], zIndex: 2 }),
+  measurementSelected: createIconStyle({ offset: [100, 1900], zIndex: 10 }),
+  measurementError: createIconStyle({ offset: [0, 2000], zIndex: 1 }),
+  measurementErrorSelected: createIconStyle({ offset: [100, 2000], zIndex: 10 }),
   text: createTextStyle(),
   textLarge: createTextStyle({ font: 'Bold 16px GDS Transport, Arial, sans-serif', offsetY: -13, radius: 3 })
 }
