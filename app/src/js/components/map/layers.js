@@ -3,7 +3,7 @@
 Initialises the window.flood.maps layers
 */
 import { Tile as TileLayer, Vector as VectorLayer } from 'ol/layer'
-import { BingMaps, Vector as VectorSource } from 'ol/source'
+import { BingMaps, OSM, Vector as VectorSource } from 'ol/source'
 import { GeoJSON } from 'ol/format'
 
 const { xhr } = window.flood.utils
@@ -54,10 +54,11 @@ window.flood.maps.layers = {
   road: () => {
     return new TileLayer({
       ref: 'road',
-      source: new BingMaps({
-        key: window.flood.model.bingMaps,
-        imagerySet: 'RoadOnDemand'
-      }),
+      // source: new BingMaps({
+      //   key: window.flood.model.bingMaps,
+      //   imagerySet: 'RoadOnDemand'
+      // }),
+      source: new OSM(),
       visible: false,
       zIndex: 0
     })

@@ -78,7 +78,6 @@
       "stateInformation": "0.05m to 1.90m"
     },
     "feedback": true,
-    "bingMaps": "Ai5rU4wMPkFql-gJRkkDqVJZbBLiI7yEeLltwXn0JKj143Q6i-a0hnY44VQIv0Ba",
     "banner": 0,
     "isAlertLinkRendered": true,
     "id": 8208,
