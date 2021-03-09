@@ -1,5 +1,6 @@
 .DS_Store
 .vscode
+.port.tmp
 node_modules
 public
 dist
