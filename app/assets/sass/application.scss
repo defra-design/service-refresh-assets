@@ -1,12 +1,24 @@
 // global styles for <a> and <p> tags
 $govuk-global-styles: true;
 
+// DL: Tablet/desktop overide to address modern iPads 
+$govuk-breakpoints: (
+  mobile:  320px,
+  tablet:  641px,
+  desktop: 835px
+) !default;
+
 // We can't mount GOV.UK Frontend's assets at root as it's done automatically by the extensions framework.
 $govuk-assets-path: '/govuk/assets/';
 $govuk-images-path: '/public/images/';
 
 // Import GOV.UK Frontend and any extension styles if extensions have been configured
 @import "lib/extensions/extensions";
+
+//
+// ITCSS
+// https://designnotes.blog.gov.uk/2018/02/19/developing-new-typography-and-spacing-for-gov-uk-frontend/
+//
 
 // Settings
 
