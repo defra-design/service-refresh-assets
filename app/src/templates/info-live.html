@@ -21,8 +21,12 @@
         Flood alert (inactive)
         {% endif %}
     </h2>
-    <p class="defra-map-info__description"><a href="">{{ model.ta_name }}</a></p>
-    <p class="defra-map-info__meta">Updated 5:04am on 22 January 2021</p>
+    <p class="defra-map-info__description">
+        <a href="">{{ model.ta_name }}</a>
+    </p>
+    <p class="defra-map-info__meta">
+        Updated 5:04am on 22 January 2021
+    </p>
 </div>
 {% elif model.river %}
 <div id="infoDescription">
@@ -47,7 +51,7 @@
             <dt class="govuk-visually-hidden">Height</dt>
             <dd>
                 <span class="defra-flood-list-data__value">{{ model.value | round(2) }}m</span>
-                <span class="defra-flood-list-data__description"><time datetime="">{{ }}</time></span>
+                <span class="defra-flood-list-data__description"><time datetime="">{{ model.date }}</time></span>
             </dd>
         </div>
         {% if model.value and model.type !== 'C' and model.status !== 'Closed' and model.status !== 'Suspended' and not model.iswales %}
