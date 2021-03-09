@@ -5,10 +5,10 @@
 */
 
 const gulp = require('gulp')
+const path = require('path')
 const named = require('vinyl-named')
 const config = require('./config.json')
-const webpack = require('webpack-stream')
-const webpackConfig = require('../webpack.config.js')
+const webpackStream = require('webpack-stream')
 
 gulp.task('webpack', function (done) {
   gulp.src([
@@ -17,7 +17,22 @@ gulp.task('webpack', function (done) {
     config.paths.src + 'js/pages/river-and-sea-levels.js'
   ])
     .pipe(named())
-    .pipe(webpack(webpackConfig))
+    .pipe(webpackStream({
+      mode: 'production', // development, production
+      devtool: 'none', // source-map, none
+      output: {
+        path: path.resolve(__dirname, 'public/javascripts/dist')
+      },
+      module: {
+        rules: [
+          {
+            use: {
+              loader: 'babel-loader'
+            }
+          }
+        ]
+      }
+    }))
     .pipe(gulp.dest(config.paths.dist + 'js/'))
   done()
 })

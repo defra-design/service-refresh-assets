@@ -25,7 +25,6 @@ window.flood.maps.createLiveMap('map', {
 const chart = document.querySelector('.defra-line-chart')
 if (chart) {
   // If javascript is enabled make content visible to all but assitive technology
-  // var figure = chart.parentNode
   chart.setAttribute('aria-hidden', true)
   chart.removeAttribute('hidden')
 

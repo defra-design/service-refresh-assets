@@ -19,6 +19,8 @@ requireDir('./gulp', { recurse: true })
 gulp.task('generate-assets', gulp.series(
   'clean',
   'sass-extensions',
+  'webpack',
+  'nunjucks',
   gulp.parallel(
     'sass',
     'copy-assets',
@@ -27,9 +29,7 @@ gulp.task('generate-assets', gulp.series(
     'sass-v6',
     'copy-assets-v6',
     'copy-src-images'
-  ),
-  'webpack',
-  'nunjucks'
+  )
 ))
 gulp.task('watch', gulp.parallel(
   'watch-sass',
