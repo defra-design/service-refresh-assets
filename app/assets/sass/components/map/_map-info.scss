@@ -7,8 +7,8 @@
   }
   &__name {
     display: block;
-    @extend .govuk-body-s;
-    margin-bottom: 0px;
+    @include govuk-font($size: 19, $weight: bold);
+    margin: 0px;
   }
   &__name--emphasis {
     font-weight: bold;
@@ -17,8 +17,6 @@
     @extend .govuk-body;
     margin-bottom: 0px;
     margin-top: 10px;
-    border-top:1px solid $govuk-border-colour;
-    padding-top: 10px;
   }
   &__meta {
     display: block;

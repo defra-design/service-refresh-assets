@@ -32,7 +32,7 @@
 <div id="infoDescription">
     <h2 class="defra-map-info__name">
         <a href="">
-            {% if model.type === 'C' %}Tide{% elif model.type === 'G' %}Groundwater level{% else %}{{ model.river }} level{% endif %} at
+            {% if model.type === 'C' %}Tide{% elif model.type === 'G' %}Groundwater{% else %}{{ model.river }}{% endif %} at
             {{ model.name }}
             {% if model.iswales %} (Natural Resources Wales){% endif %}
         </a>
@@ -51,7 +51,7 @@
             <dt class="govuk-visually-hidden">Height</dt>
             <dd>
                 <span class="defra-flood-list-data__value">{{ model.value | round(2) }}m</span>
-                <span class="defra-flood-list-data__description"><time datetime="">11:15am, 8 Mar</time></span>
+                <span class="defra-flood-list-data__description"><time datetime="">{{ }}</time></span>
             </dd>
         </div>
         {% if model.value and model.type !== 'C' and model.status !== 'Closed' and model.status !== 'Suspended' and not model.iswales %}
