@@ -20,9 +20,6 @@ gulp.task('webpack', function (done) {
     .pipe(webpackStream({
       mode: 'production', // development, production
       devtool: 'none', // source-map, none
-      output: {
-        path: path.resolve(__dirname, config.paths.dist + 'js/')
-      },
       module: {
         rules: [
           {
