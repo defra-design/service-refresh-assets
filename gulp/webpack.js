@@ -39,7 +39,10 @@ const webpackStream = require('webpack-stream')
 
 gulp.task('webpack', function (done) {
   gulp.src([
-    config.paths.src + 'js/core.js'])
+    config.paths.src + 'js/core.js',
+    config.paths.src + 'js/pages/station.js',
+    config.paths.src + 'js/pages/river-and-sea-levels.js'
+  ])
     .pipe(named())
     .pipe(webpackStream())
     .pipe(gulp.dest(config.paths.dist + 'js/'))
