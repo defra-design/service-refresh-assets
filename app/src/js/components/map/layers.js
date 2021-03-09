@@ -139,16 +139,16 @@ window.flood.maps.layers = {
 
   impacts: () => {
     return new VectorLayer({
-      ref: 'impacts',
-      featureCodes: 'hi',
+      ref: 'rainfall',
+      featureCodes: 'ra',
       source: new VectorSource({
         format: new GeoJSON(),
         projection: 'EPSG:3857',
-        url: '/api/impacts'
+        url: '/api/rainfall.geojson'
       }),
-      style: window.flood.maps.styles.impacts,
+      style: window.flood.maps.styles.rainfall,
       visible: false,
-      zIndex: 6
+      zIndex: 3
     })
   },
 

@@ -64,7 +64,7 @@ window.flood.maps.styles = {
 
   warnings: (feature, resolution) => {
     // Hide warning symbols or hide when polygon is shown
-    if (feature.get('isVisible') !== 'true' || resolution < window.flood.maps.liveMaxBigZoom) {
+    if (feature.get('isVisible') !== 'true' || resolution < window.flood.maps.liveMaxZoom) {
       return
     }
     const severity = feature.get('severity_value')
@@ -87,14 +87,14 @@ window.flood.maps.styles = {
     }
     const state = feature.get('state')
     const isSelected = feature.get('isSelected')
-    const isBigSymbol = resolution <= window.flood.maps.liveMaxBigZoom
+    const isSymbol = resolution <= window.flood.maps.liveMaxZoom
     switch (state) {
       case 'high':
-        return isSelected ? (isBigSymbol ? styleCache.levelHighBigSelected : styleCache.measurementAlertSelected) : (isBigSymbol ? styleCache.levelHighBig : styleCache.measurementAlert)
+        return isSelected ? (isSymbol ? styleCache.riverHighSelected : styleCache.measurementAlertSelected) : (isSymbol ? styleCache.riverHigh : styleCache.measurementAlert)
       case 'error':
-        return isSelected ? (isBigSymbol ? styleCache.levelErrorBigSelected : styleCache.measurementErrorSelected) : (isBigSymbol ? styleCache.levelErrorBig : styleCache.measurementError)
+        return isSelected ? (isSymbol ? styleCache.riverErrorSelected : styleCache.measurementErrorSelected) : (isSymbol ? styleCache.riverError : styleCache.measurementError)
       default:
-        return isSelected ? (isBigSymbol ? styleCache.levelBigSelected : styleCache.measurementSelected) : (isBigSymbol ? styleCache.levelBig : styleCache.measurement)
+        return isSelected ? (isSymbol ? styleCache.riverSelected : styleCache.measurementSelected) : (isSymbol ? styleCache.river : styleCache.measurement)
     }
   },
 
@@ -405,12 +405,37 @@ const styleCache = {
   targetAreaSelected: createIconStyle({ offset: [100, 300], zIndex: 10 }),
   impact: createIconStyle({ offset: [0, 400], zIndex: 1 }),
   impactSelected: createIconStyle({ offset: [100, 400], zIndex: 10 }),
-  levelHighBig: createIconStyle({ offset: [0, 500], zIndex: 3 }),
-  levelHighBigSelected: createIconStyle({ offset: [100, 500], zIndex: 10 }),
-  levelBig: createIconStyle({ offset: [0, 600], zIndex: 2 }),
-  levelBigSelected: createIconStyle({ offset: [100, 600], zIndex: 10 }),
-  levelErrorBig: createIconStyle({ offset: [0, 700], zIndex: 1 }),
-  levelErrorBigSelected: createIconStyle({ offset: [100, 700], zIndex: 10 }),
+  // River
+  riverHigh: createIconStyle({ offset: [0, 500], zIndex: 3 }),
+  riverHighSelected: createIconStyle({ offset: [100, 500], zIndex: 10 }),
+  river: createIconStyle({ offset: [0, 600], zIndex: 2 }),
+  riverSelected: createIconStyle({ offset: [100, 600], zIndex: 10 }),
+  riverError: createIconStyle({ offset: [0, 700], zIndex: 1 }),
+  riverErrorSelected: createIconStyle({ offset: [100, 700], zIndex: 10 }),
+  // Tide
+  tide: createIconStyle({ offset: [0, 800], zIndex: 2 }),
+  tideSelected: createIconStyle({ offset: [100, 800], zIndex: 10 }),
+  tideError: createIconStyle({ offset: [0, 900], zIndex: 1 }),
+  tideErrorSelected: createIconStyle({ offset: [100, 900], zIndex: 10 }),
+  // Groundwater
+  groundHigh: createIconStyle({ offset: [0, 1000], zIndex: 3 }),
+  groundHighSelected: createIconStyle({ offset: [100, 1000], zIndex: 10 }),
+  ground: createIconStyle({ offset: [0, 1100], zIndex: 2 }),
+  groundSelected: createIconStyle({ offset: [100, 1100], zIndex: 10 }),
+  groundError: createIconStyle({ offset: [0, 1200], zIndex: 1 }),
+  groundErrorSelected: createIconStyle({ offset: [100, 1200], zIndex: 10 }),
+  // Rainfall
+  rainHeavy: createIconStyle({ offset: [0, 1300], zIndex: 3 }),
+  rainHeavySelected: createIconStyle({ offset: [100, 1300], zIndex: 10 }),
+  rainModerate: createIconStyle({ offset: [0, 1400], zIndex: 3 }),
+  rainModerateSelected: createIconStyle({ offset: [100, 1400], zIndex: 10 }),
+  rainLight: createIconStyle({ offset: [0, 1500], zIndex: 3 }),
+  rainLightSelected: createIconStyle({ offset: [100, 1500], zIndex: 10 }),
+  rainNone: createIconStyle({ offset: [0, 1600], zIndex: 3 }),
+  rainNoneSelected: createIconStyle({ offset: [100, 1600], zIndex: 10 }),
+  rainError: createIconStyle({ offset: [0, 1700], zIndex: 3 }),
+  rainErrorSelected: createIconStyle({ offset: [100, 1700], zIndex: 10 }),
+  // Measurements
   measurementAlert: createIconStyle({ offset: [0, 1800], zIndex: 3 }),
   measurementAlertSelected: createIconStyle({ offset: [100, 1800], zIndex: 10 }),
   measurement: createIconStyle({ offset: [0, 1900], zIndex: 2 }),

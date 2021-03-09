@@ -165,5 +165,9 @@ router.get('/api/stations.geojson', (req, res) => {
   const stations = require('./data/stations-geojson.js')
   res.json(stations)
 })
+router.get('/api/rainfall.geojson', (req, res) => {
+  const rainfall = require('./data/rainfall-geojson.js')
+  res.json(rainfall)
+})
 
 module.exports = router
