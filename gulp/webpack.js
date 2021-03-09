@@ -17,22 +17,23 @@ gulp.task('webpack', function (done) {
     config.paths.src + 'js/pages/river-and-sea-levels.js'
   ])
     .pipe(named())
-    .pipe(webpackStream({
-      mode: 'production', // development, production
-      devtool: 'none', // source-map, none
-      // output: {
-      //   path: path.resolve(__dirname, config.paths.dist + 'js/')
-      // },
-      module: {
-        rules: [
-          {
-            use: {
-              loader: 'babel-loader'
-            }
-          }
-        ]
-      }
-    }))
+    // .pipe(webpackStream({
+    //   mode: 'production', // development, production
+    //   devtool: 'none', // source-map, none
+    //   // output: {
+    //   //   path: path.resolve(__dirname, config.paths.dist + 'js/')
+    //   // },
+    //   module: {
+    //     rules: [
+    //       {
+    //         use: {
+    //           loader: 'babel-loader'
+    //         }
+    //       }
+    //     ]
+    //   }
+    // }))
+    .pipe(webpackStream())
     .pipe(gulp.dest(config.paths.dist + 'js/'))
   done()
 })
