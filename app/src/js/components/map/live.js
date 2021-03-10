@@ -48,7 +48,7 @@ function LiveMap (mapId, options) {
   const targetAreaPolygons = maps.layers.targetAreaPolygons()
   const warnings = maps.layers.warnings()
   const stations = maps.layers.stations()
-  const impacts = maps.layers.impacts()
+  const rainfall = maps.layers.rainfall()
   const selected = maps.layers.selected()
 
   // These layers are static
@@ -61,8 +61,8 @@ function LiveMap (mapId, options) {
   // These layers can be manipulated
   const dataLayers = [
     stations,
-    warnings,
-    impacts
+    rainfall,
+    warnings
   ]
   const layers = defaultLayers.concat(dataLayers)
 
@@ -95,7 +95,6 @@ function LiveMap (mapId, options) {
   const resetButton = container.resetButton
   const closeInfoButton = container.closeInfoButton
   const openKeyButton = container.openKeyButton
-  // const keyboardButton = container.keyboardButton
 
   //
   // Private methods
@@ -135,12 +134,28 @@ function LiveMap (mapId, options) {
   const setFeatueState = (layer) => {
     layer.getSource().forEachFeature((feature) => {
       const props = feature.getProperties()
-      let state = 'normal'
-      // Stations
-      if (props.status === 'Suspended' || props.status === 'Closed' || (!props.value && !props.iswales)) {
-        state = 'error'
-      } else if (props.value && props.atrisk && props.type !== 'C' && !props.iswales) {
-        state = 'high'
+      let state = ''
+      if (['S', 'M', 'G'].includes(props.type)) {
+        // River or groundwater
+        if (props.status === 'Suspended' || props.status === 'Closed' || (!props.value && !props.iswales)) {
+          state = props.type === 'G' ? 'groundError' : 'riverError'
+        } else if (props.value && props.atrisk && props.type !== 'C' && !props.iswales) {
+          state = props.type === 'G' ? 'groundHigh' : 'riverHigh'
+        } else {
+          state = props.type === 'G' ? 'ground' : 'river'
+        }
+      } else if (props.type === 'C') {
+        // Tide
+        if (props.status === 'Suspended' || props.status === 'Closed' || (!props.value && !props.iswales)) {
+          state = 'tideError'
+        } else {
+          state = 'tide'
+        }
+      } else if (props.type === 'R') {
+        // Rainfall
+        const intensity = ['', 'Error', 'Light', 'Moderate', 'Heavy']
+        state = 'rain' + intensity[props.intensity]
+        console.log('State: ' + state)
       }
       // WebGl: Feature properties must be strings or numbers
       feature.set('state', state)
@@ -152,18 +167,20 @@ function LiveMap (mapId, options) {
     layer.getSource().forEachFeature((feature) => {
       const ref = layer.get('ref')
       const props = feature.getProperties()
-      const isHighLevel = props.atrisk && props.status === 'Active' && props.value && props.type !== 'C' && !props.iswales
       const isVisible = (
         // Warnings
         (props.severity_value && props.severity_value === 3 && lyrCodes.includes('ts')) ||
         (props.severity_value && props.severity_value === 2 && lyrCodes.includes('tw')) ||
         (props.severity_value && props.severity_value === 1 && lyrCodes.includes('ta')) ||
         (props.severity_value && props.severity_value === 4 && lyrCodes.includes('tr')) ||
-        // Stations
-        (ref === 'stations' && isHighLevel && lyrCodes.includes('sh')) ||
-        (ref === 'stations' && !isHighLevel && lyrCodes.includes('st')) ||
-        // Impacts
-        (ref === 'impacts' && lyrCodes.includes('hi')) ||
+        // Rivers
+        (ref === 'stations' && ['S', 'M'].includes(props.type) && lyrCodes.includes('ri')) ||
+        // Tide
+        (ref === 'stations' && props.type === 'C' && lyrCodes.includes('ti')) ||
+        // Ground
+        (ref === 'stations' && props.type === 'G' && lyrCodes.includes('gr')) ||
+        // Rainfall
+        (ref === 'rainfall' && props.type === 'R' && lyrCodes.includes('rf')) ||
         // Target area provided
         (targetArea.pointFeature && targetArea.pointFeature.getId() === feature.getId())
       )
@@ -385,6 +402,7 @@ function LiveMap (mapId, options) {
     if (feature.getId().startsWith('stations')) {
       // model.date = formatTime(new Date(model.value_date)) + ' ' + formatDay(new Date(model.value_date))
       model.date = formatExpiredTime(model.value_date)
+      model.state = feature.get('state')
     }
     const html = window.nunjucks.render('info-live.html', { model: model })
     feature.set('html', html)
@@ -486,7 +504,7 @@ function LiveMap (mapId, options) {
           }
         }
         // WebGL: Limited dynamic styling could be done server side for client performance
-        if (layer.get('ref') === 'stations') {
+        if (['stations', 'rainfall'].includes(layer.get('ref'))) {
           setFeatueState(layer)
         }
         // Set feature visibility after all features have loaded

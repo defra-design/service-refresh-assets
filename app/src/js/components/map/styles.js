@@ -64,7 +64,7 @@ window.flood.maps.styles = {
 
   warnings: (feature, resolution) => {
     // Hide warning symbols or hide when polygon is shown
-    if (feature.get('isVisible') !== 'true' || resolution < window.flood.maps.liveMaxZoom) {
+    if (feature.get('isVisible') !== 'true' || resolution < window.flood.maps.liveMaxBigZoom) {
       return
     }
     const severity = feature.get('severity_value')
@@ -87,23 +87,49 @@ window.flood.maps.styles = {
     }
     const state = feature.get('state')
     const isSelected = feature.get('isSelected')
-    const isSymbol = resolution <= window.flood.maps.liveMaxZoom
+    const isSymbol = resolution <= window.flood.maps.liveMaxBigZoom
     switch (state) {
-      case 'high':
-        return isSelected ? (isSymbol ? styleCache.riverHighSelected : styleCache.measurementAlertSelected) : (isSymbol ? styleCache.riverHigh : styleCache.measurementAlert)
-      case 'error':
-        return isSelected ? (isSymbol ? styleCache.riverErrorSelected : styleCache.measurementErrorSelected) : (isSymbol ? styleCache.riverError : styleCache.measurementError)
-      default:
+      // Rivers
+      case 'river':
         return isSelected ? (isSymbol ? styleCache.riverSelected : styleCache.measurementSelected) : (isSymbol ? styleCache.river : styleCache.measurement)
+      case 'riverHigh':
+        return isSelected ? (isSymbol ? styleCache.riverHighSelected : styleCache.measurementAlertSelected) : (isSymbol ? styleCache.riverHigh : styleCache.measurementAlert)
+      case 'riverError':
+        return isSelected ? (isSymbol ? styleCache.riverErrorSelected : styleCache.measurementErrorSelected) : (isSymbol ? styleCache.riverError : styleCache.measurementError)     
+      // Tide
+      case 'tide':
+        return isSelected ? (isSymbol ? styleCache.tideSelected : styleCache.measurementSelected) : (isSymbol ? styleCache.tide : styleCache.measurement)
+      case 'tideError':
+        return isSelected ? (isSymbol ? styleCache.tideErrorSelected : styleCache.measurementErrorSelected) : (isSymbol ? styleCache.tideError : styleCache.measurementError)
+      // Ground
+      case 'groundHigh':
+        return isSelected ? (isSymbol ? styleCache.groundHighSelected : styleCache.measurementAlertSelected) : (isSymbol ? styleCache.groundHigh : styleCache.measurementAlert)
+      case 'groundError':
+        return isSelected ? (isSymbol ? styleCache.groundErrorSelected : styleCache.measurementErrorSelected) : (isSymbol ? styleCache.groundError : styleCache.measurementError)
+      case 'ground':
+        return isSelected ? (isSymbol ? styleCache.groundSelected : styleCache.measurementSelected) : (isSymbol ? styleCache.ground : styleCache.measurement)
     }
   },
 
-  impacts: (feature, resolution) => {
+  rainfall: (feature, resolution) => {
     if (feature.get('isVisible') !== 'true') {
       return
     }
+    const state = feature.get('state')
     const isSelected = feature.get('isSelected')
-    return isSelected ? styleCache.impactSelected : styleCache.impact
+    const isSymbol = resolution <= window.flood.maps.liveMaxBigZoom
+    switch (state) {
+      case 'rainHeavy':
+        return isSelected ? (isSymbol ? styleCache.rainHeavySelected : styleCache.measurementAlertSelected) : (isSymbol ? styleCache.rainHeavy : styleCache.measurementAlert)
+      case 'rainModerate':
+        return isSelected ? (isSymbol ? styleCache.rainModerateSelected : styleCache.measurementSelected) : (isSymbol ? styleCache.rainModerate : styleCache.measurement)
+      case 'rainLight':
+        return isSelected ? (isSymbol ? styleCache.rainLightSelected : styleCache.measurementSelected) : (isSymbol ? styleCache.rainLight : styleCache.measurement)
+      case 'rainError':
+        return isSelected ? (isSymbol ? styleCache.rainErrorSelected : styleCache.measurementErrorSelected) : (isSymbol ? styleCache.rainError : styleCache.measurementError)
+      case 'rain':
+        return isSelected ? (isSymbol ? styleCache.rainSelected : styleCache.measurementSelected) : (isSymbol ? styleCache.rain : styleCache.measurement)
+    }
   },
 
   //
@@ -160,6 +186,61 @@ window.flood.maps.styles = {
     textStyle[0].getText().setText(feature.get('n'))
     textStyle[1].getText().setText(feature.get('n'))
     return textStyle
+  },
+
+  //
+  // WebGL styles
+  //
+
+  warningsJSON: {
+    filter: ['case',
+      ['<', ['resolution'], 100],
+      false,
+      ['case',
+        ['==', ['get', 'isVisible'], 'true'],
+        true,
+        false
+      ]
+    ],
+    symbol: {
+      symbolType: 'image',
+      src: '/assets/images/map-symbols-2x.png',
+      size: 50,
+      rotateWithView: false,
+      offset: [0, 0],
+      textureCoord: ['match', ['get', 'severity_value'],
+        3, [0, 0, 0.5, 0.04761904761],
+        2, [0, 0.04761904761, 0.5, 0.09523809523],
+        1, [0, 0.09523809523, 0.5, 0.14285714285],
+        [0, 0.14285714285, 0.5, 0.19047619047]
+      ]
+    }
+  },
+
+  measurementsJSON: {
+    filter: ['==', ['get', 'isVisible'], 'true'],
+    symbol: {
+      symbolType: 'image',
+      src: '/assets/images/map-symbols-2x.png',
+      size: 50,
+      rotateWithView: false,
+      offset: [0, 0],
+      textureCoord: ['match', ['get', 'state'],
+        'rain', ['case', ['<=', ['resolution'], 100], [0, 0.7619047619, 0.5, 0.80952380952], [0, 0.90476190476, 0.5, 0.95238095238]],
+        'rainHeavy', ['case', ['<=', ['resolution'], 100], [0, 0.61904761904, 0.5, 0.66666666666], [0, 0.85714285714, 0.5, 0.90476190476]],
+        'rainModerate', ['case', ['<=', ['resolution'], 100], [0, 0.66666666666, 0.5, 0.71428571428], [0, 0.90476190476, 0.5, 0.95238095238]],
+        'rainLight', ['case', ['<=', ['resolution'], 100], [0, 0.71428571428, 0.5, 0.7619047619], [0, 0.90476190476, 0.5, 0.95238095238]],
+        'rainError', ['case', ['<=', ['resolution'], 100], [0, 0.80952380952, 0.5, 0.85714285714], [0, 0.95238095238, 0.5, 1]],
+        'tide', ['case', ['<=', ['resolution'], 100], [0, 0.38095238095, 0.5, 0.42857142857], [0, 0.90476190476, 0.5, 0.95238095238]],
+        'tideError', ['case', ['<=', ['resolution'], 100], [0, 0.42857142857, 0.5, 0.47619047619], [0, 0.95238095238, 0.5, 1]],
+        'ground', ['case', ['<=', ['resolution'], 100], [0, 0.57142857142, 0.5, 0.61904761904], [0, 0.90476190476, 0.5, 0.95238095238]],
+        'groundHigh', ['case', ['<=', ['resolution'], 100], [0, 0.47619047619, 0.5, 0.52380952381], [0, 0.85714285714, 0.5, 0.90476190476]],
+        'groundError', ['case', ['<=', ['resolution'], 100], [0, 0.52380952381, 0.5, 0.57142857142], [0, 0.95238095238, 0.5, 1]],
+        'riverHigh', ['case', ['<=', ['resolution'], 100], [0, 0.23809523809, 0.5, 0.28571428571], [0, 0.85714285714, 0.5, 0.90476190476]],
+        'riverError', ['case', ['<=', ['resolution'], 100], [0, 0.33333333333, 0.5, 0.38095238095], [0, 0.95238095238, 0.5, 1]],
+        ['case', ['<=', ['resolution'], 100], [0, 0.28571428571, 0.5, 0.33333333333], [0, 0.90476190476, 0.5, 0.95238095238]]
+      ]
+    }
   }
 }
 
@@ -403,13 +484,11 @@ const styleCache = {
   alertSelected: createIconStyle({ offset: [100, 200], zIndex: 10 }),
   targetArea: createIconStyle({ offset: [0, 300], zIndex: 1 }),
   targetAreaSelected: createIconStyle({ offset: [100, 300], zIndex: 10 }),
-  impact: createIconStyle({ offset: [0, 400], zIndex: 1 }),
-  impactSelected: createIconStyle({ offset: [100, 400], zIndex: 10 }),
   // River
-  riverHigh: createIconStyle({ offset: [0, 500], zIndex: 3 }),
-  riverHighSelected: createIconStyle({ offset: [100, 500], zIndex: 10 }),
   river: createIconStyle({ offset: [0, 600], zIndex: 2 }),
   riverSelected: createIconStyle({ offset: [100, 600], zIndex: 10 }),
+  riverHigh: createIconStyle({ offset: [0, 500], zIndex: 3 }),
+  riverHighSelected: createIconStyle({ offset: [100, 500], zIndex: 10 }),
   riverError: createIconStyle({ offset: [0, 700], zIndex: 1 }),
   riverErrorSelected: createIconStyle({ offset: [100, 700], zIndex: 10 }),
   // Tide
@@ -418,28 +497,28 @@ const styleCache = {
   tideError: createIconStyle({ offset: [0, 900], zIndex: 1 }),
   tideErrorSelected: createIconStyle({ offset: [100, 900], zIndex: 10 }),
   // Groundwater
-  groundHigh: createIconStyle({ offset: [0, 1000], zIndex: 3 }),
-  groundHighSelected: createIconStyle({ offset: [100, 1000], zIndex: 10 }),
   ground: createIconStyle({ offset: [0, 1100], zIndex: 2 }),
   groundSelected: createIconStyle({ offset: [100, 1100], zIndex: 10 }),
+  groundHigh: createIconStyle({ offset: [0, 1000], zIndex: 3 }),
+  groundHighSelected: createIconStyle({ offset: [100, 1000], zIndex: 10 }),
   groundError: createIconStyle({ offset: [0, 1200], zIndex: 1 }),
   groundErrorSelected: createIconStyle({ offset: [100, 1200], zIndex: 10 }),
   // Rainfall
+  rain: createIconStyle({ offset: [0, 1600], zIndex: 3 }),
+  rainSelected: createIconStyle({ offset: [100, 1600], zIndex: 10 }),
   rainHeavy: createIconStyle({ offset: [0, 1300], zIndex: 3 }),
   rainHeavySelected: createIconStyle({ offset: [100, 1300], zIndex: 10 }),
   rainModerate: createIconStyle({ offset: [0, 1400], zIndex: 3 }),
   rainModerateSelected: createIconStyle({ offset: [100, 1400], zIndex: 10 }),
   rainLight: createIconStyle({ offset: [0, 1500], zIndex: 3 }),
   rainLightSelected: createIconStyle({ offset: [100, 1500], zIndex: 10 }),
-  rainNone: createIconStyle({ offset: [0, 1600], zIndex: 3 }),
-  rainNoneSelected: createIconStyle({ offset: [100, 1600], zIndex: 10 }),
   rainError: createIconStyle({ offset: [0, 1700], zIndex: 3 }),
   rainErrorSelected: createIconStyle({ offset: [100, 1700], zIndex: 10 }),
   // Measurements
-  measurementAlert: createIconStyle({ offset: [0, 1800], zIndex: 3 }),
-  measurementAlertSelected: createIconStyle({ offset: [100, 1800], zIndex: 10 }),
   measurement: createIconStyle({ offset: [0, 1900], zIndex: 2 }),
   measurementSelected: createIconStyle({ offset: [100, 1900], zIndex: 10 }),
+  measurementAlert: createIconStyle({ offset: [0, 1800], zIndex: 3 }),
+  measurementAlertSelected: createIconStyle({ offset: [100, 1800], zIndex: 10 }),
   measurementError: createIconStyle({ offset: [0, 2000], zIndex: 1 }),
   measurementErrorSelected: createIconStyle({ offset: [100, 2000], zIndex: 10 }),
   text: createTextStyle(),

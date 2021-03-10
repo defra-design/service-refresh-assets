@@ -10,6 +10,7 @@ module.exports = {
         'coordinates': [-3.31, 54.85]
       },
       'properties': {
+        'type': 'R',
         'name': 'Solway rain gauge',
         'intensity': 4,
         'hours-1': 5.7,
@@ -25,6 +26,7 @@ module.exports = {
         'coordinates': [-3.06, 54.84]
       },
       'properties': {
+        'type': 'R',
         'name': 'Thursby rain gauge',
         'intensity': 3,
         'hours-1': 3.8,
@@ -40,8 +42,9 @@ module.exports = {
         'coordinates': [-3.21, 54.76]
       },
       'properties': {
+        'type': 'R',
         'name': 'Thursby rain gauge',
-        'intensity': 3,
+        'intensity': 0,
         'hours-1': 0.2,
         'hours-6': 7.3,
         'hours-24': 15.1
