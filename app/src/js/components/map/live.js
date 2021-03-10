@@ -153,8 +153,18 @@ function LiveMap (mapId, options) {
         }
       } else if (props.type === 'R') {
         // Rainfall
-        const intensity = ['', 'Error', 'Light', 'Moderate', 'Heavy']
-        state = 'rain' + intensity[props.intensity]
+        state = 'rainError'
+        if (props.hours1) {
+          if (props.hours1 > 4) {
+            state = 'rainHeavy'
+          } else if (props.hours1 > 0.5) {
+            state = 'rainModerate'
+          } else if (props.hours1 > 0) {
+            state = 'rainLight'
+          } else {
+            state = 'rain'
+          }
+        }
         console.log('State: ' + state)
       }
       // WebGl: Feature properties must be strings or numbers
@@ -246,11 +256,13 @@ function LiveMap (mapId, options) {
   const featureName = (feature) => {
     let name = ''
     if (feature.get('type') === 'C') {
-      name = `Sea level measurement: ${feature.get('name')}`
+      name = `Tide level: ${feature.get('name')}`
     } else if (feature.get('type') === 'S' || feature.get('type') === 'M') {
-      name = `River level measurement: ${feature.get('name')}, ${feature.get('river')}`
+      name = `River level: ${feature.get('name')}, ${feature.get('river')}`
     } else if (feature.get('type') === 'G') {
-      name = `Groundwater measurement: ${feature.get('name')}`
+      name = `Groundwater level: ${feature.get('name')}`
+    } else if (feature.get('type') === 'R') {
+      name = `Rainfall: ${feature.get('name')}`
     } else if (feature.get('severity_value') === 3) {
       name = `Severe flood warning: ${feature.get('ta_name')}`
     } else if (feature.get('severity_value') === 2) {

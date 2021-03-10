@@ -12,10 +12,9 @@ module.exports = {
       'properties': {
         'type': 'R',
         'name': 'Solway rain gauge',
-        'intensity': 4,
-        'hours-1': 5.7,
-        'hours-6': 7.4,
-        'hours-24': 16.3
+        'hours1': 5.7,
+        'hours6': 7.4,
+        'hours24': 16.3
       }
     },
     {
@@ -28,10 +27,9 @@ module.exports = {
       'properties': {
         'type': 'R',
         'name': 'Thursby rain gauge',
-        'intensity': 3,
-        'hours-1': 3.8,
-        'hours-6': 7.6,
-        'hours-24': 17.2
+        'hours1': 3.8,
+        'hours6': 7.6,
+        'hours24': 17.2
       }
     },
     {
@@ -44,10 +42,9 @@ module.exports = {
       'properties': {
         'type': 'R',
         'name': 'Thursby rain gauge',
-        'intensity': 0,
-        'hours-1': 0.2,
-        'hours-6': 7.3,
-        'hours-24': 15.1
+        'hours1': 0.2,
+        'hours6': 7.3,
+        'hours24': 15.1
       }
     }
   ]
