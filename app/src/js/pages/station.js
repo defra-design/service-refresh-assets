@@ -16,7 +16,7 @@ window.flood.utils.addBrowserBackButton()
 window.flood.maps.createLiveMap('map', {
   btnText: 'View map',
   btnClasses: 'defra-button-map-s',
-  layers: 'mv, ri, ti, gr',
+  layers: 'mv,ri,ti,gr',
   centre: JSON.parse(window.flood.model.station.coordinates).coordinates,
   selectedId: 'stations.' + window.flood.model.station.id,
   zoom: 14
