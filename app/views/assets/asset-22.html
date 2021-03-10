@@ -14,26 +14,8 @@
     .defra-prototype-box-inner {
       background-color: white;
       padding: 15px;
+      max-width: 378px;
     }
-    @media screen and (max-width: 40.0625em) {
-      header + .govuk-width-container  {
-        margin-left:0px;
-        margin-right:0px;
-      }
-      .govuk-grid-row {
-        margin-left:0px;
-        margin-right:0px;
-      }
-      .govuk-grid-column-full--overide {
-        padding-left:0px;
-        padding-right:0px;
-      }
-      .defra-prototype-box {
-        padding-left:0px;
-        padding-right:0px;
-      }
-    }
-
   </style>
 {% endblock %}
 
@@ -48,177 +30,16 @@
   </div>
 </div>
 
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    <p>(a) - Rainfall</p>
-  </div>
-</div>
-
 <div class="govuk-grid-row govuk-grid-row--defra-prototype">
   <div class="govuk-grid-column-full govuk-grid-column-full--overide">
     <div class="defra-prototype-box govuk-!-margin-bottom-4">
-      <div class="defra-map-info">
-        <h2 id="infoLabel" class="govuk-visually-hidden">Selected feature information</h2>
-        <div class="defra-map-info__container">
-          <!-- Start -->
-          <div id="infoDescription">
-            <h2 class="defra-map-info__name">
-              Rainfall at Bassingbourn rain gauge
-            </h2>
-            <dl class="defra-map-info__data">
-              <div class="defra-map-info__data-primary">
-                <dt class="govuk-visually-hidden">Intensity</dt>
-                <dd>
-                  <span class="defra-map-info__data-value">Moderate, 3.7mm per hour</span>
-                  <span class="defra-map-info__data-description">(within 0.5 to 4mm per hour)</span>
-                </dd>
-              </div>
-            </dl>
-          </div>
-          <!-- End -->
+      <div class="defra-prototype-box-inner">
+        <!-- Start -->
+        <div id="infoDescription">
+          <h2 class="defra-map-info__name defra-map-info__name--emphasis">Medium risk from river flooding</h2>
+          <p class="defra-map-info__description">High or overflowing rivers would possibly lead to severe or widespread flooding. If this happens, your life might be in danger and you should be prepared to evacuate. It could also cause severe travel disruption.</p>
         </div>
-        <button class="defra-map-info__close">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    <p>(b) - River or groundwater level</p>
-  </div>
-</div>
-
-<div class="govuk-grid-row govuk-grid-row--defra-prototype">
-  <div class="govuk-grid-column-full govuk-grid-column-full--overide">
-    <div class="defra-prototype-box govuk-!-margin-bottom-4">
-      <div class="defra-map-info">
-        <h2 id="infoLabel" class="govuk-visually-hidden">Selected feature information</h2>
-        <div class="defra-map-info__container">
-          <!-- Start -->
-          <div id="infoDescription">
-            <h2 class="defra-map-info__name">
-              <a href="">River Great Ouse level at Newport Pagnell</a>
-            </h2>
-            <dl class="defra-map-info__data">
-              <div class="defra-map-info__data-primary">
-                <dt class="govuk-visually-hidden">Level</dt>
-                <dd>
-                  <span class="defra-map-info__data-value">Normal, 0.81m at <time>4:00pm</time></span>
-                  <span class="defra-map-info__data-description">(within 0.15m to 0.83m)</span>
-                </dd>
-              </div>
-              <div class="defra-map-info__data-trend">
-                <dt class="govuk-visually-hidden">Trend</dt>
-                <dd>
-                  <span class="defra-map-info__data-value">Stable</span>
-                </dd>
-              </div>
-            </dl>
-            <div class="defra-map-info__buttons">
-              <button class="defra-map-info__button defra-map-info__button--up" data-id="stations.9345" aria-controls="viewport infoDescription">
-                <span class="govuk-visually-hidden">Select next</span> Upstream  <span class="govuk-visually-hidden">measurement</span>
-              </button>
-              <button class="defra-map-info__button defra-map-info__button--down" data-id="stations.8253" aria-controls="viewport infoDescription">
-                <span class="govuk-visually-hidden">Select next</span> Downstream <span class="govuk-visually-hidden">measurement</span>
-              </button>
-            </div>
-          </div>
-          <!-- End -->
-        </div>
-        <button class="defra-map-info__close">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    <p>(c) - Sea level</p>
-  </div>
-</div>
-
-<div class="govuk-grid-row govuk-grid-row--defra-prototype">
-  <div class="govuk-grid-column-full govuk-grid-column-full--overide">
-    <div class="defra-prototype-box govuk-!-margin-bottom-4">
-      <div class="defra-map-info">
-        <h2 id="infoLabel" class="govuk-visually-hidden">Selected feature information</h2>
-        <div class="defra-map-info__container">
-          <!-- Start -->
-          <div id="infoDescription">
-            <h2 class="defra-map-info__name">
-              <a href="">Sea level at Silloth Docks</a>
-            </h2>
-            <dl class="defra-map-info__data">
-              <div class="defra-map-info__data-primary">
-                <dt class="govuk-visually-hidden">Level</dt>
-                <dd>
-                  <span class="defra-map-info__data-value">-0.44m at <time>4:00pm</time></span>
-                  <span class="defra-map-info__data-description">4.25m in 3 hours 24 minutes</span>
-                </dd>
-              </div>
-              <div class="defra-map-info__data-trend defra-map-info__data-trend--rising">
-                <dt class="govuk-visually-hidden">Trend</dt>
-                <dd>
-                  <span class="defra-map-info__data-value">Rising</span>
-                </dd>
-              </div>
-            </dl>
-          </div>
-          <!-- End -->
-        </div>
-        <button class="defra-map-info__close">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    <p>(d) - Alert or wanrning</p>
-  </div>
-</div>
-
-<div class="govuk-grid-row govuk-grid-row--defra-prototype">
-  <div class="govuk-grid-column-full govuk-grid-column-full--overide">
-    <div class="defra-prototype-box govuk-!-margin-bottom-4">
-      <div class="defra-map-info">
-        <h2 id="infoLabel" class="govuk-visually-hidden">Selected feature information</h2>
-        <div class="defra-map-info__container">
-          <!-- Start -->
-          <div id="infoDescription">
-            <h2 class="defra-map-info__name defra-map-info__name--emphasis">Flood warning</h2>
-            <p class="defra-map-info__description"><a href="">River Foss at Layerthorpe to Foss Islands Road, Stonebow and Piccadilly</a></p>
-            <p class="defra-map-info__meta">Updated 5:04am on 22 January 2021</p>
-          </div>
-          <!-- End -->
-        </div>
-        <button class="defra-map-info__close">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    <p>(e) - Outlook area of concern</p>
-  </div>
-</div>
-
-<div class="govuk-grid-row govuk-grid-row--defra-prototype">
-  <div class="govuk-grid-column-full govuk-grid-column-full--overide">
-    <div class="defra-prototype-box govuk-!-margin-bottom-4">
-      <div class="defra-map-info">
-        <h2 id="infoLabel" class="govuk-visually-hidden">Selected feature information</h2>
-        <div class="defra-map-info__container">
-          <!-- Start -->
-          <div id="infoDescription">
-            <h2 class="defra-map-info__name defra-map-info__name--emphasis">Medium risk from river flooding</h2>
-            <p class="defra-map-info__description">High or overflowing rivers would possibly lead to severe or widespread flooding. If this happens, your life might be in danger and you should be prepared to evacuate. It could also cause severe travel disruption.</p>
-          </div>
-          <!-- End -->
-        </div>
-        <button class="defra-map-info__close">Close</button>
+        <!-- End -->
       </div>
     </div>
   </div>

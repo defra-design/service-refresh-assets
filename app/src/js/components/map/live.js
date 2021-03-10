@@ -304,7 +304,9 @@ function LiveMap (mapId, options) {
     state.visibleFeatures = getVisibleFeatures()
     const numFeatures = state.visibleFeatures.length
     const numWarnings = state.visibleFeatures.filter((feature) => feature.state === 'warnings').length
-    const mumMeasurements = state.visibleFeatures.filter((feature) => feature.state === 'stations').length
+    const numStations = state.visibleFeatures.filter((feature) => feature.state === 'stations').length
+    const numRainfall = state.visibleFeatures.filter((feature) => feature.state === 'rainfall').length
+    const mumMeasurements = numStations + numRainfall
     const features = state.visibleFeatures.slice(0, 9)
     // Show visual overlays
     hideOverlays()
