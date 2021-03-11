@@ -11,7 +11,7 @@ module.exports = {
       },
       'properties': {
         'type': 'R',
-        'name': 'Solway rain gauge',
+        'name': 'Abbeytown rain gauge',
         'hours1': 5.7,
         'hours6': 7.4,
         'hours24': 16.3
@@ -41,7 +41,7 @@ module.exports = {
       },
       'properties': {
         'type': 'R',
-        'name': 'Thursby rain gauge',
+        'name': 'Mealsgate rain gauge',
         'hours1': 0.2,
         'hours6': 7.3,
         'hours24': 15.1
