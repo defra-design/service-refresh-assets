@@ -153,7 +153,7 @@ function LiveMap (mapId, options) {
         }
       } else if (props.type === 'R') {
         // Rainfall
-        state = 'rainError'
+        state = 'rain'
         if (props.hours1) {
           if (props.hours1 > 4) {
             state = 'rainHeavy'
@@ -161,8 +161,6 @@ function LiveMap (mapId, options) {
             state = 'rainModerate'
           } else if (props.hours1 > 0) {
             state = 'rainLight'
-          } else {
-            state = 'rain'
           }
         }
         console.log('State: ' + state)

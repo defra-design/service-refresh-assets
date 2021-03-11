@@ -27,9 +27,9 @@ module.exports = {
       'properties': {
         'type': 'R',
         'name': 'Thursby rain gauge',
-        'hours1': 3.8,
+        'hours1': 0,
         'hours6': 7.6,
-        'hours24': 17.2
+        'hours24': 13.6
       }
     },
     {

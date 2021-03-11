@@ -119,10 +119,10 @@
             <dt class="govuk-visually-hidden">Intensity</dt>
             <dd>
                 <span class="defra-flood-list-data__value">
-                    {% if model.hours1 > 4 %}Heavy{% elif model.hours1 > 0.5 %}Moderate{% elif model.hours1 > 0 %}Light{% else %}None{% endif %}
+                    {% if model.hours1 > 4 %}Heavy{% elif model.hours1 > 0.5 %}Moderate{% elif model.hours1 > 0 %}Light{% else %}0mm{% endif %}
                 </span>
                 <span class="defra-flood-list-data__description">
-                    {% if model.hours1 > 0 %}{{ model.hours1 }}mm per hour{% else %}Last hour{% endif %}
+                    {% if model.hours1 > 0 %}{{ model.hours1 }}mm per hour{% else %}last hour{% endif %}
                 </span>
             </dd>
         </div>
