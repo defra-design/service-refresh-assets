@@ -2,6 +2,10 @@
     margin:0px;
     padding:0px;
     list-style:none;
+    & > li:not(.defra-flood-list-item):not(:first-child) {
+        border-top:2px solid $govuk-border-colour;
+        border-bottom:1px solid $govuk-border-colour;
+    }
     ul {
         list-style:none;
         padding: 0px;
@@ -21,6 +25,24 @@
         span {
             @include govuk-font($size: 19);
             display:block;
+        }
+    }
+    &__title-column {
+        @include mq ($from: desktop) {
+            float: left;
+            width: 40%;
+            padding-right: 20px;
+            box-sizing: border-box;
+        }
+    }
+    &__data-column {
+        @include mq ($from: desktop) {
+            float: left;
+            width: 60%;
+            margin-top: 0px;
+            .defra-flood-list-data {
+                margin-top: 0px;
+            }
         }
     }
 }
@@ -43,10 +65,9 @@
         position:relative;
         display: block;
         padding-left:0px;
-        padding-right:30px;
         @include govuk-font($size: 19, $weight: bold);
-        @include mq ($from: tablet) {
-            padding-right:40px;
+        a {
+            color: $govuk-link-colour;
         }
     }
     &__title:after {
@@ -60,6 +81,11 @@
         @include mq ($from: tablet) {
             top:-2px;
         }
+    }
+    &__description {
+        display: block;
+        @include govuk-font($size: 14);
+        color: $govuk-secondary-text-colour;
     }
     &__meta {
         @include govuk-font($size: 14);
@@ -135,10 +161,10 @@
     &--order:before {
         position:absolute;
         content:'';
-        top:-9px;   
+        top:4px;   
         bottom:18px; 
         @include mq ($from: tablet) {
-            top:-11px;
+            top:8px;
             bottom:20px;
         }
         left:13px;
@@ -162,23 +188,9 @@
     &__name {
         position: relative;
         display: block;
-        padding-left: 40px;
-        padding-top: 15px;
-        @include govuk-font($size: 19);
-        border-top:1px solid $govuk-border-colour;
-        &:before {
-            position:absolute;
-            content: '';
-            width: 8px;
-            height: 8px;
-            border-radius: 100%;
-            background-color: govuk-colour('mid-grey');
-            top: 21px;
-            left: 10px;
-            @include mq ($from: tablet) {
-                top: 25px;
-            }
-        }
+        padding-top: 20px;
+        padding-bottom: 5px;
+        @include govuk-font($size: 24, $weight: bold);
         a {
             color: govuk-colour('black');
         }
@@ -213,6 +225,7 @@
         display: block;
         position: relative;
         @include govuk-font($size: 19);
+        /*
         &--rising,
         &--stable,
         &--falling {
@@ -244,6 +257,7 @@
         &--falling:after {
             background-image: svg-url('<svg width="18" height="18" viewBox="0 0 18 18"><path d="M4,10L9,15L14,10" style="fill:none;fill-rule:nonzero;stroke:#0b0c0c;stroke-width:2px;"/><path d="M9,15L9,2" style="fill:none;fill-rule:nonzero;stroke:#000;stroke-width:2px;stroke-linejoin:round;stroke-miterlimit:1.5;"/></svg>');
         }
+        */
     }
     &__description {
         display: block;
