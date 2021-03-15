@@ -169,7 +169,7 @@
         }
         left:13px;
         width:2px;
-        background-color: govuk-colour('mid-grey');
+        // background-color: govuk-colour('mid-grey');
     }
     &--order:after {
         position:absolute;
@@ -178,8 +178,8 @@
         left:10px;
         width:6px;
         height:6px;
-        border-right: 2px solid govuk-colour('mid-grey');
-        border-bottom: 2px solid govuk-colour('mid-grey');
+        // border-right: 2px solid govuk-colour('mid-grey');
+        // border-bottom: 2px solid govuk-colour('mid-grey');
         transform: rotate(45deg);
         @include mq ($from: tablet) {
             bottom: 20px;
