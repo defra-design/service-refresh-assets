@@ -122,7 +122,7 @@
                     {% if model.hours1 > 4 %}Heavy{% elif model.hours1 > 0.5 %}Moderate{% elif model.hours1 > 0 %}Light{% else %}0mm{% endif %}
                 </span>
                 <span class="defra-flood-list-data__description">
-                    {% if model.hours1 > 0 %}{{ model.hours1 }}mm per hour{% else %}last hour{% endif %}
+                    {% if model.hours1 > 0 %}{{ model.hours1 }}mm/hr{% else %}last hour{% endif %}
                 </span>
             </dd>
         </div>
@@ -130,14 +130,14 @@
             <dt class="govuk-visually-hidden">Last 6 hours</dt>
             <dd>
               <span class="defra-flood-list-data__value">{{ model.hours6 }}mm</span>
-              <span class="defra-flood-list-data__description" aria-hidden="true">last 6 hours</span>
+              <span class="defra-flood-list-data__description" aria-hidden="true">6 hours</span>
             </dd>
         </div>
         <div class="defra-flood-list-data__column">
             <dt class="govuk-visually-hidden">Last 24 hours</dt>
             <dd>
               <span class="defra-flood-list-data__value">{{ model.hours24 }}mm</span>
-              <span class="defra-flood-list-data__description" aria-hidden="true">last 24 hours</span>
+              <span class="defra-flood-list-data__description" aria-hidden="true">24 hours</span>
             </dd>
         </div>
     </dl>
