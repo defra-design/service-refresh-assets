@@ -67,15 +67,12 @@
         @extend .govuk-link:focus;
         text-decoration: none;
     }
-    &__text {
-        overflow-y: auto;
-        -webkit-overflow-scrolling: touch;
-    }
     ul {
         padding: 0px 13px 5px 13px;
         margin: 0px 0px 10px 0px;
         max-height: 250px;
-        overflow: auto;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch
     }
     ul:after {
         display: block;
@@ -152,6 +149,8 @@
         @include mq ($from: tablet) {
             display: block;
         }
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch
     }
     &__container[aria-modal="true"] {
         display: block;
@@ -163,7 +162,6 @@
         bottom: 0px;
         left: 0px;
         background: #fff;
-        overflow-y: auto;
         .defra-facets__header,
         .defra-facets__reset,
         .defra-facets__close {
