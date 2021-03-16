@@ -163,7 +163,6 @@ function LiveMap (mapId, options) {
             state = 'rainLight'
           }
         }
-        console.log('State: ' + state)
       }
       // WebGl: Feature properties must be strings or numbers
       feature.set('state', state)
