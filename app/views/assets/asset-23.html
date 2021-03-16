@@ -441,16 +441,16 @@
       </li>
     </ul>
     <!-- Pagination -->
-    <nav class="defra-flood-list-pagination">
-      <a href="">Previous<span> page</span></a>
-      <ul>
-        <li><a href=""><span>Page </span>1</a></li>
-        <li><span>Page </span>2</li>
-        <li><a href=""><span>Page </span>3</a></li>
-        <li><a href=""><span>Page </span>4</a></li>
-        <li>...</li>
+    <nav class="defra-pagination" aria-label="Pagination navigation">
+      <ul class="defra-pagination__list">
+        <li class="defra-pagination__item defra-pagination__item--previous"><a href="">Previous<span> page</span></a></li>
+        <li class="defra-pagination__item"><a href=""><span>Page </span>1</a></li>
+        <li class="defra-pagination__item defra-pagination__item--current"><span>Page </span>2</li>
+        <li class="defra-pagination__item"><a href=""><span>Page </span>3</a></li>
+        <li class="defra-pagination__item"><a href=""><span>Page </span>4</a></li>
+        <li class="defra-pagination__item defra-pagination__item--next"><a href="">Next<span> page</span></a></li>
       </ul>
-      <a href="">Next<span> page</span></a>
+      <p class="defra-pagination__results">Showing <b>10</b> to <b>20</b> of <b>30</b> results</p>
     </nav>
     <!-- End pagination -->
   </div>
