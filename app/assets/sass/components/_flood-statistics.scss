@@ -12,14 +12,20 @@
         display:block;
         clear:both;
     }
-    &__column {
+    &__column-one-quarter,
+    &__column-one-third {
         padding-top: 15px;
         @include mq ($from: tablet) {
-            width:33.33%;
+            width:25%;
             box-sizing: border-box;
             padding-left: 15px;
             padding-right: 15px;
             float:left;
+        }
+    }
+    &__column-one-third {
+        @include mq ($from: tablet) {
+            width:33.33%;
         }
     }
     &__key {
