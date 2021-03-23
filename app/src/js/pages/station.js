@@ -88,7 +88,7 @@ if (chart) {
 
 const toggletips = document.querySelectorAll('.defra-toggletip')
 if (toggletips) {
-  toggletips.forEach(container => {
-    window.flood.createToggleTip(container)
+  toggletips.forEach(toggletip => {
+    window.flood.createToggleTip(toggletip)
   })
 }

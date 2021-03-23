@@ -8,6 +8,7 @@ const ToggleTip = (toggleTip) => {
   // Show text
   link.addEventListener('click', (e) => {
     e.preventDefault()
+    link.focus()
     // XMLHttpRequest could be moved to utils
     const xmlhttp = new window.XMLHttpRequest()
     xmlhttp.onreadystatechange = () => {
@@ -37,9 +38,15 @@ const ToggleTip = (toggleTip) => {
       container.innerHTML = ''
     }
   })
-  // Close on escape
-  toggleTip.addEventListener('keydown', (e) => {
+  // Key presses
+  toggleTip.addEventListener('keyup', (e) => {
+    // Close on escape
     if ((e.keyCode || e.which) === 27) {
+      toggleTip.classList.remove('defra-toggletip--open')
+      container.innerHTML = ''
+    }
+    // Close on tab
+    if (e.key === 'Tab') {
       toggleTip.classList.remove('defra-toggletip--open')
       container.innerHTML = ''
     }
