@@ -151,15 +151,15 @@ function LiveMap (mapId, options) {
         } else {
           state = 'tide'
         }
-      } else if (props.type === 'R') {
+      } else if (feature.getId().startsWith('rainfall_stations')) {
         // Rainfall
         state = 'rain'
-        if (props.hours1) {
-          if (props.hours1 > 4) {
+        if (props.one_hr_total) {
+          if (props.one_hr_total > 4) {
             state = 'rainHeavy'
-          } else if (props.hours1 > 0.5) {
+          } else if (props.one_hr_total > 0.5) {
             state = 'rainModerate'
-          } else if (props.hours1 > 0) {
+          } else if (props.one_hr_total > 0) {
             state = 'rainLight'
           }
         }
@@ -187,7 +187,7 @@ function LiveMap (mapId, options) {
         // Ground
         (ref === 'stations' && props.type === 'G' && lyrCodes.includes('gr')) ||
         // Rainfall
-        (ref === 'rainfall' && props.type === 'R' && lyrCodes.includes('rf')) ||
+        (ref === 'rainfall' && feature.getId().startsWith('rainfall_stations') && lyrCodes.includes('rf')) ||
         // Target area provided
         (targetArea.pointFeature && targetArea.pointFeature.getId() === feature.getId())
       )
@@ -258,8 +258,8 @@ function LiveMap (mapId, options) {
       name = `River level: ${feature.get('name')}, ${feature.get('river')}`
     } else if (feature.get('type') === 'G') {
       name = `Groundwater level: ${feature.get('name')}`
-    } else if (feature.get('type') === 'R') {
-      name = `Rainfall: ${feature.get('name')}`
+    } else if (feature.getId().startsWith('rainfall_stations')) {
+      name = `Rainfall: ${feature.get('station_name')}`
     } else if (feature.get('severity_value') === 3) {
       name = `Severe flood warning: ${feature.get('ta_name')}`
     } else if (feature.get('severity_value') === 2) {
@@ -411,9 +411,9 @@ function LiveMap (mapId, options) {
     model.id = feature.getId().substring(feature.getId().indexOf('.') + 1)
     // Format dates for river levels
     if (feature.getId().startsWith('stations')) {
-      // model.date = formatTime(new Date(model.value_date)) + ' ' + formatDay(new Date(model.value_date))
       model.date = formatExpiredTime(model.value_date)
-      model.state = feature.get('state')
+    } else if (feature.getId().startsWith('rainfall_stations')) {
+      model.date = formatExpiredTime(model.value_timestamp)
     }
     const html = window.nunjucks.render('info-live.html', { model: model })
     feature.set('html', html)
