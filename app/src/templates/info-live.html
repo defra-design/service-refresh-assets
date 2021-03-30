@@ -102,9 +102,11 @@
     </div>
     {% endif %}
 </div>
-{% else %}
+{% elif model.station_name === 'Abbeytown' %}
+<!-- Rainfall option 1 (Abbeytown) -->
 <div id="infoDescription">
     <h2 class="defra-map-info__name">Rainfall at {{ model.station_name }}</h2>
+    <span class="defra-flood-list-data__description">Updated 10:15am yesterday</span>
     {% if model.status === 'Closed' or model.status === 'Suspended' %}
     <p class="defra-flood-list-item__error">
         Closed or temporarily out of service
@@ -118,12 +120,47 @@
         <div class="defra-flood-list-data__column">
             <dt class="govuk-visually-hidden">Intensity</dt>
             <dd>
-                <span class="defra-flood-list-data__value">
-                    {% if model.one_hr_total > 4 %}Heavy{% elif model.one_hr_total > 0.5 %}Moderate{% elif model.one_hr_total > 0 %}Light{% else %}0mm{% endif %}
-                </span>
-                <span class="defra-flood-list-data__description">
-                    {% if model.one_hr_total > 0 %}{{ model.one_hr_total }}mm/hr{% else %}last hour{% endif %}
-                </span>
+                <span class="defra-flood-list-data__value">{{ model.one_hr_total }}mm</span>
+                <span class="defra-flood-list-data__description">9:15-10:15am</span>
+            </dd>
+        </div>
+        <div class="defra-flood-list-data__column">
+            <dt class="govuk-visually-hidden">6 hours</dt>
+            <dd>
+              <span class="defra-flood-list-data__value">{{ model.six_hr_total }}mm</span>
+              <span class="defra-flood-list-data__description" aria-hidden="true">4:15-10:15am</span>
+            </dd>
+        </div>
+        <div class="defra-flood-list-data__column">
+            <dt class="govuk-visually-hidden">24 hours</dt>
+            <dd>
+              <span class="defra-flood-list-data__value">{{ model.day_total }}mm</span>
+              <span class="defra-flood-list-data__description" aria-hidden="true">10:15-10:15am</span>
+            </dd>
+        </div>
+    </dl>
+    {% endif %}
+</div>
+{% else %}
+<!-- Rainfall option 2 -->
+<div id="infoDescription">
+    <h2 class="defra-map-info__name">Rainfall at {{ model.station_name }}</h2>
+    <span class="defra-flood-list-data__description">{{ model.date }}</span>
+    {% if model.status === 'Closed' or model.status === 'Suspended' %}
+    <p class="defra-flood-list-item__error">
+        Closed or temporarily out of service
+    </p>
+    {% elif model.isError %}
+    <p class="defra-flood-list-item__error">
+        Data not available
+    </p>
+    {% else %}
+    <dl class="defra-flood-list-data">
+        <div class="defra-flood-list-data__column">
+            <dt class="govuk-visually-hidden">Intensity</dt>
+            <dd>
+                <span class="defra-flood-list-data__value">{{ model.one_hr_total }}mm</span>
+                <span class="defra-flood-list-data__description">1 hour</span>
             </dd>
         </div>
         <div class="defra-flood-list-data__column">
@@ -142,5 +179,5 @@
         </div>
     </dl>
     {% endif %}
-  </div>
+</div>
 {% endif %}
