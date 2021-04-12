@@ -33,7 +33,10 @@ gulp.task('webpack', function (done) {
     //     ]
     //   }
     // }))
-    .pipe(webpackStream())
+    .pipe(webpackStream({
+      mode: 'development', // development, production
+      devtool: 'source-map' // source-map, none
+    }))
     .pipe(gulp.dest(config.paths.dist + 'js/'))
   done()
 })
