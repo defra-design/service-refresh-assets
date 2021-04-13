@@ -1,4 +1,13 @@
 'use strict'
+
+// Math.log2 Polyfil
+if (!Math.log2) {
+  Math.log2 = (x) => {
+    console.log('Using Math.log2')
+    return Math.log(x) * Math.LOG2E
+  }
+}
+
 // "flood" represents the global namespace for
 // client-side javascript across all our pages
 window.flood = {
