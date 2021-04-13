@@ -12,11 +12,8 @@
     "test": "npm run lint && gulp generate-assets && jest"
   },
   "dependencies": {
-    "@babel/core": "^7.13.15",
-    "@babel/preset-env": "^7.13.15",
     "acorn": "^6.4.2",
     "ansi-colors": "^3.2.3",
-    "babel-loader": "^8.2.2",
     "basic-auth": "^2.0.0",
     "basic-auth-connect": "^1.0.0",
     "body-parser": "^1.14.1",
