@@ -14,7 +14,8 @@ var env = (process.env.NODE_ENV || 'development').toLowerCase()
 utils.findAvailablePort(server, function (port) {
   console.log('Listening on port ' + port + '   url: http://localhost:' + port)
   if (env === 'production' || useBrowserSync === 'false') {
-    server.listen(port)
+    // server.listen(port)
+    server.listen(process.env.PORT, '0.0.0.0')
   } else {
     server.listen(port - 50, function () {
       browserSync({
