@@ -27,6 +27,6 @@ gulp.task('copy-assets-v6', function () {
 })
 
 gulp.task('copy-src-images', function () {
-  return gulp.src(config.paths.src + 'images/*')
-    .pipe(gulp.dest(config.paths.dist + 'images/'))
+  return gulp.src('app/src/images/*')
+    .pipe(gulp.dest('dist/images/'))
 })

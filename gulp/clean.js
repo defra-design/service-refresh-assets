@@ -12,5 +12,5 @@ const config = require('./config.json')
 
 gulp.task('clean', function () {
   return del([config.paths.public + '/*',
-    '.port.tmp', config.paths.dist + '/*'])
+    '.port.tmp', 'dist/*'])
 })
