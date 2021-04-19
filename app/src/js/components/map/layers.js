@@ -44,7 +44,7 @@ window.flood.maps.layers = {
     return new TileLayer({
       ref: 'road',
       source: new BingMaps({
-        key: 'Ak3YHoVXqd66lIuzEdjBrd1T84Jsb8ppa0SygbuSxC1qDpXVVoYcKo2s39qoBkji' + '&c4w=1&cstl=rd&src=h&st=me|lv:0_trs|v:0_pt|v:0',
+        key: 'AtbOHVZK_YNqr1Cu_FIB39nZ8Uq9XPB-RmLjk6cxJwRW3I0J3kkDZ_5qQaiMu6H-' + '&c4w=1&cstl=rd&src=h&st=me|lv:0_trs|v:0_pt|v:0',
         imagerySet: 'RoadOnDemand'
       }),
       visible: false,
