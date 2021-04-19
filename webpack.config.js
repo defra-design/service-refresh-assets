@@ -1,6 +1,7 @@
 const path = require('path')
 const env = process.env.NODE_ENV
-const inDev = env === 'dev' || env === 'development'
+// const inDev = env === 'dev' || env === 'development'
+const inDev = true
 
 module.exports = (env, argv) => ({
   mode: !inDev ? 'production' : 'development',
@@ -8,7 +9,8 @@ module.exports = (env, argv) => ({
   entry: {
     core: './app/src/js/core',
     'river-and-sea-levels': './app/src/js/pages/river-and-sea-levels',
-    station: './app/src/js/pages/station'
+    station: './app/src/js/pages/station',
+    national: './app/src/js/pages/national'
   },
   output: {
     path: path.resolve(__dirname, 'dist/js')
