@@ -2,7 +2,7 @@
 /*
 Initialises the window.flood.maps layers
 */
-import { Tile as TileLayer, Vector as VectorLayer } from 'ol/layer'
+import { Tile as TileLayer, Vector as VectorLayer, VectorImage } from 'ol/layer'
 import { BingMaps, OSM, Vector as VectorSource } from 'ol/source'
 import WebGLPointsLayer from 'ol/layer/WebGLPoints'
 import { GeoJSON } from 'ol/format'
@@ -154,7 +154,7 @@ window.flood.maps.layers = {
   // },
 
   areasOfConcern: () => {
-    return new VectorLayer({
+    return new VectorImage({
       ref: 'areasOfConcern',
       source: new VectorSource({
         format: new GeoJSON(),
