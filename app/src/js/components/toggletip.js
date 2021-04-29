@@ -18,6 +18,10 @@ const ToggleTip = (toggleTip) => {
           container.innerHTML = ''
           const fragmentId = link.href.substring(link.href.indexOf('#'))
           const fragment = xmlhttp.response.querySelector(`${fragmentId}`)
+          // Remove any hyperlinks
+          fragment.querySelectorAll('a').forEach(link => {
+            link.outerHTML = link.innerHTML
+          })
           fragment.className = 'defra-toggletip__container'
           window.setTimeout(() => {
             container.appendChild(fragment)
@@ -42,11 +46,6 @@ const ToggleTip = (toggleTip) => {
   toggleTip.addEventListener('keyup', (e) => {
     // Close on escape
     if ((e.keyCode || e.which) === 27) {
-      toggleTip.classList.remove('defra-toggletip--open')
-      container.innerHTML = ''
-    }
-    // Close on tab
-    if (e.key === 'Tab') {
       toggleTip.classList.remove('defra-toggletip--open')
       container.innerHTML = ''
     }
