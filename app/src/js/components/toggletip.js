@@ -17,7 +17,7 @@ const ToggleTip = (toggleTip) => {
           toggleTip.classList.add('defra-toggletip--open')
           container.innerHTML = ''
           const fragmentId = link.href.substring(link.href.indexOf('#'))
-          const fragment = xmlhttp.response.querySelector(`${fragmentId} + div`)
+          const fragment = xmlhttp.response.querySelector(`${fragmentId}`)
           fragment.className = 'defra-toggletip__container'
           window.setTimeout(() => {
             container.appendChild(fragment)
