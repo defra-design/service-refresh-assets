@@ -129,12 +129,12 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <h2 class="govuk-heading-m govuk-!-margin-top-6">How levels here could affect nearby areas</h2>
-    <p><a href="">Show historic flood impacts</a></p>
+    <span id="toggle-list-display" data-toggle-list-display-type="impact"></span>
   </div>
 </div>
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
-    <dl class="defra-flood-impact-list govuk-!-margin-bottom-0">
+    <dl class="defra-flood-impact-list govuk-!-margin-bottom-0" id="flood-impact-list">
       <div class="defra-flood-impact-list__row">
         <dt class="defra-flood-impact-list__key">
           5.03m
@@ -147,28 +147,28 @@
           </div>
         </dd>
       </div>
-      <div class="defra-flood-impact-list__row">
+      <div class="defra-flood-impact-list__row" data-toggle-list-display-item="impact">
         <dt class="defra-flood-impact-list__key">
           4.00m
         </dt>
-        <dd class="defra-flood-impact-list__value" data-id="1234" data-level="4.00" data-name="Past impact: River View">
+        <dd class="defra-flood-impact-list__value" data-id="1234" data-level="4.00" data-name="Past impact: River View" data-toggle-list-display-item="impact">
           <div class="defra-flood-impact-list__container">
-            <span class="">Past flooding: Properties on River View</span> <!-- impacts are prefixed with 'Past impact: ' first letter lowercase if poss :-) -->
+            <span class="">Historic flooding: Properties on River View</span> <!-- impacts are prefixed with 'Past impact: ' first letter lowercase if poss :-) -->
             <span class="defra-flood-impact-list__action"></span>
           </div>
         </dd>
-        <dd class="defra-flood-impact-list__value" data-id="1235" data-level="4.00" data-name="Past impact: Water Street"><!-- Items grouped by level use dd element -->
+        <dd class="defra-flood-impact-list__value" data-id="1235" data-level="4.00" data-name="Past impact: Water Street" data-toggle-list-display-item="impact"><!-- Items grouped by level use dd element -->
           <div class="defra-flood-impact-list__container">
-            <span class="">Past impact: Flooding to property on Water Street</span>
+            <span class="">Historic flooding: Properties on Water Street</span>
             <span class="defra-flood-impact-list__action"></span>
           </div>
         </dd>
       </div>
-      <div class="defra-flood-impact-list__row">
+      <div class="defra-flood-impact-list__row" data-toggle-list-display-item="impact">
         <dt class="defra-flood-impact-list__key">
           3.90m
         </dt>
-        <dd class="defra-flood-impact-list__value" data-id="highest" data-level="3.90" data-name="A19 at Fulford"> <!-- unique id and short name -->
+        <dd class="defra-flood-impact-list__value" data-id="highest" data-level="3.90" data-name="A19 at Fulford" data-toggle-list-display-item="impact"> <!-- unique id and short name -->
           <div class="defra-flood-impact-list__container">
             <span class="">Historic flooding: A19 at Fulford</span>
             <span class="defra-flood-impact-list__action"></span>
@@ -250,23 +250,12 @@
         </dt>
         <dd class="defra-flood-impact-list__value" data-id="pc95" data-level="1.90" data-name="Top of normal range" data-normal="true">
           <div class="defra-flood-impact-list__container">
-            This is the top of the
-            <span class="defra-toggletip">
-              <a href="/asset-25#state" class="defra-toggletip__link" aria-label="How we define state">
-                normal range
-              </a>
-              <span class="defra-toggletip__status" role="status"></span>
-            </span>.
-            <span class="defra-flood-impact-list__action"></span>
+            This is the top of the normal range
           </div>
         </dd>
       </div>
     </dl>
-  </div>
-</div>
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    <p class="govuk-!-margin-top-6 govuk-!-margin-bottom-0">Historic flood impacts associated with levels here might not happen at the same level if flood defences have been put in place since then.</p>
+    <p class="govuk-body-s govuk-!-margin-top-3 govuk-!-margin-bottom-0">Historic flood impacts might not happen at the same level if flood defences have been put in place since then.</p>
   </div>
 </div>
 <!-- end station has at least one threshold or impact -->

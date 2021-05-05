@@ -2,6 +2,7 @@
 import 'elm-pep'
 import '../components/charts'
 import '../components/toggletip'
+import '../components/toggle-list-display'
 import '../components/nunjucks'
 import '../components/map/maps'
 import '../components/map/styles'
@@ -86,9 +87,19 @@ if (chart) {
   })
 }
 
+// Add toggleTips
 const toggletips = document.querySelectorAll('.defra-toggletip')
 if (toggletips) {
   toggletips.forEach(toggletip => {
     window.flood.createToggleTip(toggletip)
+  })
+}
+
+// Add toggle list display for imapacts
+const toggleListDisplay = document.getElementById('toggle-list-display')
+if (toggleListDisplay) {
+  window.flood.createToggleListDisplay(toggleListDisplay, {
+    type: 'impact',
+    btnText: 'historic flood impacts'
   })
 }
