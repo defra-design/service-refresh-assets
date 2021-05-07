@@ -71,7 +71,8 @@
         padding: 0px 13px 5px 13px;
         margin: 0px 0px 10px 0px;
         max-height: 250px;
-        overflow-y: scroll;
+        overflow-x: hidden;
+        overflow-y: auto;
         -webkit-overflow-scrolling: touch;
     }
     ul:after {
@@ -149,7 +150,8 @@
         @include mq ($from: tablet) {
             display: block;
         }
-        overflow-y: scroll;
+        overflow-x: hidden;
+        overflow-y: auto;
         -webkit-overflow-scrolling: touch;
     }
     &__container[aria-modal="true"] {
