@@ -72,7 +72,7 @@
         margin: 0px 0px 10px 0px;
         max-height: 250px;
         overflow-y: auto;
-        -webkit-overflow-scrolling: touch
+        -webkit-overflow-scrolling: touch;
     }
     ul:after {
         display: block;
@@ -149,8 +149,8 @@
         @include mq ($from: tablet) {
             display: block;
         }
-        overflow-y: auto;
-        -webkit-overflow-scrolling: touch
+        overflow-y: scroll;
+        -webkit-overflow-scrolling: touch;
     }
     &__container[aria-modal="true"] {
         display: block;
