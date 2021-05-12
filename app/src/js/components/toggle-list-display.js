@@ -25,7 +25,7 @@ const ToggleListDisplay = (container, options) => {
 
   button.addEventListener('click', (e) => {
     button.innerText = `${button.innerText.startsWith('Show') ? 'Hide' : 'Show'} ${options.btnText}`
-    button.setAttribute('aria-expanded', !!button.getAttribute('aria-expanded'))
+    button.setAttribute('aria-expanded', button.getAttribute('aria-expanded') === 'true' ? false : true)
     toggleDisplay()
   })
 }
