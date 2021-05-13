@@ -100,6 +100,6 @@ const toggleListDisplay = document.getElementById('toggle-list-display')
 if (toggleListDisplay) {
   window.flood.createToggleListDisplay(toggleListDisplay, {
     type: 'impact',
-    btnText: 'historical flooding'
+    btnText: 'historical event'
   })
 }
