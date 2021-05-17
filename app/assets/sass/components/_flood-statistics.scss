@@ -40,6 +40,9 @@
         box-sizing: border-box;
         padding-bottom: 20px;
     }
+    &__value::first-letter {
+        margin-left: -0.075em;
+    }       
     &__data-tip:focus {
         border-bottom: 0px;
         margin-bottom: 0px;
