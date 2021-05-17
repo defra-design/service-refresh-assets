@@ -7,6 +7,7 @@ module.exports = (env, argv) => ({
   mode: !inDev ? 'production' : 'development',
   devtool: !inDev ? false : 'source-map',
   entry: {
+    'station-model': './app/assets/javascripts/models/station',
     core: './app/src/js/core',
     'river-and-sea-levels': './app/src/js/pages/river-and-sea-levels',
     station: './app/src/js/pages/station',
