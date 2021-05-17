@@ -10,6 +10,8 @@ import '../components/map/layers'
 import '../components/map/container'
 import '../components/map/live'
 
+const { forEach } = window.flood.utils
+
 // Add browser back button
 window.flood.utils.addBrowserBackButton()
 
@@ -90,7 +92,7 @@ if (chart) {
 // Add toggleTips
 const toggletips = document.querySelectorAll('.defra-toggletip')
 if (toggletips) {
-  toggletips.forEach(toggletip => {
+  forEach(toggletips, toggletip => {
     window.flood.createToggleTip(toggletip)
   })
 }
