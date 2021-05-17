@@ -199,8 +199,9 @@ function LineChart (containerId, data) {
     // Remove existing content
     toolTip.select('text').selectAll('*').remove()
     const mouseDate = xScale.invert(d3.pointer(e)[0])
-    const bisectDate = d3.bisector((d) => { return new Date(d.ts) }).left
-    const i = bisectDate(lines, mouseDate, 1) // returns the index to the current data item
+    // const bisectDate = d3.bisector((d) => { return new Date(d.ts) }).left
+    // const i = bisectDate(lines, mouseDate, 1) // returns the index to the current data item
+    const i = 0
     const d0 = lines[i - 1]
     const d1 = lines[i] || lines[i - 1]
     // Determine which date value is closest to the mouse
