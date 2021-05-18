@@ -105,7 +105,7 @@
 {% else %}
 <!-- Rainfall -->
 <div id="infoDescription">
-    <h2 class="defra-map-info__name">Rainfall at {{ model.station_name }}</h2>
+    <h2 class="defra-map-info__name">Rainfall at {{ model.name }}</h2>
     <span class="defra-flood-list-data__description">Measured {{ model.date }}</span>
     {% if model.status === 'Closed' or model.status === 'Suspended' %}
     <p class="defra-flood-list-item__error">

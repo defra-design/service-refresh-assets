@@ -405,6 +405,11 @@ function LiveMap (mapId, options) {
     return (mins < 91 ? mins + ' minutes' : (hours < 48 ? hours + ' hours' : days + ' days')) + ' ago'
   }
 
+  // Capitalise string
+  const capitalise = (str) => {
+    return str.toLowerCase().replace(/(^\w{1})|(\s+\w{1})/g, letter => letter.toUpperCase())
+  }
+
   // Set feature overlay html
   const setFeatureHtml = (feature) => {
     const model = feature.getProperties()
@@ -413,7 +418,13 @@ function LiveMap (mapId, options) {
     if (feature.getId().startsWith('stations')) {
       model.date = formatExpiredTime(model.value_date)
     } else if (feature.getId().startsWith('rainfall_stations')) {
+      // Should some of this processing be done upstream?
       model.date = formatExpiredTime(model.value_timestamp)
+      model.state = feature.get('state')
+      model.name = capitalise(model.station_name)
+      model.one_hr_total = Math.round(model.one_hr_total * 10) / 10
+      model.six_hr_total = Math.round(model.six_hr_total * 10) / 10
+      model.day_total = Math.round(model.day_total * 10) / 10
     }
     const html = window.nunjucks.render('info-live.html', { model: model })
     feature.set('html', html)
