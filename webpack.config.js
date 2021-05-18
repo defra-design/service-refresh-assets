@@ -11,6 +11,7 @@ module.exports = (env, argv) => ({
     core: './app/src/js/core',
     'river-and-sea-levels': './app/src/js/pages/river-and-sea-levels',
     station: './app/src/js/pages/station',
+    rainfall: './app/src/js/pages/rainfall',
     national: './app/src/js/pages/national'
   },
   output: {

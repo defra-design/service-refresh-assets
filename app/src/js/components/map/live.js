@@ -425,7 +425,7 @@ function LiveMap (mapId, options) {
 
   // Set initial selected feature id
   if (getParameterByName('fid')) {
-    state.selectedFeatureId = getParameterByName('fid')
+    state.selectedFeatureId = decodeURI(getParameterByName('fid'))
   }
 
   // Create optional target area feature

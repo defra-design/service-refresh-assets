@@ -69,7 +69,7 @@
             6 hours
           </dt>
           <dd class="defra-flood-statistics__value">
-            0mm
+            0.2mm
           </dd>
         </div>
         <div class="defra-flood-statistics__column-one-third">
@@ -77,7 +77,7 @@
             24 hours
           </dt>
           <dd class="defra-flood-statistics__value">
-            0mm
+            0.3mm
           </dd>
         </div>
       </dl>
@@ -163,6 +163,13 @@
 {% block pageScripts %}
 <!-- Only used for visualising the chart in the assets resource  -->
 <script src="/assets/js/core.js"></script>
+<script>
+  window.flood.model = {
+    id: 'rainfall_stations.596026.North West',
+    coordinates: [-3.31131215,54.85018348]
+  }
+</script>
 <script src="/assets/js/templates.js"></script>
+<script src="/assets/js/rainfall.js"></script>
 <!-- end assets resource only -->
 {% endblock %}

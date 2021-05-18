@@ -12,9 +12,6 @@ import '../components/map/live'
 
 const { forEach } = window.flood.utils
 
-// Add browser back button
-window.flood.utils.addBrowserBackButton()
-
 // Create LiveMap
 window.flood.maps.createLiveMap('map', {
   btnText: 'View map',
