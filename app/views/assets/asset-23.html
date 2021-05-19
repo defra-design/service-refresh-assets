@@ -5274,10 +5274,10 @@
         <div class="defra-flood-list__data-column">
           <dl class="defra-flood-list-data">
             <div class="defra-flood-list-data__column">
-              <dt class="govuk-visually-hidden">Intensity</dt>
+              <dt class="govuk-visually-hidden">Last hour</dt>
               <dd>
-                <span class="defra-flood-list-data__value">Light</span>
-                <span class="defra-flood-list-data__description">0.1mm per hour</span>
+                <span class="defra-flood-list-data__value">0mm</span>
+                <span class="defra-flood-list-data__description" aria-hidden="true">1 hour</span>
               </dd>
             </div>
             <div class="defra-flood-list-data__column">
@@ -5288,7 +5288,7 @@
               </dd>
             </div>
             <div class="defra-flood-list-data__column">
-              <dt class="govuk-visually-hidden">Last 12 hours</dt>
+              <dt class="govuk-visually-hidden">Last 24 hours</dt>
               <dd>
                 <span class="defra-flood-list-data__value">13.6mm</span>
                 <span class="defra-flood-list-data__description" aria-hidden="true">24 hours</span>
@@ -5781,6 +5781,362 @@
             </div>
           </li>
         </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+<!-- End -->
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h2 class="govuk-heading-m govuk-!-padding-top-6 govuk-!-padding-bottom-6">All measurement states</h2>
+  </div>
+</div>
+
+<!-- Start -->
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      River, sea, groundwater and rainfall levels
+    </h1>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third">
+    <form method="post" autocomplete="off">
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-!-margin-bottom-2" for="location">
+          Search a location
+        </label>
+        <div class="defra-search">
+          <input class="defra-search__input" name="location" type="search" spellcheck="false" value="{% if model.placeName %}{{ model.placeName }}{% else %}{{ model.q }}{% endif %}">
+          <div class="defra-search__submit-container">
+              <button class="defra-search__button">Search</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="govuk-grid-column-two-thirds">
+    <div class="defra-search-summary" id="searchSummary">
+      <h2 class="defra-search-summary__count">4 levels</h2>
+      <!-- Added with javascript -->
+      <button id="map-btn" class="defra-button-map-s">View map</button>
+      <!-- Added with javascript -->
+    </div>
+    <ul class="defra-flood-list">
+      <li class="defra-flood-list-item defra-flood-list-item--sea-error">
+        <div class="defra-flood-list__title-column">
+          <span class="defra-flood-list-item__title"><a href="">Tide at Silloth Docks</a></span>
+          <span class="defra-flood-list-data__description">Data not available</span>
+        </div>
+      </li>
+      <li class="defra-flood-list-item defra-flood-list-item--sea">
+        <div class="defra-flood-list__title-column">
+          <span class="defra-flood-list-item__title"><a href="">Tide at Silloth Docks</a></span>
+          <span class="defra-flood-list-data__description"><time datetime="2020-01-01T00:00:00.000Z">45 minutes ago</time></span>
+        </div>
+        <div class="defra-flood-list__data-column">
+          <dl class="defra-flood-list-data">
+            <div class="defra-flood-list-data__column-single">
+              <dt class="govuk-visually-hidden">Height</dt>
+              <dd>
+                <span class="defra-flood-list-data__value">-0.45m</span>
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </li>
+      <li class="defra-flood-list-item defra-flood-list-item--groundwater-error">
+        <div class="defra-flood-list__title-column">
+          <span class="defra-flood-list-item__title">
+            <a href="">Groundwater at Aldershot borehole</a>
+            <span class="defra-flood-list-data__description">Data not available</span>
+          </span>
+        </div>
+      </li>
+      <li class="defra-flood-list-item defra-flood-list-item--groundwater">
+        <div class="defra-flood-list__title-column">
+          <span class="defra-flood-list-item__title">
+            <a href="">Groundwater at Aldershot borehole</a>
+            <span class="defra-flood-list-data__description"><time datetime="2020-01-01T00:00:00.000Z">45 minutes ago</time></span>
+          </span>
+        </div>
+        <div class="defra-flood-list__data-column">
+          <dl class="defra-flood-list-data">
+            <div class="defra-flood-list-data__column">
+              <dt class="govuk-visually-hidden">State</dt>
+              <dd>
+                <span class="defra-flood-list-data__value">Low</span>
+              </dd>
+            </div>
+            <div class="defra-flood-list-data__column">
+              <dt class="govuk-visually-hidden">Height</dt>
+              <dd>
+                <span class="defra-flood-list-data__value">67.83m</span>
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </li>
+      <li class="defra-flood-list-item defra-flood-list-item--groundwater">
+        <div class="defra-flood-list__title-column">
+          <span class="defra-flood-list-item__title">
+            <a href="">Groundwater at Aldershot borehole</a>
+            <span class="defra-flood-list-data__description"><time datetime="2020-01-01T00:00:00.000Z">45 minutes ago</time></span>
+          </span>
+        </div>
+        <div class="defra-flood-list__data-column">
+          <dl class="defra-flood-list-data">
+            <div class="defra-flood-list-data__column">
+              <dt class="govuk-visually-hidden">State</dt>
+              <dd>
+                <span class="defra-flood-list-data__value">Normal</span>
+              </dd>
+            </div>
+            <div class="defra-flood-list-data__column">
+              <dt class="govuk-visually-hidden">Height</dt>
+              <dd>
+                <span class="defra-flood-list-data__value">67.83m</span>
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </li>
+      <li class="defra-flood-list-item defra-flood-list-item--groundwater-high">
+        <div class="defra-flood-list__title-column">
+          <span class="defra-flood-list-item__title">
+            <a href="">Groundwater at Aldershot borehole</a>
+            <span class="defra-flood-list-data__description"><time datetime="2020-01-01T00:00:00.000Z">45 minutes ago</time></span>
+          </span>
+        </div>
+        <div class="defra-flood-list__data-column">
+          <dl class="defra-flood-list-data">
+            <div class="defra-flood-list-data__column">
+              <dt class="govuk-visually-hidden">State</dt>
+              <dd>
+                <span class="defra-flood-list-data__value">High</span>
+              </dd>
+            </div>
+            <div class="defra-flood-list-data__column">
+              <dt class="govuk-visually-hidden">Height</dt>
+              <dd>
+                <span class="defra-flood-list-data__value">67.83m</span>
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </li>
+      <li class="defra-flood-list-item defra-flood-list-item--river defra-flood-list-item--river-error">
+        <div class="defra-flood-list__title-column">
+          <span class="defra-flood-list-item__title"><a href="">Kirkby Stephen</a></span>
+          <span class="defra-flood-list-data__description">Data not available</span>
+        </div>
+      </li>
+      <li class="defra-flood-list-item defra-flood-list-item--river">
+        <div class="defra-flood-list__title-column">
+          <span class="defra-flood-list-item__title"><a href="">Kirkby Stephen</a></span>
+          <span class="defra-flood-list-data__description"><time datetime="2020-01-01T00:00:00.000Z">45 minutes ago</time></span>
+        </div>
+        <div class="defra-flood-list__data-column">
+          <dl class="defra-flood-list-data">
+            <div class="defra-flood-list-data__column">
+              <dt class="govuk-visually-hidden">State</dt>
+              <dd>
+                <span class="defra-flood-list-data__value">Low</span>
+              </dd>
+            </div>
+            <div class="defra-flood-list-data__column">
+              <dt class="govuk-visually-hidden">Height</dt>
+              <dd>
+                <span class="defra-flood-list-data__value">0.56m</span>
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </li>
+      <li class="defra-flood-list-item defra-flood-list-item--river">
+        <div class="defra-flood-list__title-column">
+          <span class="defra-flood-list-item__title"><a href="">Kirkby Stephen</a></span>
+          <span class="defra-flood-list-data__description"><time datetime="2020-01-01T00:00:00.000Z">45 minutes ago</time></span>
+        </div>
+        <div class="defra-flood-list__data-column">
+          <dl class="defra-flood-list-data">
+            <div class="defra-flood-list-data__column">
+              <dt class="govuk-visually-hidden">State</dt>
+              <dd>
+                <span class="defra-flood-list-data__value">Normal</span>
+              </dd>
+            </div>
+            <div class="defra-flood-list-data__column">
+              <dt class="govuk-visually-hidden">Height</dt>
+              <dd>
+                <span class="defra-flood-list-data__value">0.65m</span>
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </li>
+      <li class="defra-flood-list-item defra-flood-list-item--river-high">
+        <div class="defra-flood-list__title-column">
+          <span class="defra-flood-list-item__title"><a href="">Kirkby Stephen</a></span>
+          <span class="defra-flood-list-data__description"><time datetime="2020-01-01T00:00:00.000Z">45 minutes ago</time></span>
+        </div>
+        <div class="defra-flood-list__data-column">
+          <dl class="defra-flood-list-data">
+            <div class="defra-flood-list-data__column">
+              <dt class="govuk-visually-hidden">State</dt>
+              <dd>
+                <span class="defra-flood-list-data__value">High</span>
+              </dd>
+            </div>
+            <div class="defra-flood-list-data__column">
+              <dt class="govuk-visually-hidden">Height</dt>
+              <dd>
+                <span class="defra-flood-list-data__value">0.66m</span>
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </li>
+      <li class="defra-flood-list-item defra-flood-list-item--rainfall">
+        <div class="defra-flood-list__title-column">
+          <span class="defra-flood-list-item__title">
+            <a href="">Rainfall at Thursby</a>
+            <span class="defra-flood-list-data__description">2 hours ago</span>
+          </span>
+        </div>
+        <div class="defra-flood-list__data-column">
+          <dl class="defra-flood-list-data">
+            <div class="defra-flood-list-data__column">
+              <dt class="govuk-visually-hidden">Last hour</dt>
+              <dd>
+                <span class="defra-flood-list-data__value">0mm</span>
+                <span class="defra-flood-list-data__description" aria-hidden="true">1 hour</span>
+              </dd>
+            </div>
+            <div class="defra-flood-list-data__column">
+              <dt class="govuk-visually-hidden">Last 6 hours</dt>
+              <dd>
+                <span class="defra-flood-list-data__value">7.6mm</span>
+                <span class="defra-flood-list-data__description" aria-hidden="true">6 hours</span>
+              </dd>
+            </div>
+            <div class="defra-flood-list-data__column">
+              <dt class="govuk-visually-hidden">Last 24 hours</dt>
+              <dd>
+                <span class="defra-flood-list-data__value">13.6mm</span>
+                <span class="defra-flood-list-data__description" aria-hidden="true">24 hours</span>
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </li>
+      <li class="defra-flood-list-item defra-flood-list-item--rainfall-light">
+        <div class="defra-flood-list__title-column">
+          <span class="defra-flood-list-item__title">
+            <a href="">Rainfall at Thursby</a>
+            <span class="defra-flood-list-data__description">
+              2 hours ago<span class="govuk-visually-hidden">, light</span>
+            </span>
+          </span>
+        </div>
+        <div class="defra-flood-list__data-column">
+          <dl class="defra-flood-list-data">
+            <div class="defra-flood-list-data__column">
+              <dt class="govuk-visually-hidden">Last hour</dt>
+              <dd>
+                <span class="defra-flood-list-data__value">0.1mm</span>
+                <span class="defra-flood-list-data__description" aria-hidden="true">1 hour</span>
+              </dd>
+            </div>
+            <div class="defra-flood-list-data__column">
+              <dt class="govuk-visually-hidden">Last 6 hours</dt>
+              <dd>
+                <span class="defra-flood-list-data__value">7.7mm</span>
+                <span class="defra-flood-list-data__description" aria-hidden="true">6 hours</span>
+              </dd>
+            </div>
+            <div class="defra-flood-list-data__column">
+              <dt class="govuk-visually-hidden">Last 24 hours</dt>
+              <dd>
+                <span class="defra-flood-list-data__value">13.7mm</span>
+                <span class="defra-flood-list-data__description" aria-hidden="true">24 hours</span>
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </li>
+      <li class="defra-flood-list-item defra-flood-list-item--rainfall-moderate">
+        <div class="defra-flood-list__title-column">
+          <span class="defra-flood-list-item__title">
+            <a href="">Rainfall at Thursby</a>
+            <span class="defra-flood-list-data__description">
+              2 hours ago<span class="govuk-visually-hidden">, moderate</span>
+            </span>
+          </span>
+        </div>
+        <div class="defra-flood-list__data-column">
+          <dl class="defra-flood-list-data">
+            <div class="defra-flood-list-data__column">
+              <dt class="govuk-visually-hidden">Last hour</dt>
+              <dd>
+                <span class="defra-flood-list-data__value">1.3mm</span>
+                <span class="defra-flood-list-data__description" aria-hidden="true">1 hour</span>
+              </dd>
+            </div>
+            <div class="defra-flood-list-data__column">
+              <dt class="govuk-visually-hidden">Last 6 hours</dt>
+              <dd>
+                <span class="defra-flood-list-data__value">8.9mm</span>
+                <span class="defra-flood-list-data__description" aria-hidden="true">6 hours</span>
+              </dd>
+            </div>
+            <div class="defra-flood-list-data__column">
+              <dt class="govuk-visually-hidden">Last 24 hours</dt>
+              <dd>
+                <span class="defra-flood-list-data__value">14.9mm</span>
+                <span class="defra-flood-list-data__description" aria-hidden="true">24 hours</span>
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </li>
+      <li class="defra-flood-list-item defra-flood-list-item--rainfall-heavy">
+        <div class="defra-flood-list__title-column">
+          <span class="defra-flood-list-item__title">
+            <a href="">Rainfall at Thursby</a>
+            <span class="defra-flood-list-data__description">
+              2 hours ago<span class="govuk-visually-hidden">, heavy</span>
+            </span>
+          </span>
+        </div>
+        <div class="defra-flood-list__data-column">
+          <dl class="defra-flood-list-data">
+            <div class="defra-flood-list-data__column">
+              <dt class="govuk-visually-hidden">Last hour</dt>
+              <dd>
+                <span class="defra-flood-list-data__value">5.2mm</span>
+                <span class="defra-flood-list-data__description" aria-hidden="true">1 hour</span>
+              </dd>
+            </div>
+            <div class="defra-flood-list-data__column">
+              <dt class="govuk-visually-hidden">Last 6 hours</dt>
+              <dd>
+                <span class="defra-flood-list-data__value">12.8mm</span>
+                <span class="defra-flood-list-data__description" aria-hidden="true">6 hours</span>
+              </dd>
+            </div>
+            <div class="defra-flood-list-data__column">
+              <dt class="govuk-visually-hidden">Last 24 hours</dt>
+              <dd>
+                <span class="defra-flood-list-data__value">18.8mm</span>
+                <span class="defra-flood-list-data__description" aria-hidden="true">24 hours</span>
+              </dd>
+            </div>
+          </dl>
+        </div>
       </li>
     </ul>
   </div>
