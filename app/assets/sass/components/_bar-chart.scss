@@ -1,7 +1,21 @@
 // Bar chart
+.js-enabled .defra-bar-chart {
+    display: block !important;
+}
 .defra-bar-chart {
     position:relative;
     // border-bottom:1px solid $govuk-border-colour;
     // padding-bottom:15px;
     margin:0;
+}
+
+// Table if no JavaScript
+.js-enabled .defra-bar-chart + table {
+    @include defra-visually-hidden();
+}
+.defra-bar-chart + table {
+    .govuk-table__header--numeric,
+    .govuk-table__cell--numeric {
+        padding-right: 25%;
+    }
 }

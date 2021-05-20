@@ -463,8 +463,19 @@ function LineChart (containerId, data) {
   }
 }
 
+function BarChart (containerId, data) {
+  // Settings
+  const windowBreakPoint = 640
+  const svgBreakPoint = 576
+
+  const chart = document.getElementById(containerId)
+}
+
 window.flood.charts = {
   createLineChart: (containerId, data) => {
     return new LineChart(containerId, data)
+  },
+  createBarChart: (containerId, data) => {
+    return new BarChart(containerId, data)
   }
 }
