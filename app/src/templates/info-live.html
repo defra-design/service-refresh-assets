@@ -36,6 +36,9 @@
             {{ model.name }}
             {% if model.iswales %} (Natural Resources Wales){% endif %}
         </a>
+        {% if model.status !== 'Closed' and model.status !== 'Suspended' and model.value %}
+        <span class="defra-flood-list-data__description">Measured {{ model.date }}</span>
+        {% endif %}
     </h2>
     {% if model.status === 'Closed' or model.status === 'Suspended' %}
     <p class="defra-flood-list-item__error">
@@ -51,7 +54,6 @@
             <dt class="govuk-visually-hidden">Height</dt>
             <dd>
                 <span class="defra-flood-list-data__value">{{ model.value | round(2) }}m</span>
-                <span class="defra-flood-list-data__description"><time datetime="">{{ model.date }}</time></span>
             </dd>
         </div>
         {% if model.value and model.type !== 'C' and model.status !== 'Closed' and model.status !== 'Suspended' and not model.iswales %}
@@ -67,6 +69,7 @@
                     Normal
                     {% endif %}
                 </span>
+                <!--
                 <span class="defra-flood-list-data__description">
                     {% if model.atrisk %}
                     Above {{ model.percentile_5 | round(2) }}m
@@ -76,6 +79,7 @@
                     {{ model.percentile_95 | round(2) }}m to {{ model.percentile_5 | round(2) }}m
                     {% endif %}
                 </span>
+                -->
             </dd>
         </div>
         {% endif %}
