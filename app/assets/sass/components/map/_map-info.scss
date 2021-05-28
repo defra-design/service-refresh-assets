@@ -9,6 +9,9 @@
     display: block;
     @include govuk-font($size: 19, $weight: bold);
     margin: 0px;
+    a {
+      color: $govuk-text-colour;
+    }
   }
   &__name--emphasis {
     font-weight: bold;
