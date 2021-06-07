@@ -37,9 +37,18 @@
         background-position: top left;
         width: 14px;
         height: 18px;
+        @include mq ($from: tablet) {
+            top: 1px;
+        }
     }
     &__link--downstream:before {
         background-image: svg-url('<svg width="14" height="18" viewBox="0 0 14 18" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><path d="M6,13.172L2.414,9.586L1,11L7,17L13,11L11.586,9.586L8,13.172L8,1L6,1L6,13.172Z" style="fill:#0b0c0c;fill-rule:nonzero;"/></svg>');
+    }
+    &__link--upstream:hover:not(:active):not(:focus):before {
+        background-image: svg-url('<svg width="14" height="18" viewBox="0 0 14 18" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><path d="M6,4.828L2.414,8.414L1,7L7,1L13,7L11.586,8.414L8,4.828L8,17L6,17L6,4.828Z" style="fill:#003078;fill-rule:nonzero;"/></svg>');
+    }
+    &__link--downstream:hover:not(:active):not(:focus):before {
+        background-image: svg-url('<svg width="14" height="18" viewBox="0 0 14 18" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><path d="M6,13.172L2.414,9.586L1,11L7,17L13,11L11.586,9.586L8,13.172L8,1L6,1L6,13.172Z" style="fill:#003078;fill-rule:nonzero;"/></svg>');
     }
 }
 
