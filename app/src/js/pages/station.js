@@ -14,7 +14,7 @@ const { forEach } = window.flood.utils
 
 // Create LiveMap
 window.flood.maps.createLiveMap('map', {
-  btnText: 'View map',
+  btnText: 'Map',
   btnClasses: 'defra-button-map-s',
   layers: 'mv,ri,ti,gr',
   centre: JSON.parse(window.flood.model.station.coordinates).coordinates,
