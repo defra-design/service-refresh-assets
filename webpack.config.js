@@ -21,7 +21,7 @@ module.exports = (env, argv) => ({
     rules: [
       {
         // Default exclude removes all node_modules but d3 is now distributed es6 so include d3 (& our own src) in transpile
-        include: mPath => mPath.indexOf('app/src') > -1 || mPath.indexOf('node_modules/d3') > -1,
+        include: mPath => mPath.indexOf('app/') > -1 || mPath.indexOf('node_modules/d3') > -1,
         use: {
           loader: 'babel-loader',
           options: {
