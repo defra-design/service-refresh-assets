@@ -164,7 +164,9 @@ router.get('/asset-26', function (req, res) {
 router.get('/asset-27', function (req, res) {
   res.render('assets/asset-27')
 })
-
+router.get('/asset-28', function (req, res) {
+  res.render('assets/asset-28')
+})
 // Icons
 router.get('/icons', function (req, res) {
   res.render('assets/icons')

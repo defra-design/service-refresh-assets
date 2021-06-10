@@ -1,0 +1,38 @@
+
+{% extends "layout.html" %}
+
+{% set bodyAttributes = {'id': 'top'} %}
+
+{% block pageTitle %}
+  Asset 28
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h2 class="govuk-heading-m">Requires</h2>
+    <ul class="govuk-list">
+      <li>sass/components/_social.scss</li>
+    </ul>
+    <p><a href="https://github.com/danleech-defra/service-refresh-assets/tree/master/app/assets">See assets on Github</a></p>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h2 class="govuk-heading-m govuk-!-margin-top-6">Share this page</h2>
+    <ul class="defra-social">
+      <li class="defra-social__channel">
+        <a class="defra-social__link defra-social__link--facebook" href="/facebook">Facebook</a>
+      </li>
+      <li class="defra-social__channel">
+        <a class="defra-social__link defra-social__link--twitter"  href="/twitter">Twitter</a>
+      </li>
+      <li class="defra-social__channel">
+        <a class="defra-social__link defra-social__link--email"  href="/email">Email</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+{% endblock %}
