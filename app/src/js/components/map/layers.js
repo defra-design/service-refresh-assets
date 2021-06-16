@@ -3,7 +3,7 @@
 Initialises the window.flood.maps layers
 */
 import { Tile as TileLayer, Vector as VectorLayer, VectorImage } from 'ol/layer'
-import { BingMaps, OSM, Vector as VectorSource } from 'ol/source'
+import { BingMaps, XYZ, Vector as VectorSource } from 'ol/source'
 import WebGLPointsLayer from 'ol/layer/WebGLPoints'
 import { GeoJSON } from 'ol/format'
 
@@ -59,7 +59,10 @@ window.flood.maps.layers = {
       //   key: window.flood.model.bingMaps,
       //   imagerySet: 'RoadOnDemand'
       // }),
-      source: new OSM(),
+      // source: new OSM(),
+      source: new XYZ({
+        url: 'https://api.os.uk/maps/raster/v1/zxy/Outdoor_3857/{z}/{x}/{y}.png?key=4flNisK69QG6w6NGkDZ4CZz0CObcUA5h'
+      }),
       visible: false,
       zIndex: 0
     })
