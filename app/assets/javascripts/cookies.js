@@ -1,14 +1,27 @@
-var container = document.getElementById('cookie-accept')
+var cookieButtons = document.getElementById('cookie-buttons')
 
-if (container) {
+if (cookieButtons) {
+  var rejectButton = document.createElement('button')
+  rejectButton.className = 'defra-cookie-banner__button-reject'
+  rejectButton.innerText = 'Reject analytics cookies'
+  cookieButtons.insertBefore(rejectButton, cookieButtons.childNodes[0])
+
   var acceptButton = document.createElement('button')
   acceptButton.className = 'defra-cookie-banner__button-accept'
-  acceptButton.innerText = 'Accept all cookies'
-  container.parentNode.replaceChild(acceptButton, container)
+  acceptButton.innerText = 'Accept analytics cookies'
+  cookieButtons.insertBefore(acceptButton, cookieButtons.childNodes[0])
 
   acceptButton.addEventListener('click', function (e) {
     e.preventDefault()
     document.getElementById('cookie-message').style.display = 'none'
+    document.getElementById('cookie-confirmation-type').innerText = 'accepted'
+    document.getElementById('cookie-confirmation').removeAttribute('style')
+  })
+
+  rejectButton.addEventListener('click', function (e) {
+    e.preventDefault()
+    document.getElementById('cookie-message').style.display = 'none'
+    document.getElementById('cookie-confirmation-type').innerText = 'rejected'
     document.getElementById('cookie-confirmation').removeAttribute('style')
   })
 
@@ -25,7 +38,7 @@ var saveButton = document.getElementById('cookies-save')
 if (saveButton) {
   saveButton.addEventListener('click', function (e) {
     e.preventDefault()
-    var alert = document.getElementById('cookie-save-confirmation')
+    var alert = document.getElementById('cookie-notification')
     alert.removeAttribute('style')
     alert.focus()
   })
