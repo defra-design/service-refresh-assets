@@ -151,6 +151,9 @@ router.get('/asset-22', function (req, res) {
 router.get('/asset-23', function (req, res) {
   res.render('assets/asset-23')
 })
+router.get('/asset-23b', function (req, res) {
+  res.render('assets/asset-23b')
+})
 router.get('/asset-24', function (req, res) {
   res.render('assets/asset-24')
 })

@@ -27,6 +27,18 @@
             display:block;
         }
     }
+    &__river {
+        display: block;
+        margin-top: 20px;
+        margin-bottom: 5px;
+        @include govuk-font($size: 16);
+        a {
+            color: $govuk-text-colour;
+        }
+        a:hover {
+            color: $govuk-link-hover-colour;
+        }
+    }
     &__title-column {
         @include mq ($from: desktop) {
             float: left;
@@ -66,9 +78,6 @@
         display: block;
         padding-left:0px;
         @include govuk-font($size: 19, $weight: bold);
-        a {
-            color: $govuk-link-colour;
-        }
     }
     &__title:after {
         position: absolute;

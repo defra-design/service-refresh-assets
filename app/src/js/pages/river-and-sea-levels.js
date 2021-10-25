@@ -14,8 +14,8 @@ window.flood.utils.addBrowserBackButton()
 // Create LiveMap
 if (document.getElementById('map')) {
   window.flood.maps.createLiveMap('map', {
-    btnText: 'View map',
-    btnClasses: 'defra-button-map-s',
+    btnText: 'View map of levels',
+    btnClasses: 'defra-button-map-list govuk-!-margin-bottom-8',
     layers: 'mv,ri,ti,gr,rf',
     extent: window.flood.model.placeBbox
   })

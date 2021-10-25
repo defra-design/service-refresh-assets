@@ -1,6 +1,7 @@
 .defra-search {
     display:table;
     width:100%;
+    @include govuk-responsive-margin(8, "bottom");
     &__input {
         @extend .govuk-input;
         display: table-cell;
@@ -78,4 +79,7 @@
             top:3px;
         }
     }
+}
+.js-enabled .defra-search {
+    margin-bottom: 20px;
 }
