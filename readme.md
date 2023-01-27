@@ -1,4 +1,6 @@
-**ARCHIVED**
+```diff
+- ARCHIVED
+```
 
 # Service refresh assets
 
